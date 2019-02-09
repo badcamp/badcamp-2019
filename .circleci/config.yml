@@ -163,6 +163,6 @@ workflows:
       - build
       # Build deploy and test on target platform
       - build_theme
-      - build_deploy_and_test
-          requires: 
+      - build_deploy_and_test:
+          requires:
             - build_theme
