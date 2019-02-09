@@ -81,10 +81,35 @@ jobs:
                 name: run unit tests
                 command: composer -n unit-test
 
+    build_theme:
+        docker:
+          - image: circleci/node:8-stretch
+        steps:
+          - checkout
+          - run:
+              name: Install Gulp
+              command: sudo npm install -g gulp-cli
+          - run:
+              name: Install NPM Packages
+              command: npm install
+              path: web/themes/custom/badcamp_2019/
+          - run:
+              name: Compile CSS and JS files
+              command: gulp
+              path: web/themes/custom/badcamp_2019/
+          - persist_to_workspace:
+              root: web/themes/custom/badcamp_2018
+              paths:
+                  - css
+                  - js
+
     build_deploy_and_test:
         <<: *defaults
         steps:
             - checkout
+
+            - attach_workspace:
+                at: web/themes/custom/badcamp_2019/
 
             - restore_cache:
                 keys:
@@ -114,9 +139,9 @@ jobs:
                 name: run composer install again to get dev dependencies
                 command: composer install
 
-            - run:
-                name: run functional tests with Behat
-                command: ./tests/scripts/run-behat
+            # - run:
+            #     name: run functional tests with Behat
+            #     command: ./tests/scripts/run-behat
 
             - run:
                 name: post-test actions
@@ -137,4 +162,6 @@ workflows:
       # Install dev dependencies and do simple tests (sniff, unit tests, etc.)
       - build
       # Build deploy and test on target platform
+      - build_theme
       - build_deploy_and_test
+            requires: build_theme
