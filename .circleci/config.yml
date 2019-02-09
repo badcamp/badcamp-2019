@@ -98,7 +98,7 @@ jobs:
               command: gulp
               path: web/themes/custom/badcamp_2019/
           - persist_to_workspace:
-              root: web/themes/custom/badcamp_2018
+              root: web/themes/custom/badcamp_2019
               paths:
                   - css
                   - js
