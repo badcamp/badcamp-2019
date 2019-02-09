@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Theme override to display a single views grouping.
+ *
+ * Available variables:
+ * - view: The view object.
+ * - grouping: The grouping instruction.
+ * - grouping_level: A number indicating the hierarchical level of the grouping.
+ * - title: The group heading.
+ * - content: The content to be grouped.
+ * - rows: The rows returned from the view.
+ *
+ * @see template_preprocess_views_view_grouping()
+ */
+#}
+{% set sticky_id="data-sticky-" ~ random() %}
+<div class="view-grouping">
+    <div class="view-grouping-header callout secondary sticky" data-sticky="data-sticky" data-anchor="{{ sticky_id }}" data-margin-top="0"><h2>{{ title }}</h2></div>
+    <div class="view-grouping-content" id="{{ sticky_id }}">{{ content }}</div>
+</div>

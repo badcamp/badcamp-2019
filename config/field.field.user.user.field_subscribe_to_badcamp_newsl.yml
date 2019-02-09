@@ -1,0 +1,38 @@
+uuid: d86755d6-31c9-4b63-8fc1-cfca21711df5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_subscribe_to_badcamp_newsl
+  module:
+    - mailchimp_lists
+    - user
+id: user.user.field_subscribe_to_badcamp_newsl
+field_name: field_subscribe_to_badcamp_newsl
+entity_type: user
+bundle: user
+label: 'Subscribe to BADCamp Newsletter'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value:
+      subscribe: 0
+    subscribe: null
+    interest_groups: null
+default_value_callback: ''
+settings:
+  subscribe_checkbox_label: 'I want to receive all BADCamp event communications'
+  show_interest_groups: 0
+  hide_subscribe_checkbox: 0
+  interest_groups_hidden: 0
+  interest_groups_label: 'Interest Groups'
+  merge_fields:
+    EMAIL: mail
+    ADDRESS: ''
+    FNAME: ''
+    LNAME: ''
+    PHONE: ''
+  unsubscribe_on_delete: 1
+field_type: mailchimp_lists_subscription

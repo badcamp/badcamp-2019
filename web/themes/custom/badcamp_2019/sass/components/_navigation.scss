@@ -1,0 +1,88 @@
+#navigation {
+  position: static;
+  display: block;
+  padding: .6em 0;
+  margin: 8px 0 24px 0;
+
+  border-top: 5px solid #1c1c1c;
+  border-bottom: 1px solid #1c1c1c;
+
+  a {
+    color: $navigation-link-color;
+  }
+
+  #block-badcamp-2019-main-menu { // the Main Menu's menu block
+
+    h2,
+    a {
+      font-size: 1.25em;
+      line-height: 1.5em;
+      padding-bottom: -5px; /* This moves the dropdown menu*/
+    }
+
+    h2 {
+      display: none;
+      @include breakpoint('medium') {
+        text-transform: uppercase;
+        float: left;
+        border: none;
+        display: block;
+      }
+    }
+
+    h2,
+    .menu-block-wrapper {
+      @include breakpoint('medium') {
+        display: inline-block;
+      }
+    }
+
+
+    a {
+      &:link {
+        text-decoration: none;
+      }
+      &:hover{color:$navigation-link-color-hover;}
+    }
+
+    li,
+    li a{
+      @include breakpoint('medium') {
+        float: left;
+      }
+    }
+
+    h2:after,
+    li:after {
+      @include breakpoint('medium') {
+        content: "/";
+        display: inline-block;
+        width: 2em;
+        text-align: center;
+        font-weight: normal;
+      }
+    }
+
+    li:after{
+      line-height: 1.75em;
+    }
+
+    li:last-child:after {
+      content: "";
+      display: none;
+    }
+  }
+
+  .responsive-navigation-toggle{
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+
+  .submenu {
+    color: rgb(69, 69, 69);
+    overflow: hidden;
+    text-align: left;
+    font-size: 1rem;
+  }
+}

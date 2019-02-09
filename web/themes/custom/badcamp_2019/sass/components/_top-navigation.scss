@@ -1,0 +1,21 @@
+#top-navigation {
+  margin: 1em 5px 7px 5px;
+  a {
+    color: $navigation-link-color;
+    text-transform: uppercase;
+    padding-top: .25em;
+  }
+
+  #block-socialmedialinks{
+    float: left;
+    span {
+      margin-right: .5rem;
+    }
+  }
+  #block-useraccountmenu {
+    float: right;
+    li {
+      margin-left: .75rem;
+    }
+  }
+}

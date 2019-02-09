@@ -1,0 +1,30 @@
+uuid: 5e38d13e-77f4-460a-9561-bcc5275e38a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.login_message
+  module:
+    - simple_block
+    - user
+  theme:
+    - badcamp_2019
+id: logintoyouraccount
+theme: badcamp_2019
+region: user_menu
+weight: 0
+provider: null
+plugin: 'simple_block:login_message'
+settings:
+  id: 'simple_block:login_message'
+  label: 'Log into your account'
+  provider: simple_block
+  label_display: visible
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

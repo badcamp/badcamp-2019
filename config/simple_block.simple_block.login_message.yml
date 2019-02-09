@@ -1,0 +1,11 @@
+uuid: 3c135e6b-8ba5-4173-b550-80a9b49cbd72
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: login_message
+title: 'Log into your account'
+content:
+  value: "<p>Enter your username and password to login to your account.</p>\r\n\r\n<p>Lost your password?&nbsp;<a href=\"/user/password\">Recover your password</a>.</p>\r\n"
+  format: full_html

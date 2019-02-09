@@ -1,0 +1,36 @@
+uuid: a34e60a3-0183-4d59-ae15-31e9425473b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_options
+field_name: field_options
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: list
+      label: 'List Me on the Attendees Page'
+    -
+      value: jobs
+      label: 'I am interested in Drupal Jobs'
+    -
+      value: sponsors
+      label: 'I am interested in hearing from sponsors'
+    -
+      value: volunteer
+      label: 'I am Interested In volunteering'
+    -
+      value: share
+      label: 'Share My Schedule With Others'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

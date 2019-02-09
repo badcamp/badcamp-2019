@@ -1,0 +1,18 @@
+main{
+  background: #fff;
+  color: #555;
+}
+
+.region--above-content {
+  color: #fff;
+  background-color: #313337;
+  font-size: 1.8em;
+  margin-bottom: 40px;
+
+  .page-title {
+    @extend .grid-container;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Contains badcamp.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function badcamp_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the badcamp module.
+    case 'help.page.badcamp':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('BADCamp Helper Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+

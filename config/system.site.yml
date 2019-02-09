@@ -1,14 +1,15 @@
 uuid: a008999a-b135-4b4d-9bd2-0a0295d92d90
-name: badcamp-2019
-mail: sean@kanopistudios.com
+name: 'Bay Area Drupal Camp - 2019'
+mail: info@badcamp.org
 slogan: ''
 page:
-  403: ''
-  404: ''
-  front: /node
+  403: /not-found
+  404: /not-found
+  front: /front
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en
 default_langcode: en
 _core:
   default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+mail_notification: ''

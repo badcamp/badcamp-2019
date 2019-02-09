@@ -1,0 +1,22 @@
+uuid: 28209d02-bea8-438d-95d5-5de190e08e09
+langcode: en
+status: true
+dependencies:
+  module:
+    - mailchimp_lists
+    - user
+id: user.field_subscribe_to_badcamp_newsl
+field_name: field_subscribe_to_badcamp_newsl
+entity_type: user
+type: mailchimp_lists_subscription
+settings:
+  mc_list_id: dc1528ac44
+  double_opt_in: 0
+  send_welcome: 0
+module: mailchimp_lists
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

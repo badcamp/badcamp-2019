@@ -1,0 +1,45 @@
+<div class="registration-steps grid-x">
+    <div class="registration one small-4 text-align-center">
+        <div class="step-number {{ step1active ? 'active' : '' }}">1</div>
+        <span>Sign Up</span>
+    </div>
+    <div class="registration two small-4 text-align-center">
+        <div class="step-number {{ step2active ? 'active' : '' }}">2</div>
+        <span>Sponsor</span>
+    </div>
+    <div class="registration three small-4 text-align-center">
+        <div class="step-number {{ step3active ? 'active' : '' }}">3</div>
+        <span>Events</span>
+    </div>
+</div>
+
+
+<div class="registration-intro">
+    {% if step1active %}
+        <div class="text-center">
+            <p>Already have an account, take me to <a href="{{ path('user.login') }}">{{ 'log in'|t }}</a>.</p>
+        </div>
+    {% endif %}
+
+    {{ intro_message }}
+</div>
+
+<div class="registration-content">
+    {{ content }}
+</div>
+
+<div class="registration-footer align-center">
+    {% if step1active %}
+
+    {% elseif step2active and not step2active_swag %}
+        <div class="button-group align-center">
+            <a class="button" href="/registration/events">Skip</a>
+            <a class="button" href="/registration/events">Next</a>
+        </div>
+    {% elseif step3active %}
+        <div class="button-group align-center">
+            <a class="button" href="/user">Skip</a>
+            <a class="button" href="/user">Done</a>
+        </div>
+    {% endif %}
+</div>

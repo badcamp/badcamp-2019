@@ -1,0 +1,23 @@
+name: BADCamp 2019
+type: theme
+description: 'Theme for BADCamp'
+package: Other
+core: 8.x
+libraries:
+  - badcamp_2019/global-css
+  - badcamp_2019/global-js
+ 
+regions:
+  user_menu: 'User Menu'
+  top_navigation: 'Top Navigation'
+  navigation: 'Navigation'
+  header: 'Header'
+  header_left: 'Header left'
+  header_right: 'Header right'
+  highlighted: 'Highlighted'
+  info: 'Info'
+  help: 'Help'
+  above_content: 'Above Content'
+  content: 'Content'
+  below_content: 'Below Content'
+  footer: 'Footer'

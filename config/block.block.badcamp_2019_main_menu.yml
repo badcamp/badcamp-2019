@@ -1,0 +1,26 @@
+uuid: 499d1bb5-27fb-45ef-948f-0ca344bea8b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - badcamp_2019
+_core:
+  default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
+id: badcamp_2019_main_menu
+theme: badcamp_2019
+region: navigation
+weight: -6
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'BADCamp 2019'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

@@ -1,0 +1,68 @@
+# Basic LAMP stack
+
+version: "2.1"
+
+services:
+  # Web
+  web:
+    image: wodby/drupal-nginx:8-1.12-4.0.4
+    volumes:
+      - ${PROJECT_ROOT}:/var/www:ro
+      # Suppress the permissions fixer script in wodby/drupal-nginx
+      - ${PROJECT_ROOT}/.docksal/services/web/init_volumes:/usr/local/bin/init_volumes
+    labels:
+      - io.docksal.virtual-host=${VIRTUAL_HOST},*.${VIRTUAL_HOST}
+      - io.docksal.project-root=${PROJECT_ROOT}
+    environment:
+      - NGINX_BACKEND_HOST=cli
+      - NGINX_SERVER_ROOT=/var/www/${DOCROOT}
+      - NGINX_DRUPAL_FILE_PROXY_URL
+      - NGINX_VHOST_PRESET
+      - NGINX_SERVER_EXTRA_CONF_FILEPATH
+    dns:
+      - ${DOCKSAL_DNS1}
+      - ${DOCKSAL_DNS2}
+    working_dir: /var/www/${DOCROOT}
+
+  # DB
+  db:
+    extends:
+      file: ${HOME}/.docksal/stacks/services.yml
+      service: db
+
+  # CLI
+  cli:
+    extends:
+      file: ${HOME}/.docksal/stacks/services.yml
+      service: cli
+    environment:
+      - PANTHEON_SITE
+      - PANTHEON_ENV
+    volumes:
+      - ${PROJECT_ROOT}/.docksal/etc/drush:/etc/drush:ro
+
+  # Fake email
+  mail:
+    hostname: mail
+    image: mailhog/mailhog
+    expose:
+      - "80"
+    environment:
+      - MH_API_BIND_ADDR=0.0.0.0:80
+      - MH_UI_BIND_ADDR=0.0.0.0:80
+    labels:
+      - io.docksal.virtual-host=webmail.${VIRTUAL_HOST}
+    user: root
+
+  phpmyadmin:
+    hostname: pma
+    image: phpmyadmin/phpmyadmin
+    expose:
+      - "80"
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=db
+      - PMA_USER=root
+      - PMA_PASSWORD=${MYSQL_ROOT_PASSWORD:-root}
+    labels:
+      - io.docksal.virtual-host=pma.${VIRTUAL_HOST}

@@ -1,0 +1,62 @@
+<div class="stripe-checkout description">
+    {{ description }}
+</div>
+
+{% if logged_in %}
+    {% if enabled %}
+        {% set payment_form_id = 'payment-form-' ~ entity_id ~ '-' ~ entity_type  %}
+        <form action="/checkout/charge" method="POST" id="{{ payment_form_id }}">
+            <input type="hidden" name="current_path" value="{{ current_path }}" />
+            <input type="hidden" name="current_route" value="{{ current_route }}" />
+            <input type="hidden" name="amount" value="{{ amount }}" />
+            <input type="hidden" name="payment_type" value="{{ payment_type }}" />
+            <input type="hidden" name="entity_type" value="{{ entity_type }}" />
+            <input type="hidden" name="entity_id" value="{{ entity_id }}" />
+            <input type="hidden" name="stripeToken" id="stripeToken" value="" />
+        </form>
+
+        {% set payment_button_id = 'custom-button-' ~ entity_id ~ '-' ~ entity_type  %}
+        <button id="{{ payment_button_id }}" class="action-button small-button">{{ button_label }}</button>
+        <script src="https://checkout.stripe.com/checkout.js"></script>
+        <script type="text/javascript">
+            document.getElementById('{{ payment_button_id }}').addEventListener('click', function(e) {
+                var handler = StripeCheckout.configure({
+                    key: '{{ data_key }}',
+                    image: '{{ logo }}',
+                    locale: 'auto',
+
+                    token: function(token) {
+                        jQuery('[name="stripeToken"]', jQuery("#{{ payment_form_id }}")).val(token.id);
+                        jQuery("#{{ payment_form_id }}").submit();
+                    }
+                });
+                // Open Checkout with further options:
+                handler.open({
+                    name: "{{ org_name }}",
+                    description: "{{ data_description }}",
+                    {% if data_zip_code %}
+                    zipCode: true,
+                    {% endif %}
+                    amount: {{ amount }},
+                    email: "{{ email }}"
+                });
+                e.preventDefault();
+            });
+
+            // Close Checkout on page navigation:
+            window.addEventListener('popstate', function() {
+                handler.close();
+            });
+        </script>
+    {% endif %}
+
+    {% if not enabled and show_button %}
+        <a type="submit" class="action-button small-button" href="{{ button_link }}" style="display: inline-block;">
+            <span style="display: block; min-height: 30px;">{{ button_label }}</span>
+        </a>
+    {% endif %}
+{% else %}
+    <a class="action-button small-button use-ajax" href="{{ user_register_link }}" data-dialog-type="modal" >
+        <span style="display: block; min-height: 30px;">{{ logged_out_label }}</span>
+    </a>
+{% endif %}

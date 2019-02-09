@@ -1,0 +1,24 @@
+uuid: d8ac49a2-e241-4303-ab7a-a93763231d7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.header-menu
+  module:
+    - system
+  theme:
+    - badcamp_2019
+id: headermenu
+theme: badcamp_2019
+region: header_right
+weight: 0
+provider: null
+plugin: 'system_menu_block:header-menu'
+settings:
+  id: 'system_menu_block:header-menu'
+  label: 'Header Menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

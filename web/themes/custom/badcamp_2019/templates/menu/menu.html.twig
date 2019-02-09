@@ -1,0 +1,7 @@
+{% import '@badcamp_2019/macros.twig' as macros %}
+
+{% set menu_level_settings = [] %}
+
+{% block content %}
+    {{ macros.foundation_menu_links(items, attributes, 0, menu_level_settings) }}
+{% endblock %}

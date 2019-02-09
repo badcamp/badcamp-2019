@@ -1,0 +1,9 @@
+uuid: d48d6719-cc41-4e34-ad5b-348f7f2b6d73
+langcode: en
+status: true
+dependencies: {  }
+name: 'Sponsor Level'
+vid: sponsor_level
+description: ''
+hierarchy: 0
+weight: 0

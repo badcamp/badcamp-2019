@@ -1,0 +1,43 @@
+
+<svg width="1549px" height="900px" viewBox="0 0 1549 900" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="-1.11022302e-14%" x2="50%" y2="78.0672034%" id="linearGradient-1">
+            <stop stop-color="#E6DAC5" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#E6DAC5" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-2" points="-266.394531 88.0976563 404.828125 919.019531 480.046875 919.019531 -52.6367188 -64.8828125"></polygon>
+        <filter x="-4.0%" y="-3.0%" width="108.0%" height="106.1%" filterUnits="objectBoundingBox" id="filter-3">
+            <feMorphology radius="2.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="7.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.901960784   0 0 0 0 0.854901961   0 0 0 0 0.77254902  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polygon id="path-4" points="1326.46875 -114.203125 1286.26172 961.34375 1352.44531 961.34375 1544.30859 -86.515625"></polygon>
+        <filter x="-11.6%" y="-2.8%" width="123.3%" height="105.6%" filterUnits="objectBoundingBox" id="filter-5">
+            <feMorphology radius="2.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="7.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.901960784   0 0 0 0 0.854901961   0 0 0 0 0.77254902  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="BADCamp-Splash-Page-(In-Progress)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="BADCAMP-Circus">
+            <g id="region/banner">
+                <g id="Photo">
+                    <g id="Spotlight">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                        <use fill-opacity="0.35" fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    </g>
+                    <g id="Spotlight">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                        <use fill-opacity="0.35" fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-4"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

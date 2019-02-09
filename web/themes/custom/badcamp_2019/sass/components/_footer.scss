@@ -1,0 +1,24 @@
+footer{
+  .region--footer{
+    .block-content{
+      @extend .grid-container;
+      @include box-sizing(border-box);
+      @include text-wrap();
+    }
+
+    #block-builtbythecommunity{
+      padding: 1rem 0;
+    }
+
+    #block-mailchimpsubscriptionformstayconnected{
+      background-color: #aaa;
+      padding: 1em 0;
+      h2, p, button, input {
+        margin-bottom: 0;
+      }
+      #edit-actions{
+        font-size: .95em;
+      }
+    }
+  }
+}

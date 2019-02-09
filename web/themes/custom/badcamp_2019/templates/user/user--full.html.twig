@@ -1,0 +1,58 @@
+{#
+/**
+ * @file
+ * Theme override to present all user data.
+ *
+ * This template is used when viewing a registered user's page,
+ * e.g., example.com/user/123. 123 being the user's ID.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.field_example'. Fields attached to a user
+ *   such as 'user_picture' are available as 'content.user_picture'.
+ * - attributes: HTML attributes for the container element.
+ * - user: A Drupal User entity.
+ *
+ * @see template_preprocess_user()
+ */
+#}
+<article{{ attributes }}>
+    <div{{ content_attributes }}>
+        <h2>{{ content.field_user_first_name.0 }} {{ content.field_user_last_name.0 }}</h2>
+        <h3>
+            {% if content.field_user_title.0 is not empty %}{{ content.field_user_title.0 }}{% endif %}
+            {% if content.field_user_title.0 is not empty and content.field_user_organization.0 is not empty %} / {% endif %}
+
+            {% if content.field_user_organization_website.0 is not empty %}
+                <a href="{{ org_url }}">
+            {% endif %}
+                {% if content.field_user_organization.0 is not empty %}{{ content.field_user_organization.0 }}{% endif %}
+            {% if content.field_user_organization_website.0 is not empty %}
+                </a>
+            {% endif %}
+        </h3>
+        <div class="media-object stack-for-small">
+            <div class="media-object-section main-section">
+                {{ content | without('sponsors','sessions','field_user_photo','field_user_first_name','field_user_last_name','field_user_social_profile_links','field_user_title','field_user_organization','field_user_organization_website') }}
+            </div>
+            <div class="media-object-section middle social-profile-links">
+                <div>{{ content.field_user_photo }}</div>
+                <div>{{ content.field_user_social_profile_links }}</div>
+            </div>
+        </div>
+
+        {% if show_sponsors %}
+            <div class="margin-vertical-2">
+                <h2 class="margin-vertical-1 callout primary">{{ "Sponsors We Represent" | t }}</h2>
+                {{ content.sponsors }}
+            </div>
+        {% endif %}
+
+        {% if show_sessions %}
+            <div class="margin-vertical-2">
+                <h2 class="margin-vertical-1 callout primary">{{ "See Me At These Sessions" | t }}</h2>
+                {{ content.sessions }}
+            </div>
+        {% endif %}
+    </div>
+</article>

@@ -1,0 +1,27 @@
+uuid: eadd9ab7-f449-4a6a-9d02-1bce05cca144
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - badcamp_2019
+id: userlogin
+theme: badcamp_2019
+region: user_menu
+weight: 0
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  provider: user
+  label_display: visible
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

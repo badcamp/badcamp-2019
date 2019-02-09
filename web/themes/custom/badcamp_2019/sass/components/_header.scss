@@ -1,0 +1,90 @@
+header {
+  background: #f3f0fd url(../images/bg-header-sanfrancisco-v1.jpg) no-repeat bottom center;
+  padding: 0;
+  width: 100%;
+  max-width: none;
+  @include background-size(cover);
+
+  #usermenu {
+    font-size: 1em;
+    background: #000000;
+    color: #FFF;
+    height: 0px;
+    overflow: hidden;
+  }
+
+  .region-usermenu {
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 25px;
+  }
+
+  .header-innner {
+    max-width: 1200px;
+    margin: 0 auto;
+    @include breakpoint('medium') {
+      padding: 0 10px;
+    }
+  }
+
+  .header-holder{
+    min-height: 200px;
+  }
+
+  #block-badcamp-2019-branding{
+    img {
+      max-width: 500px;
+    }
+  }
+
+  #block-headermenu .menu {
+    @extend .grid-x;
+    @extend .align-justify;
+    li {
+      width: 100%;
+
+      @include breakpoint('medium'){
+        width: 32%;
+      }
+
+      margin-bottom: 1em;
+    }
+    a {
+      background-image: url(../images/corner-arrow.png);
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-color: rgba(0, 0, 0, 0.6);
+      font-weight: bold;
+      color: #f4f596;
+      line-height: 48px;
+      padding: 3px 0 0 10px;
+      display: block;
+      text-decoration: none;
+      white-space: nowrap;
+      overflow: hidden;
+
+      &:hover {
+        background-color: #000;
+      }
+    }
+  }
+}
+
+#header>*,
+#content,
+#navigation,
+.region-sidebar-first,
+.region-sidebar-second,
+#footer .content {
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  word-wrap: normal;
+}

@@ -1,0 +1,10 @@
+uuid: 7fa858b3-7595-4136-ac43-6b51fe4a5233
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.sponsor_logo
+label: 'Sponsor Logo'
+targetEntityType: media
+cache: true

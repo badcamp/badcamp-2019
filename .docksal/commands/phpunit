@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+#: exec_target = cli
+
+## Run project's Behat tests.
+##
+## Usage: fin phpunit [--path=path] [arguments]
+##
+## path defaults to docroot/profiles/contrib/camp
+
+# Abort if anything fails
+set -e
+
+# Environment variables passed from fin:
+#
+#   $PROJECT_ROOT - (string) absolute path to NEAREST .docksal folder
+#   $VIRTUAL_HOST - (string) ex. projectname.docksal
+#   $DOCROOT - name of the docroot folder
+#   $DOCKER_RUNNING - (string) "true" or "false"
+
+params=''
+path='docroot/profiles/contrib/camp'
+for i in "$@"; do
+	case "$i" in
+		--path=*)
+			path="${i#*=}"
+			;;
+		*)
+			params="$params$i "
+			;;
+	esac;
+done
+
+phpunit_xml="${PROJECT_ROOT}/${path}/phpunit.xml.dist"
+if [[ ! -f "${phpunit_xml}" ]]; then
+	echo "Could not find ${phpunit_xml}"
+	exit 1
+fi
+
+cd ${PROJECT_ROOT}
+
+# Launch PHPUnit tests
+cd $path && /var/www/bin/phpunit $params

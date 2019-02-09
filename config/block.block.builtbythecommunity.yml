@@ -1,0 +1,22 @@
+uuid: cf6b4fd6-0a21-4366-a9c3-41968eb5ede5
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.build_by_communtiy
+  module:
+    - simple_block
+  theme:
+    - badcamp_2019
+id: builtbythecommunity
+theme: badcamp_2019
+region: footer
+weight: -6
+provider: null
+plugin: 'simple_block:build_by_communtiy'
+settings:
+  id: 'simple_block:build_by_communtiy'
+  label: 'Built By The Community'
+  provider: simple_block
+  label_display: '0'
+visibility: {  }

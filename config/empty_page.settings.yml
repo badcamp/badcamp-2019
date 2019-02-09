@@ -1,0 +1,15 @@
+new_id: 3
+_core:
+  default_config_hash: 1qKVk03zhLAZj-W36dakmXWDO3mx28TRgx9iDzHpqMs
+callback_1:
+  created: 1548626155
+  cid: 1
+  updated: 1548626155
+  path: front
+  page_title: 'Front Page'
+callback_2:
+  created: 1548626205
+  cid: 2
+  updated: 1548626205
+  path: /not-found
+  page_title: 'Not Found'

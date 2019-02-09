@@ -1,0 +1,11 @@
+uuid: 71e2a5b7-711f-42fb-aa70-6685401828dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+id: badcamp_dates
+title: 'BADCamp Dates'
+content:
+  value: "<h3>October 2&nbsp;- 5 / Berkeley, California</h2>\r\n\r\n<p>4 days of training, summits, sessions, contribution,&nbsp;<br />\r\nBoFs, Jobs, Networking and more!</p>\r\n"
+  format: basic_html

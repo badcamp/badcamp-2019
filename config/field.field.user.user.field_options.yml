@@ -1,0 +1,21 @@
+uuid: 0db37138-5553-4ec1-ae5b-e6f53c650bcd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_options
+  module:
+    - options
+    - user
+id: user.user.field_options
+field_name: field_options
+entity_type: user
+bundle: user
+label: Options
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

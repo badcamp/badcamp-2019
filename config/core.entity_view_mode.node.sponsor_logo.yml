@@ -1,0 +1,10 @@
+uuid: a831ab2f-3f96-40f5-aa80-ed8dc954e10d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.sponsor_logo
+label: 'Sponsor Logo'
+targetEntityType: node
+cache: true
