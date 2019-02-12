@@ -81,7 +81,7 @@ $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
 $body-background: #444;
-$body-font-color: #333333;
+$body-font-color: #111111;
 $body-font-family: Helvetica,Arial,"Nimbus Sans L","Droid Sans",sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
@@ -99,7 +99,7 @@ $global-button-cursor: auto;
 $global-color-pick-contrast-tolerance: 0;
 $print-transparent-backgrounds: true;
 
-$navigation-link-color: #1c1c1c;
+$navigation-link-color: #111111;
 $navigation-link-color-hover: #0077a5;
 
 @include add-foundation-colors;
@@ -172,7 +172,7 @@ $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
 $anchor-color: #0077A5;
 $anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
-$anchor-text-decoration: none;
+$anchor-text-decoration: underline;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
 $hr-border: 1px solid $medium-gray;

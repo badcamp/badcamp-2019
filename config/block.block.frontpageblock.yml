@@ -12,12 +12,12 @@ dependencies:
 id: frontpageblock
 theme: badcamp_2019
 region: content
-weight: -5
+weight: -4
 provider: null
 plugin: 'block_content:071dd27e-1f76-42dc-9ba6-6198d70e5e32'
 settings:
   id: 'block_content:071dd27e-1f76-42dc-9ba6-6198d70e5e32'
-  label: 'BADCamp 2019'
+  label: 'Save The Date'
   provider: block_content
   label_display: visible
   status: true

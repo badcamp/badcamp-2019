@@ -161,6 +161,8 @@ function badcamp_2019_form_mailchimp_signup_subscribe_block_stay_connected_form_
 
   $form['mergevars']['EMAIL']['#title_display'] = 'invisible';
   $form['mergevars']['EMAIL']['#attributes']['placeholder'] = 'E-mail Address';
+  $form['mergevars']['EMAIL']['#attributes']['aria-label'] = 'E-mail Address';
+  $form['mergevars']['EMAIL']['#attributes']['title'] = 'E-mail Address';
 
   $form['container']['mergevars'] = $form['mergevars'];
   $form['container']['actions'] = $form['actions']['submit'];

@@ -1,0 +1,28 @@
+uuid: 30100f09-d21a-4685-aae4-06f283545413
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.homepage_title
+  module:
+    - simple_block
+    - system
+  theme:
+    - badcamp_2019
+id: homepagetitle
+theme: badcamp_2019
+region: content
+weight: -6
+provider: null
+plugin: 'simple_block:homepage_title'
+settings:
+  id: 'simple_block:homepage_title'
+  label: 'Homepage Title'
+  provider: simple_block
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

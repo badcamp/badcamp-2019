@@ -1,0 +1,11 @@
+uuid: 48ed3e2e-ade1-495b-9254-8bfd94f8c1d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: homepage_title
+title: 'Homepage Title'
+content:
+  value: "<h1 class=\"text-center\">Bay Area Drupal Camp 2019</h1>\r\n"
+  format: full_html

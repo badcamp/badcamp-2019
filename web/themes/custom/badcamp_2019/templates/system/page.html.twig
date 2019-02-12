@@ -48,9 +48,11 @@
 <div{{ attributes.addClass('page') }}>
 
     <header id="header" role="banner">
+        {#
         <div id="usermenu">
            {{ page.user_menu }}
         </div><!-- /#usermenu -->
+        #}
         <div class="header-innner clearfix">
             <div id="top-navigation" class="clearfix">
                 {{ page.top_navigation }}
@@ -86,8 +88,7 @@
         {{ page.help }}
     </div>
 
-    <main role="main" class="grid-x">
-        <a id="main-content" tabindex="-1">{{ "Main Content" | t }}</a>{# link is in html.html.twig #}
+    <main role="main" class="grid-x" id="main-content">
         <div class="cell small-12">
             {{ page.info }}
             {{ page.above_content }}

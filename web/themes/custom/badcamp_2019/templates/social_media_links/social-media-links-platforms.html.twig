@@ -17,17 +17,10 @@
 <div{{ attributes.addClass(classes) }}>
     {% for platform in platforms %}
         <span>
-            <a href="{{ platform.url }}" {{ platform.attributes}} >
+            <a href="{{ platform.url }}" {{ platform.attributes}} aria-label="{{ platform.name }}">
                 {{ platform.element }}
+                <span class="platform-label">{{ platform.name }}</span>
             </a>
-
-            {% if appearance.show_name %}
-                {% if appearance.orientation == 'h' %}
-                    <br />
-                {% endif %}
-
-                <span><a href="{{ platform.url }}" {{ link_attributes }}>{{ platform.name }}</a></span>
-            {% endif %}
         </span>
     {% endfor %}
 </div>
