@@ -64,7 +64,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && ($_SERVER['HTTPS'] === 'OFF') && 
 
 // Require 2018.badcamp.org Domain
 if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') && (php_sapi_name() != "cli")) {
-  if ($_SERVER['HTTP_HOST'] != '2018.badcamp.org' || !isset($_SERVER['HTTP_X_SSL']) || $_SERVER['HTTP_X_SSL'] != 'ON' ) {
+  if ($_SERVER['HTTP_HOST'] != '2019.badcamp.org' || !isset($_SERVER['HTTP_X_SSL']) || $_SERVER['HTTP_X_SSL'] != 'ON' ) {
     header('HTTP/1.0 301 Moved Permanently');
     header('Location: https://2019.badcamp.org'. $_SERVER['REQUEST_URI']);
     exit();
