@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_components
     - node.type.page
   module:
+    - paragraphs
     - path
     - text
 _core:
@@ -30,6 +32,25 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_components:
+    type: paragraphs
+    weight: 121
+    settings:
+      title: Component
+      title_plural: Components
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: '0'
+    third_party_settings: {  }
+    region: content
   path:
     type: path
     weight: 30

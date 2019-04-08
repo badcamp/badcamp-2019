@@ -1,0 +1,35 @@
+uuid: 1f74e456-78c0-41ff-b5f6-2a719263fa3c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:content_block:fa512aef-65d2-4eb6-8262-aee3bca84b17'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - bay_area_camp
+third_party_settings:
+  block_class:
+    classes: featured-attendees
+id: featuredattendees
+theme: bay_area_camp
+region: content_full
+weight: -7
+provider: null
+plugin: 'block_content:fa512aef-65d2-4eb6-8262-aee3bca84b17'
+settings:
+  id: 'block_content:fa512aef-65d2-4eb6-8262-aee3bca84b17'
+  label: 'Featured Attendees'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

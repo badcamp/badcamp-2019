@@ -1,0 +1,9 @@
+uuid: e589691a-174d-4f4f-81b5-d10f9460bb69
+langcode: en
+status: true
+dependencies: {  }
+id: timeline_section
+label: 'Timeline Section'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

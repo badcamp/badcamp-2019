@@ -1,0 +1,41 @@
+#block-header-menu {
+  background-color: #fff;
+
+  padding-bottom: 2rem;
+
+  @include breakpoint('medium') {
+    padding-bottom: 0;
+  }
+
+  ul {
+    float: left;
+    @include breakpoint('medium') {
+      float: none;
+    }
+  }
+
+  li {
+    margin: 0 11px;
+
+    a {
+      padding: 10px;
+      border-bottom: 0 solid;
+
+      font-size: .9375rem;
+      @include breakpoint('medium') {
+        padding: 1rem;
+        font-size: 1.1875rem;
+      }
+    }
+  }
+}
+
+.responsive-menu-button-wrap {
+  float: right;
+  border-radius: 25px;
+  background-color: $lightblue;
+  padding: 10px;
+  line-height: 1;
+  position: relative;
+  right: 5px;
+}

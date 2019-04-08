@@ -1,0 +1,35 @@
+uuid: 9982d3b0-13c3-4f16-842a-97ee6ce4c838
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:content_block:0393f34f-ba2b-4fc0-8e45-529e82dce478'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - bay_area_camp
+third_party_settings:
+  block_class:
+    classes: 'event-details grid-container'
+id: eventdetails
+theme: bay_area_camp
+region: content_full
+weight: -8
+provider: null
+plugin: 'block_content:0393f34f-ba2b-4fc0-8e45-529e82dce478'
+settings:
+  id: 'block_content:0393f34f-ba2b-4fc0-8e45-529e82dce478'
+  label: 'Event Details'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

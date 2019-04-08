@@ -1,0 +1,81 @@
+<?php
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Url;
+use Drupal\Core\Link;
+
+/**
+ * Implements hook_form_alter().
+ */
+function bay_area_camp_form_mailchimp_signup_subscribe_block_stay_connected_form_alter(&$form, &$form_state) {
+  $form['container'] = [
+    '#prefix' => '<div class="inputs">',
+    '#suffix' => '</div>'
+  ];
+
+  $form['mergevars']['EMAIL']['#title_display'] = 'invisible';
+  $form['mergevars']['EMAIL']['#attributes']['placeholder'] = 'E-mail Address';
+  $form['mergevars']['EMAIL']['#attributes']['aria-label'] = 'E-mail Address';
+  $form['mergevars']['EMAIL']['#attributes']['title'] = 'E-mail Address';
+
+  $form['container']['mergevars'] = $form['mergevars'];
+  $form['container']['actions'] = $form['actions']['submit'];
+  unset($form['mergevars']);
+
+  unset($form['actions']);
+
+  $form['description']['#prefix'] = '<p class="description">';
+  $form['description']['#suffix'] = '</p>';
+}
+
+/**
+ * Implements hook_preprocess_menu().
+ */
+function bay_area_camp_preprocess_menu__account(&$vars) {
+  foreach($vars['items'] AS &$item) {
+//    $item['attributes']
+//      ->addClass('button')
+//      ->addClass('button-rounded-hover');
+  }
+}
+
+/**
+ * Implements template_preprocess_node__node_type__node_display().
+ */
+function bay_area_camp_preprocess_node__sponsor__full(&$vars){
+  $vars['sponsor_url'] = (!empty($vars['content']['field_sponsor_url'][0]) ? $vars['content']['field_sponsor_url'][0]['#url']->getUri() : '/sponsors');
+  $vars['logo'] = $vars['content']['field_sponsor_logo'];
+}
+
+/**
+ * Implements template_preprocess_node__node_type__node_display().
+ */
+function bay_area_camp_preprocess_node__sponsor__sponsor_logo(&$vars){
+  /** @var \Drupal\node\Entity\Node $node */
+  $node = $vars['elements']['#node'];
+  $vars['can_edit'] = $node->access('update');
+}
+
+/**
+ * Implements template_preprocess_views_view_unformatted__view__display().
+ */
+function bay_area_camp_preprocess_views_view_unformatted__sponsors__page_1(&$vars){
+
+  $vars['level_class'] = HTML::cleanCssIdentifier(strtolower(strip_tags($vars['title'])));
+
+  switch($vars['level_class']){
+    case 'core-level':
+      $vars['sizing_class'] = 'small-up-1 medium-up-3';
+      break;
+    default:
+      $vars['sizing_class'] = 'small-up-2 medium-up-4';
+      break;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function bay_area_camp_theme_suggestions_user_alter(&$suggestions, $vars){
+  $suggestions[] = 'user__' . $vars['elements']['#view_mode'];
+}

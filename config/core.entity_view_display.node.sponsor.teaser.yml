@@ -4,9 +4,9 @@ status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.sponsor.field_logo
     - field.field.node.sponsor.field_members
     - field.field.node.sponsor.field_sponsor_description
+    - field.field.node.sponsor.field_sponsor_level
     - field.field.node.sponsor.field_url
     - node.type.sponsor
   module:
@@ -22,7 +22,7 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_logo: true
   field_members: true
   field_sponsor_description: true
+  field_sponsor_level: true
   field_url: true

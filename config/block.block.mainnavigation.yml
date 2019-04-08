@@ -1,0 +1,24 @@
+uuid: 7804579a-d743-4307-9da9-85f1d5768199
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - bay_area_camp
+id: mainnavigation
+theme: bay_area_camp
+region: navigation
+weight: -7
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

@@ -1,0 +1,34 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a one-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+    set classes = [
+    'layout',
+    'layout--twocol',
+    'grid-x',
+]
+%}
+{% if content %}
+    <div{{ attributes.addClass(classes) }}>
+        {% if content.left %}
+            <div {{ region_attributes.left.addClass('layout__region', 'layout__region--left', 'small-6') }}>
+                {{ content.left }}
+            </div>
+        {% endif %}
+
+        {% if content.right %}
+            <div {{ region_attributes.right.addClass('layout__region', 'layout__region--right', 'small-6') }}>
+                {{ content.right }}
+            </div>
+        {% endif %}
+    </div>
+{% endif %}

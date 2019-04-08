@@ -1,0 +1,75 @@
+uuid: fa50b46c-6ab9-49f8-9b73-3566afadcaf4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.featured_attendees
+    - field.field.user.user.field_bio
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_options
+    - field.field.user.user.field_organization
+    - field.field.user.user.field_organization_url
+    - field.field.user.user.field_social_profile_links
+    - field.field.user.user.field_subscribe_to_badcamp_newsl
+    - field.field.user.user.field_title
+    - field.field.user.user.user_picture
+    - image.style.featured_attendee
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
+id: user.user.featured_attendees
+targetEntityType: user
+bundle: user
+mode: featured_attendees
+content:
+  field_first_name:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_last_name:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_organization:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  user_picture:
+    type: image
+    weight: 0
+    region: content
+    settings:
+      image_style: featured_attendee
+      image_link: ''
+    third_party_settings: {  }
+    label: hidden
+hidden:
+  field_bio: true
+  field_options: true
+  field_organization_url: true
+  field_social_profile_links: true
+  field_subscribe_to_badcamp_newsl: true
+  member_for: true

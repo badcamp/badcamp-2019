@@ -1,0 +1,24 @@
+uuid: 2da86f2d-0430-469b-9b23-86dcb44dd84a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sponsors
+  module:
+    - views
+  theme:
+    - bay_area_camp
+id: views_block__sponsors_core_sponsors
+theme: bay_area_camp
+region: footer
+weight: -10
+provider: null
+plugin: 'views_block:sponsors-core_sponsors'
+settings:
+  id: 'views_block:sponsors-core_sponsors'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

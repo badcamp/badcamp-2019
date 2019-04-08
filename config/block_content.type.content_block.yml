@@ -1,8 +1,8 @@
-uuid: 047b34bd-7968-4dd7-970f-b903549aec06
+uuid: 8b8efcf7-5c70-4b60-8db9-f954b50bb58b
 langcode: en
 status: true
 dependencies: {  }
 id: content_block
 label: 'Content Block'
 revision: 0
-description: ''
+description: 'Content blocks are good for creating content that can and should be reusable.'

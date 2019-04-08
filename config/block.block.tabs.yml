@@ -1,0 +1,20 @@
+uuid: 816964ac-f125-48c6-b990-32a016ed28a3
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bay_area_camp
+id: tabs
+theme: bay_area_camp
+region: content
+weight: -8
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

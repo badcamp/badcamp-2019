@@ -1,0 +1,13 @@
+uuid: 07ef9c24-0821-4594-b344-fb3853478242
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_class
+id: view
+label: View
+icon_uuid: null
+description: ''
+behavior_plugins:
+  paragraphs_class_paragraph_class:
+    enabled: true

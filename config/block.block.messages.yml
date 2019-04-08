@@ -1,0 +1,20 @@
+uuid: d7c45ba6-8c75-41d5-9739-26c483c44a51
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bay_area_camp
+id: messages
+theme: bay_area_camp
+region: info
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  provider: system
+  label_display: '0'
+visibility: {  }

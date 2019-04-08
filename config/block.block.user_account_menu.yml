@@ -1,0 +1,24 @@
+uuid: 513627ca-c212-44e5-b55e-ce336037a9c8
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - bay_area_camp
+id: user_account_menu
+theme: bay_area_camp
+region: header_right
+weight: -7
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

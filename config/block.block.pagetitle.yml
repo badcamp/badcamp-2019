@@ -1,0 +1,25 @@
+uuid: 064c406b-e4d2-421e-997c-da475f748b66
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bay_area_camp
+id: pagetitle
+theme: bay_area_camp
+region: header
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

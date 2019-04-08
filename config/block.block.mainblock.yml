@@ -1,0 +1,35 @@
+uuid: 44d7beff-d946-48a1-8800-b191d1d178b1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:content_block:5e4267fe-c510-4663-af5c-973de797d338'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - bay_area_camp
+third_party_settings:
+  block_class:
+    classes: main-block
+id: mainblock
+theme: bay_area_camp
+region: content_full
+weight: -10
+provider: null
+plugin: 'block_content:5e4267fe-c510-4663-af5c-973de797d338'
+settings:
+  id: 'block_content:5e4267fe-c510-4663-af5c-973de797d338'
+  label: 'Main Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

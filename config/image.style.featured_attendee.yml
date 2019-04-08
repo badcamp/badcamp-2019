@@ -1,0 +1,15 @@
+uuid: 13511fd1-5cd2-45b5-bcbc-4d0a28d87972
+langcode: en
+status: true
+dependencies: {  }
+name: featured_attendee
+label: 'Featured Attendee'
+effects:
+  5fb63f20-ddf5-4d28-ae55-ca883c9beb03:
+    uuid: 5fb63f20-ddf5-4d28-ae55-ca883c9beb03
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 132
+      height: 132
+      anchor: center-center

@@ -1,0 +1,10 @@
+uuid: b6acb026-f1e2-49b7-af08-d15a09d7ab39
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.featured_attendees
+label: 'Featured Attendees'
+targetEntityType: user
+cache: true

@@ -1,0 +1,135 @@
+.featured-attendees {
+  background-color: $grayish;
+  padding: 50px 0;
+
+  .featured-attendees-view {
+
+    header {
+      margin-bottom: 18px;
+
+      text-align: center;
+      @include breakpoint('medium') {
+        text-align: left;
+      }
+
+      h2 {
+        line-height: 1;
+        font-size: 2.625rem;
+        font-family: $monsterrat;
+        font-weight: 700;
+      }
+      .subtitle {
+        font-family: $fairplex-wide;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .featured-attendees-image{
+    display: none;
+  }
+
+  @include breakpoint('medium') {
+    .featured-attendees-image{
+      display: block;
+    }
+    .slick__arrow {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+
+}
+
+.featured-attendee{
+  background-color: #fff;
+  overflow: hidden;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  @include breakpoint('medium') {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+
+  margin-bottom: 20px;
+
+  padding: 20px;
+
+  width: 330px;
+  height: 172px;
+
+  .oval {
+    display: block;
+    width: 180px;
+    height: 180px;
+    background-color: white;
+    position: absolute;
+    border-radius: 300px;
+    z-index: 1;
+    left: -81px;
+    top: -95px;
+
+    &.tealish,
+    .slide--0 &,
+    .slide--4 &,
+    .slide--8 &,
+    .slide--12 &,
+    .slide--16 &,
+    .slide--20 &{
+      background-color: $tealish;
+    }
+    &.gold,
+    .slide--1 &,
+    .slide--5 &,
+    .slide--9 &,
+    .slide--13 &,
+    .slide--17 &,
+    .slide--21 &{
+      background-color: $gold;
+    }
+    &.lightblue,
+    .slide--2 &,
+    .slide--6 &,
+    .slide--10 &,
+    .slide--14 &,
+    .slide--18 &,
+    .slide--22 &{
+      background-color: $lightblue;
+    }
+    &.salmon,
+    .slide--3 &,
+    .slide--7 &,
+    .slide--11 &,
+    .slide--15 &,
+    .slide--19 &,
+    .slide--23 &{
+      background-color: $salmon;
+    }
+  }
+
+  .picture {
+    border-radius: 100px;
+    overflow: hidden;
+    z-index: 2;
+  }
+
+  .details {
+    margin-left: 20px;
+    .details--name {
+      font-size: 1.25rem;
+      font-family: $monsterrat;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .details--username,
+    .details--organization {
+      font-family: $fairplex-wide;
+      font-size: 1.125rem;
+      line-height: 1.33;
+    }
+  }
+}

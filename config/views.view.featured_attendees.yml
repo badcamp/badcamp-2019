@@ -1,0 +1,218 @@
+uuid: 35c57983-f5a4-4a0a-a9a2-f25cea1d7a3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.featured_attendees
+    - entityqueue.entity_queue.featured_attendees
+  module:
+    - entityqueue
+    - slick_views
+    - user
+id: featured_attendees
+label: 'Featured Attendees'
+module: views
+description: ''
+tag: ''
+base_table: users_field_data
+base_field: uid
+core: 8.x
+display:
+  default:
+    display_plugin: default
+    id: default
+    display_title: Master
+    position: 0
+    display_options:
+      access:
+        type: perm
+        options:
+          perm: 'access user profiles'
+      cache:
+        type: tag
+        options: {  }
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: {  }
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        type: none
+        options:
+          offset: 0
+      style:
+        type: slick
+        options:
+          vanilla: true
+          optionset: featured_attendees
+          skin: ''
+          layout: ''
+          caption:
+            name: '0'
+          optionset_thumbnail: ''
+          skin_thumbnail: ''
+          grid: null
+          grid_medium: 1
+          grid_small: 1
+          visible_items: 1
+          preserve_keys: false
+          image: ''
+          thumbnail: ''
+          overlay: ''
+          title: ''
+          link: ''
+          class: ''
+          id: ''
+          override: false
+          overridables:
+            arrows: '0'
+            autoplay: '0'
+            dots: '0'
+            draggable: '0'
+            infinite: '0'
+            mouseWheel: '0'
+            randomize: '0'
+            variableWidth: '0'
+          cache: 0
+          current_view_mode: default
+      row:
+        type: 'entity:user'
+        options:
+          relationship: none
+          view_mode: featured_attendees
+      fields:
+        name:
+          id: name
+          table: users_field_data
+          field: name
+          entity_type: user
+          entity_field: name
+          label: ''
+          alter:
+            alter_text: false
+            make_link: false
+            absolute: false
+            trim: false
+            word_boundary: false
+            ellipsis: false
+            strip_tags: false
+            html: false
+          hide_empty: false
+          empty_zero: false
+          plugin_id: field
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exclude: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_alter_empty: true
+          click_sort_column: value
+          type: user_name
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+      filters:
+        status:
+          value: '1'
+          table: users_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: user
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+      sorts:
+        random:
+          id: random
+          table: views
+          field: random
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: random
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: "<h2>Featured Attendees</h2>\r\n<div class=\"subtitle\">Meet us there!</div>"
+          plugin_id: text_custom
+      footer:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: "<a href=\"#\" class=\"big-button tealish\">Join us! Register now</a>\r\n<a href=\"#\">View all attendees</a>"
+          plugin_id: text_custom
+      empty: {  }
+      relationships:
+        entityqueue_relationship:
+          id: entityqueue_relationship
+          table: users_field_data
+          field: entityqueue_relationship
+          relationship: none
+          group_type: group
+          admin_label: 'User queue'
+          required: true
+          limit_queue: featured_attendees
+          entity_type: user
+          plugin_id: entity_queue
+      arguments: {  }
+      display_extenders: {  }
+      title: 'Featured Attendees'
+      css_class: featured-attendees-view
+    cache_metadata:
+      max-age: 0
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user.permissions
+      tags:
+        - 'config:entityqueue.entity_queue.featured_attendees'
+        - entity_field_info
+        - views_data

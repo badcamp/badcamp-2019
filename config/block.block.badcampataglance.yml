@@ -1,0 +1,35 @@
+uuid: ce6d4577-625c-45df-b3bc-f3a215edaccc
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:content_block:eebce540-df86-4169-8155-c5ed5f2a063b'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - bay_area_camp
+third_party_settings:
+  block_class:
+    classes: badcamp-at-a-glance
+id: badcampataglance
+theme: bay_area_camp
+region: content_full
+weight: -9
+provider: null
+plugin: 'block_content:eebce540-df86-4169-8155-c5ed5f2a063b'
+settings:
+  id: 'block_content:eebce540-df86-4169-8155-c5ed5f2a063b'
+  label: 'BADCamp at a glance'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
