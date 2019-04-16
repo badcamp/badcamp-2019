@@ -8,7 +8,6 @@
 @import "../node_modules/foundation-sites/scss/foundation";
 @import "../node_modules/foundation-sites/scss/util/color";
 @import "../node_modules/foundation-sites/scss/util/util";
-@import "../node_modules/font-awesome/scss/font-awesome";
 
 @include foundation-everything(true, true);
 @import "base/**/*.scss";
