@@ -17,18 +17,14 @@
 #}
 <div>
     {% if title %}
-        <h2>{{ title }}</h2>
+        <h2 class="h3 views-group__h2 views-group__h2--sponsors">{{ title }}</h2>
     {% endif %}
-    <div class="grid-x grid-margin-x">
+    <div class="grid-x grid-margin-x align-middle views-group--sponsors">
     {% for row in rows %}
         {%
             set row_classes = [
             default_row_class ? 'views-row',
-            'auto',
-            'cell',
-            'text-center',
-            'align-middle',
-            'grid-x'
+            'cell small-12 medium-auto text-center'
         ]
         %}
         <div{{ row.attributes.addClass(row_classes) }}>

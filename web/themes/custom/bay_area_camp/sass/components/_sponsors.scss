@@ -1,4 +1,35 @@
-#block-views-block-sponsors-core-sponsors{
+// sponsors view page_1
+.views-group--sponsors {
+  margin-bottom: 4.5em;
+
+  .views-row {
+    margin-bottom: 2.5em;
+    @include breakpoint('medium') {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.views-group__h2--sponsors {
+  color: $coral;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 1.5em 0 2em;
+  @include breakpoint('medium') {
+    text-align: left;
+  }
+
+  border-bottom: $light-gray 1px solid;
+}
+
+.node--view-mode-sponsor-logo {
+  a {
+    border-bottom: none;
+  }
+}
+
+// sponsors view core sponsors block
+#block-views-block-sponsors-core-sponsors {
   h3 {
     text-align: center;
     margin: 0 0 45px 0;
