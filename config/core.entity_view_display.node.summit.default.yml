@@ -1,0 +1,37 @@
+uuid: 8a3c5cd6-f073-42e4-9198-e5d0981086a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.summit.body
+    - field.field.node.summit.field_members
+    - node.type.summit
+  module:
+    - text
+    - user
+id: node.summit.default
+targetEntityType: node
+bundle: summit
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_members:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

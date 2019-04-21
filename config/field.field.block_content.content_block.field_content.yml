@@ -6,7 +6,12 @@ dependencies:
     - block_content.type.content_block
     - field.storage.block_content.field_content
   module:
+    - custom_add_another
     - entity_reference_revisions
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 id: block_content.content_block.field_content
 field_name: field_content
 entity_type: block_content

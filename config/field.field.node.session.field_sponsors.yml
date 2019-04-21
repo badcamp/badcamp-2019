@@ -1,0 +1,35 @@
+uuid: 5a17ea82-df12-49a8-b254-83d42efeea62
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sponsors
+    - node.type.session
+    - node.type.sponsor
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.session.field_sponsors
+field_name: field_sponsors
+entity_type: node
+bundle: session
+label: Sponsors
+description: 'List of sponsors who are responsible for this session.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      sponsor: sponsor
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

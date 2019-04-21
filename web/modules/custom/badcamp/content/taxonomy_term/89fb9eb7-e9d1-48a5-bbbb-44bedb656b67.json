@@ -1,0 +1,77 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/taxonomy\/term\/2?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/sponsor_level"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/sponsor_level\/parent": [
+            null
+        ]
+    },
+    "tid": [
+        {
+            "value": 2
+        }
+    ],
+    "uuid": [
+        {
+            "value": "89fb9eb7-e9d1-48a5-bbbb-44bedb656b67"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "sponsor_level"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "name": [
+        {
+            "value": "Contrib Sponsor",
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": 1
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/sponsor_level\/parent": [
+            null
+        ]
+    },
+    "changed": [
+        {
+            "value": "2019-03-16T20:44:42+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "Contrib Sponsor | Bay Area Drupal Camp - 2019",
+                "canonical_url": "http:\/\/default\/taxonomy\/term\/2"
+            }
+        }
+    ]
+}

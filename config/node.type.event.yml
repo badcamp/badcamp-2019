@@ -1,0 +1,17 @@
+uuid: 9df0a9df-efa2-486e-90d0-611e0accf201
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Event
+type: event
+description: 'Events are used to show parties, breaks, or keynotes. These can be other items that also do not fall in the category of training or a session.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

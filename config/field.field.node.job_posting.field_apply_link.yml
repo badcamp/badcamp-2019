@@ -1,0 +1,28 @@
+uuid: 70a62af3-c4dc-4321-9fc9-d1e38c43f758
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_apply_link
+    - node.type.job_posting
+  module:
+    - custom_add_another
+    - link
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.job_posting.field_apply_link
+field_name: field_apply_link
+entity_type: node
+bundle: job_posting
+label: 'Apply Link'
+description: 'Link where the person can go to apply for the position.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

@@ -1,0 +1,17 @@
+uuid: f60e22a8-92b3-49d0-914d-86c9973eabbb
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Session
+type: session
+description: 'Sessions are presentations by people on different topics. These usually are short 30-60 min.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

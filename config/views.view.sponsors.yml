@@ -15,7 +15,7 @@ dependencies:
 id: sponsors
 label: Sponsors
 module: views
-description: ''
+description: 'List of sponsors'
 tag: ''
 base_table: node_field_data
 base_field: nid
@@ -234,9 +234,9 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  page_1:
-    display_plugin: page
-    id: page_1
+  listing:
+    display_plugin: embed
+    id: listing
     display_title: 'All Sponsors'
     position: 2
     display_options:
@@ -249,7 +249,6 @@ display:
         relationships: false
         sorts: false
         fields: false
-      path: sponsors
       filters:
         status:
           value: '1'
