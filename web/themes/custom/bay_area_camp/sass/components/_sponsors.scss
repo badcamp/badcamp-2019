@@ -46,7 +46,7 @@
 // sponsors node page
 .node--type-sponsor {
   .field--sponsor-text {
-    padding: 1em 0;
+    padding: 1em 0 2em;
     @include breakpoint('medium') {
       padding-right: 3em;
     }
