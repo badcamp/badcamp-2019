@@ -13,7 +13,7 @@
 .views-group__h2--sponsors {
   color: $coral;
   text-transform: uppercase;
-  margin: 1.5em 0 2em;
+  margin: 1.5em 0 2.5em;
   border-bottom: $light-gray 1px solid;
 }
 
@@ -23,11 +23,11 @@
   }
 }
 
-// sponsors view core sponsors block
 #block-views-block-sponsors-core-sponsors {
-  h3 {
+  background: $grayish;
+  h2 {
     text-align: center;
-    margin: 0 0 45px 0;
+    margin: 0 0 1.5em 0;
   }
-  padding: 72px 0;
+  padding: 3em 0 3.5em 0;
 }
