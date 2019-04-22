@@ -13,12 +13,7 @@
 .views-group__h2--sponsors {
   color: $coral;
   text-transform: uppercase;
-  text-align: center;
   margin: 1.5em 0 2em;
-  @include breakpoint('medium') {
-    text-align: left;
-  }
-
   border-bottom: $light-gray 1px solid;
 }
 
