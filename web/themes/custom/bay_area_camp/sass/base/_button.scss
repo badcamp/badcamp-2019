@@ -1,3 +1,39 @@
+.button {
+  @include border-radius(27px);
+
+  font-family: $monsterrat;
+  font-size: 0.875em;
+  font-weight: 700;
+  line-height: 0.875;
+  text-align: center;
+  text-transform: uppercase;
+
+  &.salmon {
+    background-color: $salmon;
+    color: $navy;
+  }
+  &.tealish {
+    background-color: $tealish;
+    color: $navy;
+  }
+}
+
+.big-button {
+  @extend .button;
+
+  font-size: 1.1875em;
+  line-height: 1;
+
+  &.salmon {
+    background-color: $salmon;
+    color: $navy;
+  }
+  &.tealish {
+    background-color: $tealish;
+    color: $navy;
+  }
+}
+
 ////.button {
 ////  color: $navy;
 ////  background-color: $acqua;
@@ -66,22 +102,3 @@
 //  transform: translateX(0%);
 //  opacity: 0.25;
 //}
-
-
-.big-button {
-  @include border-radius(27px);
-
-  font-family: $monsterrat;
-  font-size: 1.1875em;
-  font-weight: 700;
-  line-height: 1;
-  text-align: center;
-  text-transform: uppercase;
-
-  &.salmon {
-    background-color: $salmon;
-  }
-  &.tealish {
-    background-color: $tealish;
-  }
-}
