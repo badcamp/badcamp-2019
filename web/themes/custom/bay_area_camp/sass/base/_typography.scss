@@ -1,0 +1,24 @@
+// reuseable classes from styleguide and beyond
+.icon-text {
+  font-family: $fairplex-wide;
+  font-size: rem-calc(22);
+  line-height: rem-calc(26);
+}
+
+.paragraph-large {
+  font-family: $fairplex-wide;
+  font-size: rem-calc(22);
+  line-height: rem-calc(34);
+}
+
+.attendee-name {
+  font-family: $monsterrat;
+  font-weight: bold;
+  font-size: rem-calc(20);
+}
+
+.attendee-info {
+  font-family: $fairplex-wide;
+  font-size: rem-calc(18);
+  line-height: rem-calc(24);
+}

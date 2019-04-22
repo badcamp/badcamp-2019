@@ -34,6 +34,17 @@ composer_install ()
   composer install --ansi
 }
 
+install_theme ()
+{
+  echo "Installing Gulp CLI..."
+  npm install -g gulp-cli
+  cd ${PROJECT_ROOT}/web/theme/bay_area_camp/
+  echo "Installing Theme Packages..."
+  npm install
+  echo "Compiling Theme..."
+  gulp
+}
+
 #-------------------------- END: Functions --------------------------------
 
 #-------------------------- Execution --------------------------------
@@ -41,5 +52,6 @@ composer_install ()
 # Project initialization steps
 composer_install
 fix_permissions
+install_theme()
 eval ${PROJECT_ROOT}/.docksal/commands/refresh
 #-------------------------- END: Execution --------------------------------

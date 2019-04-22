@@ -1,0 +1,8 @@
+
+badcamp.attendees_list:
+  path: '/node/{node}/attendees'
+  defaults:
+    _controller: '\Drupal\badcamp\Controller\MembersController::attendeesList'
+    _title: 'Attendees'
+  requirements:
+    _custom_access: '\Drupal\badcamp\Controller\MembersController::access'

@@ -6,6 +6,12 @@ dependencies:
     - field.storage.node.field_sponsor_level
     - node.type.sponsor
     - taxonomy.vocabulary.sponsor_level
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 id: node.sponsor.field_sponsor_level
 field_name: field_sponsor_level
 entity_type: node

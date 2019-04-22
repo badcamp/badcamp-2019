@@ -1,0 +1,17 @@
+uuid: 4bc130f5-c059-46e3-ac3a-6d886d279ff1
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Summit
+type: summit
+description: 'Summits are a group event that focus on specific topics. Some possible examples are Higher Ed, Front End, Non-Profit, DevOps, etc. These are also limited in size and require people to register.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

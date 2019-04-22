@@ -6,13 +6,12 @@ dependencies:
     - menu_ui
 third_party_settings:
   menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
+    available_menus: {  }
+    parent: ''
 name: Sponsor
 type: sponsor
-description: ''
+description: 'Sponsors help run the conference by donating time or financially donating to help fund the conference.'
 help: ''
-new_revision: true
+new_revision: false
 preview_mode: 1
 display_submitted: false
