@@ -1,3 +1,10 @@
+.sponsor-level {
+  font-family: $monsterrat;
+  color: $coral;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
 // sponsors view page_1
 .views-group--sponsors {
   margin-bottom: 4.5em;
@@ -11,8 +18,7 @@
 }
 
 .views-group__h2--sponsors {
-  color: $coral;
-  text-transform: uppercase;
+  @extend .sponsor-level;
   margin: 1.5em 0 2.5em;
   border-bottom: $light-gray 1px solid;
 }
@@ -23,15 +29,30 @@
   }
 }
 
+// sponsors footer block
 #block-views-block-sponsors-core-sponsors {
   background: $grayish;
+  padding: 3em 0 3.5em 0;
   h2 {
     text-align: center;
     margin: 0 0 1.5em 0;
   }
-  padding: 3em 0 3.5em 0;
 }
 
 .path-frontpage #block-views-block-sponsors-core-sponsors {
   background: $white;
+}
+
+// sponsors node page
+.node--type-sponsor {
+  .field--sponsor-text {
+    padding: 1em 0;
+    @include breakpoint('medium') {
+      padding-right: 3em;
+    }
+  }
+  .field--sponsor-level {
+    @extend .sponsor-level;
+    margin-bottom: 1.5em;
+  }
 }

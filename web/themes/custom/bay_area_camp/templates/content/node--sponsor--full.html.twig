@@ -73,12 +73,12 @@
 <article{{ attributes }}>
     <div{{ content_attributes }}>
         <div class="grid-x">
-            <div class="small-12 small-order-2 medium-order-1 medium-9">
+            <div class="field--sponsor-text small-12 small-order-2 medium-order-1 medium-9">
                 {{ content.field_sponsor_description }}
             </div>
-            <div class="text-center small-12 small-order-1 medium-order-2 medium-3">
+            <div class="field--sponsor-logo text-center small-12 small-order-1 medium-order-2 medium-3">
                 <a href="{{ sponsor_url }}" title="{{ title }}">{{ content.field_sponsor_logo }}</a><br/>
-                <div>{{ content.field_sponsor_level }}</div>
+                <div class="field--sponsor-level">{{ content.field_sponsor_level }}</div>
             </div>
         </div>
 
