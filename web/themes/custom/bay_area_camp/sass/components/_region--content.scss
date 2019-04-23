@@ -1,7 +1,3 @@
-.region--content {
-  padding: 0;
-}
-
 .page-heading {
   font-size: 3.25rem;
   font-family: $monsterrat;
@@ -16,8 +12,6 @@
   font-family: $fairplex-wide;
 }
 
-
-
 .badcamp-at-a-glance {
   background-color: $grayish;
   padding: 17px 0;
@@ -25,8 +19,7 @@
     padding: 40px 27px 36px;
   }
 
-  .stat{
-
+  .stat {
     font-size: 3rem;
     line-height: 1;
 
@@ -53,12 +46,12 @@
     font-family: $fairplex-wide;
   }
 
-  .section1{
+  .section1 {
     font-size: 2.625em;
     font-family: $monsterrat;
     font-weight: bold;
     line-height: 1;
-    p{
+    p {
       line-height: 1;
     }
 
@@ -69,17 +62,17 @@
       }
     }
   }
-  .section2{
-
+  .section2 {
   }
-  .section3{
-
+  .section3 {
   }
-  .section4{
-
+  .section4 {
   }
 
-  .section1, .section2, .section3, .section4{
+  .section1,
+  .section2,
+  .section3,
+  .section4 {
     margin: 1em 0;
     @include breakpoint('medium') {
       margin: 0;
@@ -88,7 +81,6 @@
 }
 
 .event-details {
-
   h2 {
     text-align: center;
     font-size: 2.625em;
@@ -113,18 +105,16 @@
       line-height: 1.5;
     }
 
-    a{
+    a {
       font-family: $monsterrat;
       font-weight: 700;
       font-size: 1rem;
       text-decoration: underline;
       &:after {
-
       }
     }
   }
   .event-detail-image {
-
   }
 
   margin-bottom: 51px;
