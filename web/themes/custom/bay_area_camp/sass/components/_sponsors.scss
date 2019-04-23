@@ -41,6 +41,9 @@
     text-align: center;
     margin: 0 0 1.5em 0;
   }
+  .button {
+    margin-top: 1.5em;
+  }
 }
 
 .path-frontpage #block-views-block-sponsors-core-sponsors {
@@ -57,6 +60,14 @@
   }
   .field--sponsor-level {
     @extend .sponsor-level;
+    font-size: rem-calc(20);
     margin-bottom: 1.5em;
+  }
+  .callout--sponsors {
+    font-size: rem-calc(30);
+    padding: 0.5em 0.75em;
+  }
+  .sponsor-team-member {
+    padding: 2em 0;
   }
 }
