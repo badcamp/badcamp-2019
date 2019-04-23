@@ -1,0 +1,15 @@
+uuid: 43f7ca26-26e3-4a2b-994b-5abebeb72b44
+langcode: en
+status: true
+dependencies: {  }
+name: user_profile
+label: 'User Profile'
+effects:
+  ace35733-ca26-4c86-95f3-9260f77faeee:
+    uuid: ace35733-ca26-4c86-95f3-9260f77faeee
+    id: image_scale
+    weight: 2
+    data:
+      width: 160
+      height: 160
+      upscale: true
