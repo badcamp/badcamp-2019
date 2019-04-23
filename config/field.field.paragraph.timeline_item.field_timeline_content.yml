@@ -1,0 +1,26 @@
+uuid: 5d7b0fd6-348b-480c-b139-1f75fa882eae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_timeline_content
+    - paragraphs.paragraphs_type.timeline_item
+  module:
+    - custom_add_another
+    - text
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: paragraph.timeline_item.field_timeline_content
+field_name: field_timeline_content
+entity_type: paragraph
+bundle: timeline_item
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

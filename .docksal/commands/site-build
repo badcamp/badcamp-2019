@@ -22,7 +22,7 @@ echo "Running Drush Cache-Rebuild"
 ${PROJECT_ROOT}/bin/drupal cr
 
 echo "Running Gulp Tasks on theme"
-cd ${PROJECT_ROOT}/web/themes/custom/badcamp*
+cd ${PROJECT_ROOT}/web/themes/custom/bay_area_camp
 npm i -g npm@latest
 npm install -g gulp-cli
 npm install

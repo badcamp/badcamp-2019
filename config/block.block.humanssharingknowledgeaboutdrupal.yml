@@ -1,0 +1,28 @@
+uuid: 47bebe12-728d-4954-a43b-7c1280a59992
+langcode: en
+status: false
+dependencies:
+  config:
+    - simple_block.simple_block.sharing_knowledge
+  module:
+    - simple_block
+    - system
+  theme:
+    - bay_area_camp
+id: humanssharingknowledgeaboutdrupal
+theme: bay_area_camp
+region: header
+weight: 0
+provider: null
+plugin: 'simple_block:sharing_knowledge'
+settings:
+  id: 'simple_block:sharing_knowledge'
+  label: 'Humans Sharing Knowledge About Drupal'
+  provider: simple_block
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

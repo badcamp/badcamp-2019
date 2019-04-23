@@ -1,0 +1,34 @@
+.branding-wrapper {
+  .logo-wrapper {
+    margin-right: 1em;
+    max-width: 77px;
+  }
+  .title-wrapper {
+    font-family: $monsterrat;
+    font-weight: 700;
+    text-transform: uppercase;
+    .title {
+      font-size: 1.8125rem;
+      @include breakpoint('medium') {
+        font-size: 4.5rem;
+      }
+      line-height: 1;
+    }
+  }
+
+  .subtitle{
+    line-height: 1;
+    .location, .location-date {
+      display: block;
+      @include breakpoint('medium') {
+        display: inline-block;
+      }
+    }
+    .separator {
+      display: none;
+      @include breakpoint('medium') {
+        display: inline-block;
+      }
+    }
+  }
+}

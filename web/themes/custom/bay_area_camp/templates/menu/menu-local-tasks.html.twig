@@ -1,0 +1,34 @@
+{#
+/**
+ * @file
+ * Theme override to display primary and secondary local tasks.
+ *
+ * Available variables:
+ * - primary: HTML list items representing primary tasks.
+ * - secondary: HTML list items representing primary tasks.
+ *
+ * Each item in these variables (primary and secondary) can be individually
+ * themed in menu-local-task.html.twig.
+ */
+#}
+
+{% if is_admin %}
+  <div id="tabs-wrapper">
+    <div class="tabs-list">
+      {% if primary %}
+        <ul class="menu tabs primary">{{ primary }}</ul>
+      {% endif %}
+      {% if secondary %}
+        <ul class="menu tabs secondary">{{ secondary }}</ul>
+      {% endif %}
+    </div>
+    <a href="#" class="tabs-trigger">Admin<i class="fa fa-cog"></i></a>
+  </div>
+{% else %}
+    {% if primary %}
+      <ul class="menu">{{ primary }}</ul>
+    {% endif %}
+    {% if secondary %}
+      <ul class="menu">{{ secondary }}</ul>
+    {% endif %}
+{% endif %}

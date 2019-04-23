@@ -1,0 +1,25 @@
+uuid: d06b39d6-953b-4783-b7e3-8f054e2fc21c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:content_block:614638de-54a1-4da2-a2a4-acfee9119a10'
+  module:
+    - block_content
+  theme:
+    - bay_area_camp
+id: footerbanner
+theme: bay_area_camp
+region: footer
+weight: -8
+provider: null
+plugin: 'block_content:614638de-54a1-4da2-a2a4-acfee9119a10'
+settings:
+  id: 'block_content:614638de-54a1-4da2-a2a4-acfee9119a10'
+  label: 'Footer Banner'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

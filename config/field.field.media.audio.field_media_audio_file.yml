@@ -6,7 +6,12 @@ dependencies:
     - field.storage.media.field_media_audio_file
     - media.type.audio
   module:
+    - custom_add_another
     - file
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
 _core:
   default_config_hash: sI-7KvS4Qbg6EucALXjwYEotxgxUfH-bMC19yTpZ1kw
 id: media.audio.field_media_audio_file

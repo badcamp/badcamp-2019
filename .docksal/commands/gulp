@@ -10,6 +10,6 @@
 # Abort if anything fails
 set -e
 
-cd ${PROJECT_ROOT}/web/themes/custom/*
+cd ${PROJECT_ROOT}/web/themes/custom/bay_area_camp
 
 gulp "$@"

@@ -1,0 +1,12 @@
+a {
+  &.arrow {
+    &:after {
+      font-family: $font-awesome;
+      content: '\f061';
+    }
+  }
+
+  //font-family: $monsterrat;
+  //font-size: 1.125rem;
+  border-bottom: 3px solid $lightblue;
+}

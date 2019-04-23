@@ -1,0 +1,22 @@
+uuid: 663e3496-9d6a-4f53-899f-cae0d88564e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.see_you_in_october
+  module:
+    - simple_block
+  theme:
+    - bay_area_camp
+id: seeyouinoctober
+theme: bay_area_camp
+region: footer_left
+weight: 0
+provider: null
+plugin: 'simple_block:see_you_in_october'
+settings:
+  id: 'simple_block:see_you_in_october'
+  label: 'See You In October'
+  provider: simple_block
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,10 @@
+two_column:
+  label: 'Two column'
+  category: 'Bay Area Camp'
+  template: templates/layouts/two-column
+  default_region: main
+  regions:
+    left:
+      label: Left Side
+    right:
+      label: Right Side

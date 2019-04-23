@@ -1,7 +1,7 @@
 # https://circleci.com/docs/2.0/workflows/#using-workspaces-to-share-data-among-jobs
 defaults: &defaults
   docker:
-    - image: quay.io/pantheon-public/build-tools-ci:1.x
+    - image: quay.io/pantheon-public/build-tools-ci:4.x
   working_directory: ~/example_drops_8_composer
   environment:
     #=========================================================================
@@ -92,13 +92,13 @@ jobs:
           - run:
               name: Install NPM Packages
               command: npm install
-              path: web/themes/custom/badcamp_2019/
+              path: web/themes/custom/bay_area_camp/
           - run:
               name: Compile CSS and JS files
               command: gulp
-              path: web/themes/custom/badcamp_2019/
+              path: web/themes/custom/bay_area_camp/
           - persist_to_workspace:
-              root: web/themes/custom/badcamp_2019
+              root: web/themes/custom/bay_area_camp
               paths:
                   - css
                   - js
@@ -109,7 +109,7 @@ jobs:
             - checkout
 
             - attach_workspace:
-                at: web/themes/custom/badcamp_2019/
+                at: web/themes/custom/bay_area_camp/
 
             - restore_cache:
                 keys:

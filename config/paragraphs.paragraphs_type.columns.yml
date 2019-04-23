@@ -1,0 +1,17 @@
+uuid: 4b42dc74-8024-4e1f-805a-72936452630c
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_class
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: columns
+label: Columns
+icon_uuid: null
+description: ''
+behavior_plugins:
+  paragraphs_class_paragraph_class:
+    enabled: true

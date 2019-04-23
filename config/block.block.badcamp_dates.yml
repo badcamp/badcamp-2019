@@ -1,0 +1,22 @@
+uuid: 068641d7-ab7b-4f7a-9c7e-abf557ebf0e0
+langcode: en
+status: false
+dependencies:
+  config:
+    - simple_block.simple_block.badcamp_dates
+  module:
+    - simple_block
+  theme:
+    - bay_area_camp
+id: badcamp_dates
+theme: bay_area_camp
+region: header_right
+weight: -6
+provider: null
+plugin: 'simple_block:badcamp_dates'
+settings:
+  id: 'simple_block:badcamp_dates'
+  label: 'BADCamp Dates'
+  provider: simple_block
+  label_display: '0'
+visibility: {  }

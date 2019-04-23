@@ -1,25 +1,34 @@
-uuid: 5170160a-b492-4b0d-a037-f23a92f09190
+uuid: d93955f9-4f82-403e-a0c0-fc83adaab205
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.content_block
-    - field.field.block_content.content_block.body
-    - field.field.block_content.content_block.layout_builder__layout
+    - field.field.block_content.content_block.field_content
   module:
-    - text
+    - paragraphs
 id: block_content.content_block.default
 targetEntityType: block_content
 bundle: content_block
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
+  field_content:
+    type: paragraphs
     weight: 26
     settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
+      title: Content
+      title_plural: Content
+      edit_mode: closed_expand_nested
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: add_above
     third_party_settings: {  }
     region: content
   info:
@@ -30,5 +39,4 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden:
-  layout_builder__layout: true
+hidden: {  }

@@ -1,0 +1,11 @@
+uuid: 6707caef-6afd-49b0-b847-a20c4027ed64
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+id: see_you_in_october
+title: 'See You In October'
+content:
+  value: "<p>See You In October!</p>\r\n"
+  format: basic_html

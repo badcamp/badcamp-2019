@@ -4,35 +4,33 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.sponsor_logo
-    - field.field.node.sponsor.field_logo
     - field.field.node.sponsor.field_members
     - field.field.node.sponsor.field_sponsor_description
+    - field.field.node.sponsor.field_sponsor_level
+    - field.field.node.sponsor.field_sponsor_logo
     - field.field.node.sponsor.field_url
+    - image.style.sponsor_logo
     - node.type.sponsor
   module:
-    - layout_builder
+    - image
     - user
-third_party_settings:
-  layout_builder:
-    sections: {  }
-    allow_custom: false
-    enabled: false
 id: node.sponsor.sponsor_logo
 targetEntityType: node
 bundle: sponsor
 mode: sponsor_logo
 content:
-  field_logo:
-    type: entity_reference_entity_view
+  field_sponsor_logo:
+    type: image
     weight: 0
+    region: content
     label: hidden
     settings:
-      view_mode: sponsor_logo
-      link: false
+      image_style: sponsor_logo
+      image_link: content
     third_party_settings: {  }
-    region: content
 hidden:
   field_members: true
   field_sponsor_description: true
+  field_sponsor_level: true
   field_url: true
   links: true

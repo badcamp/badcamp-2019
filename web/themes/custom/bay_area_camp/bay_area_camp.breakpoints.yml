@@ -1,0 +1,63 @@
+bay_area_camp.screen-small-max:
+  label: screen-small-max
+  mediaQuery: 'all and (max-width: 639px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+
+bay_area_camp.screen-medium-min:
+  label: screen-medium-min
+  mediaQuery: 'all and (min-width: 640px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+
+bay_area_camp.screen-medium-max:
+  label: screen-medium-max
+  mediaQuery: 'all and (max-width: 1023px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+
+bay_area_camp.screen-large-min:
+  label: screen-large-min
+  mediaQuery: 'all and (min-width: 1024px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+
+bay_area_camp.screen-large-max:
+  label: screen-large-max
+  mediaQuery: 'all and (max-width: 1199px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+
+bay_area_camp.screen-xlarge-min:
+  label: screen-xlarge-min
+  mediaQuery: 'all and (min-width: 1200px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+
+bay_area_camp.screen-xlarge-max:
+  label: screen-xlarge-max
+  mediaQuery: 'all and (max-width: 1439px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+
+bay_area_camp.screen-xxlarge-min:
+  label: screen-xxlarge-min
+  mediaQuery: 'all and (min-width: 1440px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x

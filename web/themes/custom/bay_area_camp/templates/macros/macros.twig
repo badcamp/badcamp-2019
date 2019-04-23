@@ -1,0 +1,56 @@
+{##
+ # All arguments are the same as core's menu_links macro, except for details,
+ # which contains:
+ #
+ # An array of settings that can be applied to each level of the menu tree.
+ # - Each array index corresponds to each level of the tree being displayed.
+ # - Each set of settings is an object that can contain the following
+ #   properties:
+ # -- classes: A string or array containing classes to be added to the menu
+ #    level's <ul> tag
+ # -- attributes: An object with properties defining each attribute that should
+ #    be added to the unordered list. ex: An attribute such as `data-dropdown`
+ #    will allow the <ul> to use foundation's dropdown menu component.
+ # -- prevent_dropdown: boolean that will wrap the <ul> in a <div> to prevent
+ #    nesting of foundation's dropdown component.
+ #
+ # ex: {% set details = [
+ #   {'classes': 'dropdown', 'attributes': {'data-vertical-class': '', 'data-dropdown-menu': ''}},
+ #   {'classes': 'horizontal'},
+ #   {'classes': 'vertical', 'prevent_dropdown': true}
+ #   ] %}
+ #
+ #}
+{% macro foundation_menu_links(items, attributes, menu_level, details) %}
+    {% import _self as menus %}
+    {% if items %}
+        {% set attributes = attributes.addClass(details[menu_level].classes) %}
+        {% for attr, val in details[menu_level].attributes %}
+            {% set attributes = attributes.setAttribute(attr, val) %}
+        {% endfor %}
+
+        {##
+         # Foundation nested dropdown functionality can be prevented by adding
+         # a div between the parent list item and the nested list.
+         #}
+        {% if details[menu_level].prevent_dropdown %}
+            <div class="foundation-dropdown-preventer">
+        {% endif %}
+        <ul{{ attributes.addClass(['menu', 'menu-level-' ~ menu_level]) }}>
+            {% set attributes = attributes.removeClass(['menu', 'menu-level-' ~ menu_level]) %}
+            {% set leaf_count = 0 %}
+            {% for item in items %}
+                <li{{ item.attributes.removeClass('is-active').addClass('leaf-' ~ leaf_count) }}>
+                    {{ link(item.title, item.url) }}
+                    {% if item.below %}
+                        {{ menus.foundation_menu_links(item.below, attributes, menu_level + 1, details) }}
+                    {% endif %}
+                </li>
+                {% set leaf_count = leaf_count + 1 %}
+            {% endfor %}
+        </ul>
+        {% if details[menu_level].prevent_dropdown %}
+            </div>
+        {% endif %}
+    {% endif %}
+{% endmacro %}

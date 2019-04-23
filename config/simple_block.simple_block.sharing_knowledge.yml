@@ -1,0 +1,11 @@
+uuid: f4b56055-86fd-448f-a06a-5e95b4998bf2
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+id: sharing_knowledge
+title: 'Humans Sharing Knowledge About Drupal'
+content:
+  value: "<p>BADCamp is a Drupal conference for the people. It's an annual celebration of open-source software in Berkeley, California.</p>\r\n\r\n<p>Join us this October 2 - 5&nbsp;for four days of talks, trainings, summits, sprints and socials with some of the brightest minds from all over the world, all for FREE!</p>\r\n"
+  format: basic_html

@@ -1,0 +1,22 @@
+uuid: 2dd864ce-04b2-4548-9d0e-001829f025d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - bay_area_camp
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: bay_area_camp_help
+theme: bay_area_camp
+region: help
+weight: -6
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

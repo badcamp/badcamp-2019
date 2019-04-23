@@ -1,0 +1,46 @@
+uuid: 56cac52d-cf88-4826-8705-71b4c812fe4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.timeline_section.field_timeline_item
+    - field.field.paragraph.timeline_section.field_timeline_section_title
+    - paragraphs.paragraphs_type.timeline_section
+  module:
+    - paragraphs
+id: paragraph.timeline_section.default
+targetEntityType: paragraph
+bundle: timeline_section
+mode: default
+content:
+  field_timeline_item:
+    type: paragraphs
+    weight: 1
+    settings:
+      title: Item
+      title_plural: Items
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: timeline_item
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: '0'
+    third_party_settings: {  }
+    region: content
+  field_timeline_section_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

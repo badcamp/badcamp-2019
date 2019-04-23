@@ -1,0 +1,22 @@
+uuid: 38c4ec35-da6f-4dc3-8d42-a3f59bd7a1ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - entityqueue.entity_queue.featured_attendees
+id: entity_subqueue.featured_attendees.default
+targetEntityType: entity_subqueue
+bundle: featured_attendees
+mode: default
+content:
+  items:
+    label: hidden
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    settings:
+      view_mode: featured_attendees
+      link: false
+    third_party_settings: {  }
+hidden:
+  title: true

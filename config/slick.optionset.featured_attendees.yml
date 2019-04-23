@@ -1,0 +1,37 @@
+uuid: 0702adc6-fa71-4b26-9773-772a7ec5e515
+langcode: en
+status: true
+dependencies: {  }
+id: featured_attendees
+name: featured_attendees
+label: 'Featured Attendees'
+weight: 0
+group: ''
+skin: grid
+breakpoints: 1
+optimized: true
+options:
+  options__active_tab: edit-options-responsives
+  settings:
+    draggable: false
+    lazyLoad: ondemand
+    rows: 2
+    slidesToShow: 2
+    slidesToScroll: 2
+    swipe: false
+    touchMove: false
+  responsives:
+    responsive:
+      -
+        breakpoint: 640
+        unslick: false
+        settings:
+          arrows: false
+          draggable: false
+          infinite: false
+          slidesToShow: 4
+          slidesToScroll: 4
+          swipe: false
+          touchMove: false
+          vertical: true
+          waitForAnimate: false

@@ -1,0 +1,28 @@
+uuid: 1bfe3de4-ec3f-4b5d-9be5-41e7e1d559ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_status
+    - node.type.session
+  module:
+    - custom_add_another
+    - options
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.session.field_status
+field_name: field_status
+entity_type: node
+bundle: session
+label: Status
+description: 'Status of the session.'
+required: true
+translatable: false
+default_value:
+  -
+    value: pending
+default_value_callback: ''
+settings: {  }
+field_type: list_string

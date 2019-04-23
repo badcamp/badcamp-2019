@@ -1,0 +1,49 @@
+//footer {
+//  .footer-lower-wrapper{
+//    padding: 1em 0;
+//    .footer-right-column {
+//      text-align: center;
+//      @include breakpoint('medium') {
+//        text-align: right;
+//      }
+//    }
+//  }
+//}
+
+footer {
+  .footer-lower-wrapper {
+    padding: 2em 0;
+  }
+  #block-bay-area-camp-builtbythecommunity{
+    p {
+      text-align: right;
+      font-family: $fairplex-wide;
+      font-size: 1.125em;
+    }
+  }
+
+  #block-footerbanner{
+    display: none;
+    @include breakpoint('medium'){
+      display: block;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+#block-seeyouinoctober {
+  p {
+    text-align: center;
+
+    text-transform: uppercase;
+    font-family: $monsterrat;
+    font-weight: 700;
+    font-size: 1.125rem;
+
+    @include breakpoint('medium') {
+      text-align: left;
+    }
+  }
+}

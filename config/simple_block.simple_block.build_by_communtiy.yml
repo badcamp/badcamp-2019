@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.basic_html
+    - filter.format.full_html
 id: build_by_communtiy
 title: 'Built By The Community'
 content:
-  value: "<p>Built by the community with&nbsp;<a href=\"http://www.drupal.org/\">Drupal</a>&nbsp;and hosted on&nbsp;<a href=\"http://www.pantheon.io/\">Pantheon</a>.</p>\r\n"
-  format: basic_html
+  value: "<p><a href=\"/contact\">Contact Us</a> - Built by the community with&nbsp;<a href=\"http://www.drupal.org/\">Drupal</a>&nbsp;and hosted on&nbsp;<a href=\"http://www.pantheon.io/\">Pantheon</a>.</p>\r\n"
+  format: full_html

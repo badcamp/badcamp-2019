@@ -1,0 +1,30 @@
+uuid: 61822ef4-f60c-4273-9c17-9eda62bc4441
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.summit.body
+    - node.type.summit
+  module:
+    - text
+    - user
+id: node.summit.teaser
+targetEntityType: node
+bundle: summit
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

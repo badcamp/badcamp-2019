@@ -1,0 +1,25 @@
+name: Bay Area Camp
+type: theme
+description: 'General design for Bay Area Drupal Camp.'
+package: Other
+core: 8.x
+libraries:
+  - bay_area_camp/global-css
+  - bay_area_camp/global-js
+ 
+regions:
+  top_navigation: 'Top Navigation'
+  navigation: 'Navigation'
+  header_left: 'Header left'
+  header_right: 'Header right'
+  header: 'Header'
+  highlighted: 'Highlighted'
+  content_full: 'Content Full Width'
+  info: 'Info'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: 'Footer'
+  footer_left: 'Footer Left'
+  footer_right: 'Footer Right'

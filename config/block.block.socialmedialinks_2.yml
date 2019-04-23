@@ -1,0 +1,112 @@
+uuid: 7353eb4e-1e6b-4e01-8f0f-d4268594be7b
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_media_links
+  theme:
+    - bay_area_camp
+id: socialmedialinks_2
+theme: bay_area_camp
+region: header_right
+weight: -8
+provider: null
+plugin: social_media_links_block
+settings:
+  id: social_media_links_block
+  label: 'Social Media Links'
+  provider: social_media_links
+  label_display: '0'
+  platforms:
+    rss:
+      value: ''
+      description: ''
+      weight: '-30'
+    email:
+      value: ''
+      description: ''
+      weight: '-29'
+    contact:
+      value: contact
+      description: ''
+      weight: '-28'
+    youtube_channel:
+      value: UCIJw4y2Iyv6ESwjY5rmOl7w
+      description: ''
+      weight: '-27'
+    instagram:
+      value: ''
+      description: ''
+      weight: '-26'
+    vimeo:
+      value: ''
+      description: ''
+      weight: '-25'
+    github:
+      value: ''
+      description: ''
+      weight: '-24'
+    bitbucket:
+      value: ''
+      description: ''
+      weight: '-23'
+    drupal:
+      value: ''
+      description: ''
+      weight: '-22'
+    tumblr:
+      value: ''
+      description: ''
+      weight: '-21'
+    behance:
+      value: ''
+      description: ''
+      weight: '-20'
+    flickr:
+      value: ''
+      description: ''
+      weight: '-19'
+    linkedin:
+      value: ''
+      description: ''
+      weight: '-18'
+    twitter:
+      value: badcamp
+      description: ''
+      weight: '-17'
+    youtube:
+      value: ''
+      description: ''
+      weight: '-16'
+    pinterest:
+      value: ''
+      description: ''
+      weight: '-15'
+    vkontakte:
+      value: ''
+      description: ''
+      weight: '-14'
+    facebook:
+      value: BayAreaDrupalCamp
+      description: ''
+      weight: '-13'
+    googleplus:
+      value: ''
+      description: ''
+      weight: '-12'
+    slideshare:
+      value: ''
+      description: ''
+      weight: '-11'
+  appearance:
+    orientation: h
+    show_name: 0
+  link_attributes:
+    target: '<none>'
+    rel: nofollow
+  iconset:
+    style: 'fontawesome:2x'
+    installed_iconsets:
+      fontawesome:
+        examples: ''
+visibility: {  }

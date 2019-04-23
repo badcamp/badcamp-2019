@@ -1,0 +1,18 @@
+uuid: 9b659431-37f1-4891-b08b-0b51b0e9d169
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bay_area_camp
+id: admin_actions
+theme: bay_area_camp
+region: content
+weight: -8
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Admin Actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

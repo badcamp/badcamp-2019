@@ -1,0 +1,20 @@
+uuid: 364b5187-d0fe-45ab-a4cb-59bc733bde87
+langcode: en
+status: true
+dependencies:
+  module:
+    - mailchimp_signup
+  theme:
+    - bay_area_camp
+id: bay_area_camp_mailchimpsubscriptionformstayconnected
+theme: bay_area_camp
+region: footer
+weight: -9
+provider: null
+plugin: 'mailchimp_signup_subscribe_block:stay_connected'
+settings:
+  id: 'mailchimp_signup_subscribe_block:stay_connected'
+  label: 'Stay Connected In 2019'
+  provider: mailchimp_signup
+  label_display: visible
+visibility: {  }
