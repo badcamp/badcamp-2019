@@ -5,13 +5,8 @@ dependencies:
   config:
     - field.storage.user.field_bio
   module:
-    - custom_add_another
     - text
     - user
-third_party_settings:
-  custom_add_another:
-    custom_add_another: ''
-    custom_remove: ''
 id: user.user.field_bio
 field_name: field_bio
 entity_type: user

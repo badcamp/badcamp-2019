@@ -5,13 +5,8 @@ dependencies:
   config:
     - field.storage.user.field_organization_url
   module:
-    - custom_add_another
     - link
     - user
-third_party_settings:
-  custom_add_another:
-    custom_add_another: ''
-    custom_remove: ''
 id: user.user.field_organization_url
 field_name: field_organization_url
 entity_type: user

@@ -1,9 +1,0 @@
-uuid: 04628ab2-ed9c-4077-b718-3fecc9da1d8f
-langcode: en
-status: true
-dependencies: {  }
-name: Topic
-vid: topic
-description: ''
-hierarchy: 0
-weight: 0

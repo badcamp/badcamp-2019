@@ -8,8 +8,8 @@ dependencies:
     - bay_area_camp
 id: pagetitle
 theme: bay_area_camp
-region: content
-weight: -7
+region: header
+weight: 0
 provider: null
 plugin: page_title_block
 settings:

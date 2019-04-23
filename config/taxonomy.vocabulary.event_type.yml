@@ -1,9 +1,0 @@
-uuid: fdd7e374-db08-4f5b-9bb0-80c18a636eb3
-langcode: en
-status: true
-dependencies: {  }
-name: 'Event Type'
-vid: event_type
-description: 'Terms used to classify the events.'
-hierarchy: 0
-weight: 0

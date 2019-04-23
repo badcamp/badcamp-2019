@@ -5,12 +5,6 @@ dependencies:
   config:
     - field.storage.paragraph.field_timeline_heading
     - paragraphs.paragraphs_type.timeline_item
-  module:
-    - custom_add_another
-third_party_settings:
-  custom_add_another:
-    custom_add_another: ''
-    custom_remove: ''
 id: paragraph.timeline_item.field_timeline_heading
 field_name: field_timeline_heading
 entity_type: paragraph

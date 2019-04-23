@@ -9,12 +9,7 @@ dependencies:
     module:
       - media
   module:
-    - custom_add_another
     - image
-third_party_settings:
-  custom_add_another:
-    custom_add_another: ''
-    custom_remove: ''
 _core:
   default_config_hash: pzPA-2JwyxlJ3qMb4L9viAnhNhbEhl2couH8A3FO020
 id: media.image.field_media_image

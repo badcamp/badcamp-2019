@@ -7,12 +7,7 @@ dependencies:
     - paragraphs.paragraphs_type.timeline
     - paragraphs.paragraphs_type.timeline_section
   module:
-    - custom_add_another
     - entity_reference_revisions
-third_party_settings:
-  custom_add_another:
-    custom_add_another: ''
-    custom_remove: ''
 id: paragraph.timeline.field_timeline_sections
 field_name: field_timeline_sections
 entity_type: paragraph
