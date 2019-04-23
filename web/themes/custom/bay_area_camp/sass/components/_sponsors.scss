@@ -64,8 +64,10 @@
     margin-bottom: 1.5em;
   }
   .callout--sponsors {
-    font-size: rem-calc(30);
+    font-size: rem-calc(24);
+    text-transform: uppercase;
     padding: 0.5em 0.75em;
+    background: $grayish;
   }
   .sponsor-team-member {
     padding: 2em 0;
