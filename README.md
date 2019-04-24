@@ -51,7 +51,7 @@ fin gulp
 
 - At this point, your environment should be working.  By default, Docksal makes your local install available as `http://badcamp-2019.docksal/`. Go thee ahead and start contributing!
 
-- We work by a standard Github-style workflow, so fork the badcamp/badcamp-2019 site into your Github account, link it to your local install using `git remove add LOCALNAME YOUR-GIT-SSH-LINK-TO-REPO`. Create an issue on badcamp/badcamp-2019, make your changes locally, and create a Pull Release (PR) with your change. Details how to do this are on Github, although any of us will help you get started.
+- We work by a standard Github-style workflow, so fork the badcamp/badcamp-2019 site into your Github account, link it to your local install using `git remote add LOCALNAME YOUR-GIT-SSH-LINK-TO-REPO`. Create an issue on badcamp/badcamp-2019, make your changes locally, and create a Pull Release (PR) with your change. Details how to do this are on Github, although any of us will help you get started.
 
 
 
