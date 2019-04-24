@@ -1,0 +1,39 @@
+// article node full page display
+.path-node.node--type-article {
+  .article--image {
+    margin-bottom: 1.5em;
+    @include breakpoint('large') {
+      float: right;
+      margin-left: 1.5em;
+    }
+  }
+  .article--date {
+    font-size: rem-calc(16);
+    font-family: $monsterrat;
+    font-weight: 600;
+    margin: 1.25em 0 1em;
+    border-bottom: 2px solid $coral;
+    display: inline-block;
+  }
+  .article--tags__tag {
+    margin-top: 2em;
+    a {
+      font-family: $monsterrat;
+      font-size: rem-calc(13);
+      font-weight: 600;
+      color: $navy;
+      background: $tealish;
+      border-bottom: none;
+      padding: 0.5em 1em;
+      @include border-radius(25px);
+
+      &:hover {
+        background: lighten($tealish, 10%);
+      }
+      &:focus {
+        outline: 1px dotted $navy;
+        outline-offset: 2px;
+      }
+    }
+  }
+}
