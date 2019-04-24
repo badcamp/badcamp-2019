@@ -11,7 +11,7 @@
 
 ## Bootstrapping Your Dev Environment
 
-You have your choice of local environments, but since Sean is a Prince of Docksal, support for Docksal is the quickest way to get started.  Getting ddev, Lando or similar is an exercise for the Reader :-) 
+You have your choice of local environments, but since we have build-in support for Docksel, Docksal is the quickest way to get started.  Getting ddev, Lando or similar is an exercise for the Reader :-) We welcome documentation for other environments if anyone wants to contribute these. 
 
 Steps:
 
