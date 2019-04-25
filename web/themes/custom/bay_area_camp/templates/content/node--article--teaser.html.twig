@@ -70,20 +70,22 @@
  *   in different view modes.
  */
 #}
-
-<article{{ attributes.addClass('article__display--full') }}>
-  <div{{ content_attributes }}>
-    <div class="article__image">
-      {{ content.field_image }}
-    </div>
-    <div class="article__date">
+<article{{ attributes.addClass('article__display--teaser') }}>
+  <h2 {{ title_attributes.addClass('article__title') }} >
+    <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+  </h2>
+  <div class="article__date">
+    <div class="text">
       {{ content.field_article_date }}
     </div>
-    <div class="article__body">
-      {{ content.body }}
-    </div>
-    <div class="article__tags">
-      {{ content.field_tags }}
-    </div>
+  </div>
+  <div class="article__image">
+    {{ content.field_image }}
+  </div>
+  <div class="article__body">
+    {{ content.body }}
+  </div>
+  <div class="article__tags">
+    {{ content.field_tags }}
   </div>
 </article>
