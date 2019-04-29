@@ -8,6 +8,7 @@ dependencies:
     - block_class
     - block_content
     - system
+    - user
   theme:
     - bay_area_camp
 third_party_settings:
@@ -33,3 +34,10 @@ visibility:
     pages: '<front>'
     negate: false
     context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
