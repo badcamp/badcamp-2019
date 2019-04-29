@@ -100,7 +100,7 @@ $foundation-palette: (
 );
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
+$dark-gray: #6e6e6e;
 $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
@@ -164,10 +164,10 @@ $header-margin-bottom: 0.5rem;
 $header-styles: (
   small: (
     'h1': (
-      'font-size': 35,
+      'font-size': 36,
     ),
     'h2': (
-      'font-size': 27,
+      'font-size': 32,
     ),
     'h3': (
       'font-size': 19,

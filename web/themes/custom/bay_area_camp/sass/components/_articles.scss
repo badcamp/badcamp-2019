@@ -1,0 +1,107 @@
+// common to all article displays
+.article__tags {
+  clear: both;
+}
+
+.article__tag {
+  margin-top: 1.5em;
+  margin-right: 0.5em;
+
+  a {
+    font-family: $monsterrat;
+    font-size: rem-calc(12);
+    font-weight: 600;
+    color: $white;
+    background: $navy;
+    border-bottom: none;
+    padding: 0.5em 1em;
+    @include border-radius(25px);
+
+    &:hover {
+      border: 2px solid $lightblue;
+    }
+    &:focus {
+      outline: 1px dotted $navy;
+      outline-offset: 2px;
+    }
+  }
+}
+
+// article node full page display
+.article__display--full {
+  .article__image {
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    @include breakpoint('medium') {
+      float: right;
+      margin-left: 1.5em;
+    }
+  }
+  .article__date {
+    font-size: rem-calc(16);
+    font-family: $monsterrat;
+    font-weight: 600;
+    margin: 1.25em 0 1em;
+    border-bottom: 3px solid $coral;
+    display: inline-block;
+  }
+}
+
+// article teaser display
+.article__display--teaser {
+  .article__title {
+    line-height: rem-calc(48);
+    margin-bottom: 0.5em;
+    width: 85%;
+    a {
+      border-bottom: none;
+
+      &:hover {
+        border-bottom: 3px solid $lightblue;
+      }
+    }
+  }
+  .article__image {
+    float: right;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+    margin-left: 1.5em;
+  }
+  .article__date {
+    width: 180px;
+    height: 180px;
+    background-color: $coral;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+    right: -90px;
+    top: -95px;
+
+    .text {
+      font-size: rem-calc(18);
+      font-family: $monsterrat;
+      font-weight: 700;
+      text-align: right;
+      line-height: 1.1;
+      text-transform: uppercase;
+      position: absolute;
+      bottom: 28px;
+      left: 22px;
+      max-width: 50px;
+    }
+  }
+}
+
+// article listing view
+.article__listing {
+  margin-top: 0.5em;
+
+  .views-row {
+    background: $grayish;
+    padding: 1.25em 1.75em 1.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    position: relative;
+    overflow: hidden;
+  }
+}
