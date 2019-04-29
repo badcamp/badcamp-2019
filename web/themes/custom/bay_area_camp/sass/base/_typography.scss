@@ -1,3 +1,8 @@
+p {
+  font-size: rem-calc(18);
+  line-height: rem-calc(28);
+}
+
 // reuseable classes from styleguide and beyond
 .icon-text {
   font-family: $fairplex-wide;
@@ -15,10 +20,19 @@
   font-family: $monsterrat;
   font-weight: bold;
   font-size: rem-calc(20);
+  line-height: 1.3;
+
 }
 
 .attendee-info {
   font-family: $fairplex-wide;
   font-size: rem-calc(18);
   line-height: rem-calc(24);
+}
+
+.views-group-header {
+  font-size: rem-calc(24);
+  @include breakpoint('medium') {
+    font-size: rem-calc(30);
+  }
 }

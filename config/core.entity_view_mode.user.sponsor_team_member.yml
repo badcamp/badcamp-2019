@@ -1,0 +1,10 @@
+uuid: ee0b91ff-7d51-4758-a542-f56e1be85c02
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.sponsor_team_member
+label: 'Sponsor Team Member'
+targetEntityType: user
+cache: true

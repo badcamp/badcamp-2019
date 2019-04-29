@@ -1,0 +1,61 @@
+uuid: 81ca54af-ab41-4876-80be-428356dd158d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.sponsor_team_member
+    - field.field.user.user.field_bio
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_options
+    - field.field.user.user.field_organization
+    - field.field.user.user.field_organization_url
+    - field.field.user.user.field_social_profile_links
+    - field.field.user.user.field_subscribe_to_badcamp_newsl
+    - field.field.user.user.field_title
+    - field.field.user.user.user_picture
+    - image.style.user_profile
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
+id: user.user.sponsor_team_member
+targetEntityType: user
+bundle: user
+mode: sponsor_team_member
+content:
+  field_first_name:
+    weight: 11
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_last_name:
+    weight: 12
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  user_picture:
+    type: image
+    weight: 0
+    region: content
+    settings:
+      image_style: user_profile
+      image_link: content
+    third_party_settings: {  }
+    label: hidden
+hidden:
+  field_bio: true
+  field_options: true
+  field_organization: true
+  field_organization_url: true
+  field_social_profile_links: true
+  field_subscribe_to_badcamp_newsl: true
+  field_title: true
+  member_for: true

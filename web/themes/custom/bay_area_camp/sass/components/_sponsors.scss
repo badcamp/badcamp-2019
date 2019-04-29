@@ -1,7 +1,75 @@
-#block-views-block-sponsors-core-sponsors{
-  h3 {
-    text-align: center;
-    margin: 0 0 45px 0;
+.sponsor-level {
+  font-family: $monsterrat;
+  color: $coral;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+// sponsors view page_1
+.views-group--sponsors {
+  margin-bottom: 4.5em;
+
+  .views-row {
+    margin-bottom: 2.5em;
+    @include breakpoint('medium') {
+      margin-bottom: 0;
+    }
+
+    .button {
+      margin-top: 1.5em;
+    }
   }
-  padding: 72px 0;
+}
+
+.views-group__h2--sponsors {
+  @extend .sponsor-level;
+  margin: 1.5em 0 2.5em;
+  border-bottom: $light-gray 1px solid;
+}
+
+.node--view-mode-sponsor-logo {
+  a {
+    border-bottom: none;
+  }
+}
+
+// sponsors footer block
+#block-views-block-sponsors-core-sponsors {
+  background: $grayish;
+  padding: 3em 0 3.5em 0;
+  h2 {
+    text-align: center;
+    margin: 0 0 1.5em 0;
+  }
+  .button {
+    margin-top: 1.5em;
+  }
+}
+
+.path-frontpage #block-views-block-sponsors-core-sponsors {
+  background: $white;
+}
+
+// sponsors node page
+.node--type-sponsor {
+  .field--sponsor-text {
+    padding: 1em 0 2em;
+    @include breakpoint('medium') {
+      padding-right: 3em;
+    }
+  }
+  .field--sponsor-level {
+    @extend .sponsor-level;
+    font-size: rem-calc(20);
+    margin-bottom: 1.5em;
+  }
+  .callout--sponsors {
+    font-size: rem-calc(24);
+    text-transform: uppercase;
+    padding: 0.5em 0.75em;
+    background: $grayish;
+  }
+  .sponsor-team-member {
+    padding: 2em 0;
+  }
 }
