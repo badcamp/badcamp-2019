@@ -1,41 +1,7 @@
-//header {
-//  padding: 1em 0;
-//
-//  //background: url(../images/bg-header-sanfrancisco-v1.jpg) bottom center no-repeat #f3f0fd;
-//  background: url(../images/golden-gate_web.jpg) center top no-repeat;
-//  @include background-size('cover');
-//
-//  @include breakpoint('xlarge') {
-//    background-position: center center;
-//  }
-//
-//  #block-header-menu,
-//  #block-user-account-menu{
-//    ul.menu {
-//      justify-content: flex-end;
-//    }
-//  }
-//
-//
-//  .header-left {
-//
-//  }
-//  .header-right {
-//    > div {
-//      @extend .grid-y;
-//      height: 100%;
-//      @include justify-content(space-between);
-//    }
-//  }
-//
-//  .page-header{
-//    text-align: center;
-//    height: 350px;
-//  }
-//}
-
 header {
   .header-holder {
-    padding: 25px 0;
+    padding-top: 1.75em;
+    padding-bottom: 1.75em;
+    // LR padding set with .grid-container
   }
 }

@@ -1,20 +1,10 @@
-//footer {
-//  .footer-lower-wrapper{
-//    padding: 1em 0;
-//    .footer-right-column {
-//      text-align: center;
-//      @include breakpoint('medium') {
-//        text-align: right;
-//      }
-//    }
-//  }
-//}
-
 footer {
   .footer-lower-wrapper {
-    padding: 2em 0;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    // LR padding set with .grid-container
   }
-  #block-bay-area-camp-builtbythecommunity{
+  #block-bay-area-camp-builtbythecommunity {
     p {
       text-align: right;
       font-family: $fairplex-wide;
@@ -22,9 +12,9 @@ footer {
     }
   }
 
-  #block-footerbanner{
+  #block-footerbanner {
     display: none;
-    @include breakpoint('medium'){
+    @include breakpoint('medium') {
       display: block;
     }
     img {
