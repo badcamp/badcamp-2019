@@ -1,8 +1,8 @@
 channel:
-  description: ''
+  description: 'RSS Feed for Bay Area Drupal Camp (BADCamp) for October 2 to 5, 2019.  Follow this for updates, key dates, and fun.'
 items:
   limit: 10
-  view_mode: rss
+  view_mode: teaser
 langcode: en
 _core:
   default_config_hash: TlH7NNk46phfxu1mSUfwg1C0YqaGsUCeD4l9JQnQlDU

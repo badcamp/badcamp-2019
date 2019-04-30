@@ -5,9 +5,13 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - node.type.article
+    - taxonomy.vocabulary.tags
+  content:
+    - 'taxonomy_term:tags:4b9a9c28-5d5e-4a21-9ef5-a944dd5a6557'
   module:
     - datetime
     - node
+    - taxonomy
     - user
 id: articles
 label: Articles
@@ -147,6 +151,49 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+        tid:
+          id: tid
+          table: taxonomy_index
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: tags
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
       sorts:
         field_article_date_value:
           id: field_article_date_value
@@ -188,6 +235,103 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  feed_1:
+    display_plugin: feed
+    id: feed_1
+    display_title: Feed
+    position: 2
+    display_options:
+      display_extenders: {  }
+      row:
+        type: node_rss
+        options: {  }
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            article: article
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        tid:
+          id: tid
+          table: taxonomy_index
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: 'Drupal Planet feed'
+          operator: or
+          value:
+            - 5
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: tags
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+      defaults:
+        filters: false
+        filter_groups: false
+        title: false
+        sitename_title: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      path: path/drupal-planet/rss.xml
+      title: ''
+      sitename_title: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -208,6 +352,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
