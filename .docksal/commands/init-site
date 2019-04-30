@@ -38,7 +38,7 @@ install_theme ()
 {
   echo "Installing Gulp CLI..."
   npm install -g gulp-cli
-  cd ${PROJECT_ROOT}/web/theme/bay_area_camp/
+  cd ${PROJECT_ROOT}/web/themes/custom/bay_area_camp/
   echo "Installing Theme Packages..."
   npm install
   echo "Compiling Theme..."
@@ -52,6 +52,7 @@ install_theme ()
 # Project initialization steps
 composer_install
 fix_permissions
-install_theme()
-eval ${PROJECT_ROOT}/.docksal/commands/refresh
+install_theme
+${PROJECT_ROOT}/.docksal/commands/refresh
+
 #-------------------------- END: Execution --------------------------------
