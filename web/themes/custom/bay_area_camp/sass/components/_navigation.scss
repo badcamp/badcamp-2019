@@ -1,22 +1,19 @@
-.region--navigation {
-  margin-bottom: 40px;
-}
-
 .main-navigation {
   background-color: $grayish;
+  margin-bottom: 2em;
 }
 
 #block-mainnavigation {
-  ul {
-  }
   > ul {
     @extend .flex-container;
     @extend .align-stretch;
-    padding-right: 2em;
+    @include breakpoint('large') {
+      padding-right: 1em;
+    }
 
     li {
       a {
-        font-size: 1.375em;
+        font-size: 1.125em;
         font-family: $monsterrat;
         font-weight: 700;
         text-transform: uppercase;
@@ -24,16 +21,29 @@
         display: block;
         width: 100%;
         text-align: center;
-
         border-bottom: 0;
+        @include breakpoint('medium') {
+          text-align: left;
+        }
+        @include breakpoint('large') {
+          font-size: 1em;
+        }
+        @include breakpoint('xlarge') {
+          font-size: 1.125em;
+        }
       }
     }
 
     > li {
-      padding: 0 1em;
+      padding: 0 0.75em;
       @extend .flex-child-grow;
-      &.leaf-0 {
-        padding-left: 0;
+      @include breakpoint('large') {
+        &.leaf-0 {
+          padding-left: 0;
+        }
+        @include breakpoint('xlarge') {
+          padding: 0 0.875em;
+        }
       }
 
       li {

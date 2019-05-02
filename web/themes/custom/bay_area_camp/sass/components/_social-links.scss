@@ -1,19 +1,33 @@
 .social-media-links--platforms {
+  margin-top: 20px;
   margin-bottom: 0;
   margin-left: 0;
-  text-align: right;
+  text-align: center;
+  @include breakpoint('medium') {
+    text-align: right;
+    margin-top: 5px;
+  }
+
   li {
-    padding: .2em .70em;
+    margin: 0 10px;
+    @include breakpoint('medium') {
+      margin: 0 5px;
+    }
   }
   .fa {
-    font-size: 1.375em;
+    font-size: 1.5em;
   }
   a {
-    @include border-radius(25px);
+    border-radius: 50%;
     background-color: $grayish;
     display: block;
     line-height: 1;
-    padding: 12px;
+    padding: 15px;
     border-bottom: 0px;
+    &:focus,
+    &:active {
+      outline: 0;
+      border: 2px dotted $navy;
+    }
   }
 }
