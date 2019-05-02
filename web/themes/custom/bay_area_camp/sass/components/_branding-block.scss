@@ -30,13 +30,13 @@
     .location-date {
       font-size: 1rem;
       display: block;
-      @include breakpoint('medium') {
+      @include breakpoint('large') {
         display: inline-block;
       }
     }
     .separator {
       display: none;
-      @include breakpoint('medium') {
+      @include breakpoint('large') {
         display: inline-block;
       }
     }

@@ -1,0 +1,23 @@
+{#
+/**
+ * @ingroup themeable
+ */
+#}
+
+{%
+  set classes = [
+    'social-media-links--platforms',
+    'platforms',
+  ]
+%}
+
+<ul{{ attributes.addClass(classes) }}>
+  {% for platform in platforms %}
+    <li>
+      <a href="{{ platform.url }}" {{ platform.attributes}} aria-label="{{ platform.name }}">
+        {{ platform.element }}
+        <span class="platform-label visually-hidden">{{ platform.name }}</span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

@@ -1,22 +1,38 @@
 .social-media-links--platforms {
-  margin-top: 20px;
+  margin-top: 25px;
   margin-bottom: 0;
   margin-left: 0;
   text-align: center;
+  display: flex;
+  padding: 0 5px;
+  justify-content: space-between;
   @include breakpoint('medium') {
     text-align: right;
+    padding: 0;
     margin-top: 5px;
+    justify-content: flex-end;
   }
 
   li {
-    margin: 0 10px;
+    list-style: none;
     @include breakpoint('medium') {
-      margin: 0 5px;
+      margin: 0 7px;
+    }
+    @include breakpoint('large') {
+      margin: 0 10px;
     }
   }
+
   .fa {
     font-size: 1.5em;
+    @include breakpoint('medium') {
+      font-size: 1.25em;
+    }
+    @include breakpoint('large') {
+      font-size: 1.5em;
+    }
   }
+
   a {
     border-radius: 50%;
     background-color: $grayish;
