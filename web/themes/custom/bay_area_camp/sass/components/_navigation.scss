@@ -1,6 +1,8 @@
 .main-navigation {
   background-color: $grayish;
-  margin-bottom: 2em;
+  @include breakpoint('medium') {
+    margin-bottom: 30px;
+  }
 }
 
 #block-mainnavigation {

@@ -1,0 +1,47 @@
+// Main Block
+.main-block {
+  .paragraph--type--columns {
+    @include breakpoint('medium') {
+      @include xy-grid-container;
+    }
+  }
+  .main-block-text {
+    @include xy-grid-container;
+    padding-bottom: 10px;
+    @include breakpoint('medium') {
+      padding-left: 0;
+    }
+    p {
+      font-size: 1.325em;
+      font-family: $fairplex-wide;
+    }
+  }
+  .page-heading {
+    font-size: 2.5rem;
+    font-family: $monsterrat;
+    font-weight: 700;
+    line-height: 1.1;
+    color: $navy;
+    padding: 15px 0;
+    @include breakpoint('medium') {
+      padding-top: 0;
+      font-size: 3.125rem;
+    }
+  }
+  .main-block-image {
+    img {
+      height: 200px;
+      object-fit: cover;
+      object-position: center bottom;
+      @include breakpoint('medium') {
+        height: 540px;
+      }
+      @include breakpoint('large') {
+        height: 500px;
+      }
+      @include breakpoint('xlarge') {
+        height: 420px;
+      }
+    }
+  }
+}
