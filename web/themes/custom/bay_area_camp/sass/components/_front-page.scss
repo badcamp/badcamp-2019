@@ -14,7 +14,7 @@
 .section-heading {
   font-size: 2.125rem;
   @include breakpoint('medium') {
-    font-size: 2.75rem;
+    font-size: 2.625rem;
   }
 }
 
@@ -130,6 +130,50 @@
       margin: 0;
       img {
         padding-right: 12px;
+      }
+    }
+  }
+}
+
+// event details
+.event-details {
+  padding-top: 2.5em;
+  h2 {
+    @extend .section-heading;
+    text-align: center;
+    padding-bottom: 0;
+  }
+  .event-detail-image {
+    @include breakpoint('medium') {
+      padding-top: 1em;
+    }
+  }
+  .event-detail {
+    margin-bottom: 2.5em;
+
+    .event-detail-title {
+      font-family: $monsterrat;
+      font-weight: 700;
+      font-size: 1.875rem;
+      margin-bottom: 10px;
+    }
+    p:not([class]) {
+      font-family: $fairplex-wide;
+      font-size: 1.125rem;
+      line-height: 1.5;
+    }
+    a {
+      font-family: $monsterrat;
+      font-weight: 600;
+      font-size: 1rem;
+      display: table-cell;
+      padding-top: 5px;
+      &:after {
+        content: url('./../images/arrow-navy.png');
+        padding-left: 7px;
+      }
+      &:hover::after {
+        content: url('./../images/arrow-navy-hover.png');
       }
     }
   }
