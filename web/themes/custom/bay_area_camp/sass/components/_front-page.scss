@@ -17,6 +17,10 @@
     font-size: 2.625rem;
   }
 }
+.section-subhead {
+  font-family: $fairplex-wide;
+  font-size: 1.5rem;
+}
 
 // Main Block
 .main-block {
@@ -163,18 +167,9 @@
       line-height: 1.5;
     }
     a {
-      font-family: $monsterrat;
-      font-weight: 600;
-      font-size: 1rem;
-      display: table-cell;
-      padding-top: 5px;
-      &:after {
-        content: url('./../images/arrow-navy.png');
-        padding-left: 7px;
-      }
-      &:hover::after {
-        content: url('./../images/arrow-navy-hover.png');
-      }
+      @extend .arrow-link;
     }
   }
 }
+
+// featured attendees --> _featured-atendees.scss

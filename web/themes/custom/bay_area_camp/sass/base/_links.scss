@@ -1,12 +1,18 @@
 a {
-  &.arrow {
-    &:after {
-      font-family: $font-awesome;
-      content: '\f061';
-    }
-  }
-
-  //font-family: $monsterrat;
-  //font-size: 1.125rem;
   border-bottom: 3px solid $lightblue;
+}
+
+.arrow-link {
+  font-family: $monsterrat;
+  font-weight: 600;
+  font-size: 1rem;
+  display: table-cell;
+  padding-top: 5px;
+  &:after {
+    content: url('./../images/arrow-navy.png');
+    padding-left: 7px;
+  }
+  &:hover::after {
+    content: url('./../images/arrow-navy-hover.png');
+  }
 }

@@ -1,72 +1,88 @@
 .featured-attendees {
   background-color: $grayish;
-  padding: 50px 0;
+  padding: 1em 0;
 
   .featured-attendees-view {
+    @include xy-grid-container;
 
     header {
-      margin-bottom: 18px;
-
+      margin-bottom: 20px;
       text-align: center;
+
       @include breakpoint('medium') {
         text-align: left;
       }
-
-      h2 {
-        line-height: 1;
-        font-size: 2.625rem;
-        font-family: $monsterrat;
-        font-weight: 700;
+      .section-heading {
+        margin-bottom: 0;
+        padding-bottom: 0;
       }
-      .subtitle {
-        font-family: $fairplex-wide;
-        font-size: 1.5rem;
+    }
+
+    .slick__arrow {
+      text-align: center;
+
+      button {
+        font-size: 1px;
+        color: rgba($color: #fff, $alpha: 0);
+        padding: 10px;
+
+        &:focus {
+          outline: 1px dotted $navy;
+        }
+      }
+
+      .slick-prev:after {
+        content: url('./../images/arrow-navy-pager-prev.png');
+      }
+      .slick-next:after {
+        content: url('./../images/arrow-navy-pager-next.png');
+      }
+    }
+
+    footer {
+      clear: both;
+      text-align: center;
+      .register-button {
+        margin: 3em 0 2em;
+      }
+      .more-link {
+        display: inline-block;
       }
     }
   }
-
-  .featured-attendees-image{
+  .featured-attendees-image {
     display: none;
-  }
-
-  @include breakpoint('medium') {
-    .featured-attendees-image{
+    @include breakpoint('large') {
       display: block;
     }
-    .slick__arrow {
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
   }
-
-
 }
 
-.featured-attendee{
-  background-color: #fff;
+// featured-attendee details
+.featured-attendee {
+  background-color: $white;
   overflow: hidden;
-
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  position: relative;
 
   @include breakpoint('medium') {
     margin-left: 0;
-    margin-right: 20px;
+    margin-right: 0;
   }
 
-  margin-bottom: 20px;
-
-  padding: 20px;
-
-  width: 330px;
-  height: 172px;
+  .picture {
+    border-radius: 100px;
+    overflow: hidden;
+    z-index: 2;
+  }
 
   .oval {
     display: block;
     width: 180px;
     height: 180px;
-    background-color: white;
     position: absolute;
     border-radius: 300px;
     z-index: 1;
@@ -79,7 +95,7 @@
     .slide--8 &,
     .slide--12 &,
     .slide--16 &,
-    .slide--20 &{
+    .slide--20 & {
       background-color: $tealish;
     }
     &.gold,
@@ -88,7 +104,7 @@
     .slide--9 &,
     .slide--13 &,
     .slide--17 &,
-    .slide--21 &{
+    .slide--21 & {
       background-color: $gold;
     }
     &.lightblue,
@@ -97,7 +113,7 @@
     .slide--10 &,
     .slide--14 &,
     .slide--18 &,
-    .slide--22 &{
+    .slide--22 & {
       background-color: $lightblue;
     }
     &.salmon,
@@ -106,17 +122,10 @@
     .slide--11 &,
     .slide--15 &,
     .slide--19 &,
-    .slide--23 &{
+    .slide--23 & {
       background-color: $salmon;
     }
   }
-
-  .picture {
-    border-radius: 100px;
-    overflow: hidden;
-    z-index: 2;
-  }
-
   .details {
     margin-left: 20px;
     .details--name {
@@ -130,6 +139,42 @@
       font-family: $fairplex-wide;
       font-size: 1.125rem;
       line-height: 1.33;
+    }
+  }
+}
+
+// slide padding
+@include breakpoint('medium') {
+  .featured-attendees-view {
+    .slide--0,
+    .slide--1,
+    .slide--4,
+    .slide--5,
+    .slide--6,
+    .slide--7,
+    .slide--10,
+    .slide--11,
+    .slide--14,
+    .slide--15,
+    .slide--18,
+    .slide--19,
+    .slide--22,
+    .slide--23 {
+      padding-right: 10px;
+    }
+    .slide--2,
+    .slide--3,
+    .slide--6,
+    .slide--7,
+    .slide--8,
+    .slide--9,
+    .slide--12,
+    .slide--13,
+    .slide--16,
+    .slide--17,
+    .slide--20,
+    .slide--21 {
+      padding-left: 10px;
     }
   }
 }
