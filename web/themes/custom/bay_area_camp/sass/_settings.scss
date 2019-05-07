@@ -69,7 +69,9 @@
 $lightblue: #02a0e4;
 $navy: #0a2240;
 $tealish: #50c4b7;
+$dark-tealish: #199f94;
 $salmon: #ff8568;
+$dark-salmon: #e47053;
 $gold: #ffba02;
 $purpleish: #61748b;
 $white: #fefefe;
@@ -98,7 +100,7 @@ $foundation-palette: (
   secondary: #767676,
   success: #3adb76,
   warning: $gold,
-  alert: #cc4b37,
+  alert: $dark-salmon,
 );
 
 $body-background: $white;
