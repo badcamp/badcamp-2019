@@ -1,104 +1,45 @@
-.button {
-  @include border-radius(27px);
-
+@mixin button($bg: $lightblue, $color: $navy, $size: regular) {
+  @include border-radius(25px);
+  border: 0;
   font-family: $monsterrat;
-  font-size: 0.875em;
   font-weight: 700;
-  line-height: 0.875;
-  text-align: center;
-  text-transform: uppercase;
-
-  &.salmon {
-    background-color: $salmon;
-    color: $navy;
-  }
-  &.tealish {
-    background-color: $tealish;
-    color: $navy;
-  }
-}
-
-.big-button {
-  @extend .button;
-
-  font-size: 1.1875em;
   line-height: 1;
-
-  &.salmon {
-    background-color: $salmon;
-    color: $navy;
+  text-align: center;
+  background-color: $bg;
+  color: $color;
+  @if $size == big {
+    font-size: 1.125rem;
+    padding: 1rem;
+  } @else {
+    font-size: 0.9375rem;
   }
-  &.tealish {
-    background-color: $tealish;
-    color: $navy;
+  &:hover {
+    color: $color;
+    @if $bg == $salmon {
+      background-color: lighten($bg, 3%);
+    } @else {
+      background-color: lighten($bg, 4%);
+    }
+  }
+  &:focus,
+  &:active {
+    outline: 0;
+    border: 2px dotted $navy;
+  }
+  a {
+    border-bottom: none !important;
   }
 }
 
-////.button {
-////  color: $navy;
-////  background-color: $acqua;
-////  border-radius: 25px;
-////  font-weight: 900;
-////  &:after {
-////    font-family: $font-awesome;
-////    content: "\f0da";
-////    margin-left: 5px;
-////  }
-////  margin-right: .5em;
-////}
-//
-//$button-rounded-hover-radius: 5000px;
-//$button-rounded-hover-border: 5px solid darken($primary-color, 10%);
-//
-//.button{
-//  margin: 1rem 0;
-//}
-//
-//.button-rounded-hover {
-//  border: 0;
-//  border-radius: $button-rounded-hover-radius;
-//  padding: 1rem 2rem;
-//  text-transform: uppercase;
-//  position: relative;
-//  overflow: hidden;
-//  font-size: 1rem;
-//  letter-spacing: 2px;
-//  transition: all 0.35s ease;
-//  transform: translateZ(0);
-//}
-//
-//.button-rounded-hover:before {
-//  opacity: 0;
-//  content: "";
-//  position: absolute;
-//  top: 0px;
-//  bottom: 0px;
-//  left: 0px;
-//  right: 0px;
-//  border-radius: inherit;
-//  background-color: $white;
-//  transition: all 0.3s;
-//  transform: translateX(-100%);
-//}
-//
-//.button-rounded-hover:after {
-//  position: absolute;
-//  top: 0px;
-//  bottom: 0px;
-//  left: 0px;
-//  right: 0px;
-//  border: $button-rounded-hover-border;
-//  content: '';
-//  border-radius: inherit;
-//}
-//
-//.button-rounded-hover:hover,
-//.button-rounded-hover:focus {
-//  background-color: darken($primary-color, 10%);
-//}
-//
-//.button-rounded-hover:hover:before,
-//.button-rounded-hover:focus:before {
-//  transform: translateX(0%);
-//  opacity: 0.25;
-//}
+.button {
+  @include button();
+}
+.big-button {
+  @include button($size: big);
+}
+.big-button.salmon {
+  @include button($salmon, $navy, big);
+}
+.big-button.tealish {
+  @include button($tealish, $navy, big);
+}

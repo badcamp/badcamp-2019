@@ -1,41 +1,39 @@
 #block-header-menu {
-  background-color: #fff;
-
-  padding-bottom: 2rem;
-
-  @include breakpoint('medium') {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  @include breakpoint('large') {
+    padding-top: 0;
     padding-bottom: 0;
+    background-color: $white;
   }
 
   ul {
-    float: left;
-    @include breakpoint('medium') {
+    float: right;
+    @include breakpoint('large') {
       float: none;
     }
   }
 
   li {
-    margin: 0 11px;
-
+    margin: 0 8px;
     a {
-      padding: 10px;
-      border-bottom: 0 solid;
-
-      font-size: .9375rem;
-      @include breakpoint('medium') {
-        padding: 1rem;
-        font-size: 1.1875rem;
+      @include breakpoint('large') {
+        font-size: 0.9375em;
+      }
+      @include breakpoint('xlarge') {
+        font-size: 1.25em;
       }
     }
+  }
+  .big-button {
+    text-transform: uppercase;
   }
 }
 
 .responsive-menu-button-wrap {
-  float: right;
+  float: left;
   border-radius: 25px;
   background-color: $lightblue;
-  padding: 10px;
+  padding: 1rem;
   line-height: 1;
-  position: relative;
-  right: 5px;
 }
