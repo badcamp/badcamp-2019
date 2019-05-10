@@ -65,18 +65,23 @@
 // 1. Global
 // ---------
 
-$gold: #ffba02;
-$logoblue: #2796d3;
-$navy: #0a2240;
+// colors
 $lightblue: #02a0e4;
-$coral: #ff8061;
-$acqua: #15bcac;
-$grayish: #f4f4f4;
-$tealish: #1baa9f;
-$salmon: #ff8061;
-$blueish: #02a0e4;
+$navy: #0a2240;
+$tealish: #50c4b7;
+$dark-tealish: #199f94;
+$salmon: #ff8568;
+$dark-salmon: #e47053;
+$gold: #ffba02;
 $purpleish: #61748b;
+$white: #fefefe;
+$grayish: #f4f4f4;
+$light-gray: #e6e6e6;
+$medium-gray: #cacaca;
+$dark-gray: #6e6e6e;
+$black: #0a0a0a;
 
+// fonts
 $fairplex: fairplex-narrow, serif;
 $fairplex-wide: fairplex-wide, serif;
 $monsterrat: 'Montserrat', sans-serif;
@@ -87,22 +92,17 @@ $fjallo-one: 'Fjalla One', sans-serif;
 $lato: 'Lato', sans-serif;
 $roboto: 'Roboto', sans-serif;
 $roboto-condensed: 'Roboto Condensed', sans-serif;
-
 $global-font-size: 100%;
 $global-width: rem-calc(1440);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: $logoblue,
+  primary: $lightblue,
   secondary: #767676,
   success: #3adb76,
-  warning: #ffae00,
-  alert: #cc4b37,
+  warning: $gold,
+  alert: $dark-salmon,
 );
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #6e6e6e;
-$black: #0a0a0a;
-$white: #fefefe;
+
 $body-background: $white;
 $body-font-color: $navy;
 $body-font-family: $fairplex;
@@ -130,13 +130,13 @@ $print-hrefs: true;
 
 $breakpoints: (
   small: 0,
-  medium: 640px,
+  medium: 768px,
   large: 1024px,
   xlarge: 1200px,
   xxlarge: 1440px,
 );
 $print-breakpoint: large;
-$breakpoint-classes: (small medium large);
+$breakpoint-classes: (small medium large xlarge xxlarge);
 
 // 3. The Grid
 // -----------

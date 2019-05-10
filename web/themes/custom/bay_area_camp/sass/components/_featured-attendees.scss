@@ -1,135 +1,253 @@
 .featured-attendees {
   background-color: $grayish;
-  padding: 50px 0;
+  padding: 1.25em 0 0.75em;
+
+  .section-heading {
+    @include breakpoint('large') {
+      font-size: 2.25rem;
+    }
+    @include breakpoint('xlarge') {
+      font-size: 2.5rem;
+    }
+  }
 
   .featured-attendees-view {
+    @include xy-grid-container;
 
     header {
-      margin-bottom: 18px;
-
+      margin-bottom: 20px;
       text-align: center;
+
       @include breakpoint('medium') {
         text-align: left;
       }
-
-      h2 {
-        line-height: 1;
-        font-size: 2.625rem;
-        font-family: $monsterrat;
-        font-weight: 700;
-      }
-      .subtitle {
-        font-family: $fairplex-wide;
-        font-size: 1.5rem;
+      .section-heading {
+        margin-bottom: 0;
+        padding-bottom: 0;
       }
     }
-  }
 
-  .featured-attendees-image{
-    display: none;
-  }
-
-  @include breakpoint('medium') {
-    .featured-attendees-image{
-      display: block;
-    }
     .slick__arrow {
-      position: absolute;
-      top: 0;
-      right: 0;
+      text-align: center;
+
+      @include breakpoint('large') {
+        position: absolute;
+        top: 0;
+        right: 2em;
+      }
+
+      button {
+        font-size: 1px;
+        color: rgba($color: #fff, $alpha: 0);
+        padding: 6px;
+
+        &:focus {
+          outline: 2px dotted $navy;
+        }
+      }
+
+      .slick-prev:after {
+        content: url('./../images/arrow-navy-pager-prev.png');
+      }
+      .slick-next:after {
+        content: url('./../images/arrow-navy-pager-next.png');
+      }
+    }
+
+    footer {
+      clear: both;
+      text-align: center;
+      .register-button {
+        margin: 3em 0 2em;
+
+        @include breakpoint('large') {
+          float: left;
+          margin-top: 1.75em;
+        }
+      }
+      .more-link {
+        display: inline-block;
+        @include breakpoint('large') {
+          float: left;
+          margin-top: 1.25em;
+          margin-left: 2em;
+        }
+      }
     }
   }
+  .featured-attendees-image {
+    display: none;
+    @include breakpoint('large') {
+      display: block;
+      padding-right: 0;
+    }
 
-
+    img {
+      height: 470px;
+      object-fit: cover;
+      object-position: center bottom;
+      @include breakpoint('xlarge') {
+        height: 490px;
+      }
+    }
+  }
 }
 
-.featured-attendee{
-  background-color: #fff;
+// featured-attendee details
+.featured-attendee {
+  background-color: $white;
   overflow: hidden;
-
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  position: relative;
+  @include breakpoint('large') {
+    padding: 15px;
+  }
+  @include breakpoint('xlarge') {
+    padding: 20px;
+  }
 
   @include breakpoint('medium') {
     margin-left: 0;
-    margin-right: 20px;
+    margin-right: 0;
   }
 
-  margin-bottom: 20px;
-
-  padding: 20px;
-
-  width: 330px;
-  height: 172px;
+  .picture {
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 2;
+    min-width: 70px;
+    max-width: 100px;
+  }
 
   .oval {
     display: block;
     width: 180px;
     height: 180px;
-    background-color: white;
     position: absolute;
     border-radius: 300px;
     z-index: 1;
-    left: -81px;
-    top: -95px;
+    left: -90px;
+    top: -100px;
 
-    &.tealish,
-    .slide--0 &,
-    .slide--4 &,
-    .slide--8 &,
-    .slide--12 &,
-    .slide--16 &,
-    .slide--20 &{
-      background-color: $tealish;
+    @include breakpoint('large') {
+      width: 170px;
+      height: 170px;
     }
-    &.gold,
-    .slide--1 &,
-    .slide--5 &,
-    .slide--9 &,
-    .slide--13 &,
-    .slide--17 &,
-    .slide--21 &{
-      background-color: $gold;
+    @include breakpoint('xlarge') {
+      width: 180px;
+      height: 180px;
     }
-    &.lightblue,
-    .slide--2 &,
-    .slide--6 &,
-    .slide--10 &,
-    .slide--14 &,
-    .slide--18 &,
-    .slide--22 &{
-      background-color: $lightblue;
-    }
-    &.salmon,
-    .slide--3 &,
-    .slide--7 &,
-    .slide--11 &,
-    .slide--15 &,
-    .slide--19 &,
-    .slide--23 &{
-      background-color: $salmon;
-    }
-  }
-
-  .picture {
-    border-radius: 100px;
-    overflow: hidden;
-    z-index: 2;
   }
 
   .details {
-    margin-left: 20px;
+    z-index: 3;
+    margin-left: 12px;
+    @include breakpoint('xlarge') {
+      margin-left: 20px;
+    }
     .details--name {
       font-size: 1.25rem;
       font-family: $monsterrat;
       font-weight: 700;
+      line-height: 1.1;
       margin-bottom: 6px;
+      @include breakpoint('large') {
+        font-size: 1.125rem;
+      }
+      @include breakpoint('xlarge') {
+        font-size: 1.25rem;
+      }
     }
     .details--username,
     .details--organization {
       font-family: $fairplex-wide;
       font-size: 1.125rem;
       line-height: 1.33;
+      @include breakpoint('large') {
+        font-size: 0.9875rem;
+      }
+      @include breakpoint('xlarge') {
+        font-size: 1.125rem;
+      }
     }
+  }
+}
+
+// slide padding
+@include breakpoint('medium') {
+  .featured-attendees-view {
+    .slide--0,
+    .slide--1,
+    .slide--4,
+    .slide--5,
+    .slide--6,
+    .slide--7,
+    .slide--10,
+    .slide--11,
+    .slide--14,
+    .slide--15,
+    .slide--18,
+    .slide--19,
+    .slide--22,
+    .slide--23 {
+      padding-right: 10px;
+    }
+    .slide--2,
+    .slide--3,
+    .slide--6,
+    .slide--7,
+    .slide--8,
+    .slide--9,
+    .slide--12,
+    .slide--13,
+    .slide--16,
+    .slide--17,
+    .slide--20,
+    .slide--21 {
+      padding-left: 10px;
+    }
+  }
+}
+
+// slide oval colors
+.featured-attendee .oval {
+  &.tealish,
+  .slide--0 &,
+  .slide--4 &,
+  .slide--8 &,
+  .slide--12 &,
+  .slide--16 &,
+  .slide--20 & {
+    background-color: $tealish;
+  }
+  &.gold,
+  .slide--1 &,
+  .slide--5 &,
+  .slide--9 &,
+  .slide--13 &,
+  .slide--17 &,
+  .slide--21 & {
+    background-color: $gold;
+  }
+  &.lightblue,
+  .slide--2 &,
+  .slide--6 &,
+  .slide--10 &,
+  .slide--14 &,
+  .slide--18 &,
+  .slide--22 & {
+    background-color: $lightblue;
+  }
+  &.salmon,
+  .slide--3 &,
+  .slide--7 &,
+  .slide--11 &,
+  .slide--15 &,
+  .slide--19 &,
+  .slide--23 & {
+    background-color: $salmon;
   }
 }

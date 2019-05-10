@@ -2,13 +2,16 @@ footer {
   .footer-lower-wrapper {
     padding-top: 2em;
     padding-bottom: 2em;
-    // LR padding set with .grid-container
+    // LR padding set via .grid-container
   }
   #block-bay-area-camp-builtbythecommunity {
     p {
-      text-align: right;
+      text-align: center;
       font-family: $fairplex-wide;
       font-size: 1.125em;
+      @include breakpoint('medium') {
+        text-align: right;
+      }
     }
   }
 

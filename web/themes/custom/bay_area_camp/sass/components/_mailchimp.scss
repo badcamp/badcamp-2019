@@ -4,7 +4,7 @@
   @include breakpoint('medium') {
     padding: 5em 0;
   }
-  background-color: $blueish;
+  background-color: $lightblue;
 
   .description {
     font-family: $fairplex-wide;
@@ -18,7 +18,7 @@
     position: relative;
   }
 
-  input[type="email"] {
+  input[type='email'] {
     font-family: $fairplex-wide;
     font-size: 1.125em;
     line-height: 1.56;
@@ -28,27 +28,20 @@
     border: 0 solid;
     width: 100%;
     @include breakpoint('medium') {
-      width: 446px;
+      border-radius: 0 25px 25px 0;
     }
   }
 
-  input[type="submit"] {
-    background-color: $salmon;
-    border-radius: 30px;
-    font-family: $monsterrat;
-    font-size: 1.25em;
-    color: $navy;
-    font-weight: 700;
-    margin: 0;
-
+  input[type='submit'] {
+    @extend .big-button.salmon;
     width: 100%;
     margin-top: 10px;
     @include breakpoint('medium') {
       margin-top: 0;
+      height: 52px;
+      width: auto;
       position: absolute;
       top: 0;
-      width: 297px;
-      height: 52px;
       right: 0;
     }
   }
