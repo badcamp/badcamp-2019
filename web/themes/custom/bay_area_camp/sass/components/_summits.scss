@@ -9,6 +9,15 @@
       padding-right: 10px;
       vertical-align: sub;
     }
+    a {
+      &:hover {
+        border-bottom-color: $salmon;
+      }
+      &:focus {
+        outline: 2px dotted $salmon;
+        outline-offset: 1px;
+      }
+    }
   }
 }
 
