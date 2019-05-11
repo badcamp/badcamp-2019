@@ -1,10 +1,22 @@
 // summit node full page display
+.summit__display--full {
+  margin-bottom: 3em;
+  .summit__organizers {
+    margin: 1.5em 0 1.125em;
+    .fas {
+      font-size: 1.75em;
+      color: $lightblue;
+      padding-right: 10px;
+      vertical-align: sub;
+    }
+  }
+}
 
 // summit teaser display
 .summit__display--teaser {
   .summit__title {
     font-size: rem-calc(36);
-    line-height: 1.3;
+    line-height: 1.25;
     margin-bottom: 0.5em;
     a {
       border-bottom: none;
@@ -26,7 +38,5 @@
     padding: 1.25em 1.75em 1.5em;
     margin-top: 1em;
     margin-bottom: 2em;
-    position: relative;
-    overflow: hidden;
   }
 }
