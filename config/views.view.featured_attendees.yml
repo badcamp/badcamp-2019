@@ -30,7 +30,7 @@ display:
           perm: 'access user profiles'
       cache:
         type: tag
-        options: {}
+        options: {  }
       query:
         type: views_query
         options:
@@ -38,7 +38,7 @@ display:
           distinct: false
           replica: false
           query_comment: ''
-          query_tags: {}
+          query_tags: {  }
       exposed_form:
         type: basic
         options:
@@ -129,9 +129,9 @@ display:
           hide_alter_empty: true
           click_sort_column: value
           type: user_name
-          settings: {}
+          settings: {  }
           group_column: value
-          group_columns: {}
+          group_columns: {  }
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -175,7 +175,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: "<h2 class=\"section-heading\">Featured Attendees</h2>\r\n<div class=\"section-subhead\">Meet us there!</div>"
+          content: "<h2>Featured Attendees</h2>\r\n<div class=\"subtitle\">Meet us there!</div>"
           plugin_id: text_custom
       footer:
         area_text_custom:
@@ -187,9 +187,9 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: "<div class=\"register-button\"><a href=\"#\" class=\"big-button tealish\">Join us! Register now</a></div>\r\n<div class =\"more-link\"><a class=\"arrow-link\" href=\"#\">View all attendees</a></div>"
+          content: "<a href=\"#\" class=\"big-button tealish\">Join us! Register now</a>\r\n<a href=\"#\">View all attendees</a>"
           plugin_id: text_custom
-      empty: {}
+      empty: {  }
       relationships:
         entityqueue_relationship:
           id: entityqueue_relationship
@@ -202,8 +202,8 @@ display:
           limit_queue: featured_attendees
           entity_type: user
           plugin_id: entity_queue
-      arguments: {}
-      display_extenders: {}
+      arguments: {  }
+      display_extenders: {  }
       title: 'Featured Attendees'
       css_class: featured-attendees-view
     cache_metadata:

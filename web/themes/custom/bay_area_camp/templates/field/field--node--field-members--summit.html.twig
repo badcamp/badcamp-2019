@@ -1,0 +1,19 @@
+{%
+  set title_classes = [
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
+%}
+
+<div{{ attributes }}>
+  <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+  <div>
+  <i class="fas fa-users" aria-hidden="true"></i>
+    {% for item in items %}
+      {% if loop.last %}
+        <span{{ item.attributes.addClass('attendee-name--small') }}>{{ item.content }}</span>
+      {% else %}
+        <span{{ item.attributes.addClass('attendee-name--small') }}>{{ item.content }}</span><span class="separator">//<span>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
