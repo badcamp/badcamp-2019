@@ -15,6 +15,7 @@
 
   li {
     list-style: none;
+    text-align: center;
     @include breakpoint('medium') {
       margin: 0 7px;
     }
@@ -23,27 +24,24 @@
     }
   }
 
-  .fa {
-    font-size: 1.5em;
-    @include breakpoint('medium') {
-      font-size: 1.25em;
-    }
-    @include breakpoint('large') {
-      font-size: 1.5em;
-    }
-  }
-
   a {
+    width: 3.5em;
+    height: 3.5em;
     border-radius: 50%;
     background-color: $grayish;
-    display: block;
-    line-height: 1;
-    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-bottom: 0px;
     &:focus,
     &:active {
       outline: 0;
       border: 2px dotted $navy;
     }
+  }
+
+  .fa {
+    font-size: 1.5em;
+    display: inline-block;
   }
 }
