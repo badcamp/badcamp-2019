@@ -71,5 +71,18 @@
   }
   .sponsor-team-member {
     padding: 2em 0;
+
+    .attendee-name {
+      margin: 0.5em 0;
+    }
+
+    a {
+      border-bottom: none;
+
+      &:focus {
+        outline: 2px dotted $navy;
+        outline-offset: 2px;
+      }
+    }
   }
 }
