@@ -16,6 +16,10 @@
  * @see template_preprocess_user()
  */
 #}
+
+{% set attendee_tile = content.field_title|render %}
+{% set attendee_org = content.field_organization|render %}
+
 <article{{ attributes.addClass('user__display--full grid-x grid-margin-x') }}>
   <div class="content-left cell small-12 medium-9 xlarge-10 small-order-2 medium-order-1">
     <div class="user__attendee-name">
@@ -24,7 +28,9 @@
     </div>
     <div class="user__attendee-org">
       <span class="user-title">{{ content.field_title }}</span>
-      <span class="separator"> // </span>
+      {% if attendee_tile and attendee_org %}
+        <span class="separator"> // </span>
+      {% endif %}
       <span class="user-org">{{ content.field_organization }}</span>
     </div>
     <div class="user__attendee-bio">{{ content.field_bio }}</div>
