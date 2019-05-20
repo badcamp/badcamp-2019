@@ -1,7 +1,8 @@
 a,
 .link {
   border-bottom: 3px solid $lightblue;
-  &:hover {
+  &:hover,
+  &:focus {
     border-bottom: 3px solid $salmon;
   }
   &:focus {
