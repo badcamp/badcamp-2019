@@ -1,5 +1,13 @@
-a {
+a,
+.link {
   border-bottom: 3px solid $lightblue;
+  &:hover {
+    border-bottom: 3px solid $salmon;
+  }
+  &:focus {
+    outline: 1px dotted $navy;
+    outline-offset: 2px;
+  }
 }
 
 .arrow-link {

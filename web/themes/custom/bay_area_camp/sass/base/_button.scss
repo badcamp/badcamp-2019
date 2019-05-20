@@ -16,9 +16,9 @@
   &:hover {
     color: $color;
     @if $bg == $salmon {
-      background-color: lighten($bg, 3%);
-    } @else {
       background-color: lighten($bg, 4%);
+    } @else {
+      background-color: lighten($bg, 5%);
     }
   }
   &:focus,
