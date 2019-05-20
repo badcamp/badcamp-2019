@@ -98,3 +98,8 @@
     overflow: hidden;
   }
 }
+
+// for logged in site editors - replaces row padding removed by js
+.contextual-region.article__display--teaser {
+  padding: 1.25em 1.75em 1.5em;
+}
