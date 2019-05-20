@@ -1,10 +1,9 @@
-//input[type="textfield"],
-//input[type="email"]{
-//  border: 5px solid $primary-color;
-//  @include border-radius(25px);
-//  height: 46px;
-//}
-//
-//input[type="checkbox"] {
-//
-//}
+input[type='text'],
+input[type='email'],
+textarea {
+  box-shadow: none;
+  &:focus {
+    border: 2px dotted $navy;
+    box-shadow: none;
+  }
+}
