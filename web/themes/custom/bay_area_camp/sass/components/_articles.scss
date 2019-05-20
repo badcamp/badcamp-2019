@@ -6,24 +6,14 @@
 .article__tag {
   margin-top: 1.5em;
   margin-right: 0.5em;
-
-  a {
-    font-family: $monsterrat;
-    font-size: rem-calc(12);
-    font-weight: 600;
-    color: $white;
-    background: $navy;
-    border-bottom: none;
-    padding: 0.5em 1em;
-    @include border-radius(25px);
-
-    &:hover {
-      border: 2px solid $lightblue;
-    }
-    &:focus {
-      outline: 1px dotted $navy;
-      outline-offset: 2px;
-    }
+  font-family: $monsterrat;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+.article__body {
+  h2 {
+    font-size: rem-calc(24);
+    margin-top: 8px;
   }
 }
 
@@ -40,7 +30,7 @@
   .article__date {
     font-size: rem-calc(16);
     font-family: $monsterrat;
-    font-weight: 600;
+    font-weight: 700;
     margin: 1.25em 0 1em;
     border-bottom: 3px solid $salmon;
     display: inline-block;
@@ -51,16 +41,19 @@
 .article__display--teaser {
   .article__title {
     line-height: rem-calc(48);
-    margin-bottom: 0.5em;
-    width: 85%;
+    margin-bottom: 0.375em;
+    width: 72%;
     a {
       border-bottom: none;
 
-      &:hover {
-        border-bottom: 3px solid $lightblue;
+      &:hover,
+      &:focus {
+        border-bottom: 3px solid $salmon;
+        outline: 0;
       }
     }
   }
+
   .article__image {
     float: right;
     margin-top: 0.5em;

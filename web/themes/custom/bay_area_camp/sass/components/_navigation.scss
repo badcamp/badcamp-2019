@@ -24,18 +24,18 @@
         width: 100%;
         text-align: center;
         border-bottom: 0;
-        @include breakpoint('medium') {
+
+        @include breakpoint('large') {
           border-bottom: 3px solid $grayish;
           text-align: left;
+          font-size: 1em;
           &:hover,
           &:focus {
             border-bottom: 3px solid $salmon;
             outline: 0;
           }
         }
-        @include breakpoint('large') {
-          font-size: 1em;
-        }
+
         @include breakpoint('xlarge') {
           font-size: 1.125em;
         }
