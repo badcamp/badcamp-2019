@@ -1,9 +1,14 @@
 .branding-wrapper {
   .logo-wrapper {
     margin-right: 1em;
-    max-width: 75px;
+    max-width: 76px;
+    transition: transform 0.2s;
     @include breakpoint('xlarge') {
       max-width: 92px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
     }
   }
   .title-wrapper {
@@ -14,17 +19,6 @@
     .title {
       font-size: 2rem;
       margin-bottom: 3px;
-
-      a {
-        border-bottom: none;
-
-        &:hover {
-          color: $midblue;
-        }
-        &:focus {
-          outline-offset: 0;
-        }
-      }
 
       @include breakpoint('medium') {
         font-size: 2.5rem;
