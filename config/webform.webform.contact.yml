@@ -23,7 +23,7 @@ id: contact
 title: Contact
 description: 'Basic email contact webform.'
 category: ''
-elements: "name:\n  '#title': 'Your Name'\n  '#type': textfield\n  '#required': true\n  '#default_value': '[current-user:display-name]'\nemail:\n  '#title': 'Your Email'\n  '#type': email\n  '#required': true\n  '#default_value': '[current-user:mail]'\nsubject:\n  '#title': Subject\n  '#type': textfield\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\nmessage:\n  '#title': Message\n  '#type': textarea\n  '#required': true\n  '#test': 'Please ignore this email.'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'\n"
+elements: "name:\n  '#type': textfield\n  '#title': 'Your Name'\n  '#required': true\n  '#default_value': '[current-user:display-name]'\n  '#attributes':\n    aria-labelledby: label-name\n  '#label_attributes':\n    id: label-name\nemail:\n  '#type': email\n  '#title': 'Your Email'\n  '#required': true\n  '#default_value': '[current-user:mail]'\n  '#attributes':\n    aria-labelledby: label-email\n  '#label_attributes':\n    id: label-email\nsubject:\n  '#type': textfield\n  '#title': Subject\n  '#required': true\n  '#attributes':\n    aria-labelledby: label-subject\n  '#label_attributes':\n    id: label-subject\n  '#test': 'Testing contact webform from [site:name]'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#required': true\n  '#attributes':\n    aria-labelledby: label-message\n  '#label_attributes':\n    id: label-message\n  '#test': 'Please ignore this email.'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'\n  '#submit__attributes':\n    class:\n      - button"
 css: ''
 javascript: ''
 settings:
@@ -59,28 +59,28 @@ settings:
   form_access_denied: default
   form_access_denied_title: ''
   form_access_denied_message: ''
-  form_access_denied_attributes: {  }
+  form_access_denied_attributes: {}
   form_file_limit: ''
   submission_label: ''
   submission_log: false
-  submission_views: {  }
-  submission_views_replace: {  }
-  submission_user_columns: {  }
+  submission_views: {}
+  submission_views_replace: {}
+  submission_user_columns: {}
   submission_user_duplicate: false
   submission_access_denied: default
   submission_access_denied_title: ''
   submission_access_denied_message: ''
-  submission_access_denied_attributes: {  }
+  submission_access_denied_attributes: {}
   submission_exception_message: ''
   submission_locked_message: ''
-  submission_excluded_elements: {  }
+  submission_excluded_elements: {}
   submission_exclude_empty: false
   submission_exclude_empty_checkbox: false
   previous_submission_message: ''
   previous_submissions_message: ''
   autofill: false
   autofill_message: ''
-  autofill_excluded_elements: {  }
+  autofill_excluded_elements: {}
   wizard_progress_bar: true
   wizard_progress_pages: false
   wizard_progress_percentage: false
@@ -94,8 +94,8 @@ settings:
   preview_label: ''
   preview_title: ''
   preview_message: ''
-  preview_attributes: {  }
-  preview_excluded_elements: {  }
+  preview_attributes: {}
+  preview_excluded_elements: {}
   preview_exclude_empty: true
   preview_exclude_empty_checkbox: false
   draft: none
@@ -107,10 +107,10 @@ settings:
   confirmation_title: ''
   confirmation_message: 'Your message has been sent.'
   confirmation_url: '<front>'
-  confirmation_attributes: {  }
+  confirmation_attributes: {}
   confirmation_back: true
   confirmation_back_label: ''
-  confirmation_back_attributes: {  }
+  confirmation_back_attributes: {}
   confirmation_exclude_query: false
   confirmation_exclude_token: false
   limit_total: null
@@ -135,71 +135,71 @@ access:
     roles:
       - anonymous
       - authenticated
-    users: {  }
-    permissions: {  }
+    users: {}
+    permissions: {}
   view_any:
-    roles: {  }
-    users: {  }
-    permissions: {  }
+    roles: {}
+    users: {}
+    permissions: {}
   update_any:
-    roles: {  }
-    users: {  }
-    permissions: {  }
+    roles: {}
+    users: {}
+    permissions: {}
   delete_any:
-    roles: {  }
-    users: {  }
-    permissions: {  }
+    roles: {}
+    users: {}
+    permissions: {}
   purge_any:
-    roles: {  }
-    users: {  }
-    permissions: {  }
+    roles: {}
+    users: {}
+    permissions: {}
   view_own:
-    roles: {  }
-    users: {  }
-    permissions: {  }
+    roles: {}
+    users: {}
+    permissions: {}
   update_own:
-    roles: {  }
-    users: {  }
-    permissions: {  }
+    roles: {}
+    users: {}
+    permissions: {}
   delete_own:
-    roles: {  }
-    users: {  }
-    permissions: {  }
+    roles: {}
+    users: {}
+    permissions: {}
   administer:
-    roles: {  }
-    users: {  }
-    permissions: {  }
+    roles: {}
+    users: {}
+    permissions: {}
   test:
-    roles: {  }
-    users: {  }
-    permissions: {  }
+    roles: {}
+    users: {}
+    permissions: {}
   configuration:
-    roles: {  }
-    users: {  }
-    permissions: {  }
+    roles: {}
+    users: {}
+    permissions: {}
 handlers:
   email_confirmation:
     id: email
     label: 'Email confirmation'
     handler_id: email_confirmation
     status: true
-    conditions: {  }
+    conditions: {}
     weight: 1
     settings:
       states:
         - completed
       to_mail: '[webform_submission:values:email:raw]'
-      to_options: {  }
+      to_options: {}
       cc_mail: ''
-      cc_options: {  }
+      cc_options: {}
       bcc_mail: ''
-      bcc_options: {  }
+      bcc_options: {}
       from_mail: _default
-      from_options: {  }
+      from_options: {}
       from_name: _default
       subject: '[webform_submission:values:subject:raw]'
       body: '[webform_submission:values:message:value]'
-      excluded_elements: {  }
+      excluded_elements: {}
       ignore_access: false
       exclude_empty: true
       exclude_empty_checkbox: false
@@ -217,23 +217,23 @@ handlers:
     label: 'Email notification'
     handler_id: email_notification
     status: true
-    conditions: {  }
+    conditions: {}
     weight: 1
     settings:
       states:
         - completed
       to_mail: _default
-      to_options: {  }
+      to_options: {}
       cc_mail: ''
-      cc_options: {  }
+      cc_options: {}
       bcc_mail: ''
-      bcc_options: {  }
+      bcc_options: {}
       from_mail: '[webform_submission:values:email:raw]'
-      from_options: {  }
+      from_options: {}
       from_name: '[webform_submission:values:name:raw]'
       subject: '[webform_submission:values:subject:raw]'
       body: '[webform_submission:values:message:value]'
-      excluded_elements: {  }
+      excluded_elements: {}
       ignore_access: false
       exclude_empty: true
       exclude_empty_checkbox: false
