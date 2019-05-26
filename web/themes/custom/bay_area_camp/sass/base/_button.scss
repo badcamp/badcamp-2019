@@ -10,29 +10,33 @@
   @if $size == big {
     font-size: 1.125rem;
     padding: 1rem;
-  } @else {
+  } @else if $size == regular {
     font-size: 0.9375rem;
+  } @else {
+    font-size: 0.75rem;
+    font-weight: 600;
   }
   &:hover {
     color: $color;
     @if $bg == $salmon {
-      background-color: lighten($bg, 3%);
-    } @else {
       background-color: lighten($bg, 4%);
     }
-  }
-  &:focus,
-  &:active {
-    outline: 0;
-    border: 2px dotted $navy;
-  }
-  a {
-    border-bottom: none !important;
+    @if else == $navy {
+      background-color: lighten($bg, 6%);
+    } @else {
+      background-color: lighten($bg, 5%);
+    }
   }
 }
 
 .button {
   @include button();
+}
+.small-button {
+  @include button($size: small);
+}
+.small-button.navy {
+  @include button($navy, $white, small);
 }
 .big-button {
   @include button($size: big);
