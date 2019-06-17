@@ -1,0 +1,8 @@
+uuid: 47e248a1-082b-4a2b-ac12-d236a9fda40f
+langcode: en
+status: true
+dependencies: {  }
+id: donation
+label: 'Donation Block'
+revision: 0
+description: 'Promote Sponsorship'

@@ -1,0 +1,94 @@
+alternativeSigns: {  }
+currencyCode: USD
+currencyNumber: '840'
+label: 'U.S. dollar'
+roundingStep: 0.01
+sign: $
+subunits: 100
+status: true
+usages:
+  -
+    start: '1904-07-16'
+    end: null
+    countryCode: AS
+  -
+    start: '1899-01-01'
+    end: '1959-01-01'
+    countryCode: CU
+  -
+    start: '1905-06-21'
+    end: '1947-10-01'
+    countryCode: DO
+  -
+    start: '2000-10-02'
+    end: null
+    countryCode: EC
+  -
+    start: '1944-01-01'
+    end: null
+    countryCode: FM
+  -
+    start: '1944-08-21'
+    end: null
+    countryCode: GU
+  -
+    start: '1915'
+    end: null
+    countryCode: HT
+  -
+    start: '1965-11-08'
+    end: null
+    countryCode: IO
+  -
+    start: '1944-01-01'
+    end: null
+    countryCode: MH
+  -
+    start: '1944-01-01'
+    end: null
+    countryCode: MP
+  -
+    start: '1903-11-18'
+    end: null
+    countryCode: PA
+  -
+    start: '1898-12-10'
+    end: null
+    countryCode: PR
+  -
+    start: '1944-01-01'
+    end: null
+    countryCode: PW
+  -
+    start: '2001-01-01'
+    end: null
+    countryCode: SV
+  -
+    start: '1969-09-08'
+    end: null
+    countryCode: TC
+  -
+    start: '1999-10-20'
+    end: null
+    countryCode: TL
+  -
+    start: '1944-01-01'
+    end: null
+    countryCode: UM
+  -
+    start: '1792-01-01'
+    end: null
+    countryCode: US
+  -
+    start: '1833-01-01'
+    end: null
+    countryCode: VG
+  -
+    start: '1837-01-01'
+    end: null
+    countryCode: VI
+  -
+    start: '2009-04-12'
+    end: null
+    countryCode: ZW
+uuid: e07ab191-fb9b-4636-a3cf-bb010f33b573

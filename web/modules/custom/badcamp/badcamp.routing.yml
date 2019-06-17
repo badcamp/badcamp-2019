@@ -6,3 +6,10 @@ badcamp.attendees_list:
     _title: 'Attendees'
   requirements:
     _custom_access: '\Drupal\badcamp\Controller\MembersController::access'
+
+badcamp.payment:
+  path: '/payment/{type}'
+  defaults:
+    _controller: '\Drupal\badcamp\Controller\PaymentController::payment'
+  requirements:
+    _permission: 'access content'

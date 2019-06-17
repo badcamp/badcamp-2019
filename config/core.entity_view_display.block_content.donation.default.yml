@@ -1,0 +1,36 @@
+uuid: 305a84f6-39d1-4da0-92cd-aea1b9a66ce8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.donation
+    - field.field.block_content.donation.body
+    - field.field.block_content.donation.field_sponsor_link
+  module:
+    - link
+    - text
+id: block_content.donation.default
+targetEntityType: block_content
+bundle: donation
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_sponsor_link:
+    weight: 1
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

@@ -1,0 +1,8 @@
+badcamp_register.page:
+  path: '/registration/{page}'
+  defaults:
+    _controller: '\Drupal\badcamp_register\Controller\RegistrationPageController::page'
+    _title_callback: '\Drupal\badcamp_register\Controller\RegistrationPageController::title'
+    page: 'register'
+  requirements:
+    _custom_access: '\Drupal\badcamp_register\Controller\RegistrationPageController::access'

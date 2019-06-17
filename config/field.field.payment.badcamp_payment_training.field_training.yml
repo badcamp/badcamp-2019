@@ -1,0 +1,35 @@
+uuid: e684dbd2-a791-4dc5-93b6-b46dec045b66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.payment.field_training
+    - node.type.training
+  module:
+    - custom_add_another
+    - payment
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: payment.badcamp_payment_training.field_training
+field_name: field_training
+entity_type: payment
+bundle: badcamp_payment_training
+label: Training
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      training: training
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -94,3 +94,5 @@ if (PHP_SAPI !== 'cli') {
     $_SERVER['SERVER_PORT'] = 443;
   }
 }
+
+$config['system.logging']['error_level'] = 'verbose';

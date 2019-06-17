@@ -1,0 +1,8 @@
+uuid: ae7754b1-9c00-4c1f-900c-f2c7d7f9b759
+langcode: en
+status: true
+dependencies: {  }
+id: block_listing
+label: 'Block Listing'
+revision: 0
+description: 'Allow for multiple blocks to be associated into a single block.'

@@ -1,0 +1,27 @@
+uuid: f049750b-f165-4d60-b060-c3fc65a4c884
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.payment.badcamp_payment_sponsorship.field_sponsorship_hoodie_size
+    - field.field.payment.badcamp_payment_sponsorship.field_sponsorship_shirt_size
+  module:
+    - payment
+id: payment.badcamp_payment_sponsorship.default
+targetEntityType: payment
+bundle: badcamp_payment_sponsorship
+mode: default
+content:
+  field_sponsorship_hoodie_size:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_sponsorship_shirt_size:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden: {  }

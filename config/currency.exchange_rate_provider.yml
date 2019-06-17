@@ -1,0 +1,9 @@
+plugins:
+  -
+    plugin_id: currency_fixed_rates
+    status: true
+  -
+    plugin_id: currency_historical_rates
+    status: true
+_core:
+  default_config_hash: TrKWV8zxs3oIJUC4bRlCJZrOFimdU4FgrGrFusfxJME

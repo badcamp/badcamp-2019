@@ -1,0 +1,16 @@
+uuid: b0a826c9-fd78-46b2-bff3-22363779e872
+langcode: en
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: qUUQpFDuzrT0QdG8c3UG_6bMDQEOd16OAys8r5k4FRw
+id: no_payment_required
+label: 'No payment required'
+ownerId: 1
+pluginConfiguration:
+  execute_status_id: payment_success
+  capture: false
+  capture_status_id: payment_success
+  refund: true
+  refund_status_id: payment_refunded
+pluginId: payment_basic

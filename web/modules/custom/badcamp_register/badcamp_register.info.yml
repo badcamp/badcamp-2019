@@ -1,0 +1,5 @@
+name: 'BADCamp Register'
+type: module
+description: 'BADCamp Registration Module'
+core: 8.x
+package: 'BADCAMP'

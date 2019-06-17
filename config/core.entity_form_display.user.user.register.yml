@@ -1,0 +1,293 @@
+uuid: 97667c97-6fde-484e-adde-929d5bc97c20
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.register
+    - field.field.user.user.field_bio
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_options
+    - field.field.user.user.field_organization
+    - field.field.user.user.field_organization_url
+    - field.field.user.user.field_social_profile_links
+    - field.field.user.user.field_subscribe_to_badcamp_newsl
+    - field.field.user.user.field_title
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - field_group
+    - image
+    - link
+    - mailchimp_lists
+    - path
+    - social_media_links_field
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_account_information:
+      children:
+        - account
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Account Information'
+    group_personal_information:
+      children:
+        - group_name
+        - field_bio
+        - user_picture
+        - group_organization_wrapper
+        - group_options_group
+        - field_social_profile_links
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Personal Information'
+    group_name:
+      children:
+        - group_first_name_wrapper
+        - group_last_name_wrapper
+      parent_name: group_personal_information
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'cell small-12 medium-6'
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Name
+    group_first_name_wrapper:
+      children:
+        - field_first_name
+      parent_name: group_name
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'cell small-12 medium-6'
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'First Name Wrapper'
+    group_last_name_wrapper:
+      children:
+        - field_last_name
+      parent_name: group_name
+      weight: 21
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'cell small-12 medium-6'
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Last Name Wrapper'
+    group_organization_wrapper:
+      children:
+        - group_org_wrapper
+        - group_org_website_wrapper
+        - group_title_wrapper
+        - field_title
+      parent_name: group_personal_information
+      weight: 23
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'grid-x grid-margin-x'
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Organization Wrapper'
+    group_org_wrapper:
+      children:
+        - field_organization
+      parent_name: group_organization_wrapper
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'cell small-12 medium-6'
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Org Wrapper'
+    group_org_website_wrapper:
+      children:
+        - field_organization_url
+      parent_name: group_organization_wrapper
+      weight: 21
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'cell small-12 medium-6'
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Org Website Wrapper'
+    group_title_wrapper:
+      children: {  }
+      parent_name: group_organization_wrapper
+      weight: 22
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'cell small-12 medium-6'
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Title Wrapper'
+    group_options_group:
+      children:
+        - field_options
+      parent_name: group_personal_information
+      weight: 24
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'grid-x grid-margin-x margin-horizontal-1'
+        element: div
+        show_label: false
+        label_element: h3
+        required_fields: true
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Options Group'
+_core:
+  default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
+id: user.user.register
+targetEntityType: user
+bundle: user
+mode: register
+content:
+  account:
+    weight: -10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_bio:
+    weight: 21
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_first_name:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_last_name:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_options:
+    weight: 24
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_organization:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_organization_url:
+    weight: 9
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_social_profile_links:
+    weight: 25
+    settings: {  }
+    third_party_settings: {  }
+    type: social_media_links_field_default
+    region: content
+  field_subscribe_to_badcamp_newsl:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: mailchimp_lists_select
+    region: content
+  field_title:
+    weight: 23
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  user_picture:
+    type: image_image
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    weight: 22
+    region: content
+hidden:
+  contact: true
+  google_analytics: true
+  language: true
+  timezone: true

@@ -1,0 +1,21 @@
+uuid: 27beb93f-bddd-4401-af52-d4f4b44e5f9d
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - payment
+id: payment.field_sponsorship_shirt_size
+field_name: field_sponsorship_shirt_size
+entity_type: payment
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,2 @@
+allow users to register with badcamp_register:
+  title: 'Allow users to register using the registration page'

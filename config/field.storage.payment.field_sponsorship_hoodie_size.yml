@@ -1,0 +1,21 @@
+uuid: 99794424-8fb6-4562-ac35-c4b36dd0bec6
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - payment
+id: payment.field_sponsorship_hoodie_size
+field_name: field_sponsorship_hoodie_size
+entity_type: payment
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

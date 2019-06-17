@@ -1,0 +1,18 @@
+uuid: 6550b9b6-80d1-4110-822e-5c54d06e1504
+langcode: en
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: IG-JPbPgrupmRhlSOqzzLaYsvyoipqvamkZsTFJqYK4
+id: collect_on_delivery
+label: 'Collect on delivery'
+ownerId: 1
+pluginConfiguration:
+  message_text: 'You will be charged upon delivery. Please make sure you have enough cash available.'
+  message_text_format: plain_text
+  execute_status_id: payment_pending
+  capture: true
+  capture_status_id: payment_success
+  refund: false
+  refund_status_id: payment_refunded
+pluginId: payment_basic

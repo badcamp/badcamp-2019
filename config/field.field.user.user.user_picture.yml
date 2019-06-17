@@ -25,21 +25,21 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_directory: 'pictures/[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
+  file_directory: 'pictures/[date:custom:Y]-[date:custom:m]'
   max_filesize: ''
+  alt_field: false
+  title_field: false
   max_resolution: ''
   min_resolution: ''
-  alt_field: false
-  alt_field_required: false
-  title_field: false
-  title_field_required: false
   default_image:
-    uuid: 2f7cf4ba-10aa-4038-b2af-2f5e20e7d9e8
+    uuid: null
     alt: ''
     title: ''
-    width: 400
-    height: 400
+    width: null
+    height: null
+  alt_field_required: false
+  title_field_required: false
   handler: 'default:file'
   handler_settings: {  }
 field_type: image
