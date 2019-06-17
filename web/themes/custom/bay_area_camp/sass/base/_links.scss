@@ -10,6 +10,11 @@
   }
 }
 
+a:focus {
+  outline: 1px dotted $navy;
+  outline-offset: 2px;
+}
+
 p a {
   @extend .link;
 }
