@@ -1,4 +1,3 @@
-a,
 .link {
   border-bottom: 3px solid $lightblue;
   &:hover,
@@ -9,6 +8,10 @@ a,
     outline: 1px dotted $navy;
     outline-offset: 2px;
   }
+}
+
+p a {
+  @extend .link;
 }
 
 .arrow-link {
