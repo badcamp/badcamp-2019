@@ -33,6 +33,11 @@
     justify-content: center;
     align-items: center;
     border-bottom: 0px;
+
+    &:hover {
+      background-color: darken($grayish, 5%);
+    }
+
     &:focus,
     &:active {
       outline: 0;

@@ -22,13 +22,16 @@
     font-family: $fairplex-wide;
     font-size: 1.125em;
     line-height: 1.56;
-    color: $purpleish;
+    color: $navy;
     height: 51px;
     margin-bottom: 0;
-    border: 0 solid;
     width: 100%;
+    padding-left: 15px;
     @include breakpoint('medium') {
       border-radius: 0 25px 25px 0;
+    }
+    &::placeholder {
+      color: $dark-gray;
     }
   }
 
