@@ -1,38 +1,32 @@
-uuid: 21eaa66c-fe19-450b-8f7d-5126804380de
+uuid: b58b3ab7-500f-4781-ab8d-13f7313c000e
 langcode: en
 status: open
 dependencies:
-  enforced:
-    module:
-      - webform
   module:
     - honeypot
 third_party_settings:
   honeypot:
     honeypot: true
-    time_restriction: true
-_core:
-  default_config_hash: Db1CJM6FchEqqeVz5YJThCK0WB599y4NjQ4GkPcGF5g
 open: null
 close: null
 weight: 0
-uid: null
+uid: 61
 template: false
 archive: false
-id: contact
-title: Contact
-description: 'Basic email contact webform.'
+id: volunteer
+title: Volunteer
+description: 'Basic email volunteer webform.'
 category: ''
-elements: "name:\n  '#title': 'Your Name'\n  '#type': textfield\n  '#required': true\n  '#default_value': '[current-user:display-name]'\nemail:\n  '#title': 'Your Email'\n  '#type': email\n  '#required': true\n  '#default_value': '[current-user:mail]'\nsubject:\n  '#title': Subject\n  '#type': textfield\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\nmessage:\n  '#title': Message\n  '#type': textarea\n  '#required': true\n  '#test': 'Please ignore this email.'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'\n"
+elements: "processed_text:\n  '#type': processed_text\n  '#text': \"<h3><strong>Yes, you!&nbsp; Got Skills to Share?!</strong></h3>\\r\\n\\r\\n<p><strong>BADCamp</strong>&nbsp;would not be possible without love + support from volunteers!</p>\\r\\n<!-- \\r\\n<p><b>Volunteer Now Through Our New Online Portal!</b></p>\\r\\n\\r\\n<p><a href=\\\"http://bayareadrupalcamp.volunteerlocal.com/volunteer/?id=29132\\\" target=\\\"_blank\\\"><img alt=\\\"Sign Up To Volunteer\\\" border=\\\"0\\\" height=\\\"30\\\" src=\\\"https://app.volunteerlocal.com/images/volunteer_signup_widget_165x30.gif\\\" width=\\\"165\\\" /></a></p>\\r\\n\\r\\n<h3><strong><a href=\\\"http://bayareadrupalcamp.volunteerlocal.com/volunteer/?id=29132\\\" target=\\\"_blank\\\">View the Job List »</a></strong></h3>\\r\\n\\r\\n<p>&nbsp;</p>\\r\\n-->\\r\\n\\r\\n<hr />\\r\\n<p><u><strong>Volunteer opportunities include:</strong></u></p>\\r\\n\\r\\n<ul>\\r\\n\\t<li>Marketing + communications</li>\\r\\n\\t<li>Day-of-coordination</li>\\r\\n\\t<li>Registration desk help</li>\\r\\n\\t<li>Store assistants + managers</li>\\r\\n\\t<li>Room monitors + coordinators</li>\\r\\n\\t<li>Stuff movers + badge checkers</li>\\r\\n\\t<li>Room setup + maintenance</li>\\r\\n\\t<li>AV, Internet + Photographers</li>\\r\\n\\t<li>Signage distributors</li>\\r\\n\\t<li>Venue setup + teardown</li>\\r\\n</ul>\\r\\n\\r\\n<p><strong>Use the form below and we will be in contact.</strong></p>\\r\\n\"\n  '#format': full_html\nname:\n  '#type': webform_name\n  '#title': Name\n  '#title__access': false\n  '#first__required': true\n  '#middle__access': false\n  '#last__required': true\n  '#suffix__access': false\n  '#degree__access': false\n  '#required': true\nemail:\n  '#type': email\n  '#title': Email\n  '#required': true\nphone:\n  '#type': tel\n  '#title': Phone\ncomment:\n  '#type': textarea\n  '#title': Comment\n  '#help_title': 'Let us know what you would like to volunteer for...planning, summit content, day-of registration, etc.'"
 css: ''
 javascript: ''
 settings:
   ajax: false
   ajax_scroll_top: form
   page: true
-  page_submit_path: /contact-us
+  page_submit_path: /volunteer
   page_confirm_path: ''
-  form_title: source_entity_webform
+  form_title: both
   form_submit_once: false
   form_exception_message: ''
   form_open_message: ''
@@ -103,10 +97,10 @@ settings:
   draft_auto_save: false
   draft_saved_message: ''
   draft_loaded_message: ''
-  confirmation_type: url_message
-  confirmation_title: ''
-  confirmation_message: 'Your message has been sent.'
-  confirmation_url: '<front>'
+  confirmation_type: page
+  confirmation_title: 'Thank You!'
+  confirmation_message: 'Thank you for submitting our volunteer interest form. Someone from team BADCamp will be in touch soon. (Probably Valerie Neumark from rootid.)'
+  confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -178,17 +172,17 @@ access:
     users: {  }
     permissions: {  }
 handlers:
-  email_confirmation:
+  email:
     id: email
-    label: 'Email confirmation'
-    handler_id: email_confirmation
+    label: 'Email From BADCamp Volunteers 2019'
+    handler_id: email
     status: true
     conditions: {  }
-    weight: 1
+    weight: 0
     settings:
       states:
         - completed
-      to_mail: '[webform_submission:values:email:raw]'
+      to_mail: valerie@rootid.com
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
@@ -197,8 +191,8 @@ handlers:
       from_mail: _default
       from_options: {  }
       from_name: _default
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
+      subject: _default
+      body: _default
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
@@ -206,43 +200,9 @@ handlers:
       html: true
       attachments: false
       twig: false
-      theme_name: ''
       debug: false
       reply_to: ''
       return_path: ''
       sender_mail: ''
       sender_name: ''
-  email_notification:
-    id: email
-    label: 'Email notification'
-    handler_id: email_notification
-    status: true
-    conditions: {  }
-    weight: 1
-    settings:
-      states:
-        - completed
-      to_mail: _default
-      to_options: {  }
-      cc_mail: ''
-      cc_options: {  }
-      bcc_mail: ''
-      bcc_options: {  }
-      from_mail: '[webform_submission:values:email:raw]'
-      from_options: {  }
-      from_name: '[webform_submission:values:name:raw]'
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
-      excluded_elements: {  }
-      ignore_access: false
-      exclude_empty: true
-      exclude_empty_checkbox: false
-      html: true
-      attachments: false
-      twig: false
       theme_name: ''
-      debug: false
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
