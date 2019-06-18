@@ -104,68 +104,63 @@ class RegistrationPageController extends ControllerBase {
     $format = isset($config['message']) ? $config['message']['format'] : NULL;
     $render = '';
 
-    if ($page == 'register') {
-      // If logged in redirect to the sponsors page.
-      if ($this->currentUser()->isAuthenticated()) {
-        return $this->generateResponse('sponsor');
-      }
+    $config = array_merge([
+      'requires_auth' => FALSE,
+    ], $config);
 
-      // Check to see if user has a
-      if ($this->currentUser()->hasPermission('allow users to register with badcamp_register')) {
-        $url = Url::fromRoute('system.403');
-        $response = new RedirectResponse($url->toString());
-        return $response;
-      }
+    $data = [
+      '#theme' => 'registration_page',
+    ];
 
-      $entity = $this->entityTypeManager->getStorage('user')->create(array());
-      $formObject = $this->entityTypeManager
-        ->getFormObject('user', 'register')
-        ->setEntity($entity);
-      $form = $this->formBuilder->getForm($formObject);
-      $rendered_form = $this->renderer->render($form);
+    $active = isset($config['active']) ? $config['active'] : FALSE;
 
-      return [
-        '#theme' => 'registration_page',
-        '#content' => $rendered_form,
-        '#step1active' => TRUE,
-      ];
-    }
-
-    if ($page == 'sponsor' || $page == 'event') {
-      if ($this->currentUser()->isAnonymous()) {
-        return $this->generateResponse('register');
-      }
-    }
-
-    if ($page == 'sponsor') {
-
-      $config['bid'] = 'f32e2774-1417-450b-aeb1-f3fbb2e94f7e';
-      if (isset($config['bid'])) {
-        $bid = $config['bid'];
+    // If Block Set.
+    if (isset($config['content']['block'])) {
+      if (isset($config['content']['block']['bid'])) {
+        $bid = $config['content']['block']['bid'];
         $block = $this->entityRepository->loadEntityByUuid('block_content', $bid);
-        $render = $this->entityTypeManager->getViewBuilder('block_content')->view($block);
+        $render = $this->entityTypeManager->getViewBuilder('block_content')
+          ->view($block);
       }
-
-      return [
-        '#theme' => 'registration_page',
-        '#content' => $render,
-        '#step2active' => TRUE,
-        '#intro_message' => check_markup($text, $format)
-      ];
     }
-    elseif ($page == 'event') {
-      $content = [];
-      if (isset($config['content'])) {
-        $content = $config['content'];
+    elseif (isset($config['content']['entity_form'])) {
+
+      $entity_form = isset($config['content']['entity_form']) ? $config['content']['entity_form'] : [];
+      $entity_type = isset($entity_form['entity_type']) ? $entity_form['entity_type'] : FALSE;
+      $display_mode = isset($entity_form['display_mode']) ? $entity_form['display_mode'] : FALSE;
+      $default_data = isset($entity_form['default_data']) ? $entity_form['default_data'] : [];
+
+      if ($entity_type !== FALSE && $display_mode !== FALSE) {
+        $entity = $this->entityTypeManager->getStorage($entity_type)
+          ->create($default_data);
+        $formObject = $this->entityTypeManager
+          ->getFormObject($entity_type, $display_mode)
+          ->setEntity($entity);
+        $form = $this->formBuilder->getForm($formObject);
+        $render = $this->renderer->render($form);
       }
-
-      return [
-        '#theme' => 'registration_page',
-        '#content' => $content,
-        '#step3active' => TRUE,
-        '#intro_message' => check_markup($text, $format)
-      ];
     }
+    // Default to whatever is in content.
+    elseif (isset($config['content']) && !empty($config['content'])) {
+      $render = $config['content'];
+    }
+
+    if (($config['requires_auth'] === TRUE && !$this->currentUser()->isAuthenticated()) ||
+        ($config['requires_auth'] === FALSE && $this->currentUser()->isAuthenticated())) {
+      return $this->generateResponse($config['redirect_auth']);
+    }
+
+    if ($active !== FALSE) {
+      $data['#' . $active] = TRUE;
+    }
+
+    if ($text !== '') {
+      $data['#intro_message'] = check_markup($text, $format);
+    }
+
+    $data['#content'] = $render;
+
+    return $data;
   }
 
   /**
@@ -183,31 +178,26 @@ class RegistrationPageController extends ControllerBase {
    * @param $page
    */
   public function title($page) {
-    $title = '';
-    switch($page) {
-      case 'register':
-        $title = $this->t('Registration');
-        break;
-      case 'sponsor':
-        $title = $this->t('Sponsor');
-        break;
-      case 'events':
-        $title = $this->t('Events');
-        break;
-    }
-    return $title;
+    $config = $this->config('badcamp_register.settings')->get($page);
+
+    if (isset($config['title']))
+      return $config['title'];
+
+    return '';
   }
 
   /**
    * @param $page
    */
   public function access($page) {
-    switch($page) {
-      case 'register':
-      case 'sponsor':
-      case 'events':
-        return AccessResult::allowed();
-        break;
+    $config = $this->config('badcamp_register.settings')->get($page);
+
+    if (!empty($config)) {
+      if (isset($config['permission']) && !$this->currentUser()->hasPermission($config['permission'])) {
+        return AccessResult::forbidden();
+      }
+
+      return AccessResult::allowed();
     }
 
     return AccessResult::forbidden();

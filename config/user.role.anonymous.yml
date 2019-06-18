@@ -12,6 +12,7 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
+  - 'allow users to register with badcamp_register'
   - 'search content'
   - 'use text format restricted_html'
   - 'view empty pages'

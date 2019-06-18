@@ -1,18 +1,33 @@
 register:
+  title: 'Register For An Account'
   message:
     value: ''
-    format: null
-  content: false
-  active: step1active
+    format: NULL
+  content:
+    entity_form:
+      entity_type: user
+      display_mode: register
+  active: 'step1active'
+  redirect_auth: 'sponsor'
+  requires_auth: FALSE
+  permission: 'allow users to register with badcamp_register'
 sponsor:
+  title: 'Help Sponsor The Bay Area Drupal Camp'
   message:
     value: ''
-    format: null
-  content: false
-  active: step2active
-event:
+    format: NULL
+  content:
+    block:
+      bid: f32e2774-1417-450b-aeb1-f3fbb2e94f7e
+  active: 'step2active'
+  redirect_auth: 'register'
+  requires_auth: TRUE
+events:
+  title: 'Events'
   message:
     value: ''
-    format: null
-  content: false
-  active: step3active
+    format: NULL
+  content: FALSE
+  active: 'step3active'
+  redirect_auth: 'register'
+  requires_auth: TRUE
