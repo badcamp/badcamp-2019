@@ -1,0 +1,113 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/badcamp-2019.docksal\/block\/15?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/donation"
+        }
+    },
+    "id": [
+        {
+            "value": 15
+        }
+    ],
+    "uuid": [
+        {
+            "value": "d3f20f30-51c9-4c01-a030-b969ce712e88"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 17
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "donation"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2019-06-16T00:28:27+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "info": [
+        {
+            "value": "Donate $25",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2019-06-18T08:38:41+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "reusable": [
+        {
+            "value": true
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "| Bay Area Drupal Camp - 2019",
+                "canonical_url": "http:\/\/badcamp-2019.docksal\/front"
+            }
+        }
+    ],
+    "body": [
+        {
+            "value": "<ul>\r\n\t<li>Much love and respect<\/li>\r\n\t<li>BADCamp T-shirt<\/li>\r\n<\/ul>\r\n",
+            "format": "full_html",
+            "processed": "<ul><li>Much love and respect<\/li>\n\t<li>BADCamp T-shirt<\/li>\n<\/ul>",
+            "summary": "",
+            "lang": "en"
+        }
+    ],
+    "field_block_title": [
+        {
+            "value": "$25"
+        }
+    ],
+    "field_sponsor_link": [
+        {
+            "uri": "internal:\/",
+            "title": "Select",
+            "options": {
+                "attributes": {
+                    "class": [
+                        ""
+                    ]
+                }
+            }
+        }
+    ]
+}
