@@ -1,0 +1,39 @@
+uuid:
+  -
+    value: 8ac60ec7-0ad6-42ff-914f-aeab72d10df2
+langcode:
+  -
+    value: en
+uid:
+  -
+    target_type: user
+    target_uuid: 9ae2283e-4818-4893-8383-7eec8264fa32
+filename:
+  -
+    value: generateImage_oMjyap.jpg
+uri:
+  -
+    value: 'public://pictures/2019-04/generateImage_oMjyap.jpg'
+    url: /sites/default/files/pictures/2019-04/generateImage_oMjyap.jpg
+filemime:
+  -
+    value: image/jpeg
+filesize:
+  -
+    value: 5422
+status:
+  -
+    value: true
+created:
+  -
+    value: '2019-04-06T06:40:18+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2019-04-06T06:40:18+00:00'
+    format: 'Y-m-d\TH:i:sP'
+_content_sync:
+  entity_type: file
+  entity_dependencies:
+    user:
+      - user.user.9ae2283e-4818-4893-8383-7eec8264fa32

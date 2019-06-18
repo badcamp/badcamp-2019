@@ -1,0 +1,58 @@
+uuid:
+  -
+    value: 3dcc1b40-323b-4bef-bf46-23f141637887
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: columns
+    target_type: paragraphs_type
+    target_uuid: 4b42dc74-8024-4e1f-805a-72936452630c
+status:
+  -
+    value: true
+created:
+  -
+    value: '2019-04-06T05:12:46+00:00'
+    format: 'Y-m-d\TH:i:sP'
+parent_id:
+  -
+    value: '10'
+parent_type:
+  -
+    value: block_content
+parent_field_name:
+  -
+    value: field_content
+behavior_settings:
+  -
+    value:
+      paragraphs_class_paragraph_class:
+        wrapper_class: 'grid-x event-details'
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+field_content:
+  -
+    target_revision_id: 62
+    target_type: paragraph
+    target_uuid: f939196b-9974-4eb4-9a27-bc0a1610df65
+  -
+    target_revision_id: 64
+    target_type: paragraph
+    target_uuid: 6132e839-a813-466a-add8-629f25c3edf4
+  -
+    target_revision_id: 68
+    target_type: paragraph
+    target_uuid: 5a67dc74-dda5-4606-80bb-68bd0b563870
+_content_sync:
+  entity_type: paragraph
+  entity_dependencies:
+    paragraph:
+      - paragraph.columns.f939196b-9974-4eb4-9a27-bc0a1610df65
+      - paragraph.columns.6132e839-a813-466a-add8-629f25c3edf4
+      - paragraph.columns.5a67dc74-dda5-4606-80bb-68bd0b563870

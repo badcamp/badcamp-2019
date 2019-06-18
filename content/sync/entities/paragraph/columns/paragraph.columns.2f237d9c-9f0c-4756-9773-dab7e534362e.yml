@@ -1,0 +1,53 @@
+uuid:
+  -
+    value: 2f237d9c-9f0c-4756-9773-dab7e534362e
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: columns
+    target_type: paragraphs_type
+    target_uuid: 4b42dc74-8024-4e1f-805a-72936452630c
+status:
+  -
+    value: true
+created:
+  -
+    value: '2019-04-06T05:05:44+00:00'
+    format: 'Y-m-d\TH:i:sP'
+parent_id:
+  -
+    value: '58'
+parent_type:
+  -
+    value: paragraph
+parent_field_name:
+  -
+    value: field_content
+behavior_settings:
+  -
+    value:
+      paragraphs_class_paragraph_class:
+        wrapper_class: 'cell small-12 medium-auto section2 grid-x align-middle'
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+field_content:
+  -
+    target_revision_id: 49
+    target_type: paragraph
+    target_uuid: df03d28c-7e4d-4e8f-9b28-f183d0695371
+  -
+    target_revision_id: 50
+    target_type: paragraph
+    target_uuid: 55d12c5a-e48f-4275-9ce8-ed3b43d63081
+_content_sync:
+  entity_type: paragraph
+  entity_dependencies:
+    paragraph:
+      - paragraph.image.df03d28c-7e4d-4e8f-9b28-f183d0695371
+      - paragraph.text.55d12c5a-e48f-4275-9ce8-ed3b43d63081

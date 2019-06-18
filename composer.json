@@ -37,6 +37,15 @@
                     "reference": "master"
                 }
             }
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/Blanca-Esqueda/content_sync",
+            "package": {
+                "name": "drupal/content_sync",
+                "version": "8.x-2.x",
+                "type": "drupal-module"
+            }
         }
     ],
     "require": {
@@ -53,10 +62,10 @@
         "drupal/config_direct_save": "^1.0",
         "drupal/config_installer": "^1.0",
         "drupal/console": "^1.8",
+        "drupal/content_sync": "8.x-2.x-dev",
         "drupal/core": "^8",
         "drupal/custom_add_another": "^1.0@beta",
         "drupal/daterange_compact": "1.x-dev",
-        "drupal/default_content": "1.x-dev",
         "drupal/disable_messages": "^1.1",
         "drupal/eck": "1.x-dev",
         "drupal/embed": "^1.0",
@@ -205,10 +214,6 @@
             },
             "drupal/multiple_selects": {
                 "Issue #2866543 - Support required fields": "https://www.drupal.org/files/issues/2866543.patch"
-            },
-            "drupal/default_content": {
-                "Issue #2952520: Flag an entity as being imported:": "https://www.drupal.org/files/issues/2018-03-14/2952520-6.patch",
-                "Issue #2640734: Import manual content": "https://www.drupal.org/files/issues/2019-01-28/2640734-93.default_content.Allow-manual-imports.patch"
             }
         }
     },

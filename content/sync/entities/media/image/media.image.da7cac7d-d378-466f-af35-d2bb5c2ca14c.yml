@@ -1,0 +1,76 @@
+uuid:
+  -
+    value: da7cac7d-d378-466f-af35-d2bb5c2ca14c
+langcode:
+  -
+    value: en
+bundle:
+  -
+    target_id: image
+    target_type: media_type
+    target_uuid: b820a4df-41d5-40f8-ac1d-29ac48a6abb6
+revision_created:
+  -
+    value: '2019-05-05T23:35:26+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user:
+  -
+    target_type: user
+    target_uuid: 9ae2283e-4818-4893-8383-7eec8264fa32
+revision_log_message: {  }
+status:
+  -
+    value: true
+name:
+  -
+    value: Pantheon
+thumbnail:
+  -
+    alt: Pantheonlogo
+    title: null
+    width: 380
+    height: 130
+    target_type: file
+    target_uuid: 155db426-9b9f-44f9-ac09-b8bdf1a812bf
+uid:
+  -
+    target_type: user
+    target_uuid: 9ae2283e-4818-4893-8383-7eec8264fa32
+created:
+  -
+    value: '2019-03-16T20:53:15+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2019-05-05T23:35:26+00:00'
+    format: 'Y-m-d\TH:i:sP'
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+metatag:
+  value:
+    title: '| Bay Area Drupal Camp - 2019'
+    canonical_url: 'http://badcamp-2019.docksal/front'
+path:
+  -
+    alias: null
+    pid: null
+    langcode: en
+field_media_image:
+  -
+    alt: Pantheonlogo
+    title: ''
+    width: 2513
+    height: 834
+    target_type: file
+    target_uuid: 155db426-9b9f-44f9-ac09-b8bdf1a812bf
+_content_sync:
+  entity_type: media
+  entity_dependencies:
+    user:
+      - user.user.9ae2283e-4818-4893-8383-7eec8264fa32
+    file:
+      - file.file.155db426-9b9f-44f9-ac09-b8bdf1a812bf

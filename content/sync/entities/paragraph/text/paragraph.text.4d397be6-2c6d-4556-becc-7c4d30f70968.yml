@@ -1,0 +1,46 @@
+uuid:
+  -
+    value: 4d397be6-2c6d-4556-becc-7c4d30f70968
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: text
+    target_type: paragraphs_type
+    target_uuid: e8c7ea08-d825-4e47-97f5-4f73fbe4bef4
+status:
+  -
+    value: true
+created:
+  -
+    value: '2019-04-06T05:06:32+00:00'
+    format: 'Y-m-d\TH:i:sP'
+parent_id:
+  -
+    value: '54'
+parent_type:
+  -
+    value: paragraph
+parent_field_name:
+  -
+    value: field_content
+behavior_settings:
+  -
+    value:
+      paragraphs_class_paragraph_class:
+        wrapper_class: 'small-8 stat'
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+field_text:
+  -
+    value: "<p class=\"stat-number\">1842</p>\r\n\r\n<p>Attendees in 2018</p>\r\n"
+    format: full_html
+    processed: "<p class=\"stat-number\">1842</p>\n\n<p>Attendees in 2018</p>\n"
+_content_sync:
+  entity_type: paragraph
+  entity_dependencies: {  }

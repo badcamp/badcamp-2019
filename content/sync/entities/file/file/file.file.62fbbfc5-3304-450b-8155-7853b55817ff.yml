@@ -1,0 +1,39 @@
+uuid:
+  -
+    value: 62fbbfc5-3304-450b-8155-7853b55817ff
+langcode:
+  -
+    value: en
+uid:
+  -
+    target_type: user
+    target_uuid: 9ae2283e-4818-4893-8383-7eec8264fa32
+filename:
+  -
+    value: 'Platformsh logo.png'
+uri:
+  -
+    value: 'public://2019-03/Platformsh logo.png'
+    url: /sites/default/files/2019-03/Platformsh%20logo.png
+filemime:
+  -
+    value: image/png
+filesize:
+  -
+    value: 7963
+status:
+  -
+    value: true
+created:
+  -
+    value: '2019-03-16T20:54:39+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2019-03-16T20:54:52+00:00'
+    format: 'Y-m-d\TH:i:sP'
+_content_sync:
+  entity_type: file
+  entity_dependencies:
+    user:
+      - user.user.9ae2283e-4818-4893-8383-7eec8264fa32

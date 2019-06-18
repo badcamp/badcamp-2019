@@ -1,0 +1,47 @@
+uuid:
+  -
+    value: e5cad56d-55dd-4e87-9b2a-87681448363d
+langcode:
+  -
+    value: en
+vid:
+  -
+    target_id: sponsor_level
+    target_type: taxonomy_vocabulary
+    target_uuid: d48d6719-cc41-4e34-ad5b-348f7f2b6d73
+status:
+  -
+    value: true
+name:
+  -
+    value: 'Core Sponsor'
+description:
+  -
+    value: null
+    format: null
+    processed: ''
+weight:
+  -
+    value: 0
+parent:
+  -
+    target_id: 0
+changed:
+  -
+    value: '2019-03-16T20:44:34+00:00'
+    format: 'Y-m-d\TH:i:sP'
+default_langcode:
+  -
+    value: true
+metatag:
+  value:
+    title: 'Core Sponsor | Bay Area Drupal Camp - 2019'
+    canonical_url: 'http://badcamp-2019.docksal/taxonomy/term/1'
+path:
+  -
+    alias: null
+    pid: null
+    langcode: en
+_content_sync:
+  entity_type: taxonomy_term
+  entity_dependencies: {  }

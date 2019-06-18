@@ -1,0 +1,47 @@
+uuid:
+  -
+    value: 111fa6ad-fde1-45a5-99a3-2f00ddecd238
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: image
+    target_type: paragraphs_type
+    target_uuid: e98737b5-b8bd-48f8-8d91-914afa83d1b8
+status:
+  -
+    value: true
+created:
+  -
+    value: '2019-04-06T05:06:02+00:00'
+    format: 'Y-m-d\TH:i:sP'
+parent_id:
+  -
+    value: '48'
+parent_type:
+  -
+    value: paragraph
+parent_field_name:
+  -
+    value: field_content
+behavior_settings:
+  -
+    value:
+      paragraphs_class_paragraph_class:
+        wrapper_class: small-2
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+field_image:
+  -
+    target_type: media
+    target_uuid: e18fc4f2-f77e-4d88-b81e-ef6b8528c436
+_content_sync:
+  entity_type: paragraph
+  entity_dependencies:
+    media:
+      - media.image.e18fc4f2-f77e-4d88-b81e-ef6b8528c436

@@ -1,0 +1,39 @@
+uuid:
+  -
+    value: 8157a01a-21bc-420d-9590-ef1987738f15
+langcode:
+  -
+    value: en
+uid:
+  -
+    target_type: user
+    target_uuid: 9ae2283e-4818-4893-8383-7eec8264fa32
+filename:
+  -
+    value: chris-leipelt-176595-unsplash.jpg
+uri:
+  -
+    value: 'public://2019-03/chris-leipelt-176595-unsplash_0.jpg'
+    url: /sites/default/files/2019-03/chris-leipelt-176595-unsplash_0.jpg
+filemime:
+  -
+    value: image/jpeg
+filesize:
+  -
+    value: 2830586
+status:
+  -
+    value: true
+created:
+  -
+    value: '2019-03-30T23:54:49+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2019-03-30T23:55:05+00:00'
+    format: 'Y-m-d\TH:i:sP'
+_content_sync:
+  entity_type: file
+  entity_dependencies:
+    user:
+      - user.user.9ae2283e-4818-4893-8383-7eec8264fa32

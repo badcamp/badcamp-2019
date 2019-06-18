@@ -1,0 +1,39 @@
+uuid:
+  -
+    value: c2464149-ef66-4eb7-aa22-93a1b55f63fb
+langcode:
+  -
+    value: en
+uid:
+  -
+    target_type: user
+    target_uuid: 9ae2283e-4818-4893-8383-7eec8264fa32
+filename:
+  -
+    value: generateImage_4RRK0W.jpeg
+uri:
+  -
+    value: 'public://pictures/2019-04/generateImage_4RRK0W.jpeg'
+    url: /sites/default/files/pictures/2019-04/generateImage_4RRK0W.jpeg
+filemime:
+  -
+    value: image/jpeg
+filesize:
+  -
+    value: 5934
+status:
+  -
+    value: true
+created:
+  -
+    value: '2019-04-06T06:40:18+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2019-04-06T06:40:18+00:00'
+    format: 'Y-m-d\TH:i:sP'
+_content_sync:
+  entity_type: file
+  entity_dependencies:
+    user:
+      - user.user.9ae2283e-4818-4893-8383-7eec8264fa32

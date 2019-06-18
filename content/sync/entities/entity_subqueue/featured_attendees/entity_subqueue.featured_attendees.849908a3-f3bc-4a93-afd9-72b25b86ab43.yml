@@ -1,0 +1,71 @@
+uuid:
+  -
+    value: 849908a3-f3bc-4a93-afd9-72b25b86ab43
+queue:
+  -
+    target_id: featured_attendees
+    target_type: entity_queue
+    target_uuid: 3836a7bf-18a3-4b41-b01c-b937c65f938c
+title:
+  -
+    value: 'Featured Attendees'
+items:
+  -
+    target_type: user
+    target_uuid: b5ac695e-450c-4aac-aeb6-19668ab713b8
+  -
+    target_type: user
+    target_uuid: cc3375c1-de47-4b7b-8c57-b47a6352cb51
+  -
+    target_type: user
+    target_uuid: e07ba4c0-fc03-4cb8-97be-9451ce4f7137
+  -
+    target_type: user
+    target_uuid: 7ce4c0d1-dc0b-4685-a0b6-d224e490b78f
+  -
+    target_type: user
+    target_uuid: c195fd3e-3c11-4971-bbb9-0751b57f4be5
+  -
+    target_type: user
+    target_uuid: 1099cada-05f0-4b09-84b9-295e9398fd59
+  -
+    target_type: user
+    target_uuid: cc3375c1-de47-4b7b-8c57-b47a6352cb51
+  -
+    target_type: user
+    target_uuid: 2b18bbf2-8b27-49cf-b8b0-fa4cc13b3df1
+  -
+    target_type: user
+    target_uuid: 987c2815-7b8b-41ce-9d33-274eee602897
+  -
+    target_type: user
+    target_uuid: c4389b59-14e0-40ef-8476-bd8be6b6d5fd
+langcode:
+  -
+    value: en
+uid:
+  -
+    target_type: user
+    target_uuid: 9ae2283e-4818-4893-8383-7eec8264fa32
+created:
+  -
+    value: '2019-04-06T05:32:43+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2019-04-06T06:42:37+00:00'
+    format: 'Y-m-d\TH:i:sP'
+_content_sync:
+  entity_type: entity_subqueue
+  entity_dependencies:
+    user:
+      - user.user.b5ac695e-450c-4aac-aeb6-19668ab713b8
+      - user.user.cc3375c1-de47-4b7b-8c57-b47a6352cb51
+      - user.user.e07ba4c0-fc03-4cb8-97be-9451ce4f7137
+      - user.user.7ce4c0d1-dc0b-4685-a0b6-d224e490b78f
+      - user.user.c195fd3e-3c11-4971-bbb9-0751b57f4be5
+      - user.user.1099cada-05f0-4b09-84b9-295e9398fd59
+      - user.user.2b18bbf2-8b27-49cf-b8b0-fa4cc13b3df1
+      - user.user.987c2815-7b8b-41ce-9d33-274eee602897
+      - user.user.c4389b59-14e0-40ef-8476-bd8be6b6d5fd
+      - user.user.9ae2283e-4818-4893-8383-7eec8264fa32

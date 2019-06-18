@@ -1,0 +1,61 @@
+uuid:
+  -
+    value: 228e66f0-5656-4c68-9b31-a4922def6520
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: donation
+    target_type: block_content_type
+    target_uuid: 47e248a1-082b-4a2b-ac12-d236a9fda40f
+revision_created:
+  -
+    value: '2019-06-16T00:30:10+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log: {  }
+status:
+  -
+    value: true
+info:
+  -
+    value: 'Donate $50'
+changed:
+  -
+    value: '2019-06-18T08:38:46+00:00'
+    format: 'Y-m-d\TH:i:sP'
+reusable:
+  -
+    value: true
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+metatag:
+  value:
+    title: '| Bay Area Drupal Camp - 2019'
+    canonical_url: 'http://badcamp-2019.docksal/front'
+body:
+  -
+    value: "<ul>\r\n\t<li>Much love and respect</li>\r\n\t<li>BADCamp T-shirt</li>\r\n\t<li>Surprise Swag</li>\r\n</ul>\r\n"
+    format: basic_html
+    processed: "<ul><li>Much love and respect</li>\n\t<li>BADCamp T-shirt</li>\n\t<li>Surprise Swag</li>\n</ul>"
+    summary: ''
+    summary_processed: ''
+field_block_title:
+  -
+    value: $50
+field_sponsor_link:
+  -
+    uri: 'internal:/'
+    title: Select
+    options:
+      attributes:
+        class:
+          - ''
+_content_sync:
+  entity_type: block_content
+  entity_dependencies: {  }

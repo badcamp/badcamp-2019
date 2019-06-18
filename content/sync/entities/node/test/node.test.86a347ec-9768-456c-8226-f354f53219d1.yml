@@ -1,0 +1,67 @@
+uuid:
+  -
+    value: 86a347ec-9768-456c-8226-f354f53219d1
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: test
+    target_type: node_type
+    target_uuid: 90046c81-2ebf-4a82-857f-f547c1054a36
+revision_timestamp:
+  -
+    value: '2019-05-31T17:32:30+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_uid:
+  -
+    target_type: user
+    target_uuid: 9ae2283e-4818-4893-8383-7eec8264fa32
+revision_log: {  }
+status:
+  -
+    value: true
+title:
+  -
+    value: Test
+uid:
+  -
+    target_type: user
+    target_uuid: 9ae2283e-4818-4893-8383-7eec8264fa32
+created:
+  -
+    value: '2019-05-31T17:32:22+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2019-05-31T17:32:30+00:00'
+    format: 'Y-m-d\TH:i:sP'
+promote:
+  -
+    value: true
+sticky:
+  -
+    value: false
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+metatag:
+  value:
+    title: 'Test | Bay Area Drupal Camp - 2019'
+    canonical_url: 'http://badcamp-2019.docksal/node/6'
+path:
+  -
+    alias: null
+    pid: null
+    langcode: en
+menu_link: {  }
+body: {  }
+field_test_payment: {  }
+_content_sync:
+  entity_type: node
+  entity_dependencies:
+    user:
+      - user.user.9ae2283e-4818-4893-8383-7eec8264fa32

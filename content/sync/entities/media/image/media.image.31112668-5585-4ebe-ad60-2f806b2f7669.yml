@@ -1,0 +1,76 @@
+uuid:
+  -
+    value: 31112668-5585-4ebe-ad60-2f806b2f7669
+langcode:
+  -
+    value: en
+bundle:
+  -
+    target_id: image
+    target_type: media_type
+    target_uuid: b820a4df-41d5-40f8-ac1d-29ac48a6abb6
+revision_created:
+  -
+    value: '2019-05-05T23:35:53+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user:
+  -
+    target_type: user
+    target_uuid: 9ae2283e-4818-4893-8383-7eec8264fa32
+revision_log_message: {  }
+status:
+  -
+    value: true
+name:
+  -
+    value: 'Acquia Logo'
+thumbnail:
+  -
+    alt: 'Acquia logo'
+    title: null
+    width: 500
+    height: 104
+    target_type: file
+    target_uuid: b2de95a1-9d58-4abc-884b-e29795588ba1
+uid:
+  -
+    target_type: user
+    target_uuid: 9ae2283e-4818-4893-8383-7eec8264fa32
+created:
+  -
+    value: '2019-02-02T06:25:23+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2019-05-05T23:35:53+00:00'
+    format: 'Y-m-d\TH:i:sP'
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+metatag:
+  value:
+    title: '| Bay Area Drupal Camp - 2019'
+    canonical_url: 'http://badcamp-2019.docksal/front'
+path:
+  -
+    alias: null
+    pid: null
+    langcode: en
+field_media_image:
+  -
+    alt: 'Acquia logo'
+    title: ''
+    width: 2601
+    height: 834
+    target_type: file
+    target_uuid: b2de95a1-9d58-4abc-884b-e29795588ba1
+_content_sync:
+  entity_type: media
+  entity_dependencies:
+    user:
+      - user.user.9ae2283e-4818-4893-8383-7eec8264fa32
+    file:
+      - file.file.b2de95a1-9d58-4abc-884b-e29795588ba1

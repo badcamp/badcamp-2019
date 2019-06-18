@@ -1,0 +1,39 @@
+uuid:
+  -
+    value: 1990b39d-2bcb-49eb-a937-fc6b68f13ac7
+langcode:
+  -
+    value: en
+uid:
+  -
+    target_type: user
+    target_uuid: 9ae2283e-4818-4893-8383-7eec8264fa32
+filename:
+  -
+    value: pantheon-logo_0.png
+uri:
+  -
+    value: 'public://sponsors/logos/2019-03/pantheon-logo_0.png'
+    url: /sites/default/files/sponsors/logos/2019-03/pantheon-logo_0.png
+filemime:
+  -
+    value: image/png
+filesize:
+  -
+    value: 22926
+status:
+  -
+    value: true
+created:
+  -
+    value: '2019-03-16T21:22:33+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2019-03-16T21:22:36+00:00'
+    format: 'Y-m-d\TH:i:sP'
+_content_sync:
+  entity_type: file
+  entity_dependencies:
+    user:
+      - user.user.9ae2283e-4818-4893-8383-7eec8264fa32

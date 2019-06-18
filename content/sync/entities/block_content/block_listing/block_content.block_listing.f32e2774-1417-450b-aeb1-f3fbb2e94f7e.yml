@@ -1,0 +1,61 @@
+uuid:
+  -
+    value: f32e2774-1417-450b-aeb1-f3fbb2e94f7e
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: block_listing
+    target_type: block_content_type
+    target_uuid: ae7754b1-9c00-4c1f-900c-f2c7d7f9b759
+revision_created:
+  -
+    value: '2019-06-16T00:32:06+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log: {  }
+status:
+  -
+    value: true
+info:
+  -
+    value: 'Sponsor Blocks'
+changed:
+  -
+    value: '2019-06-16T00:34:02+00:00'
+    format: 'Y-m-d\TH:i:sP'
+reusable:
+  -
+    value: true
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+metatag:
+  value:
+    title: '| Bay Area Drupal Camp - 2019'
+    canonical_url: 'http://badcamp-2019.docksal/front'
+field_block_content:
+  -
+    target_type: block_content
+    target_uuid: 482064c5-ecc2-4343-8dbd-877d23c680cc
+  -
+    target_type: block_content
+    target_uuid: d3f20f30-51c9-4c01-a030-b969ce712e88
+  -
+    target_type: block_content
+    target_uuid: 228e66f0-5656-4c68-9b31-a4922def6520
+  -
+    target_type: block_content
+    target_uuid: b3e920de-7f3b-4a22-86b4-931f646a8a3e
+_content_sync:
+  entity_type: block_content
+  entity_dependencies:
+    block_content:
+      - block_content.donation.482064c5-ecc2-4343-8dbd-877d23c680cc
+      - block_content.donation.d3f20f30-51c9-4c01-a030-b969ce712e88
+      - block_content.donation.228e66f0-5656-4c68-9b31-a4922def6520
+      - block_content.donation.b3e920de-7f3b-4a22-86b4-931f646a8a3e

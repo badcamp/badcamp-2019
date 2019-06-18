@@ -1,0 +1,46 @@
+uuid:
+  -
+    value: a4e11fa9-926c-4b44-af39-5ee539e6ca29
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: text
+    target_type: paragraphs_type
+    target_uuid: e8c7ea08-d825-4e47-97f5-4f73fbe4bef4
+status:
+  -
+    value: true
+created:
+  -
+    value: '2019-04-06T05:13:59+00:00'
+    format: 'Y-m-d\TH:i:sP'
+parent_id:
+  -
+    value: '68'
+parent_type:
+  -
+    value: paragraph
+parent_field_name:
+  -
+    value: field_content
+behavior_settings:
+  -
+    value:
+      paragraphs_class_paragraph_class:
+        wrapper_class: event-detail
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+field_text:
+  -
+    value: "<p class=\"event-detail-title\">Contribution Sprints</p>\r\n\r\n<p>It's amazing what can happen when we bring everyone together. Get ready to give back to Drupal, and let's get some serious work accomplished.</p>\r\n"
+    format: full_html
+    processed: "<p class=\"event-detail-title\">Contribution Sprints</p>\n\n<p>It's amazing what can happen when we bring everyone together. Get ready to give back to Drupal, and let's get some serious work accomplished.</p>\n"
+_content_sync:
+  entity_type: paragraph
+  entity_dependencies: {  }

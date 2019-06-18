@@ -1,0 +1,90 @@
+uuid:
+  -
+    value: cb85f9b5-f938-479e-ab8c-5cdcaa1cbfd5
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: sponsor
+    target_type: node_type
+    target_uuid: 6c817c21-da25-4d6b-8c68-af4187702bf5
+revision_timestamp:
+  -
+    value: '2019-03-16T21:22:20+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_uid:
+  -
+    target_type: user
+    target_uuid: 9ae2283e-4818-4893-8383-7eec8264fa32
+revision_log: {  }
+status:
+  -
+    value: true
+title:
+  -
+    value: Acquia
+uid:
+  -
+    target_type: user
+    target_uuid: 9ae2283e-4818-4893-8383-7eec8264fa32
+created:
+  -
+    value: '2019-02-02T06:25:33+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2019-05-05T23:33:46+00:00'
+    format: 'Y-m-d\TH:i:sP'
+promote:
+  -
+    value: false
+sticky:
+  -
+    value: false
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+metatag:
+  value:
+    title: 'Acquia | Bay Area Drupal Camp - 2019'
+    canonical_url: 'http://badcamp-2019.docksal/sponsor/core-sponsor/acquia'
+path:
+  -
+    alias: /sponsor/core-sponsor/acquia
+menu_link: {  }
+field_members: {  }
+field_sponsor_description:
+  -
+    value: "<p>Acquia is where great digital experiences begin. Acquia is helping some of the world's leading brands succeed, including Twitter, Mercedes Benz, Warner Music Group, and Stanford University.&nbsp;</p>\r\n\r\n<p>Join the more than 3,800 organizations that are moving at the speed of the web with Acquia's solutions for content, community and commerce. Acquia offers developer tools, cloud solutions and global expertise to drive success the open source way.</p>\r\n\r\n<p>Dream It. Drupal It. Acquia.</p>\r\n\r\n<p>See who’s using Drupal at<a href=\"http://www.drupalshowcase.com/\">&nbsp;http://www.drupalshowcase.com</a>, and for more information visit<a href=\"http://www.acquia.com/\">&nbsp;www.acquia.com</a>&nbsp;or call +1.781.238.8600</p>\r\n"
+    format: basic_html
+    processed: "<p>Acquia is where great digital experiences begin. Acquia is helping some of the world's leading brands succeed, including Twitter, Mercedes Benz, Warner Music Group, and Stanford University.\_</p>\n\n<p>Join the more than 3,800 organizations that are moving at the speed of the web with Acquia's solutions for content, community and commerce. Acquia offers developer tools, cloud solutions and global expertise to drive success the open source way.</p>\n\n<p>Dream It. Drupal It. Acquia.</p>\n\n<p>See who’s using Drupal at<a href=\"http://www.drupalshowcase.com/\">\_http://www.drupalshowcase.com</a>, and for more information visit<a href=\"http://www.acquia.com/\">\_www.acquia.com</a>\_or call +1.781.238.8600</p>"
+field_sponsor_level:
+  -
+    target_type: taxonomy_term
+    target_uuid: e5cad56d-55dd-4e87-9b2a-87681448363d
+field_sponsor_logo:
+  -
+    alt: ''
+    title: ''
+    width: 2601
+    height: 834
+    target_type: file
+    target_uuid: c8e72e7c-40a2-4671-a6de-1f86afd5d0c3
+field_url:
+  -
+    uri: 'https://www.acquia.com'
+    title: ''
+    options: {  }
+_content_sync:
+  entity_type: node
+  entity_dependencies:
+    user:
+      - user.user.9ae2283e-4818-4893-8383-7eec8264fa32
+    taxonomy_term:
+      - taxonomy_term.sponsor_level.e5cad56d-55dd-4e87-9b2a-87681448363d
+    file:
+      - file.file.c8e72e7c-40a2-4671-a6de-1f86afd5d0c3

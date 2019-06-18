@@ -1,0 +1,71 @@
+uuid:
+  -
+    value: 2abec846-7d3d-4fe3-8ab3-565e3c89d56c
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: page
+    target_type: node_type
+    target_uuid: 09816b52-601d-4a25-8a93-f4dc739eecf6
+revision_timestamp:
+  -
+    value: '2019-03-24T05:22:28+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_uid:
+  -
+    target_type: user
+    target_uuid: 9ae2283e-4818-4893-8383-7eec8264fa32
+revision_log: {  }
+status:
+  -
+    value: true
+title:
+  -
+    value: 'Event Details'
+uid:
+  -
+    target_type: user
+    target_uuid: 9ae2283e-4818-4893-8383-7eec8264fa32
+created:
+  -
+    value: '2019-03-24T05:20:01+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2019-03-24T05:22:28+00:00'
+    format: 'Y-m-d\TH:i:sP'
+promote:
+  -
+    value: false
+sticky:
+  -
+    value: false
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+metatag:
+  value:
+    title: 'Event Details | Bay Area Drupal Camp - 2019'
+    canonical_url: 'http://badcamp-2019.docksal/event-details'
+path:
+  -
+    alias: /event-details
+menu_link: {  }
+body: {  }
+field_components:
+  -
+    target_revision_id: 9
+    target_type: paragraph
+    target_uuid: b1a5d3a0-d2e0-4514-bb9c-a7ad3d3ea701
+_content_sync:
+  entity_type: node
+  entity_dependencies:
+    user:
+      - user.user.9ae2283e-4818-4893-8383-7eec8264fa32
+    paragraph:
+      - paragraph.timeline.b1a5d3a0-d2e0-4514-bb9c-a7ad3d3ea701

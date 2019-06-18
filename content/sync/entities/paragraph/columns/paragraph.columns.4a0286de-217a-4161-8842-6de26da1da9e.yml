@@ -1,0 +1,53 @@
+uuid:
+  -
+    value: 4a0286de-217a-4161-8842-6de26da1da9e
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: columns
+    target_type: paragraphs_type
+    target_uuid: 4b42dc74-8024-4e1f-805a-72936452630c
+status:
+  -
+    value: true
+created:
+  -
+    value: '2019-04-06T05:26:06+00:00'
+    format: 'Y-m-d\TH:i:sP'
+parent_id:
+  -
+    value: '11'
+parent_type:
+  -
+    value: block_content
+parent_field_name:
+  -
+    value: field_content
+behavior_settings:
+  -
+    value:
+      paragraphs_class_paragraph_class:
+        wrapper_class: 'featured-attendees grid-x grid-container'
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+field_content:
+  -
+    target_revision_id: 70
+    target_type: paragraph
+    target_uuid: 7637ab47-8d6b-4b30-98ad-3309a01d46ea
+  -
+    target_revision_id: 71
+    target_type: paragraph
+    target_uuid: 10255cb6-2ea7-480c-b4e4-646209740077
+_content_sync:
+  entity_type: paragraph
+  entity_dependencies:
+    paragraph:
+      - paragraph.image.7637ab47-8d6b-4b30-98ad-3309a01d46ea
+      - paragraph.view.10255cb6-2ea7-480c-b4e4-646209740077

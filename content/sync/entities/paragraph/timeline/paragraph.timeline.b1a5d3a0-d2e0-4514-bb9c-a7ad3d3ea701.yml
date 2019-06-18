@@ -1,0 +1,51 @@
+uuid:
+  -
+    value: b1a5d3a0-d2e0-4514-bb9c-a7ad3d3ea701
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: timeline
+    target_type: paragraphs_type
+    target_uuid: a95e3f3f-684f-4aa8-801c-94274547c991
+status:
+  -
+    value: true
+created:
+  -
+    value: '2019-03-24T05:20:07+00:00'
+    format: 'Y-m-d\TH:i:sP'
+parent_id:
+  -
+    value: '4'
+parent_type:
+  -
+    value: node
+parent_field_name:
+  -
+    value: field_components
+behavior_settings:
+  -
+    value: {  }
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+field_timeline_sections:
+  -
+    target_revision_id: 5
+    target_type: paragraph
+    target_uuid: 47f5c30a-3e26-4189-a421-cb5019c30cb2
+  -
+    target_revision_id: 8
+    target_type: paragraph
+    target_uuid: 766aeddf-8fd4-45e3-8a91-3f25d7c5be66
+_content_sync:
+  entity_type: paragraph
+  entity_dependencies:
+    paragraph:
+      - paragraph.timeline_section.47f5c30a-3e26-4189-a421-cb5019c30cb2
+      - paragraph.timeline_section.766aeddf-8fd4-45e3-8a91-3f25d7c5be66

@@ -1,0 +1,46 @@
+uuid:
+  -
+    value: b10bdff3-4dd1-4870-a975-c5f8908b37b7
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: text
+    target_type: paragraphs_type
+    target_uuid: e8c7ea08-d825-4e47-97f5-4f73fbe4bef4
+status:
+  -
+    value: true
+created:
+  -
+    value: '2019-04-06T05:13:07+00:00'
+    format: 'Y-m-d\TH:i:sP'
+parent_id:
+  -
+    value: '62'
+parent_type:
+  -
+    value: paragraph
+parent_field_name:
+  -
+    value: field_content
+behavior_settings:
+  -
+    value:
+      paragraphs_class_paragraph_class:
+        wrapper_class: event-detail
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+field_text:
+  -
+    value: "<p class=\"event-detail-title\">Summits</p>\r\n\r\n<p>Summits allow people in specific industries or with specific skill sets to dive deep into the issues that matter and collaborate freely. Join us Oct 18 &amp; 19.</p>\r\n"
+    format: full_html
+    processed: "<p class=\"event-detail-title\">Summits</p>\n\n<p>Summits allow people in specific industries or with specific skill sets to dive deep into the issues that matter and collaborate freely. Join us Oct 18 &amp; 19.</p>\n"
+_content_sync:
+  entity_type: paragraph
+  entity_dependencies: {  }

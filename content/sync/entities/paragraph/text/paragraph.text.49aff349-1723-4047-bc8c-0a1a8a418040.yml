@@ -1,0 +1,46 @@
+uuid:
+  -
+    value: 49aff349-1723-4047-bc8c-0a1a8a418040
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: text
+    target_type: paragraphs_type
+    target_uuid: e8c7ea08-d825-4e47-97f5-4f73fbe4bef4
+status:
+  -
+    value: true
+created:
+  -
+    value: '2019-04-06T05:13:03+00:00'
+    format: 'Y-m-d\TH:i:sP'
+parent_id:
+  -
+    value: '62'
+parent_type:
+  -
+    value: paragraph
+parent_field_name:
+  -
+    value: field_content
+behavior_settings:
+  -
+    value:
+      paragraphs_class_paragraph_class:
+        wrapper_class: event-detail
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+field_text:
+  -
+    value: "<p class=\"event-detail-title\">Sessions &amp; Talks</p>\r\n\r\n<p>You'll learn something whether you're new to Drupal or already a pro. October 20 &amp; 21 will be full of great sessions for all levels of interest. Sessions schedule has now been posted.</p>\r\n"
+    format: full_html
+    processed: "<p class=\"event-detail-title\">Sessions &amp; Talks</p>\n\n<p>You'll learn something whether you're new to Drupal or already a pro. October 20 &amp; 21 will be full of great sessions for all levels of interest. Sessions schedule has now been posted.</p>\n"
+_content_sync:
+  entity_type: paragraph
+  entity_dependencies: {  }

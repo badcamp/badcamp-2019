@@ -1,0 +1,58 @@
+uuid:
+  -
+    value: 5a67dc74-dda5-4606-80bb-68bd0b563870
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: columns
+    target_type: paragraphs_type
+    target_uuid: 4b42dc74-8024-4e1f-805a-72936452630c
+status:
+  -
+    value: true
+created:
+  -
+    value: '2019-04-06T05:12:51+00:00'
+    format: 'Y-m-d\TH:i:sP'
+parent_id:
+  -
+    value: '69'
+parent_type:
+  -
+    value: paragraph
+parent_field_name:
+  -
+    value: field_content
+behavior_settings:
+  -
+    value:
+      paragraphs_class_paragraph_class:
+        wrapper_class: 'small-12 small-order-3 medium-3 medium-order-3 large-4'
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+field_content:
+  -
+    target_revision_id: 65
+    target_type: paragraph
+    target_uuid: a4e11fa9-926c-4b44-af39-5ee539e6ca29
+  -
+    target_revision_id: 66
+    target_type: paragraph
+    target_uuid: 3ad80568-ae75-4ca9-9db0-546e0666a82b
+  -
+    target_revision_id: 67
+    target_type: paragraph
+    target_uuid: 55448947-7449-4718-90b7-0f5634155078
+_content_sync:
+  entity_type: paragraph
+  entity_dependencies:
+    paragraph:
+      - paragraph.text.a4e11fa9-926c-4b44-af39-5ee539e6ca29
+      - paragraph.text.3ad80568-ae75-4ca9-9db0-546e0666a82b
+      - paragraph.text.55448947-7449-4718-90b7-0f5634155078

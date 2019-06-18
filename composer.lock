@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a90b0a470f5c2e780b4d1d7f43dbe056",
+    "content-hash": "6936a689f568c82b25215d340017a298",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2750,6 +2750,61 @@
             "time": "2017-07-28T17:11:54+00:00"
         },
         {
+            "name": "drupal/content_sync",
+            "version": "dev-8.x-2.x",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Blanca-Esqueda/content_sync",
+                "reference": "00e85e2b0a3d8ddf682c269c633a0f8c6b0ea92b"
+            },
+            "require": {
+                "drupal/core": "^8.6.10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                }
+            },
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Blanca.Esqueda",
+                    "homepage": "https://www.drupal.org/u/blancaesqueda",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "David Gil Hidalgo",
+                    "homepage": "https://www.drupal.org/u/dabito",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "David Nova",
+                    "homepage": "https://www.drupal.org/u/david4lim",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Andrés Moncada",
+                    "homepage": "https://www.drupal.org/u/acmoncadab4",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "See contributors",
+                    "homepage": "https://www.drupal.org/node/2865869/committers"
+                }
+            ],
+            "description": "Content Sync functionality.",
+            "homepage": "http://drupal.org/project/content_sync",
+            "support": {
+                "issues": "http://drupal.org/project/content_sync"
+            },
+            "time": "2019-06-18T08:52:22+00:00"
+        },
+        {
             "name": "drupal/core",
             "version": "8.6.16",
             "source": {
@@ -3234,81 +3289,6 @@
                 "source": "http://cgit.drupalcode.org/daterange_compact"
             },
             "time": "2017-06-12T21:30:07+00:00"
-        },
-        {
-            "name": "drupal/default_content",
-            "version": "dev-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/default_content.git",
-                "reference": "73cf3472e2b4521d40821619eba276ee48bc8848"
-            },
-            "require": {
-                "drupal/core": "~8.3"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-alpha8+0-dev",
-                    "datestamp": "1556924287",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9"
-                    }
-                },
-                "patches_applied": {
-                    "Issue #2952520: Flag an entity as being imported:": "https://www.drupal.org/files/issues/2018-03-14/2952520-6.patch",
-                    "Issue #2640734: Import manual content": "https://www.drupal.org/files/issues/2019-01-28/2640734-93.default_content.Allow-manual-imports.patch"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Berdir",
-                    "homepage": "https://www.drupal.org/user/214652"
-                },
-                {
-                    "name": "Sam152",
-                    "homepage": "https://www.drupal.org/user/1485048"
-                },
-                {
-                    "name": "andypost",
-                    "homepage": "https://www.drupal.org/user/118908"
-                },
-                {
-                    "name": "benjy",
-                    "homepage": "https://www.drupal.org/user/1852732"
-                },
-                {
-                    "name": "dawehner",
-                    "homepage": "https://www.drupal.org/user/99340"
-                },
-                {
-                    "name": "jibran",
-                    "homepage": "https://www.drupal.org/user/1198144"
-                },
-                {
-                    "name": "larowlan",
-                    "homepage": "https://www.drupal.org/user/395439"
-                }
-            ],
-            "description": "Imports default content when a module is enabled",
-            "homepage": "https://www.drupal.org/project/default_content",
-            "support": {
-                "source": "https://git.drupalcode.org/project/default_content"
-            },
-            "time": "2019-05-03T22:55:54+00:00"
         },
         {
             "name": "drupal/disable_messages",
@@ -12041,9 +12021,9 @@
         "drupal/blazy": 5,
         "drupal/block_field": 15,
         "drupal/cer": 15,
+        "drupal/content_sync": 20,
         "drupal/custom_add_another": 10,
         "drupal/daterange_compact": 20,
-        "drupal/default_content": 20,
         "drupal/eck": 20,
         "drupal/entity_usage": 15,
         "drupal/entityqueue": 10,

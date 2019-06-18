@@ -1,0 +1,39 @@
+uuid:
+  -
+    value: 6082e4eb-6023-4290-b0f1-975b4cc3b9c9
+langcode:
+  -
+    value: en
+uid:
+  -
+    target_type: user
+    target_uuid: 9ae2283e-4818-4893-8383-7eec8264fa32
+filename:
+  -
+    value: event_details_image.png
+uri:
+  -
+    value: 'public://2019-03/event_details_image.png'
+    url: /sites/default/files/2019-03/event_details_image.png
+filemime:
+  -
+    value: image/png
+filesize:
+  -
+    value: 83631
+status:
+  -
+    value: true
+created:
+  -
+    value: '2019-03-31T20:46:11+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2019-03-31T20:46:26+00:00'
+    format: 'Y-m-d\TH:i:sP'
+_content_sync:
+  entity_type: file
+  entity_dependencies:
+    user:
+      - user.user.9ae2283e-4818-4893-8383-7eec8264fa32
