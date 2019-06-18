@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5bb164e1381ed7bc42261b8bfabd1b5f",
+    "content-hash": "a90b0a470f5c2e780b4d1d7f43dbe056",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3241,7 +3241,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/default_content.git",
-                "reference": "13f97c93eeaf4da9f84cc3fdcc0c91d32284132c"
+                "reference": "73cf3472e2b4521d40821619eba276ee48bc8848"
             },
             "require": {
                 "drupal/core": "~8.3"
@@ -3252,8 +3252,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-alpha7+2-dev",
-                    "datestamp": "1520901180",
+                    "version": "8.x-1.0-alpha8+0-dev",
+                    "datestamp": "1556924287",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -3265,7 +3265,8 @@
                     }
                 },
                 "patches_applied": {
-                    "Issue #2952520: Flag an entity as being imported:": "https://www.drupal.org/files/issues/2018-03-14/2952520-6.patch"
+                    "Issue #2952520: Flag an entity as being imported:": "https://www.drupal.org/files/issues/2018-03-14/2952520-6.patch",
+                    "Issue #2640734: Import manual content": "https://www.drupal.org/files/issues/2019-01-28/2640734-93.default_content.Allow-manual-imports.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3307,7 +3308,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/default_content"
             },
-            "time": "2018-03-13T00:32:18+00:00"
+            "time": "2019-05-03T22:55:54+00:00"
         },
         {
             "name": "drupal/disable_messages",
