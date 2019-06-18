@@ -113,7 +113,7 @@ $global-position: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
 $global-radius: 0;
-$global-menu-padding: 1.5rem 1rem;
+$global-menu-padding: 1.125rem 1rem;
 $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
 $global-flexbox: true;
@@ -289,9 +289,9 @@ $accordionmenu-padding: $global-menu-padding;
 $accordionmenu-nested-margin: $global-menu-nested-margin;
 $accordionmenu-submenu-padding: $accordionmenu-padding;
 $accordionmenu-arrows: true;
-$accordionmenu-arrow-color: $primary-color;
+$accordionmenu-arrow-color: $dark-salmon;
 $accordionmenu-item-background: null;
-$accordionmenu-border: null;
+$accordionmenu-border: 1px solid white;
 $accordionmenu-submenu-toggle-background: null;
 $accordion-submenu-toggle-border: $accordionmenu-border;
 $accordionmenu-submenu-toggle-width: 40px;
@@ -411,10 +411,10 @@ $drilldown-transition: transform 0.15s linear;
 $drilldown-arrows: true;
 $drilldown-padding: $global-menu-padding;
 $drilldown-nested-margin: 0;
-$drilldown-background: $white;
+$drilldown-background: $grayish;
 $drilldown-submenu-padding: $drilldown-padding;
 $drilldown-submenu-background: $white;
-$drilldown-arrow-color: $primary-color;
+$drilldown-arrow-color: $dark-salmon;
 $drilldown-arrow-size: 6px;
 
 // 17. Dropdown
@@ -435,19 +435,19 @@ $dropdown-sizes: (
 // 18. Dropdown Menu
 // -----------------
 
-$dropdownmenu-arrows: false;
-$dropdownmenu-arrow-color: $anchor-color;
+$dropdownmenu-arrows: true;
+$dropdownmenu-arrow-color: $dark-salmon;
 $dropdownmenu-arrow-size: 6px;
 $dropdownmenu-arrow-padding: 1.5rem;
 $dropdownmenu-min-width: 200px;
 $dropdownmenu-background: null;
-$dropdownmenu-submenu-background: $white;
+$dropdownmenu-submenu-background: white;
 $dropdownmenu-padding: $global-menu-padding;
 $dropdownmenu-nested-margin: 0;
 $dropdownmenu-submenu-padding: $dropdownmenu-padding;
-$dropdownmenu-border: 1px solid $medium-gray;
-$dropdown-menu-item-color-active: get-color(primary);
-$dropdown-menu-item-background-active: transparent;
+$dropdownmenu-border: 0;
+$dropdown-menu-item-color-active: $navy;
+$dropdown-menu-item-background-active: null;
 
 // 19. Flexbox Utilities
 // ---------------------
