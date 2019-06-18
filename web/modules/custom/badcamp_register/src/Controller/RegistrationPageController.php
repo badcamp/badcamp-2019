@@ -139,6 +139,7 @@ class RegistrationPageController extends ControllerBase {
 
     if ($page == 'sponsor') {
 
+      $config['bid'] = 'f32e2774-1417-450b-aeb1-f3fbb2e94f7e';
       if (isset($config['bid'])) {
         $bid = $config['bid'];
         $block = $this->entityRepository->loadEntityByUuid('block_content', $bid);
@@ -165,11 +166,6 @@ class RegistrationPageController extends ControllerBase {
         '#intro_message' => check_markup($text, $format)
       ];
     }
-
-
-    return [
-      '#markup' => 'test'
-    ];
   }
 
   /**

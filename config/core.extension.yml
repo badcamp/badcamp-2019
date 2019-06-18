@@ -45,6 +45,7 @@ module:
   inline_form_errors: 0
   layout_discovery: 0
   link: 0
+  link_attributes: 0
   mailchimp: 0
   mailchimp_lists: 0
   mailchimp_signup: 0

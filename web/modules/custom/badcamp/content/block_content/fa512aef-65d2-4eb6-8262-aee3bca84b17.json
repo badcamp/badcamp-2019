@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/block\/11?_format=hal_json"
+            "href": "http:\/\/badcamp-2019.docksal\/block\/11?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/block_content\/content_block"
@@ -58,7 +58,7 @@
     ],
     "changed": [
         {
-            "value": "2019-04-07T08:29:07+00:00",
+            "value": "2019-05-06T02:43:02+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -84,7 +84,7 @@
         {
             "value": {
                 "title": "| Bay Area Drupal Camp - 2019",
-                "canonical_url": "http:\/\/default\/front"
+                "canonical_url": "http:\/\/badcamp-2019.docksal\/front"
             }
         }
     ],

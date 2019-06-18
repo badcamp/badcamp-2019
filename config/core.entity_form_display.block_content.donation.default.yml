@@ -5,9 +5,10 @@ dependencies:
   config:
     - block_content.type.donation
     - field.field.block_content.donation.body
+    - field.field.block_content.donation.field_block_title
     - field.field.block_content.donation.field_sponsor_link
   module:
-    - link
+    - link_attributes
     - text
 id: block_content.donation.default
 targetEntityType: block_content
@@ -16,24 +17,39 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 26
+    weight: 2
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
     region: content
+  field_block_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_sponsor_link:
-    weight: 27
+    weight: 3
     settings:
       placeholder_url: ''
       placeholder_title: ''
+      enabled_attributes:
+        id: false
+        name: false
+        target: true
+        rel: true
+        class: true
+        accesskey: false
     third_party_settings: {  }
-    type: link_default
+    type: link_attributes
     region: content
   info:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60

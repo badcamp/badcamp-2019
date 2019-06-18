@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/taxonomy\/term\/1?_format=hal_json"
+            "href": "http:\/\/badcamp-2019.docksal\/taxonomy\/term\/1?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/sponsor_level"
@@ -70,7 +70,7 @@
         {
             "value": {
                 "title": "Core Sponsor | Bay Area Drupal Camp - 2019",
-                "canonical_url": "http:\/\/default\/taxonomy\/term\/1"
+                "canonical_url": "http:\/\/badcamp-2019.docksal\/taxonomy\/term\/1"
             }
         }
     ]

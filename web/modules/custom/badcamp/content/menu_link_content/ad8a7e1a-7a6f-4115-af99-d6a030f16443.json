@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/admin\/structure\/menu\/item\/14\/edit?_format=hal_json"
+            "href": "http:\/\/badcamp-2019.docksal\/admin\/structure\/menu\/item\/14\/edit?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/menu_link_content\/menu_link_content"
@@ -98,7 +98,7 @@
         {
             "value": {
                 "title": "| Bay Area Drupal Camp - 2019",
-                "canonical_url": "http:\/\/default\/front"
+                "canonical_url": "http:\/\/badcamp-2019.docksal\/front"
             }
         }
     ]

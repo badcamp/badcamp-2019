@@ -1,26 +1,26 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/media\/12?_format=hal_json"
+            "href": "http:\/\/badcamp-2019.docksal\/media\/12?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
         },
         "http:\/\/drupal.org\/rest\/relation\/media\/image\/thumbnail": [
             {
-                "href": "http:\/\/default\/sites\/default\/files\/2019-04\/footer-banner.png",
+                "href": "http:\/\/badcamp-2019.docksal\/sites\/default\/files\/2019-04\/footer-banner.png",
                 "lang": "en"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/media\/image\/uid": [
             {
-                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "href": "http:\/\/badcamp-2019.docksal\/user\/1?_format=hal_json",
                 "lang": "en"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/media\/image\/field_media_image": [
             {
-                "href": "http:\/\/default\/sites\/default\/files\/2019-04\/footer-banner.png",
+                "href": "http:\/\/badcamp-2019.docksal\/sites\/default\/files\/2019-04\/footer-banner.png",
                 "lang": "en"
             }
         ]
@@ -74,7 +74,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/default\/sites\/default\/files\/2019-04\/footer-banner.png"
+                        "href": "http:\/\/badcamp-2019.docksal\/sites\/default\/files\/2019-04\/footer-banner.png"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
@@ -92,7 +92,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                        "href": "http:\/\/badcamp-2019.docksal\/user\/1?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
@@ -110,7 +110,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/default\/sites\/default\/files\/2019-04\/footer-banner.png"
+                        "href": "http:\/\/badcamp-2019.docksal\/sites\/default\/files\/2019-04\/footer-banner.png"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
@@ -155,7 +155,7 @@
         {
             "value": {
                 "title": "| Bay Area Drupal Camp - 2019",
-                "canonical_url": "http:\/\/default\/front"
+                "canonical_url": "http:\/\/badcamp-2019.docksal\/front"
             }
         }
     ]

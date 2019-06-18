@@ -1,0 +1,18 @@
+register:
+  message:
+    value: ''
+    format: NULL
+  content: false
+  active: 'step1active'
+sponsor:
+  message:
+    value: ''
+    format: NULL
+  content: false
+  active: 'step2active'
+event:
+  message:
+    value: ''
+    format: NULL
+  content: false
+  active: 'step3active'

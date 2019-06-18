@@ -71,6 +71,7 @@
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/jsonapi": "^2.4",
         "drupal/lets_camp": "6.x-dev",
+        "drupal/link_attributes": "^1.8",
         "drupal/mailchimp": "^1.8",
         "drupal/menu_attributes": "1.x-dev",
         "drupal/menu_item_visibility": "1.x-dev",
