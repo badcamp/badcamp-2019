@@ -1,0 +1,27 @@
+.registration-steps {
+  font-family: $monsterrat;
+  margin: 3em 0 2em;
+}
+
+.registration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-number {
+  color: white;
+  font-weight: 600;
+  background: $navy;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  padding-top: 14px;
+  font-size: 30px;
+  margin-bottom: 10px;
+
+  &.active {
+    color: $navy;
+    background: $salmon;
+  }
+}
