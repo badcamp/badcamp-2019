@@ -1,9 +1,67 @@
 input[type='text'],
 input[type='email'],
+input[type='password'],
 textarea {
   box-shadow: none;
+  margin: 0.25em 0 0.5em;
   &:focus {
-    border: 2px dotted $navy;
+    border: 1px solid $navy;
     box-shadow: none;
   }
+}
+
+.field-group-fieldset {
+  margin: 3em 0;
+}
+
+.fieldset-legend {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $dark-salmon;
+  font-size: rem-calc(18);
+}
+
+.form-wrapper summary {
+  @extend .fieldset-legend;
+  margin-bottom: 1em;
+
+  &:focus {
+    outline: 1px dotted $navy;
+    outline-offset: 2px;
+  }
+}
+
+.form-item {
+  font-family: $monsterrat;
+  margin-bottom: 1.5em;
+
+  label {
+    font-weight: 600;
+    color: $navy;
+  }
+
+  .field-prefix {
+    font-size: rem-calc(14);
+  }
+
+  .description {
+    font-size: rem-calc(13);
+  }
+}
+
+.password-strength__meter {
+  margin-top: 0.25em;
+}
+.password-strength__title,
+.password-confirm {
+  font-size: rem-calc(13);
+}
+
+.filter-guidelines {
+  font-size: rem-calc(13);
+}
+
+.filter-help {
+  font-size: rem-calc(13);
+  padding-left: 1.5em;
 }
