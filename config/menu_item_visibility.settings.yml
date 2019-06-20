@@ -8,3 +8,6 @@ mlid:
   'menu_link_content:71c22bdd-8fdc-4c80-a200-b69036a6f1bb':
     roles: {  }
     access_check: false
+  'menu_link_content:2a160e0c-7687-45f3-a3e9-bd7c95274017':
+    roles: {  }
+    access_check: false
