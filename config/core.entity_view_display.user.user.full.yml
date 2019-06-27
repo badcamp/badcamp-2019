@@ -14,9 +14,12 @@ dependencies:
     - field.field.user.user.field_subscribe_to_badcamp_newsl
     - field.field.user.user.field_title
     - field.field.user.user.user_picture
-    - image.style.medium
+    - image.style.thumbnail
   module:
     - image
+    - link
+    - mailchimp_lists
+    - options
     - social_media_links_field
     - text
     - user
@@ -28,51 +31,78 @@ bundle: user
 mode: full
 content:
   field_bio:
-    weight: 5
-    label: hidden
-    settings: {}
-    third_party_settings: {}
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
     type: text_default
     region: content
   field_first_name:
-    weight: 1
-    label: hidden
+    weight: 4
+    label: above
     settings:
       link_to_entity: false
-    third_party_settings: {}
+    third_party_settings: {  }
     type: string
     region: content
   field_last_name:
-    weight: 2
-    label: hidden
+    weight: 5
+    label: above
     settings:
       link_to_entity: false
-    third_party_settings: {}
+    third_party_settings: {  }
     type: string
+    region: content
+  field_options:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_organization:
-    weight: 4
-    label: hidden
+    weight: 1
+    label: above
     settings:
       link_to_entity: false
-    third_party_settings: {}
+    third_party_settings: {  }
     type: string
     region: content
-  field_social_profile_links:
-    weight: 6
-    label: hidden
+  field_organization_url:
+    weight: 2
+    label: above
     settings:
-      appearance: {}
-      link_attributes: {}
-    third_party_settings: {}
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_social_profile_links:
+    weight: 9
+    label: above
+    settings:
+      appearance: {  }
+      link_attributes: {  }
+    third_party_settings: {  }
     type: social_media_links_field_default
     region: content
-  field_title:
+  field_subscribe_to_badcamp_newsl:
     weight: 3
-    label: hidden
+    label: above
+    settings:
+      show_interest_groups: false
+    third_party_settings: {  }
+    type: mailchimp_lists_subscribe_default
+    region: content
+  field_title:
+    weight: 7
+    label: above
     settings:
       link_to_entity: false
-    third_party_settings: {}
+    third_party_settings: {  }
     type: string
     region: content
   user_picture:
@@ -80,12 +110,9 @@ content:
     weight: 0
     region: content
     settings:
-      image_style: medium
-      image_link: ''
-    third_party_settings: {}
+      image_style: thumbnail
+      image_link: content
+    third_party_settings: {  }
     label: hidden
 hidden:
-  field_options: true
-  field_organization_url: true
-  field_subscribe_to_badcamp_newsl: true
   member_for: true
