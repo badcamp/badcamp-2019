@@ -9,6 +9,9 @@
   font-family: $monsterrat;
   font-weight: 600;
   font-size: 0.75rem;
+  a {
+    @extend .link;
+  }
 }
 .article__body {
   h2 {

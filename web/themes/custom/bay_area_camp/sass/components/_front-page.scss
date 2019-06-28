@@ -46,13 +46,14 @@
       object-fit: cover;
       object-position: center bottom;
       @include breakpoint('medium') {
-        height: 540px;
+        height: 440px;
+        padding-bottom: 1.25em;
       }
       @include breakpoint('large') {
-        height: 500px;
+        height: 480px;
       }
       @include breakpoint('xlarge') {
-        height: 420px;
+        height: 400px;
       }
     }
   }
