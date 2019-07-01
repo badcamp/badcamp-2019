@@ -2,9 +2,7 @@
 
 namespace Drupal\badcamp_register\Controller;
 
-use Drupal\Component\Plugin\PluginManagerInterface;
 use Drupal\Core\Access\AccessResult;
-use Drupal\Core\Block\BlockManagerInterface;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Entity\EntityRepositoryInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
@@ -88,6 +86,30 @@ class RegistrationPageController extends ControllerBase {
   }
 
   /**
+   * Return the config for a page.
+   *
+   * @param $page
+   */
+  private function getPageConfig($page) {
+    $pages = $this->config('badcamp_register.settings')->get('pages');
+    return (isset($pages[$page])) ? $pages[$page] : FALSE;
+  }
+
+  /**
+   * Return the tabs for the provided Page.
+   *
+   * @param $page
+   */
+  private function getPageNavigation($page) {
+    $pageInfo = $this->getPageConfig($page);
+    if ($pageInfo == FALSE){
+      return FALSE;
+    }
+    $tabs = $this->config('badcamp_register.settings')->get('navigation');
+    return isset($tabs[$pageInfo['tabs']]) ? $tabs[$pageInfo['tabs']] : FALSE;
+  }
+
+  /**
    * Page Callback.
    *
    * @param $page
@@ -98,7 +120,7 @@ class RegistrationPageController extends ControllerBase {
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
   public function page($page) {
-    $config = $this->config('badcamp_register.settings')->get($page);
+    $config = $this->getPageConfig($page);
 
     $text = isset($config['message']) ? $config['message']['value'] : '';
     $format = isset($config['message']) ? $config['message']['format'] : NULL;
@@ -151,13 +173,14 @@ class RegistrationPageController extends ControllerBase {
     }
 
     if ($active !== FALSE) {
-      $data['#' . $active] = TRUE;
+      $data['#active'] = $active;
     }
 
     if ($text !== '') {
       $data['#intro_message'] = check_markup($text, $format);
     }
 
+    $data['#tabs'] = $this->getPageNavigation($page);
     $data['#content'] = $render;
 
     return $data;
@@ -178,7 +201,7 @@ class RegistrationPageController extends ControllerBase {
    * @param $page
    */
   public function title($page) {
-    $config = $this->config('badcamp_register.settings')->get($page);
+    $config = $this->getPageConfig($page);
 
     if (isset($config['title']))
       return $config['title'];
@@ -190,7 +213,7 @@ class RegistrationPageController extends ControllerBase {
    * @param $page
    */
   public function access($page) {
-    $config = $this->config('badcamp_register.settings')->get($page);
+    $config = $this->getPageConfig($page);
 
     if (!empty($config)) {
       if (isset($config['permission']) && !$this->currentUser()->hasPermission($config['permission'])) {

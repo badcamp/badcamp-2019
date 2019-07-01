@@ -1,23 +1,22 @@
+{% if tabs %}
 <div class="registration-steps grid-x grid-margin-x">
-    <div class="registration one small-2 text-align-center">
-        <div class="step-number {{ step1active ? 'active' : '' }}">1</div>
-        <span>Step 1</span>
+    {% for key, tab in tabs %}
+    <div class="registration {{ key }} text-align-center">
+        <div class="step-number {{ key == active ? 'active' : '' }}">{{ tab.title }}</div>
+        <span>{{ tab.subtitle }}</span>
     </div>
-    <div class="registration two small-2 small-offset-3 text-align-center">
-        <div class="step-number {{ step2active ? 'active' : '' }}">2</div>
-        <span>Step 2</span>
-    </div>
-    <div class="registration three small-2 small-offset-3 text-align-center">
-        <div class="step-number {{ step3active ? 'active' : '' }}">3</div>
-        <span>Step 3</span>
-    </div>
+    {% endfor %}
 </div>
+{% endif %}
 
-
+{% if intro_message is not empty %}
 <div class="registration-intro">
     {{ intro_message }}
 </div>
+{% endif %}
 
+{% if content is not empty %}
 <div class="registration-content">
     {{ content }}
 </div>
+{% endif %}

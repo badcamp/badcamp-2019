@@ -1,0 +1,7 @@
+data-dialog-type:
+  title: Dialog Type
+  default_value: 'modal'
+data-dialog-options:
+  title: Dialog Options
+  default_value: '{"width":800}'
+

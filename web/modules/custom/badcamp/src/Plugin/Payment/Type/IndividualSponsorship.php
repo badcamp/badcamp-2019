@@ -44,7 +44,13 @@ class IndividualSponsorship extends PaymentTypeBase {
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
-    return new static($configuration, $plugin_id, $plugin_definition, $container->get('payment.event_dispatcher'), $container->get('string_translation'));
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $container->get('payment.event_dispatcher'),
+      $container->get('string_translation')
+    );
   }
 
   /**

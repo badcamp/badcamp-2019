@@ -38,12 +38,16 @@ content:
       placeholder_url: ''
       placeholder_title: ''
       enabled_attributes:
-        id: false
-        name: false
         target: true
         rel: true
         class: true
+        data-dialog-type: true
+        data-dialog-options: true
+        id: false
+        name: false
         accesskey: false
+        aria-label: false
+        title: false
     third_party_settings: {  }
     type: link_attributes
     region: content

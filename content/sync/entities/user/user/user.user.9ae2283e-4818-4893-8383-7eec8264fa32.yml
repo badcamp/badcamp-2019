@@ -1,0 +1,81 @@
+uuid:
+  -
+    value: 9ae2283e-4818-4893-8383-7eec8264fa32
+langcode:
+  -
+    value: en
+name:
+  -
+    value: sean-e-dietrich
+created:
+  -
+    value: '2019-01-07T21:32:43+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2019-02-10T23:04:58+00:00'
+    format: 'Y-m-d\TH:i:sP'
+default_langcode:
+  -
+    value: true
+metatag:
+  value:
+    title: 'sean-e-dietrich | Bay Area Drupal Camp - 2019'
+    canonical_url: 'http://badcamp-2019.docksal/user/1'
+    description: 'Bay Area Drupal Camp - 2019'
+path:
+  -
+    alias: null
+    pid: null
+    langcode: en
+field_bio: {  }
+field_first_name:
+  -
+    value: Sean
+field_last_name:
+  -
+    value: Dietrich
+field_options: {  }
+field_organization: {  }
+field_organization_url: {  }
+field_social_profile_links:
+  -
+    platform: null
+    value: null
+    platform_values:
+      drupal:
+        value: ''
+      email:
+        value: ''
+      facebook:
+        value: ''
+      github:
+        value: ''
+      googleplus:
+        value: ''
+      linkedin:
+        value: ''
+      twitter:
+        value: ''
+      youtube:
+        value: ''
+field_subscribe_to_badcamp_newsl:
+  -
+    subscribe: false
+    interest_groups: ''
+field_title: {  }
+user_picture: {  }
+_content_sync:
+  entity_type: user
+  entity_dependencies: {  }
+pass:
+  -
+    value: $S$ENhLhRZicfD19AmXnOw5E9Tyr7C9m3t6XlKSDcEj5ggn/0sDMMB/
+    pre_hashed: true
+mail:
+  value: sean.e.dietrich@gmail.com
+status:
+  value: '1'
+roles:
+  - authenticated
+  - administrator

@@ -9,6 +9,9 @@ use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\payment\Plugin\Payment\LineItem\PaymentLineItemManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Drupal\currency\Plugin\Validation\Constraint\CurrencyCode;
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\OpenModalDialogCommand;
 
 /**
  * Class PaymentController.
@@ -81,7 +84,8 @@ class PaymentController extends ControllerBase {
     /** @var \Drupal\payment\Entity\PaymentInterface $payment */
     $payment = $this->paymentStorage->create([
       'bundle' => $type,
-    ]);
+    ])
+    ->setCurrencyCode('USD');
 
     $line_item = $this->paymentLineItemManager
       ->createInstance('payment_basic')
@@ -91,8 +95,9 @@ class PaymentController extends ControllerBase {
       ->setCurrencyCode('USD');
 
     $payment
-      ->setLineItem($line_item)
-      ->setCurrencyCode('USD');
+      ->setLineItem($line_item);
+
+    $payment->redirectDestination = '/';
 
     $form = $this->entityFormBuilder->getForm($payment, 'payment_form');
 

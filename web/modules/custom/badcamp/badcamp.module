@@ -6,6 +6,11 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\OpenModalDialogCommand;
+use Drupal\Core\Ajax\ReplaceCommand;
 
 /**
  * Implements hook_help().
@@ -23,3 +28,53 @@ function badcamp_help($route_name, RouteMatchInterface $route_match) {
   }
 }
 
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function badcamp_form_payment_badcamp_payment_sponsorship_payment_form_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['actions']['submit']['#submit'][] = 'badcamp_payment_sponsorship_submit';
+  $form['actions']['submit']['#ajax'] = [
+    'callback' => 'badcamp_payment_sponsorship_submit_ajax',
+    'event' => 'click',
+  ];
+  $form['actions']['submit']['#attributes'] = ['class' => ['use-ajax-submit']];
+
+  $form['#prefix'] = '<div id="modal_example_form">';
+  $form['#suffix'] = '</div>';
+
+  $form['#attached']['library'][] = 'core/drupal.dialog.ajax';
+}
+
+/**
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function badcamp_payment_sponsorship_submit($form, FormStateInterface $form_state) {
+  $buildInfo = $form_state->getBuildInfo();
+  /** @var \Drupal\payment_form\Entity\Payment\PaymentForm $callbackObject */
+  $callbackObject = $buildInfo['callback_object'];
+  /** @var \Drupal\payment\Entity\PaymentInterface $payment */
+  $payment = $callbackObject->getEntity();
+
+  if (($redirect_value = $payment->redirectDestination) != '') {
+    $form_state->setRedirectUrl(Url::fromUserInput($redirect_value));
+  }
+}
+
+/**
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $formState
+ */
+function badcamp_payment_sponsorship_submit_ajax($form, FormStateInterface $form_state) {
+  $response = new AjaxResponse();
+
+  // If there are any form errors, re-display the form.
+  if ($form_state->hasAnyErrors()) {
+    $response->addCommand(new ReplaceCommand('#modal_example_form', $form));
+  }
+  else {
+    $response->addCommand(new OpenModalDialogCommand("Success!", 'The modal form has been submitted.', ['width' => 800]));
+  }
+
+  return $response;
+}

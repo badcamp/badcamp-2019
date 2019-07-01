@@ -1,4 +1,3 @@
-
 badcamp.attendees_list:
   path: '/node/{node}/attendees'
   defaults:

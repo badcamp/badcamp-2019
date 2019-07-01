@@ -10,10 +10,8 @@ function badcamp_register_theme($existing, $type, $theme, $path) {
   return [
     'registration_page' => [
       'variables' => [
-        'step1active' => FALSE,
-        'step2active' => FALSE,
-        'step2active_swag' => FALSE,
-        'step3active' => FALSE,
+        'active' => NULL,
+        'tabs' => NULL,
         'content' => NULL,
         'intro_message' => NULL,
       ],

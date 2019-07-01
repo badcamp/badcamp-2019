@@ -6,20 +6,36 @@ dependencies:
     - field.field.payment.badcamp_payment_sponsorship.field_sponsorship_hoodie_size
     - field.field.payment.badcamp_payment_sponsorship.field_sponsorship_shirt_size
   module:
+    - field_group
     - payment
+third_party_settings:
+  field_group:
+    group_camp_swag:
+      children:
+        - field_sponsorship_shirt_size
+        - field_sponsorship_hoodie_size
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Camp Swag'
 id: payment.badcamp_payment_sponsorship.default
 targetEntityType: payment
 bundle: badcamp_payment_sponsorship
 mode: default
 content:
   field_sponsorship_hoodie_size:
-    weight: 1
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_sponsorship_shirt_size:
-    weight: 0
+    weight: -1
     settings: {  }
     third_party_settings: {  }
     type: options_select
