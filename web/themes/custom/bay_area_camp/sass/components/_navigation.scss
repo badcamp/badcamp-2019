@@ -1,71 +1,39 @@
 .main-navigation {
   background-color: $grayish;
+  font-family: $monsterrat;
   @include breakpoint('medium') {
     margin-bottom: 20px;
   }
 }
 
-#block-mainnavigation {
-  > ul {
-    @extend .flex-container;
-    @extend .align-stretch;
-    @include breakpoint('large') {
-      padding-right: 1em;
-    }
-
-    li {
-      a {
-        font-size: 1.125em;
-        font-family: $monsterrat;
-        font-weight: 600;
-        text-transform: uppercase;
-        text-decoration: none;
-        display: block;
-        width: 100%;
-        text-align: center;
-        border-bottom: 0;
-
-        @include breakpoint('large') {
-          border-bottom: 3px solid $grayish;
-          text-align: left;
-          font-size: 1em;
-          &:hover,
-          &:focus {
-            border-bottom: 3px solid $salmon;
-            outline: 0;
-          }
-        }
-
-        @include breakpoint('xlarge') {
-          font-size: 1.125em;
-        }
-      }
-    }
-
-    > li {
-      padding: 0 0.75em;
-      // @extend .flex-child-grow;
-      @include breakpoint('large') {
-        &.leaf-0 {
-          padding-left: 0;
-        }
-        @include breakpoint('xlarge') {
-          padding: 0 0.875em;
-        }
-      }
-
-      li {
-        a {
-          padding: 1rem !important;
-        }
-      }
-    }
+.navigation-wrap {
+  @include breakpoint('medium') {
+    @include xy-grid-container;
   }
+}
 
-  .drilldown .is-drilldown-submenu a,
-  .drilldown a,
-  .dropdown .is-dropdown-submenu a,
-  .dropdown.menu > li > a {
-    padding: 17px 0px 13px;
+#block-mainnavigation {
+  li {
+    a {
+      font-size: 1.125em;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      &:hover {
+        color: darken($lightblue, 15%);
+      }
+      &:focus {
+        outline-offset: 1px;
+      }
+    }
+    > ul {
+      background: darken($grayish, 4%);
+    }
+
+    &.is-accordion-submenu-item {
+      a {
+        padding-left: 2em;
+      }
+    }
   }
 }
