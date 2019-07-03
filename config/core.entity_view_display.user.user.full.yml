@@ -14,7 +14,7 @@ dependencies:
     - field.field.user.user.field_subscribe_to_badcamp_newsl
     - field.field.user.user.field_title
     - field.field.user.user.user_picture
-    - image.style.thumbnail
+    - image.style.medium
   module:
     - image
     - link
@@ -32,14 +32,14 @@ mode: full
 content:
   field_bio:
     weight: 6
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_first_name:
     weight: 4
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -47,7 +47,7 @@ content:
     region: content
   field_last_name:
     weight: 5
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -55,14 +55,14 @@ content:
     region: content
   field_options:
     weight: 8
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_organization:
     weight: 1
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -70,7 +70,7 @@ content:
     region: content
   field_organization_url:
     weight: 2
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -82,7 +82,7 @@ content:
     region: content
   field_social_profile_links:
     weight: 9
-    label: above
+    label: hidden
     settings:
       appearance: {  }
       link_attributes: {  }
@@ -91,7 +91,7 @@ content:
     region: content
   field_subscribe_to_badcamp_newsl:
     weight: 3
-    label: above
+    label: hidden
     settings:
       show_interest_groups: false
     third_party_settings: {  }
@@ -99,7 +99,7 @@ content:
     region: content
   field_title:
     weight: 7
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -110,8 +110,8 @@ content:
     weight: 0
     region: content
     settings:
-      image_style: thumbnail
-      image_link: content
+      image_style: medium
+      image_link: ''
     third_party_settings: {  }
     label: hidden
 hidden:

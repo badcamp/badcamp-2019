@@ -1,6 +1,6 @@
 .registration-steps {
   font-family: $monsterrat;
-  margin: 3em 0 2em;
+  margin: 3em 0;
 }
 
 .registration {
@@ -27,6 +27,28 @@
   }
 }
 
+// Step 1
+
+.user-register-form {
+  .field--name-field-social-profile-links {
+    margin-top: 3em;
+    @include breakpoint('large') {
+      .form-item {
+        max-width: 760px;
+      }
+    }
+  }
+}
+
+.fieldset--options {
+  margin-bottom: 1em;
+  margin-left: -1px !important;
+  .form-item {
+    margin-bottom: 0.75em;
+  }
+}
+
+// Step 2
 .donation-block {
   background: $grayish;
   padding: 1em 1.5em;
