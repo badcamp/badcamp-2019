@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6936a689f568c82b25215d340017a298",
+    "content-hash": "94ae600143d6ba62534ec7fe36dffb0f",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2398,6 +2398,69 @@
             "homepage": "https://www.drupal.org/project/cer",
             "support": {
                 "source": "https://git.drupalcode.org/project/cer"
+            }
+        },
+        {
+            "name": "drupal/conditional_fields",
+            "version": "1.0.0-alpha5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/conditional_fields.git",
+                "reference": "8.x-1.0-alpha5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/conditional_fields-8.x-1.0-alpha5.zip",
+                "reference": "8.x-1.0-alpha5",
+                "shasum": "f4193c987d460ed44d44f2936e33d00a80f0f22b"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha5",
+                    "datestamp": "1550176380",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Adyax",
+                    "homepage": "https://www.adyax.com/"
+                },
+                {
+                    "name": "axel.rutz",
+                    "homepage": "https://www.drupal.org/user/229048"
+                },
+                {
+                    "name": "colan",
+                    "homepage": "https://www.drupal.org/user/58704"
+                },
+                {
+                    "name": "itsekhmistro",
+                    "homepage": "https://www.drupal.org/user/928152"
+                },
+                {
+                    "name": "peterpoe",
+                    "homepage": "https://www.drupal.org/user/55674"
+                }
+            ],
+            "description": "Conditional fields",
+            "homepage": "https://www.drupal.org/project/conditional_fields",
+            "support": {
+                "source": "https://git.drupalcode.org/project/conditional_fields"
             }
         },
         {
@@ -5101,8 +5164,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/payment_stripe",
                 "issues": "https://www.drupal.org/project/issues/payment_stripe"
-            },
-            "time": "2019-05-10T20:08:38+00:00"
+            }
         },
         {
             "name": "drupal/plugin",
@@ -5748,8 +5810,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/stripe",
                 "issues": "https://www.drupal.org/project/issues/stripe"
-            },
-            "time": "2018-08-28T15:12:37+00:00"
+            }
         },
         {
             "name": "drupal/token",
@@ -12021,6 +12082,7 @@
         "drupal/blazy": 5,
         "drupal/block_field": 15,
         "drupal/cer": 15,
+        "drupal/conditional_fields": 15,
         "drupal/content_sync": 20,
         "drupal/custom_add_another": 10,
         "drupal/daterange_compact": 20,

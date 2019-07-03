@@ -10,7 +10,25 @@ field_name: field_sponsorship_hoodie_size
 entity_type: payment
 type: list_string
 settings:
-  allowed_values: {  }
+  allowed_values:
+    -
+      value: Small
+      label: Small
+    -
+      value: Medium
+      label: Medium
+    -
+      value: Large
+      label: Large
+    -
+      value: X-Large
+      label: X-Large
+    -
+      value: XX-Large
+      label: XX-Large
+    -
+      value: XXX-Large
+      label: XXX-Large
   allowed_values_function: ''
 module: options
 locked: false

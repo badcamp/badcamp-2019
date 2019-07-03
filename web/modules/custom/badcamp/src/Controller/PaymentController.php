@@ -2,6 +2,7 @@
 
 namespace Drupal\badcamp\Controller;
 
+use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Entity\EntityFormBuilderInterface;
 use Drupal\Core\Entity\EntityInterface;
@@ -66,19 +67,34 @@ class PaymentController extends ControllerBase {
   }
 
   /**
+   * @param $type
+   */
+  private function getPaymentInfo($type, $default = FALSE) {
+    $payments = $this->config('badcamp.settings')->get('payments');
+    return isset($payments[$type]) ? $payments[$type] : $payments[$default];
+  }
+
+  /**
+   * @param $type
+   */
+  public function title($type) {
+    return $this->getPaymentInfo($type)['page_title'];
+  }
+
+  /**
+   * @param $type
    *
+   * @return array
    */
   public function payment($type) {
-    $amount = isset($_GET['amount']) ? $_GET['amount'] : 25;
-    $type = ($type != 'badcamp_payment_sponsorship' && $type != 'badcamp_payment_organization_sponsorship') ? 'badcamp_payment_sponsorship' : $type;
+    $paymentInfo = $this->getPaymentInfo($type, 'badcamp_payment_sponsorship');
+    $amount = isset($_GET['amount']) ? $_GET['amount'] : $paymentInfo['amount'];
 
-    $line_title = $this->t('BADCamp Individual Sponsorship');
-    if ($type == 'badcamp_payment_sponsorship' && ($amount != 25 && $amount != 50 && $amount != 100) ){
-      $amount = 25;
-    }
-    elseif ($type == 'badcamp_payment_organization_sponsorship') {
-      $amount = 400;
-      $line_title = $this->t('BADCAMP Organization Sponsorship');
+    $redirectDestination = isset($paymentInfo['redirect']) ?: '/';
+
+    $line_title = $paymentInfo['title'];
+    if (isset($paymentInfo['allowed_amounts']) && !in_array($amount, $paymentInfo['allowed_amounts'])){
+      $amount = $paymentInfo['amount'];
     }
 
     /** @var \Drupal\payment\Entity\PaymentInterface $payment */
@@ -97,12 +113,30 @@ class PaymentController extends ControllerBase {
     $payment
       ->setLineItem($line_item);
 
-    $payment->redirectDestination = '/';
+    $payment->lineItemTitle = $line_title;
+    $payment->redirectDestination = $redirectDestination;
 
     $form = $this->entityFormBuilder->getForm($payment, 'payment_form');
 
     return [
       'form' => $form,
     ];
+  }
+
+  /**
+   * @param $page
+   */
+  public function access($type) {
+    $config = $this->getPaymentInfo($type);
+
+    if (!empty($config)) {
+      if (isset($config['permission']) && !$this->currentUser()->hasPermission($config['permission'])) {
+        return AccessResult::forbidden();
+      }
+
+      return AccessResult::allowed();
+    }
+
+    return AccessResult::forbidden();
   }
 }

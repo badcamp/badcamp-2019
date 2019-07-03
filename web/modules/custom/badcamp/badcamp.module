@@ -11,6 +11,7 @@ use Drupal\Core\Url;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\OpenModalDialogCommand;
 use Drupal\Core\Ajax\ReplaceCommand;
+use Drupal\Core\Ajax\RedirectCommand;
 
 /**
  * Implements hook_help().
@@ -32,6 +33,22 @@ function badcamp_help($route_name, RouteMatchInterface $route_match) {
  * Implements hook_form_FORM_ID_alter().
  */
 function badcamp_form_payment_badcamp_payment_sponsorship_payment_form_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $buildInfo = $form_state->getBuildInfo();
+  /** @var \Drupal\payment_form\Entity\Payment\PaymentForm $callbackObject */
+  $callbackObject = $buildInfo['callback_object'];
+  /** @var \Drupal\payment\Entity\PaymentInterface $payment */
+  $payment = $callbackObject->getEntity();
+
+  if ($payment->getAmount() < 100) {
+    $form['field_sponsorship_hoodie_size']['#required'] = FALSE;
+    $form['field_sponsorship_hoodie_size']['#access'] = FALSE;
+  }
+
+  if ($payment->getAmount() < 25) {
+    $form['field_sponsorship_shirt_size']['#required'] = FALSE;
+    $form['field_sponsorship_shirt_size']['#access'] = FALSE;
+  }
+
   $form['actions']['submit']['#submit'][] = 'badcamp_payment_sponsorship_submit';
   $form['actions']['submit']['#ajax'] = [
     'callback' => 'badcamp_payment_sponsorship_submit_ajax',
@@ -39,7 +56,7 @@ function badcamp_form_payment_badcamp_payment_sponsorship_payment_form_form_alte
   ];
   $form['actions']['submit']['#attributes'] = ['class' => ['use-ajax-submit']];
 
-  $form['#prefix'] = '<div id="modal_example_form">';
+  $form['#prefix'] = '<div id="payment_form">';
   $form['#suffix'] = '</div>';
 
   $form['#attached']['library'][] = 'core/drupal.dialog.ajax';
@@ -58,6 +75,9 @@ function badcamp_payment_sponsorship_submit($form, FormStateInterface $form_stat
 
   if (($redirect_value = $payment->redirectDestination) != '') {
     $form_state->setRedirectUrl(Url::fromUserInput($redirect_value));
+    $form_state->setProgrammed(FALSE);
+    $form_state->disableRedirect(FALSE);
+    $form_state->setRebuild(FALSE);
   }
 }
 
@@ -70,10 +90,16 @@ function badcamp_payment_sponsorship_submit_ajax($form, FormStateInterface $form
 
   // If there are any form errors, re-display the form.
   if ($form_state->hasAnyErrors()) {
-    $response->addCommand(new ReplaceCommand('#modal_example_form', $form));
+    $response->addCommand(new ReplaceCommand('#payment_form', $form));
   }
   else {
-    $response->addCommand(new OpenModalDialogCommand("Success!", 'The modal form has been submitted.', ['width' => 800]));
+    /** @var \Drupal\Core\Url $redirect */
+    if (($redirect = $form_state->getRedirect()) !== FALSE) {
+      $response->addCommand(new OpenModalDialogCommand("Thank You!", "Thank you for your payment!", ['width' => 800]));
+      $response->addCommand(new RedirectCommand($redirect->toString()));
+    } else {
+      $response->addCommand(new OpenModalDialogCommand("Success!", 'The modal form has been submitted.', ['width' => 800]));
+    }
   }
 
   return $response;

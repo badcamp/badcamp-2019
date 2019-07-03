@@ -1,0 +1,14 @@
+payments:
+  badcamp_payment_sponsorship:
+    title: 'BADCamp Individual Sponsorship'
+    redirect: '/'
+    allowed_amounts:
+      - 25
+      - 50
+      - 100
+    amount: 25
+    page_title: 'Sponsor The Bay Area Drupal Camp'
+  badcamp_payment_organization_sponsorship:
+    amount: 400
+    title: 'BADCAMP Organization Sponsorship'
+    page_title: 'Sponsor The Bay Area Drupal Camp'

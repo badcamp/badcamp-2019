@@ -111,6 +111,7 @@
         "drupal/block_class": "^1.0",
         "drupal/block_field": "^1.0@alpha",
         "drupal/cer": "^4.0@alpha",
+        "drupal/conditional_fields": "^1.0@alpha",
         "drupal/config_direct_save": "^1.0",
         "drupal/config_installer": "^1.0",
         "drupal/console": "^1.8",
@@ -278,7 +279,10 @@
                 "Issue #2866543 - Support required fields": "https://www.drupal.org/files/issues/2866543.patch"
             },
             "drupal/payment_stripe": {
-                "Improvements": "https://gist.githubusercontent.com/sean-e-dietrich/2ac08921ac2d23637593d888cc7f28a7/raw/71b9cd08347f58fb228f1b881a2e6ba1c10b8e36/payment_stripe.patch"
+                "Improvements": "https://gist.githubusercontent.com/sean-e-dietrich/2ac08921ac2d23637593d888cc7f28a7/raw/d81da5b66572d80dab13c6e531b51c696d59c44a/payment_stripe.patch"
+            },
+            "drupal/stripe": {
+                "Ajax Form": "https://gist.githubusercontent.com/sean-e-dietrich/fb979d558a3974f791af678b68879ce3/raw/1c2c580d65c185289a97eeb3c323f239046fadd1/stripe.patch"
             }
         }
     },

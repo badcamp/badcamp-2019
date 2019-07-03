@@ -10,5 +10,6 @@ badcamp.payment:
   path: '/payment/{type}'
   defaults:
     _controller: '\Drupal\badcamp\Controller\PaymentController::payment'
+    _title_callback: '\Drupal\badcamp\Controller\PaymentController::title'
   requirements:
-    _permission: 'access content'
+    _custom_access: '\Drupal\badcamp\Controller\PaymentController::access'
