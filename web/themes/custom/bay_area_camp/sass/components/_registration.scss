@@ -7,11 +7,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-right: 3em;
+  font-weight: 600;
 }
 
 .step-number {
   color: white;
-  font-weight: 600;
   background: $navy;
   border-radius: 50%;
   height: 70px;
@@ -24,4 +25,27 @@
     color: $navy;
     background: $salmon;
   }
+}
+
+.donation-block {
+  background: $grayish;
+  padding: 1em 1.5em;
+  margin-bottom: 1.5em;
+  font-family: $monsterrat;
+  position: relative;
+
+  .button {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.donation-block__title {
+  font-size: rem-calc(32);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.donation-block__body {
+  padding-bottom: 2.75em;
 }
