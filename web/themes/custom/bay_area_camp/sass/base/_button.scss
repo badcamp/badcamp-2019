@@ -28,6 +28,15 @@
       background-color: lighten($bg, 5%);
     }
   }
+  &:focus,
+  &:active {
+    outline: none;
+    @if $bg == $navy {
+      border: 2px dotted $lightblue;
+    } @else {
+      border: 2px dotted $navy;
+    }
+  }
 }
 
 .button {
