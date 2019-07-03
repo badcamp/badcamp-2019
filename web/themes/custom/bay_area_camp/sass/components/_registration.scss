@@ -1,7 +1,7 @@
 .registration-steps {
   font-family: $monsterrat;
   margin: 3em 0;
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
 }
 
 .registration-step {
@@ -33,7 +33,7 @@
   }
 
   .registration-step__subtitle {
-    color: darken($medium-gray, 3%);
+    color: darken($medium-gray, 5%);
   }
 
   &:last-child {
