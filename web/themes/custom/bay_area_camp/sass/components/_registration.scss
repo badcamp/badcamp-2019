@@ -1,35 +1,58 @@
 .registration-steps {
   font-family: $monsterrat;
   margin: 3em 0;
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
 }
 
-.registration {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-right: 3em;
+.registration-step {
+  margin-right: 90px;
   font-weight: 600;
-}
+  position: relative;
 
-.step-number {
-  color: white;
-  background: $navy;
-  border-radius: 50%;
-  height: 70px;
-  width: 70px;
-  padding-top: 14px;
-  font-size: 30px;
-  margin-bottom: 10px;
+  .registration-step__number {
+    color: white;
+    background: $medium-gray;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    padding-top: 14px;
+    font-size: 30px;
+    margin-bottom: 10px;
+
+    &::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-left: 20px solid $medium-gray;
+      position: absolute;
+      top: 20px;
+      left: 105px;
+    }
+  }
+
+  .registration-step__subtitle {
+    color: darken($medium-gray, 5%);
+  }
+
+  &:last-child {
+    .registration-step__number::after {
+      border: none;
+    }
+  }
 
   &.active {
-    color: $navy;
-    background: $salmon;
+    .registration-step__number {
+      background: $navy;
+    }
+    .registration-step__subtitle {
+      color: $navy;
+    }
   }
 }
 
 // Step 1
-
 .user-register-form {
   .field--name-field-social-profile-links {
     margin-top: 3em;
