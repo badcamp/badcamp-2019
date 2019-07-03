@@ -279,7 +279,7 @@
                 "Issue #2866543 - Support required fields": "https://www.drupal.org/files/issues/2866543.patch"
             },
             "drupal/payment_stripe": {
-                "Improvements": "https://gist.githubusercontent.com/sean-e-dietrich/2ac08921ac2d23637593d888cc7f28a7/raw/b741a3f82def9e0524840ee81d787e120b07f38c/payment_stripe.patch"
+                "Improvements": "https://gist.githubusercontent.com/sean-e-dietrich/2ac08921ac2d23637593d888cc7f28a7/raw/fe41c8bf682442cba031070d998d99954d13cf74/payment_stripe.patch"
             },
             "drupal/stripe": {
                 "Ajax Form": "https://gist.githubusercontent.com/sean-e-dietrich/fb979d558a3974f791af678b68879ce3/raw/1c2c580d65c185289a97eeb3c323f239046fadd1/stripe.patch"
