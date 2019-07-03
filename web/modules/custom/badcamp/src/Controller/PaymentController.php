@@ -90,7 +90,7 @@ class PaymentController extends ControllerBase {
     $paymentInfo = $this->getPaymentInfo($type, 'badcamp_payment_sponsorship');
     $amount = isset($_GET['amount']) ? $_GET['amount'] : $paymentInfo['amount'];
 
-    $redirectDestination = isset($paymentInfo['redirect']) ?: '/';
+    $redirectDestination = isset($paymentInfo['redirect']) ? $paymentInfo['redirect'] : '/';
 
     $line_title = $paymentInfo['title'];
     if (isset($paymentInfo['allowed_amounts']) && !in_array($amount, $paymentInfo['allowed_amounts'])){
