@@ -1,11 +1,11 @@
 .user__display--full {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .user__attendee-name {
   @extend .attendee-name;
-  font-size: rem-calc(26);
-  margin-top: 0.5em;
+  font-size: rem-calc(27);
+  margin-top: 0.75em;
   display: block;
   .first-name {
     float: left;
@@ -15,22 +15,21 @@
 
 .user__attendee-org {
   @extend .attendee-name;
-  font-size: rem-calc(19);
-  margin-top: 0.5em;
+  font-size: rem-calc(18);
+  margin-top: 0.25em;
   font-weight: 600;
   .user-title,
   .separator {
     float: left;
-    margin-right: 3px;
+    margin-right: 4px;
   }
 }
 
 .user__attendee-bio {
-  margin-top: 0.875em;
+  margin: 1.5em 0 2em;
 }
 
 .user__attendee-social {
-  margin-top: 2em;
   .social-media-links--platforms {
     justify-content: flex-start;
     li {

@@ -33,10 +33,11 @@ third_party_settings:
       weight: 0
       format_type: fieldset
       format_settings:
-        id: ''
-        classes: ''
+        label: 'Account Information'
         description: ''
         required_fields: true
+        id: ''
+        classes: fieldset--account-info
       label: 'Account Information'
     group_personal_information:
       children:
@@ -44,16 +45,16 @@ third_party_settings:
         - field_bio
         - user_picture
         - group_organization_wrapper
-        - group_options_group
         - field_social_profile_links
       parent_name: ''
       weight: 1
       format_type: fieldset
       format_settings:
-        id: ''
-        classes: ''
+        label: 'Personal Information'
         description: ''
         required_fields: true
+        id: ''
+        classes: fieldset--personal-info
       label: 'Personal Information'
     group_name:
       children:
@@ -63,8 +64,7 @@ third_party_settings:
       weight: 20
       format_type: html_element
       format_settings:
-        id: ''
-        classes: 'cell small-12 medium-6'
+        label: Name
         element: div
         show_label: false
         label_element: h3
@@ -72,6 +72,8 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: 'grid-x grid-margin-x'
       label: Name
     group_first_name_wrapper:
       children:
@@ -112,7 +114,6 @@ third_party_settings:
         - group_org_wrapper
         - group_org_website_wrapper
         - group_title_wrapper
-        - field_title
       parent_name: group_personal_information
       weight: 23
       format_type: html_element
@@ -131,11 +132,10 @@ third_party_settings:
       children:
         - field_organization
       parent_name: group_organization_wrapper
-      weight: 20
+      weight: 11
       format_type: html_element
       format_settings:
-        id: ''
-        classes: 'cell small-12 medium-6'
+        label: 'Org Wrapper'
         element: div
         show_label: false
         label_element: h3
@@ -143,16 +143,17 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: 'cell small-12 large-8'
       label: 'Org Wrapper'
     group_org_website_wrapper:
       children:
         - field_organization_url
       parent_name: group_organization_wrapper
-      weight: 21
+      weight: 12
       format_type: html_element
       format_settings:
-        id: ''
-        classes: 'cell small-12 medium-6'
+        label: 'Org Website Wrapper'
         element: div
         show_label: false
         label_element: h3
@@ -160,15 +161,17 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: 'cell small-12 large-8'
       label: 'Org Website Wrapper'
     group_title_wrapper:
-      children: {  }
+      children:
+        - field_title
       parent_name: group_organization_wrapper
-      weight: 22
+      weight: 13
       format_type: html_element
       format_settings:
-        id: ''
-        classes: 'cell small-12 medium-6'
+        label: 'Title Wrapper'
         element: div
         show_label: false
         label_element: h3
@@ -176,16 +179,17 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: 'cell small-12 large-8'
       label: 'Title Wrapper'
     group_options_group:
       children:
         - field_options
-      parent_name: group_personal_information
-      weight: 24
+      parent_name: ''
+      weight: 3
       format_type: html_element
       format_settings:
-        id: ''
-        classes: 'grid-x grid-margin-x margin-horizontal-1'
+        label: 'Options Group'
         element: div
         show_label: false
         label_element: h3
@@ -193,6 +197,8 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: 'fieldset--options grid-x grid-margin-x margin-horizontal-1'
       label: 'Options Group'
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
@@ -253,19 +259,19 @@ content:
     type: link_default
     region: content
   field_social_profile_links:
-    weight: 25
+    weight: 24
     settings: {  }
     third_party_settings: {  }
     type: social_media_links_field_default
     region: content
   field_subscribe_to_badcamp_newsl:
-    weight: 2
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: mailchimp_lists_select
     region: content
   field_title:
-    weight: 23
+    weight: 10
     settings:
       size: 60
       placeholder: ''
@@ -274,7 +280,7 @@ content:
     region: content
   path:
     type: path
-    weight: 30
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
