@@ -14,10 +14,50 @@ dependencies:
     - node.type.session
   module:
     - entityqueue
+    - field_group
     - file
     - multiple_selects
     - text
     - video_embed_field
+third_party_settings:
+  field_group:
+    group_presentation_materials:
+      children:
+        - field_session_slides
+        - field_session_presentation_video
+      parent_name: ''
+      weight: 8
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: false
+      label: 'Presentation Materials'
+    group_session_status:
+      children:
+        - field_status
+      parent_name: ''
+      weight: 7
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Session Status'
+    group_presenters:
+      children:
+        - field_members
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Presenters
 id: node.session.default
 targetEntityType: node
 bundle: session
@@ -33,43 +73,43 @@ content:
     third_party_settings: {  }
     region: content
   field_members:
-    weight: 3
+    weight: 5
     settings:
       match_operator: CONTAINS
-      size: 60
+      size: '60'
       placeholder: ''
-      link_to_entity: false
-      link_to_edit_form: true
+      link_to_edit_form: '1'
+      link_to_entity: 0
     third_party_settings: {  }
     type: entityqueue_dragtable
     region: content
   field_session_presentation_video:
-    weight: 7
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: video_embed_field_textfield
     region: content
   field_session_slides:
-    weight: 8
+    weight: 9
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
     region: content
   field_session_topics:
-    weight: 4
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: multiple_options_select
     region: content
   field_sponsors:
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_status:
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
