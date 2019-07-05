@@ -39,6 +39,17 @@
     }
   }
 
+  tr.draggable {
+    .form-item {
+      font-weight: 600;
+      float: left;
+      padding-top: 10px;
+    }
+    .form-submit {
+      margin-bottom: 0;
+    }
+  }
+
   // Series of checkboxes.
   .form-checkboxes {
     .form-item {
@@ -53,7 +64,8 @@
     }
   }
 
-  #edit-preview.button {
+  #edit-preview.button,
+  #edit-delete.button {
     @include button($medium-gray);
     margin-left: 10px;
   }

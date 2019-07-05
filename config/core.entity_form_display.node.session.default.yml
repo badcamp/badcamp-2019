@@ -78,8 +78,8 @@ content:
       match_operator: CONTAINS
       size: '60'
       placeholder: ''
-      link_to_edit_form: '1'
       link_to_entity: 0
+      link_to_edit_form: 0
     third_party_settings: {  }
     type: entityqueue_dragtable
     region: content

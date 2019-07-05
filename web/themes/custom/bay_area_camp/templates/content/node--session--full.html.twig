@@ -1,0 +1,13 @@
+<article{{ attributes.addClass('session__display--full') }}>
+  <div{{ content_attributes }}>
+    <div class="session__presenters">
+     {{ content.field_members }}
+    </div>
+    <div class="session__topics">
+     {{ content.field_session_topics }}
+    </div>
+    <div class="session__description">
+      {{ content.body }}
+    </div>
+  </div>
+</article>
