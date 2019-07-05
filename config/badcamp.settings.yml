@@ -1,7 +1,7 @@
 payments:
   badcamp_payment_sponsorship:
     title: 'BADCamp Individual Sponsorship'
-    redirect: '/'
+    redirect: /
     allowed_amounts:
       - 25
       - 50

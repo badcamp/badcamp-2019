@@ -1,0 +1,25 @@
+uuid: bba21c48-f76c-43d7-8760-453d58342400
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - payment
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: payment.field_organization_name
+field_name: field_organization_name
+entity_type: payment
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

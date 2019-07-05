@@ -1,0 +1,12 @@
+uuid: 4a2cecea-8f3b-423c-a04d-f3d943a1cb75
+langcode: en
+status: true
+dependencies:
+  module:
+    - payment
+id: payment.payment_stripe.default
+targetEntityType: payment
+bundle: payment_stripe
+mode: default
+content: {  }
+hidden: {  }

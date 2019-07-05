@@ -14,7 +14,7 @@ dependencies:
     - field.field.user.user.field_subscribe_to_badcamp_newsl
     - field.field.user.user.field_title
     - field.field.user.user.user_picture
-    - image.style.medium
+    - image.style.user_profile
   module:
     - image
     - link
@@ -78,7 +78,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    type: link_separate
     region: content
   field_social_profile_links:
     weight: 9
@@ -110,7 +110,7 @@ content:
     weight: 0
     region: content
     settings:
-      image_style: medium
+      image_style: user_profile
       image_link: ''
     third_party_settings: {  }
     label: hidden

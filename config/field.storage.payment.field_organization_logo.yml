@@ -1,0 +1,34 @@
+uuid: 4f4cbad1-3c07-4d63-8da2-5bc69494dab9
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - file
+    - image
+    - payment
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: payment.field_organization_logo
+field_name: field_organization_logo
+entity_type: payment
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

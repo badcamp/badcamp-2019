@@ -18,4 +18,6 @@ permissions:
   - 'search content'
   - 'use text format restricted_html'
   - 'view empty pages'
+  - 'view field_session_presentation_video'
   - 'view media'
+  - 'view own field_session_presentation_video'

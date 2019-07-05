@@ -1,18 +1,14 @@
-uuid: 4af09392-8c8d-4226-8303-e6ed6048a93d
+uuid: a9d3c65a-90e7-4f00-b2af-210f9ab51475
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.field.payment.badcamp_payment_sponsorship.field_hoodie_size
-    - field.field.payment.badcamp_payment_sponsorship.field_tshirt_size
   module:
-    - options
     - payment
     - plugin
     - user
-id: payment.badcamp_payment_sponsorship.default
+id: payment.payment_stripe.default
 targetEntityType: payment
-bundle: badcamp_payment_sponsorship
+bundle: payment_stripe
 mode: default
 content:
   changed:
@@ -43,20 +39,6 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-  field_hoodie_size:
-    weight: 2
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_tshirt_size:
-    weight: 1
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   line_items:
     type: payment_line_item_overview
     weight: 0

@@ -31,14 +31,14 @@ mode: default
 content:
   field_bio:
     weight: 13
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_first_name:
     weight: 11
-    label: hidden
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -46,7 +46,7 @@ content:
     region: content
   field_last_name:
     weight: 12
-    label: hidden
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -54,14 +54,14 @@ content:
     region: content
   field_options:
     weight: 15
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_organization:
     weight: 7
-    label: hidden
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -69,7 +69,7 @@ content:
     region: content
   field_organization_url:
     weight: 8
-    label: hidden
+    label: above
     settings:
       trim_length: 80
       url_only: false
@@ -81,7 +81,7 @@ content:
     region: content
   field_social_profile_links:
     weight: 16
-    label: hidden
+    label: above
     settings:
       appearance: {  }
       link_attributes: {  }
@@ -90,7 +90,7 @@ content:
     region: content
   field_subscribe_to_badcamp_newsl:
     weight: 10
-    label: hidden
+    label: above
     settings:
       show_interest_groups: false
     third_party_settings: {  }
@@ -98,7 +98,7 @@ content:
     region: content
   field_title:
     weight: 14
-    label: hidden
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }

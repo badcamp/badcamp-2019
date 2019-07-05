@@ -1,18 +1,22 @@
-uuid: 4af09392-8c8d-4226-8303-e6ed6048a93d
+uuid: 67c58699-70b0-4c57-9fb3-ff85ac0b31ad
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.payment.badcamp_payment_sponsorship.field_hoodie_size
-    - field.field.payment.badcamp_payment_sponsorship.field_tshirt_size
+    - field.field.payment.badcamp_payment_organization_sponsorship.field_organization_description
+    - field.field.payment.badcamp_payment_organization_sponsorship.field_organization_logo
+    - field.field.payment.badcamp_payment_organization_sponsorship.field_organization_name
+    - field.field.payment.badcamp_payment_organization_sponsorship.field_organization_url
   module:
-    - options
+    - image
+    - link
     - payment
     - plugin
+    - text
     - user
-id: payment.badcamp_payment_sponsorship.default
+id: payment.badcamp_payment_organization_sponsorship.default
 targetEntityType: payment
-bundle: badcamp_payment_sponsorship
+bundle: badcamp_payment_organization_sponsorship
 mode: default
 content:
   changed:
@@ -43,19 +47,41 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-  field_hoodie_size:
+  field_organization_description:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_organization_logo:
     weight: 2
     label: above
-    settings: {  }
+    settings:
+      image_style: ''
+      image_link: ''
     third_party_settings: {  }
-    type: list_default
+    type: image
     region: content
-  field_tshirt_size:
+  field_organization_name:
     weight: 1
     label: above
-    settings: {  }
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    type: list_default
+    type: string
+    region: content
+  field_organization_url:
+    weight: 4
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
   line_items:
     type: payment_line_item_overview

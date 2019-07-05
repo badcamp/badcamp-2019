@@ -13,11 +13,8 @@ dependencies:
     - field.field.node.session.field_twitter_description
     - node.type.session
   module:
-    - entityqueue
     - file
-    - multiple_selects
     - text
-    - video_embed_field
 id: node.session.default
 targetEntityType: node
 bundle: session
@@ -25,7 +22,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 1
+    weight: 4
     settings:
       rows: 9
       summary_rows: 3
@@ -33,47 +30,36 @@ content:
     third_party_settings: {  }
     region: content
   field_members:
-    weight: 3
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
-      link_to_entity: false
-      link_to_edit_form: true
     third_party_settings: {  }
-    type: entityqueue_dragtable
-    region: content
-  field_session_presentation_video:
-    weight: 7
-    settings: {  }
-    third_party_settings: {  }
-    type: video_embed_field_textfield
+    type: entity_reference_autocomplete_tags
     region: content
   field_session_slides:
-    weight: 8
+    type: file_generic
+    weight: 3
+    region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
-    type: file_generic
-    region: content
   field_session_topics:
-    weight: 4
-    settings: {  }
+    weight: 6
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: multiple_options_select
-    region: content
-  field_sponsors:
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
+    type: entity_reference_autocomplete_tags
     region: content
   field_status:
-    weight: 6
+    type: options_select
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_twitter_description:
     weight: 2
     settings:
@@ -84,7 +70,7 @@ content:
     region: content
   title:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
@@ -92,6 +78,8 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_session_presentation_video: true
+  field_sponsors: true
   path: true
   promote: true
   status: true

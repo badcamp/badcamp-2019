@@ -13,5 +13,5 @@ type: session
 description: 'Sessions are presentations by people on different topics. These usually are short 30-60 min.'
 help: ''
 new_revision: false
-preview_mode: 1
+preview_mode: 0
 display_submitted: false

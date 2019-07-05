@@ -5,6 +5,13 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.session.body
+    - field.field.node.session.field_members
+    - field.field.node.session.field_session_presentation_video
+    - field.field.node.session.field_session_slides
+    - field.field.node.session.field_session_topics
+    - field.field.node.session.field_sponsors
+    - field.field.node.session.field_status
+    - field.field.node.session.field_twitter_description
     - node.type.session
   module:
     - text
@@ -27,4 +34,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_members: true
+  field_session_presentation_video: true
+  field_session_slides: true
+  field_session_topics: true
+  field_sponsors: true
+  field_status: true
+  field_twitter_description: true
