@@ -79,3 +79,16 @@ function bay_area_camp_preprocess_views_view_unformatted__sponsors__page_1(&$var
 function bay_area_camp_theme_suggestions_user_alter(&$suggestions, $vars){
   $suggestions[] = 'user__' . $vars['elements']['#view_mode'];
 }
+
+/**
+ * Implements hook_preprocess_user().
+ */
+function bay_area_camp_preprocess_user(&$vars) {
+  $vars['org_url'] = (!empty($vars['content']['field_organization_url'][0]) ? $vars['content']['field_organization_url'][0]['#url']->getUri() : '');
+
+  /** @var User $account */
+  $account = $vars['elements']['#user'];
+
+  $vars['username'] = $account->getDisplayName();
+}
+
