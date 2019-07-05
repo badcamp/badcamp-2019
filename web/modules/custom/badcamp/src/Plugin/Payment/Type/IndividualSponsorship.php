@@ -71,7 +71,7 @@ class IndividualSponsorship extends PaymentTypeBase {
    * {@inheritdoc}
    */
   public function getPaymentDescription() {
-    return new TranslationWrapper('Individual Sponsorship');
+    return $this->t('Individual Sponsorship');
   }
 
 }

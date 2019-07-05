@@ -7,6 +7,7 @@ use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Entity\EntityFormBuilderInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityStorageInterface;
+use Drupal\payment\Entity\Payment;
 use Drupal\payment\Plugin\Payment\LineItem\PaymentLineItemManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
@@ -72,6 +73,11 @@ class PaymentController extends ControllerBase {
   private function getPaymentInfo($type, $default = FALSE) {
     $payments = $this->config('badcamp.settings')->get('payments');
     return isset($payments[$type]) ? $payments[$type] : $payments[$default];
+//    return [
+//      'page_title' => 'test',
+//      'amount' => 500,
+//      'title' => 'help'
+//    ];
   }
 
   /**

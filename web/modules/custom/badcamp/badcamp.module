@@ -32,6 +32,19 @@ function badcamp_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_form_FORM_ID_alter().
  */
+function badcamp_form_node_session_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $nodeForm = $form_state->getBuildInfo()['callback_object'];
+  $node = $nodeForm->getEntity();
+  if ($node->isNew()) {
+    $form['#title'] = t('Submit A Session');
+    $form['actions']['submit']['#value'] = t('Submit');
+  }
+  $form['body']['widget']['#after_build'][] = '_allowed_formats_remove_textarea_help';
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
 function badcamp_form_payment_badcamp_payment_sponsorship_payment_form_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   $buildInfo = $form_state->getBuildInfo();
   /** @var \Drupal\payment_form\Entity\Payment\PaymentForm $callbackObject */
@@ -40,13 +53,13 @@ function badcamp_form_payment_badcamp_payment_sponsorship_payment_form_form_alte
   $payment = $callbackObject->getEntity();
 
   if ($payment->getAmount() < 100) {
-    $form['field_sponsorship_hoodie_size']['#required'] = FALSE;
-    $form['field_sponsorship_hoodie_size']['#access'] = FALSE;
+    $form['field_hoodie_size']['#required'] = FALSE;
+    $form['field_hoodie_size']['#access'] = FALSE;
   }
 
   if ($payment->getAmount() < 25) {
-    $form['field_sponsorship_shirt_size']['#required'] = FALSE;
-    $form['field_sponsorship_shirt_size']['#access'] = FALSE;
+    $form['field_tshirt_size']['#required'] = FALSE;
+    $form['field_tshirt_size']['#access'] = FALSE;
   }
 
   $form['actions']['submit']['#submit'][] = 'badcamp_payment_sponsorship_submit';
@@ -103,4 +116,27 @@ function badcamp_payment_sponsorship_submit_ajax($form, FormStateInterface $form
   }
 
   return $response;
+}
+
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function badcamp_form_alter(&$form, formStateInterface $form_state, $form_id) {
+
+}
+
+/**
+ *
+ */
+function _allowed_formats_remove_textarea_help($form_element, FormStateInterface $form_state) {
+  if (isset($form_element[0]['format'])) {
+    // All this stuff is needed to hide the help text.
+    unset($form_element[0]['format']['guidelines']);
+    unset($form_element[0]['format']['help']);
+    unset($form_element[0]['format']['#type']);
+    unset($form_element[0]['format']['#theme_wrappers']);
+    $form_element[0]['format']['format']['#access'] = FALSE;
+  }
+
+  return $form_element;
 }

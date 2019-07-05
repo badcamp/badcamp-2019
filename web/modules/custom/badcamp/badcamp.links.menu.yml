@@ -1,0 +1,5 @@
+badcamp.reports.payments:
+  title: Payments
+  description: Configure payment methods, types, and statuses.
+  parent: system.admin_reports
+  route_name: view.badcamp_payments.individual
