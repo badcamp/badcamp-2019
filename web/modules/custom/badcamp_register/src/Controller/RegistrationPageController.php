@@ -216,7 +216,13 @@ class RegistrationPageController extends ControllerBase {
     $config = $this->getPageConfig($page);
 
     if (!empty($config)) {
-      if (isset($config['permission']) && !$this->currentUser()->hasPermission($config['permission'])) {
+
+      if (($config['requires_auth'] === TRUE && !$this->currentUser()->isAuthenticated()) ||
+        ($config['requires_auth'] === FALSE && $this->currentUser()->isAuthenticated())) {
+        return AccessResult::allowed();
+      }
+
+      if (isset($config['permission']) && !$this->account->hasPermission($config['permission'])) {
         return AccessResult::forbidden();
       }
 

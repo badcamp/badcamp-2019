@@ -6,6 +6,9 @@ navigation:
     step2:
       title: 2
       subtitle: Sponsor
+    step3:
+      title: 3
+      subtitle: Confirmation
 pages:
   register:
     tabs: tabs
@@ -40,6 +43,15 @@ pages:
       value: ''
       format: null
     content: false
+    active: step3
+    redirect_auth: register
+    requires_auth: true
+  confirm:
+    tabs: tabs
+    title: Confirmation
+    content:
+      block:
+        bid: 05718ed9-5a12-4ac9-b65f-1302ac5a0c8d
     active: step3
     redirect_auth: register
     requires_auth: true

@@ -1,0 +1,36 @@
+<?php
+
+use Drupal\Core\Serialization\Yaml;
+
+/**
+ * Import configuration for Register Page.
+ */
+function badcamp_register_update_8001() {
+  $syncDir = DRUPAL_ROOT . '/../content/sync/';
+
+  $files = [
+    'entities/donation/block_content.donation.228e66f0-5656-4c68-9b31-a4922def6520.yml',
+    'entities/donation/block_content.donation.482064c5-ecc2-4343-8dbd-877d23c680cc.yml',
+    'entities/donation/block_content.donation.b3e920de-7f3b-4a22-86b4-931f646a8a3e.yml',
+    'entities/donation/block_content.donation.d3f20f30-51c9-4c01-a030-b969ce712e88.yml',
+    'entities/block_listing/block_content.block_listing.f32e2774-1417-450b-aeb1-f3fbb2e94f7e.yml'
+  ];
+
+  /**
+   * Loop Through Files and Import
+   */
+  foreach ($files AS $file) {
+    $data = Yaml::decode(file_get_contents($syncDir . $file));
+    $entity = $this->contentImporter->importEntity($data);
+    if ($entity) {
+      drupal_set_message(t('Entity @label (@entity_type: @id) imported successfully.', [
+        '@label' => $entity->label(),
+        '@entity_type' => $entity->getEntityTypeId(),
+        '@id' => $entity->id(),
+      ]));
+    }
+    else {
+      drupal_set_message(t('Entity could not be imported.'), 'error');
+    }
+  }
+}
