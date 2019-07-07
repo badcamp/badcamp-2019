@@ -23,7 +23,7 @@ info:
     value: 'No Donation'
 changed:
   -
-    value: '2019-06-18T08:38:57+00:00'
+    value: '2019-07-06T23:02:12+00:00'
     format: 'Y-m-d\TH:i:sP'
 reusable:
   -
@@ -50,12 +50,15 @@ field_block_title:
     value: $0
 field_sponsor_link:
   -
-    uri: 'internal:/'
+    uri: 'internal:/registration/confirm'
     title: Select
     options:
       attributes:
         class:
-          - ''
+          - button
+          - primary
+        data-dialog-type: modal
+        data-dialog-options: '{"width":800}'
 _content_sync:
   entity_type: block_content
   entity_dependencies: {  }

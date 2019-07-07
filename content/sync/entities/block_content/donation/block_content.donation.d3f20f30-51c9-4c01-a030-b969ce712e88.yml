@@ -23,7 +23,7 @@ info:
     value: 'Donate $25'
 changed:
   -
-    value: '2019-06-18T08:38:41+00:00'
+    value: '2019-07-06T22:56:37+00:00'
     format: 'Y-m-d\TH:i:sP'
 reusable:
   -
@@ -50,12 +50,16 @@ field_block_title:
     value: $25
 field_sponsor_link:
   -
-    uri: 'internal:/'
+    uri: 'internal:/take-payment/badcamp_payment_sponsorship?amount=25'
     title: Select
     options:
       attributes:
         class:
-          - ''
+          - use-ajax
+          - button
+          - primary
+        data-dialog-type: modal
+        data-dialog-options: '{"width":800}'
 _content_sync:
   entity_type: block_content
   entity_dependencies: {  }
