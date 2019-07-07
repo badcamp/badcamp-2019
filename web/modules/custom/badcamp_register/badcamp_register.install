@@ -3,9 +3,11 @@
 use Drupal\Core\Serialization\Yaml;
 
 /**
- * Import configuration for Register Page.
+ * Read the files and add them into the database.
+ *
+ * @param $files
  */
-function badcamp_register_update_8001() {
+function _install_content($files) {
   global $content_directories;
 
   if (!\Drupal::moduleHandler()->moduleExists('content_sync')) {
@@ -13,14 +15,6 @@ function badcamp_register_update_8001() {
   }
 
   $syncDir = $content_directories['sync'] . '/';
-
-  $files = [
-    'entities/block_content/donation/block_content.donation.228e66f0-5656-4c68-9b31-a4922def6520.yml',
-    'entities/block_content/donation/block_content.donation.482064c5-ecc2-4343-8dbd-877d23c680cc.yml',
-    'entities/block_content/donation/block_content.donation.b3e920de-7f3b-4a22-86b4-931f646a8a3e.yml',
-    'entities/block_content/donation/block_content.donation.d3f20f30-51c9-4c01-a030-b969ce712e88.yml',
-    'entities/block_content/block_listing/block_content.block_listing.f32e2774-1417-450b-aeb1-f3fbb2e94f7e.yml'
-  ];
 
   /**
    * Loop Through Files and Import
@@ -40,4 +34,30 @@ function badcamp_register_update_8001() {
       drupal_set_message(t('Entity could not be imported.'), 'error');
     }
   }
+}
+
+/**
+ * Import configuration for Register Page.
+ */
+function badcamp_register_update_8001() {
+  $files = [
+    'entities/block_content/donation/block_content.donation.228e66f0-5656-4c68-9b31-a4922def6520.yml',
+    'entities/block_content/donation/block_content.donation.482064c5-ecc2-4343-8dbd-877d23c680cc.yml',
+    'entities/block_content/donation/block_content.donation.b3e920de-7f3b-4a22-86b4-931f646a8a3e.yml',
+    'entities/block_content/donation/block_content.donation.d3f20f30-51c9-4c01-a030-b969ce712e88.yml',
+    'entities/block_content/block_listing/block_content.block_listing.f32e2774-1417-450b-aeb1-f3fbb2e94f7e.yml'
+  ];
+
+  _install_content($files);
+}
+
+/**
+ * Import confirmation page.
+ */
+function badcamp_register_update_8002() {
+  $files = [
+    'entities/block_content/content_block/block_content.content_block.05718ed9-5a12-4ac9-b65f-1302ac5a0c8d.yml',
+  ];
+
+  _install_content($files);
 }
