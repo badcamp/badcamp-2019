@@ -183,6 +183,8 @@ class RegistrationPageController extends ControllerBase {
     $data['#tabs'] = $this->getPageNavigation($page);
     $data['#content'] = $render;
 
+    $data['#attached']['library'][] = 'core/drupal.dialog.ajax';
+
     return $data;
   }
 
