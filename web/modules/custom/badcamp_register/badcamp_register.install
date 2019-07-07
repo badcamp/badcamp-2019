@@ -57,6 +57,7 @@ function badcamp_register_update_8001() {
 function badcamp_register_update_8002() {
   $files = [
     'entities/block_content/content_block/block_content.content_block.05718ed9-5a12-4ac9-b65f-1302ac5a0c8d.yml',
+    'entities/paragraph/text/paragraph.text.1766f471-d4cf-4c3f-8f43-3d22d784d5fc.yml',
   ];
 
   _install_content($files);

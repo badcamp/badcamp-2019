@@ -76,8 +76,9 @@ function badcamp_form_payment_badcamp_payment_sponsorship_payment_form_form_alte
 }
 
 /**
- * @param $form
- * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * Submit handler
+ *
+ * @see badcamp_form_payment_badcamp_payment_sponsorship_payment_form_form_alter().
  */
 function badcamp_payment_sponsorship_submit($form, FormStateInterface $form_state) {
   $buildInfo = $form_state->getBuildInfo();
@@ -95,8 +96,9 @@ function badcamp_payment_sponsorship_submit($form, FormStateInterface $form_stat
 }
 
 /**
- * @param $form
- * @param \Drupal\Core\Form\FormStateInterface $formState
+ * Submit handler.
+ *
+ * @see badcamp_form_payment_badcamp_payment_sponsorship_payment_form_form_alter().
  */
 function badcamp_payment_sponsorship_submit_ajax($form, FormStateInterface $form_state) {
   $response = new AjaxResponse();
@@ -119,14 +121,7 @@ function badcamp_payment_sponsorship_submit_ajax($form, FormStateInterface $form
 }
 
 /**
- * Implements hook_field_widget_form_alter().
- */
-function badcamp_form_alter(&$form, formStateInterface $form_state, $form_id) {
-
-}
-
-/**
- *
+ * Modify the form element data field.
  */
 function _allowed_formats_remove_textarea_help($form_element, FormStateInterface $form_state) {
   if (isset($form_element[0]['format'])) {

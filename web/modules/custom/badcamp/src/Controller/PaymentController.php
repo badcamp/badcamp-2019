@@ -5,15 +5,10 @@ namespace Drupal\badcamp\Controller;
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Entity\EntityFormBuilderInterface;
-use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityStorageInterface;
-use Drupal\payment\Entity\Payment;
 use Drupal\payment\Plugin\Payment\LineItem\PaymentLineItemManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
-use Drupal\currency\Plugin\Validation\Constraint\CurrencyCode;
-use Drupal\Core\Ajax\AjaxResponse;
-use Drupal\Core\Ajax\OpenModalDialogCommand;
 
 /**
  * Class PaymentController.
@@ -68,16 +63,17 @@ class PaymentController extends ControllerBase {
   }
 
   /**
+   * Return the data for the given payment form.
+   *
    * @param $type
+   *  The type of payment info to search for.
+   *
+   * @return array
+   *   The Payment form information.
    */
   private function getPaymentInfo($type, $default = FALSE) {
     $payments = $this->config('badcamp.settings')->get('payments');
     return isset($payments[$type]) ? $payments[$type] : $payments[$default];
-//    return [
-//      'page_title' => 'test',
-//      'amount' => 500,
-//      'title' => 'help'
-//    ];
   }
 
   /**
@@ -88,9 +84,13 @@ class PaymentController extends ControllerBase {
   }
 
   /**
-   * @param $type
+   * Return the rendered payment form.
+   *
+   * @param string $type
+   *   The page to return the provided form form.
    *
    * @return array
+   *   The page to return rendered.
    */
   public function payment($type) {
     $paymentInfo = $this->getPaymentInfo($type, 'badcamp_payment_sponsorship');
@@ -130,7 +130,12 @@ class PaymentController extends ControllerBase {
   }
 
   /**
-   * @param $page
+   * Check if the person has access to the provided page.
+   *
+   * @param string $type
+   *   The type of page to check access for.
+   *
+   * @return \Drupal\Core\Access\AccessResultAllowed|\Drupal\Core\Access\AccessResultForbidden
    */
   public function access($type) {
     $config = $this->getPaymentInfo($type);
