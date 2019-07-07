@@ -302,6 +302,9 @@
             },
             "drupal/stripe": {
                 "Ajax Form": "https://gist.githubusercontent.com/sean-e-dietrich/fb979d558a3974f791af678b68879ce3/raw/1c2c580d65c185289a97eeb3c323f239046fadd1/stripe.patch"
+            },
+            "drupal/content_sync": {
+                "Fixed issue with variable referencing": "https://github.com/Blanca-Esqueda/content_sync/pull/15.diff"
             }
         }
     },
