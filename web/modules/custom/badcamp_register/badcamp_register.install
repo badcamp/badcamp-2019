@@ -8,6 +8,10 @@ use Drupal\Core\Serialization\Yaml;
 function badcamp_register_update_8001() {
   global $content_directories;
 
+  if (!\Drupal::moduleHandler()->moduleExists('content_sync')) {
+    \Drupal::service('module_installer')->install(['content_sync']);
+  }
+
   $syncDir = $content_directories['sync'] . '/';
 
   $files = [
@@ -36,11 +40,4 @@ function badcamp_register_update_8001() {
       drupal_set_message(t('Entity could not be imported.'), 'error');
     }
   }
-}
-
-/**
- * Redo badcamp_register_update_8001().
- */
-function badcamp_register_update_8002() {
-  badcamp_register_update_8001();
 }
