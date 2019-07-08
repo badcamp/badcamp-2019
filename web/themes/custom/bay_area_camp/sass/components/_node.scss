@@ -1,0 +1,29 @@
+.path-node {
+  h1 {
+    margin-bottom: 0.5em;
+  }
+  .field {
+    margin-bottom: 1.25em;
+
+    a {
+      @extend .link;
+    }
+  }
+}
+
+.field__label {
+  font-family: $monsterrat;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $dark-salmon;
+  font-size: rem-calc(16);
+}
+
+.field__label--inline {
+  float: left;
+  margin-right: 8px;
+
+  &:after {
+    content: ':';
+  }
+}

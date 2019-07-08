@@ -20,6 +20,12 @@
   }
 }
 
+.article__image {
+  a {
+    border: none !important;
+  }
+}
+
 // article node full page display
 .article__display--full {
   .article__image {
@@ -70,8 +76,8 @@
     position: absolute;
     border-radius: 50%;
     z-index: 1;
-    right: -90px;
-    top: -95px;
+    right: -92px;
+    top: -98px;
 
     .text {
       font-size: rem-calc(18);

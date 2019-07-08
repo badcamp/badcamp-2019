@@ -92,3 +92,19 @@ function bay_area_camp_preprocess_user(&$vars) {
   $vars['username'] = $account->getDisplayName();
 }
 
+/**
+* Implements hook_preprocess_html().
+*/
+function bay_area_camp_preprocess_html(array &$variables) {
+  // Add body classes for node add/edit forms.
+  $route_name = \Drupal::routeMatch()->getRouteName();
+
+  if ($route_name == 'entity.node.edit_form') {
+    $variables['attributes']['class'][] = 'node-edit';
+  }
+
+  if ($route_name == 'node.add') {
+    $variables['attributes']['class'][] = 'node-add';
+  }
+}
+
