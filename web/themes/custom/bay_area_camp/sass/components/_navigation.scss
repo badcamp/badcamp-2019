@@ -27,7 +27,11 @@
       }
     }
     > ul {
-      background: darken($grayish, 4%);
+      background: darken($grayish, 5%);
+
+      &.is-dropdown-submenu {
+        z-index: 9;
+      }
     }
 
     &.is-accordion-submenu-item {
