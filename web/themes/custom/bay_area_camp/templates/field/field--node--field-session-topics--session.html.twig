@@ -5,15 +5,15 @@
   ]
 %}
 
-<div{{ attributes.addClass('field field--organizers') }}>
+<div{{ attributes.addClass('field field--topics') }}>
   <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
   <div{{ attributes.addClass('field__items')}}>
-  {# <i class="fas fa-users" aria-hidden="true"></i> #}
     {% for item in items %}
       {% if loop.last %}
-        <span{{ item.attributes.addClass('field__item attendee-name--small') }}>{{ item.content }}</span>
+        <span{{ item.attributes.addClass('field__item') }}>{{ item.content }}</span>
       {% else %}
-        <span{{ item.attributes.addClass('field__item attendee-name--small') }}>{{ item.content }}</span><span class="separator">//<span>
+        <span{{ item.attributes.addClass('field__item') }}>{{ item.content }}</span>
+        <span class="separator">//<span>
       {% endif %}
     {% endfor %}
   </div>

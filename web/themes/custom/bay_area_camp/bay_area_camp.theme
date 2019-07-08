@@ -79,3 +79,21 @@ function bay_area_camp_preprocess_views_view_unformatted__sponsors__page_1(&$var
 function bay_area_camp_theme_suggestions_user_alter(&$suggestions, $vars){
   $suggestions[] = 'user__' . $vars['elements']['#view_mode'];
 }
+
+
+/**
+* Implements hook_preprocess_html().
+*/
+function bay_area_camp_preprocess_html(array &$variables) {
+  // Add body classes for node add/edit forms.
+  $route_name = \Drupal::routeMatch()->getRouteName();
+
+  if ($route_name == 'entity.node.edit_form') {
+    $variables['attributes']['class'][] = 'node-edit';
+  }
+
+  if ($route_name == 'node.add') {
+    $variables['attributes']['class'][] = 'node-add';
+  }
+}
+

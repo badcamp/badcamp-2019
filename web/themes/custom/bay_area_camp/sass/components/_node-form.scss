@@ -1,0 +1,72 @@
+.node-add,
+.node-edit {
+  h1 {
+    margin-bottom: 0.75em;
+  }
+
+  h4.label {
+    background: none;
+    color: $navy;
+    margin-bottom: 0;
+    font-size: 0.875rem;
+    line-height: 1.8;
+  }
+
+  // Fieldsets.
+  .fieldset-legend {
+    margin-top: 3em;
+  }
+
+  // Clean up tabledrag elements.
+  td.field-multiple-drag {
+    padding: 0;
+    width: 40px;
+  }
+
+  td .form-item {
+    margin-bottom: 0;
+    select {
+      margin-bottom: 0;
+    }
+  }
+
+  .tabledrag-handle {
+    .handle {
+      height: 30px;
+      width: 30px;
+      margin: 0;
+      margin-left: 25px;
+    }
+  }
+
+  tr.draggable {
+    .form-item {
+      font-weight: 600;
+      float: left;
+      padding-top: 10px;
+    }
+    .form-submit {
+      margin-bottom: 0;
+    }
+  }
+
+  // Series of checkboxes.
+  .form-checkboxes {
+    .form-item {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  // Vertical tabs.
+  .vertical-tabs {
+    .vertical-tabs__panes {
+      padding: 0.75em 1.25em;
+    }
+  }
+
+  #edit-preview.button,
+  #edit-delete.button {
+    @include button($medium-gray);
+    margin-left: 10px;
+  }
+}
