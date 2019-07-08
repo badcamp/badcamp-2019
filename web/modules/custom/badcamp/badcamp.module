@@ -76,6 +76,23 @@ function badcamp_form_payment_badcamp_payment_sponsorship_payment_form_form_alte
 }
 
 /**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function badcamp_form_payment_badcamp_payment_organization_sponsorship_payment_form_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['actions']['submit']['#submit'][] = 'badcamp_payment_sponsorship_submit';
+  $form['actions']['submit']['#ajax'] = [
+    'callback' => 'badcamp_payment_sponsorship_submit_ajax',
+    'event' => 'click',
+  ];
+  $form['actions']['submit']['#attributes'] = ['class' => ['use-ajax-submit']];
+
+  $form['#prefix'] = '<div id="payment_form">';
+  $form['#suffix'] = '</div>';
+
+  $form['#attached']['library'][] = 'core/drupal.dialog.ajax';
+}
+
+/**
  * Submit handler
  *
  * @see badcamp_form_payment_badcamp_payment_sponsorship_payment_form_form_alter().

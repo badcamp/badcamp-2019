@@ -143,7 +143,9 @@
         "drupal/field_group": "^1.0",
         "drupal/field_permissions": "^1.0@RC",
         "drupal/google_analytics": "^2.3",
+        "drupal/google_tag": "^1.1",
         "drupal/honeypot": "^1.29",
+        "drupal/hook_event_dispatcher": "^1.25",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/lets_camp": "6.x-dev",
         "drupal/link_attributes": "^1.8",
@@ -295,7 +297,7 @@
                 "Issue #2866543 - Support required fields": "https://www.drupal.org/files/issues/2866543.patch"
             },
             "drupal/payment_stripe": {
-                "Improvements": "https://gist.githubusercontent.com/sean-e-dietrich/2ac08921ac2d23637593d888cc7f28a7/raw/3bd5150920c770b58fd9c97b313cc5cf6dd05d01/payment_stripe.patch"
+                "Improvements": "https://gist.githubusercontent.com/sean-e-dietrich/2ac08921ac2d23637593d888cc7f28a7/raw/00134e98d6ed9517615383a75e014c5f47c2e6bc/payment_stripe.patch"
             },
             "drupal/payment": {
                 "Fields on Payments don't save (Issue #2841035)": "https://www.drupal.org/files/issues/fix_fieldable.patch"

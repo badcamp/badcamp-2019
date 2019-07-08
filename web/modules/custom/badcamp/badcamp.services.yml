@@ -1,0 +1,6 @@
+services:
+  badcamp.organization_payment_subscriber:
+    class: '\Drupal\badcamp\EventSubscriber\OrganizationPaymentSubscriber'
+    arguments: ['@entity_type.manager']
+    tags:
+      - { name: 'event_subscriber' }

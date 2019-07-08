@@ -7,6 +7,7 @@ dependencies:
     - field.field.payment.badcamp_payment_organization_sponsorship.field_organization_logo
     - field.field.payment.badcamp_payment_organization_sponsorship.field_organization_name
     - field.field.payment.badcamp_payment_organization_sponsorship.field_organization_url
+    - field.field.payment.badcamp_payment_organization_sponsorship.field_sponsor_node
     - image.style.thumbnail
   module:
     - field_group
@@ -23,7 +24,7 @@ third_party_settings:
         - field_organization_description
         - field_organization_logo
       parent_name: ''
-      weight: 20
+      weight: 0
       format_type: fieldset
       format_settings:
         id: ''
@@ -68,4 +69,5 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-hidden: {  }
+hidden:
+  field_sponsor_node: true
