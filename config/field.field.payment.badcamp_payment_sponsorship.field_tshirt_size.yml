@@ -1,0 +1,26 @@
+uuid: 67d3173d-1497-4a76-a0eb-22dc3cdbe8a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.payment.field_tshirt_size
+  module:
+    - custom_add_another
+    - options
+    - payment
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: payment.badcamp_payment_sponsorship.field_tshirt_size
+field_name: field_tshirt_size
+entity_type: payment
+bundle: badcamp_payment_sponsorship
+label: 'T-Shirt Size'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

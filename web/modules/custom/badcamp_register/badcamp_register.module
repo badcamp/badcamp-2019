@@ -1,0 +1,36 @@
+<?php
+
+use Drupal\Core\Url;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function badcamp_register_theme($existing, $type, $theme, $path) {
+  return [
+    'registration_page' => [
+      'variables' => [
+        'active' => NULL,
+        'tabs' => NULL,
+        'content' => NULL,
+        'intro_message' => NULL,
+      ],
+      'template' => 'registration-page'
+    ]
+  ];
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function badcamp_register_form_user_register_form_alter(&$form, &$form_state, $form_id) {
+  $form['actions']['submit']['#submit'][] = 'badcamp_register_redirect_submit';
+}
+
+/**
+ * Redirect First Time Login Users to Sponsor Page.
+ */
+function badcamp_register_redirect_submit(&$form, FormStateInterface &$form_state) {
+  $redirect_url = Url::fromRoute('badcamp_register.page', ['page' => 'sponsor']);
+  $form_state->setRedirectUrl($redirect_url);
+}

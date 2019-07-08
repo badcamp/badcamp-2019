@@ -1,0 +1,50 @@
+uuid:
+  -
+    value: fa512aef-65d2-4eb6-8262-aee3bca84b17
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: content_block
+    target_type: block_content_type
+    target_uuid: 8b8efcf7-5c70-4b60-8db9-f954b50bb58b
+revision_created:
+  -
+    value: '2019-04-06T05:26:06+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log: {  }
+status:
+  -
+    value: true
+info:
+  -
+    value: 'Featured Attendees'
+changed:
+  -
+    value: '2019-05-06T02:43:02+00:00'
+    format: 'Y-m-d\TH:i:sP'
+reusable:
+  -
+    value: true
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+metatag:
+  value:
+    title: '| Bay Area Drupal Camp - 2019'
+    canonical_url: 'http://badcamp-2019.docksal/front'
+field_content:
+  -
+    target_revision_id: 72
+    target_type: paragraph
+    target_uuid: 4a0286de-217a-4161-8842-6de26da1da9e
+_content_sync:
+  entity_type: block_content
+  entity_dependencies:
+    paragraph:
+      - paragraph.columns.4a0286de-217a-4161-8842-6de26da1da9e

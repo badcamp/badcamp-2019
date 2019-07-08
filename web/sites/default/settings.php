@@ -23,6 +23,9 @@ $config_directories = array(
   CONFIG_SYNC_DIRECTORY => dirname(DRUPAL_ROOT) . '/config',
 );
 
+global $content_directories;
+$content_directories['sync'] = dirname(DRUPAL_ROOT) . '/content/sync';
+
 /**
  * If there is a local settings file, then include it
  */
@@ -94,3 +97,5 @@ if (PHP_SAPI !== 'cli') {
     $_SERVER['SERVER_PORT'] = 443;
   }
 }
+
+$config['system.logging']['error_level'] = 'verbose';

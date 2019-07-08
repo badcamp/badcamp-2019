@@ -9,8 +9,8 @@ dependencies:
     - custom_add_another
 third_party_settings:
   custom_add_another:
-    custom_add_another: ''
-    custom_remove: ''
+    custom_add_another: 'Add Presenter'
+    custom_remove: 'Remove Presenter'
 id: node.session.field_members
 field_name: field_members
 entity_type: node

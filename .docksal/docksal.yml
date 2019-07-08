@@ -35,24 +35,14 @@ services:
     extends:
       file: ${HOME}/.docksal/stacks/services.yml
       service: cli
-    environment:
-      - PANTHEON_SITE
-      - PANTHEON_ENV
     volumes:
       - ${PROJECT_ROOT}/.docksal/etc/drush:/etc/drush:ro
 
   # Fake email
   mail:
-    hostname: mail
-    image: mailhog/mailhog
-    expose:
-      - "80"
-    environment:
-      - MH_API_BIND_ADDR=0.0.0.0:80
-      - MH_UI_BIND_ADDR=0.0.0.0:80
-    labels:
-      - io.docksal.virtual-host=webmail.${VIRTUAL_HOST}
-    user: root
+    extends:
+      file: ${HOME}/.docksal/stacks/services.yml
+      service: mail
 
   phpmyadmin:
     hostname: pma

@@ -1,0 +1,62 @@
+uuid: 32c2f928-3d9f-4d62-8fe4-4e098f46b8f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.donation
+    - field.field.block_content.donation.body
+    - field.field.block_content.donation.field_block_title
+    - field.field.block_content.donation.field_sponsor_link
+  module:
+    - link_attributes
+    - text
+id: block_content.donation.default
+targetEntityType: block_content
+bundle: donation
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_block_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_sponsor_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        target: true
+        rel: true
+        class: true
+        data-dialog-type: true
+        data-dialog-options: true
+        id: false
+        name: false
+        accesskey: false
+        aria-label: false
+        title: false
+    third_party_settings: {  }
+    type: link_attributes
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

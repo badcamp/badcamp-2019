@@ -1,0 +1,17 @@
+uuid: 6d1d5b0f-3980-4fbd-9855-92af579a6b2a
+langcode: en
+status: true
+dependencies: {  }
+id: credit_card
+label: 'Credit Card'
+ownerId: 1
+pluginConfiguration:
+  message_text: ''
+  message_text_format: plain_text
+  brand_label: ''
+  execute_status_id: payment_success
+  capture: 0
+  capture_status_id: payment_pending
+  refund: 0
+  refund_status_id: payment_pending
+pluginId: payment_stripe

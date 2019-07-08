@@ -1,0 +1,97 @@
+.registration-steps {
+  font-family: $monsterrat;
+  margin: 3em 0;
+  justify-content: center;
+}
+
+.registration-step {
+  margin-right: 90px;
+  font-weight: 600;
+  position: relative;
+
+  .registration-step__number {
+    color: white;
+    background: $medium-gray;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    padding-top: 14px;
+    font-size: 30px;
+    margin-bottom: 10px;
+
+    &::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-left: 20px solid $medium-gray;
+      position: absolute;
+      top: 20px;
+      left: 105px;
+    }
+  }
+
+  .registration-step__subtitle {
+    color: darken($medium-gray, 5%);
+  }
+
+  &:last-child {
+    .registration-step__number::after {
+      border: none;
+    }
+  }
+
+  &.active {
+    .registration-step__number {
+      background: $navy;
+    }
+    .registration-step__subtitle {
+      color: $navy;
+    }
+  }
+}
+
+// Step 1
+.user-register-form {
+  .field--name-field-social-profile-links {
+    margin-top: 3em;
+    @include breakpoint('large') {
+      .form-item {
+        max-width: 760px;
+      }
+    }
+  }
+}
+
+.fieldset--options {
+  margin-bottom: 1em;
+  margin-left: -1px !important;
+  .form-item {
+    margin-bottom: 0.75em;
+  }
+}
+
+// Step 2
+.donation-block {
+  background: $grayish;
+  padding: 1em 1.5em;
+  margin-bottom: 1.5em;
+  font-family: $monsterrat;
+  position: relative;
+
+  .button {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.donation-block__title {
+  font-size: rem-calc(32);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.donation-block__body {
+  padding-bottom: 2.75em;
+}

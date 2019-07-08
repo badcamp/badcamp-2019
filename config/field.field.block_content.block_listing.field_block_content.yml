@@ -1,0 +1,34 @@
+uuid: acb4d0ad-47c4-4f8f-aa0a-caaaa1b00db4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.block_listing
+    - block_content.type.donation
+    - field.storage.block_content.field_block_content
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: 'Add Another Block'
+    custom_remove: 'Remove Block'
+id: block_content.block_listing.field_block_content
+field_name: field_block_content
+entity_type: block_content
+bundle: block_listing
+label: Block
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      donation: donation
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

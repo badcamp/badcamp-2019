@@ -1,0 +1,73 @@
+uuid: fee511a4-4d86-4c34-ae1f-9c5e3a082455
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.payment.badcamp_payment_organization_sponsorship.field_organization_description
+    - field.field.payment.badcamp_payment_organization_sponsorship.field_organization_logo
+    - field.field.payment.badcamp_payment_organization_sponsorship.field_organization_name
+    - field.field.payment.badcamp_payment_organization_sponsorship.field_organization_url
+    - field.field.payment.badcamp_payment_organization_sponsorship.field_sponsor_node
+    - image.style.thumbnail
+  module:
+    - field_group
+    - image
+    - link
+    - payment
+    - text
+third_party_settings:
+  field_group:
+    group_profile_information:
+      children:
+        - field_organization_name
+        - field_organization_url
+        - field_organization_description
+        - field_organization_logo
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Profile Information'
+id: payment.badcamp_payment_organization_sponsorship.default
+targetEntityType: payment
+bundle: badcamp_payment_organization_sponsorship
+mode: default
+content:
+  field_organization_description:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_organization_logo:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_organization_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_organization_url:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  field_sponsor_node: true

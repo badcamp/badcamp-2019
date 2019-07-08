@@ -1,0 +1,23 @@
+uuid: 2816bc2f-fd62-42c5-8aa0-8855022c8f27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.payment.badcamp_payment_training.field_training
+  module:
+    - payment
+id: payment.badcamp_payment_training.default
+targetEntityType: payment
+bundle: badcamp_payment_training
+mode: default
+content:
+  field_training:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden: {  }

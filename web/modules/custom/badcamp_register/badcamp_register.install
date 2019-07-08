@@ -1,0 +1,64 @@
+<?php
+
+use Drupal\Core\Serialization\Yaml;
+
+/**
+ * Read the files and add them into the database.
+ *
+ * @param $files
+ */
+function _install_content($files) {
+  global $content_directories;
+
+  if (!\Drupal::moduleHandler()->moduleExists('content_sync')) {
+    \Drupal::service('module_installer')->install(['content_sync']);
+  }
+
+  $syncDir = $content_directories['sync'] . '/';
+
+  /**
+   * Loop Through Files and Import
+   */
+  $importer = \Drupal::service('content_sync.importer');
+  foreach ($files AS $file) {
+    $data = Yaml::decode(file_get_contents($syncDir . $file));
+    $entity = $importer->importEntity($data);
+    if ($entity) {
+      drupal_set_message(t('Entity @label (@entity_type: @id) imported successfully.', [
+        '@label' => $entity->label(),
+        '@entity_type' => $entity->getEntityTypeId(),
+        '@id' => $entity->id(),
+      ]));
+    }
+    else {
+      drupal_set_message(t('Entity could not be imported.'), 'error');
+    }
+  }
+}
+
+/**
+ * Import configuration for Register Page.
+ */
+function badcamp_register_update_8001() {
+  $files = [
+    'entities/block_content/donation/block_content.donation.228e66f0-5656-4c68-9b31-a4922def6520.yml',
+    'entities/block_content/donation/block_content.donation.482064c5-ecc2-4343-8dbd-877d23c680cc.yml',
+    'entities/block_content/donation/block_content.donation.b3e920de-7f3b-4a22-86b4-931f646a8a3e.yml',
+    'entities/block_content/donation/block_content.donation.d3f20f30-51c9-4c01-a030-b969ce712e88.yml',
+    'entities/block_content/block_listing/block_content.block_listing.f32e2774-1417-450b-aeb1-f3fbb2e94f7e.yml'
+  ];
+
+  _install_content($files);
+}
+
+/**
+ * Import confirmation page.
+ */
+function badcamp_register_update_8002() {
+  $files = [
+    'entities/block_content/content_block/block_content.content_block.05718ed9-5a12-4ac9-b65f-1302ac5a0c8d.yml',
+    'entities/paragraph/text/paragraph.text.1766f471-d4cf-4c3f-8f43-3d22d784d5fc.yml',
+  ];
+
+  _install_content($files);
+}

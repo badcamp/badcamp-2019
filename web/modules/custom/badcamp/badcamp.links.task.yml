@@ -1,0 +1,12 @@
+view.badcamp_payments.individual:
+  route_name: view.badcamp_payments.individual
+  base_route: view.badcamp_payments.individual
+  title: Individuals
+view.badcamp_payments.organization:
+  base_route: view.badcamp_payments.individual
+  route_name: view.badcamp_payments.organization
+  title: Organizations
+view.badcamp_payments.training:
+  base_route: view.badcamp_payments.individual
+  route_name: view.badcamp_payments.training
+  title: Trainings

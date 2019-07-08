@@ -1,0 +1,22 @@
+{% if tabs %}
+<div class="registration-steps grid-x grid-margin-x">
+    {% for key, tab in tabs %}
+    <div class="registration-step {{ key }} {{ key == active ? 'active' : '' }} text-align-center">
+        <div class="registration-step__number ">{{ tab.title }}</div>
+        <span class="registration-step__subtitle">{{ tab.subtitle }}</span>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% if intro_message is not empty %}
+<div class="registration-intro">
+    {{ intro_message }}
+</div>
+{% endif %}
+
+{% if content is not empty %}
+<div class="registration-content">
+    {{ content }}
+</div>
+{% endif %}

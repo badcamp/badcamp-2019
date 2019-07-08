@@ -1,0 +1,57 @@
+navigation:
+  tabs:
+    step1:
+      title: 1
+      subtitle: Register
+    step2:
+      title: 2
+      subtitle: Sponsor
+    step3:
+      title: 3
+      subtitle: Confirmation
+pages:
+  register:
+    tabs: tabs
+    title: 'Register For An Account'
+    message:
+      value: ''
+      format: null
+    content:
+      entity_form:
+        entity_type: user
+        display_mode: register
+    active: step1
+    redirect_auth: sponsor
+    requires_auth: false
+    permission: 'allow users to register with badcamp_register'
+  sponsor:
+    tabs: tabs
+    title: 'Help Sponsor The Bay Area Drupal Camp'
+    message:
+      value: ''
+      format: null
+    content:
+      block:
+        bid: f32e2774-1417-450b-aeb1-f3fbb2e94f7e
+    active: step2
+    redirect_auth: register
+    requires_auth: true
+  events:
+    tabs: tabs
+    title: Events
+    message:
+      value: ''
+      format: null
+    content: false
+    active: step3
+    redirect_auth: register
+    requires_auth: true
+  confirm:
+    tabs: tabs
+    title: Confirmation
+    content:
+      block:
+        bid: 05718ed9-5a12-4ac9-b65f-1302ac5a0c8d
+    active: step3
+    redirect_auth: register
+    requires_auth: true

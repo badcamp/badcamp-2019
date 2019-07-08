@@ -1,0 +1,34 @@
+uuid: 732c68c9-eed2-473f-b68a-22828f4d52cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.payment.field_sponsor_node
+    - node.type.sponsor
+  module:
+    - custom_add_another
+    - payment
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: payment.badcamp_payment_organization_sponsorship.field_sponsor_node
+field_name: field_sponsor_node
+entity_type: payment
+bundle: badcamp_payment_organization_sponsorship
+label: 'Sponsor Node'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      sponsor: sponsor
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

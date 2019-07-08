@@ -1,0 +1,43 @@
+uuid: b63c949d-0718-42fc-abda-e41c9627915f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.payment.field_organization_logo
+  module:
+    - custom_add_another
+    - image
+    - payment
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: payment.badcamp_payment_organization_sponsorship.field_organization_logo
+field_name: field_organization_logo
+entity_type: payment
+bundle: badcamp_payment_organization_sponsorship
+label: 'Organization Logo'
+description: 'Provide the Organization Logo you''d like to upload as part of the online profile.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'sponsor/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

@@ -1,0 +1,27 @@
+uuid: 68c2adfe-dd30-45bb-be1c-d3e64a778660
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.donation
+    - field.storage.block_content.body
+  module:
+    - custom_add_another
+    - text
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: block_content.donation.body
+field_name: body
+entity_type: block_content
+bundle: donation
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

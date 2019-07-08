@@ -25,7 +25,7 @@
     @if else == $navy {
       background-color: lighten($bg, 6%);
     } @else {
-      background-color: lighten($bg, 5%);
+      background-color: lighten($bg, 7%);
     }
   }
   &:focus,
@@ -39,7 +39,8 @@
   }
 }
 
-.button {
+.button,
+.button.primary {
   @include button();
 }
 .small-button {

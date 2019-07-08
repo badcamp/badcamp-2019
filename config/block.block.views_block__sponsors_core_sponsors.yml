@@ -6,7 +6,6 @@ dependencies:
     - views.view.sponsors
   module:
     - system
-    - user
     - views
   theme:
     - bay_area_camp
@@ -29,10 +28,3 @@ visibility:
     pages: /sponsors
     negate: true
     context_mapping: {  }
-  user_role:
-    id: user_role
-    roles:
-      administrator: administrator
-    negate: false
-    context_mapping:
-      user: '@user.current_user_context:current_user'

@@ -13,9 +13,15 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'create session content'
+  - currency.currency.view
+  - currency.currency_locale.view
+  - 'edit own session content'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
   - 'view empty pages'
+  - 'view field_session_presentation_video'
   - 'view media'
+  - 'view own field_session_presentation_video'

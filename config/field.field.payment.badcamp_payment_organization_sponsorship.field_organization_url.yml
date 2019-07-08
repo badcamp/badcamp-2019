@@ -1,0 +1,28 @@
+uuid: c04343db-b042-49ce-83a4-173626f552f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.payment.field_organization_url
+  module:
+    - custom_add_another
+    - link
+    - payment
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: payment.badcamp_payment_organization_sponsorship.field_organization_url
+field_name: field_organization_url
+entity_type: payment
+bundle: badcamp_payment_organization_sponsorship
+label: URL
+description: 'Please provide a link to the organization where people can go to for more information.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

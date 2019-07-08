@@ -1,0 +1,50 @@
+uuid:
+  -
+    value: 05718ed9-5a12-4ac9-b65f-1302ac5a0c8d
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: content_block
+    target_type: block_content_type
+    target_uuid: 8b8efcf7-5c70-4b60-8db9-f954b50bb58b
+revision_created:
+  -
+    value: '2019-07-06T22:03:47+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log: {  }
+status:
+  -
+    value: true
+info:
+  -
+    value: 'Register Confirmation Page'
+changed:
+  -
+    value: '2019-07-06T22:04:44+00:00'
+    format: 'Y-m-d\TH:i:sP'
+reusable:
+  -
+    value: true
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+metatag:
+  value:
+    title: '| Bay Area Drupal Camp - 2019'
+    canonical_url: 'http://badcamp-2019.docksal/front'
+field_content:
+  -
+    target_revision_id: 78
+    target_type: paragraph
+    target_uuid: 1766f471-d4cf-4c3f-8f43-3d22d784d5fc
+_content_sync:
+  entity_type: block_content
+  entity_dependencies:
+    paragraph:
+      - paragraph.text.1766f471-d4cf-4c3f-8f43-3d22d784d5fc

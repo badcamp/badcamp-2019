@@ -1,0 +1,5 @@
+services:
+  badcamp_register.route_subscriber:
+    class: Drupal\badcamp_register\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

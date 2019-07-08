@@ -5,6 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.training.body
+    - field.field.node.training.field_members
+    - field.field.node.training.field_skill_level
+    - field.field.node.training.field_sponsors
+    - field.field.node.training.field_training_files
+    - field.field.node.training.field_training_links
     - node.type.training
   module:
     - text
@@ -27,4 +32,9 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_members: true
+  field_skill_level: true
+  field_sponsors: true
+  field_training_files: true
+  field_training_links: true

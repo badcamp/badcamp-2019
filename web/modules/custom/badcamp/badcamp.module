@@ -6,6 +6,12 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\OpenModalDialogCommand;
+use Drupal\Core\Ajax\ReplaceCommand;
+use Drupal\Core\Ajax\RedirectCommand;
 
 /**
  * Implements hook_help().
@@ -23,3 +29,126 @@ function badcamp_help($route_name, RouteMatchInterface $route_match) {
   }
 }
 
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function badcamp_form_node_session_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $nodeForm = $form_state->getBuildInfo()['callback_object'];
+  $node = $nodeForm->getEntity();
+  if ($node->isNew()) {
+    $form['#title'] = t('Submit A Session');
+    $form['actions']['submit']['#value'] = t('Submit');
+  }
+  $form['body']['widget']['#after_build'][] = '_allowed_formats_remove_textarea_help';
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function badcamp_form_payment_badcamp_payment_sponsorship_payment_form_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $buildInfo = $form_state->getBuildInfo();
+  /** @var \Drupal\payment_form\Entity\Payment\PaymentForm $callbackObject */
+  $callbackObject = $buildInfo['callback_object'];
+  /** @var \Drupal\payment\Entity\PaymentInterface $payment */
+  $payment = $callbackObject->getEntity();
+
+  if ($payment->getAmount() < 100) {
+    $form['field_hoodie_size']['#required'] = FALSE;
+    $form['field_hoodie_size']['#access'] = FALSE;
+  }
+
+  if ($payment->getAmount() < 25) {
+    $form['field_tshirt_size']['#required'] = FALSE;
+    $form['field_tshirt_size']['#access'] = FALSE;
+  }
+
+  $form['actions']['submit']['#submit'][] = 'badcamp_payment_sponsorship_submit';
+  $form['actions']['submit']['#ajax'] = [
+    'callback' => 'badcamp_payment_sponsorship_submit_ajax',
+    'event' => 'click',
+  ];
+  $form['actions']['submit']['#attributes'] = ['class' => ['use-ajax-submit']];
+
+  $form['#prefix'] = '<div id="payment_form">';
+  $form['#suffix'] = '</div>';
+
+  $form['#attached']['library'][] = 'core/drupal.dialog.ajax';
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function badcamp_form_payment_badcamp_payment_organization_sponsorship_payment_form_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['actions']['submit']['#submit'][] = 'badcamp_payment_sponsorship_submit';
+  $form['actions']['submit']['#ajax'] = [
+    'callback' => 'badcamp_payment_sponsorship_submit_ajax',
+    'event' => 'click',
+  ];
+  $form['actions']['submit']['#attributes'] = ['class' => ['use-ajax-submit']];
+
+  $form['#prefix'] = '<div id="payment_form">';
+  $form['#suffix'] = '</div>';
+
+  $form['#attached']['library'][] = 'core/drupal.dialog.ajax';
+}
+
+/**
+ * Submit handler
+ *
+ * @see badcamp_form_payment_badcamp_payment_sponsorship_payment_form_form_alter().
+ */
+function badcamp_payment_sponsorship_submit($form, FormStateInterface $form_state) {
+  $buildInfo = $form_state->getBuildInfo();
+  /** @var \Drupal\payment_form\Entity\Payment\PaymentForm $callbackObject */
+  $callbackObject = $buildInfo['callback_object'];
+  /** @var \Drupal\payment\Entity\PaymentInterface $payment */
+  $payment = $callbackObject->getEntity();
+
+  if (($redirect_value = $payment->redirectDestination) != '') {
+    $form_state->setRedirectUrl(Url::fromUserInput($redirect_value));
+    $form_state->setProgrammed(FALSE);
+    $form_state->disableRedirect(FALSE);
+    $form_state->setRebuild(FALSE);
+  }
+}
+
+/**
+ * Submit handler.
+ *
+ * @see badcamp_form_payment_badcamp_payment_sponsorship_payment_form_form_alter().
+ */
+function badcamp_payment_sponsorship_submit_ajax($form, FormStateInterface $form_state) {
+  $response = new AjaxResponse();
+
+  // If there are any form errors, re-display the form.
+  if ($form_state->hasAnyErrors()) {
+    $response->addCommand(new ReplaceCommand('#payment_form', $form));
+  }
+  else {
+    /** @var \Drupal\Core\Url $redirect */
+    if (($redirect = $form_state->getRedirect()) !== FALSE) {
+      $response->addCommand(new OpenModalDialogCommand("Thank You!", "Thank you for your payment!", ['width' => 800]));
+      $response->addCommand(new RedirectCommand($redirect->toString()));
+    } else {
+      $response->addCommand(new OpenModalDialogCommand("Success!", 'The modal form has been submitted.', ['width' => 800]));
+    }
+  }
+
+  return $response;
+}
+
+/**
+ * Modify the form element data field.
+ */
+function _allowed_formats_remove_textarea_help($form_element, FormStateInterface $form_state) {
+  if (isset($form_element[0]['format'])) {
+    // All this stuff is needed to hide the help text.
+    unset($form_element[0]['format']['guidelines']);
+    unset($form_element[0]['format']['help']);
+    unset($form_element[0]['format']['#type']);
+    unset($form_element[0]['format']['#theme_wrappers']);
+    $form_element[0]['format']['format']['#access'] = FALSE;
+  }
+
+  return $form_element;
+}

@@ -1,0 +1,12 @@
+environment: test
+apikey:
+  test:
+    public: pk_test_y3wxgmU1CpmCHb2ynsVp8Ba9
+    secret: sk_test_IvPjdXX7PpX0UD2kCk73xxiI
+    webhook: ''
+  live:
+    public: ''
+    secret: ''
+    webhook: ''
+_core:
+  default_config_hash: rvasJJkL462tLuGEfcTDUE_1ReQ_UkXB1gsCVJtCIPg

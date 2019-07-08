@@ -1,0 +1,28 @@
+uuid: fc39cab9-9f10-4ee5-9f0c-0121bfa53da4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.donation
+    - field.storage.block_content.field_sponsor_link
+  module:
+    - custom_add_another
+    - link
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: block_content.donation.field_sponsor_link
+field_name: field_sponsor_link
+entity_type: block_content
+bundle: donation
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link
