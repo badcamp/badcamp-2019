@@ -3,6 +3,14 @@
 use Drupal\Core\Serialization\Yaml;
 
 /**
+ * Implements hook_install().
+ */
+function badcamp_register_install() {
+  badcamp_register_update_8001();
+  badcamp_register_update_8002();
+}
+
+/**
  * Read the files and add them into the database.
  *
  * @param $files
