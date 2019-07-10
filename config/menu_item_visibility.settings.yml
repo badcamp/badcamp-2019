@@ -2,3 +2,14 @@ mlid:
   'menu_link_content:ad8a7e1a-7a6f-4115-af99-d6a030f16443':
     roles: {  }
     access_check: false
+  'menu_link_content:f94cd2da-f4e9-42ed-b3d0-0a96e77a8cc5':
+    roles:
+      - anonymous
+    access_check: false
+  'menu_link_content:73657f48-5a08-46dc-a442-41eab7da566e':
+    roles: {  }
+    access_check: false
+  'menu_link_content:8cee9ab9-0e8b-463e-bee6-db60a7fcd62b':
+    roles:
+      - authenticated
+    access_check: false
