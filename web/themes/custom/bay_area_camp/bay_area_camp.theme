@@ -106,5 +106,10 @@ function bay_area_camp_preprocess_html(array &$variables) {
   if ($route_name == 'node.add') {
     $variables['attributes']['class'][] = 'node-add';
   }
+
+  // Add nid to body class.
+  if ($node = \Drupal::request()->attributes->get('node')) {
+    $variables['attributes']['class'][] = 'page-node--' . $node->id();
+  }
 }
 
