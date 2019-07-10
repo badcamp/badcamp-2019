@@ -2,3 +2,25 @@
   @extend .attendee-name;
   font-size: rem-calc(16);
 }
+
+// Temporary fix. Do this later with a template. (MM)
+.page-node--31 .views-element-container {
+  margin-top: 2.5em;
+  .views-row {
+    margin-bottom: 1.875em;
+    border-top: 1px solid $medium-gray;
+    padding-top: 1.5em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      line-height: 1.25;
+      margin-bottom: 0.5em;
+      a:hover {
+        color: $midblue;
+      }
+    }
+  }
+}
