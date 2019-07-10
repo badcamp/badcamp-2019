@@ -20,7 +20,7 @@
       text-transform: uppercase;
 
       &:hover {
-        color: darken($lightblue, 15%);
+        color: $midblue;
       }
       &:focus {
         outline-offset: 1px;
