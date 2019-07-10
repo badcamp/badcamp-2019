@@ -93,6 +93,7 @@ content:
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
+    region: content
   field_session_topics:
     weight: 3
     settings: {  }
@@ -110,10 +111,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
-    weight: 0
     region: content
-    settings: {  }
-    third_party_settings: {  }
   field_twitter_description:
     weight: 2
     settings:

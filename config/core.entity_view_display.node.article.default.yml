@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.article.field_article_date
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
-    - image.style.large
     - node.type.article
   module:
     - datetime
@@ -42,7 +41,7 @@ content:
     weight: 1
     region: content
     settings:
-      image_style: large
+      image_style: ''
       image_link: ''
     third_party_settings: {  }
     label: hidden

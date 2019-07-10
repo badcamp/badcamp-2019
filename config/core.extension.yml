@@ -17,7 +17,6 @@ module:
   conditional_fields: 0
   config: 0
   config_direct_save: 0
-  content_sync: 0
   contextual: 0
   ctools: 0
   ctools_block: 0

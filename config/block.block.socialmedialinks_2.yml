@@ -27,7 +27,7 @@ settings:
       description: ''
       weight: '-29'
     contact:
-      value: contact
+      value: contact-us
       description: ''
       weight: '-28'
     youtube_channel:
