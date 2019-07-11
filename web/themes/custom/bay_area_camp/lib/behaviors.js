@@ -7,7 +7,7 @@
 
   Drupal.behaviors.badAreaTabs = {
     attach: function(context, settings) {
-      $('.tabs-trigger').click(function(e) {
+      $(document).on('click', '.tabs-trigger', function(e) {
         e.preventDefault();
         $('.tabs-list')
           .parent()
