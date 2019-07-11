@@ -1,8 +1,8 @@
 environment: test
 apikey:
   test:
-    public: pk_test_y3wxgmU1CpmCHb2ynsVp8Ba9
-    secret: sk_test_IvPjdXX7PpX0UD2kCk73xxiI
+    public: ''
+    secret: ''
     webhook: ''
   live:
     public: ''
