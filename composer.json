@@ -297,7 +297,7 @@
                 "Issue #2866543 - Support required fields": "https://www.drupal.org/files/issues/2866543.patch"
             },
             "drupal/payment_stripe": {
-                "Improvements": "https://gist.githubusercontent.com/sean-e-dietrich/2ac08921ac2d23637593d888cc7f28a7/raw/00134e98d6ed9517615383a75e014c5f47c2e6bc/payment_stripe.patch"
+                "Improvements": "https://gist.githubusercontent.com/sean-e-dietrich/2ac08921ac2d23637593d888cc7f28a7/raw/0a4997b52994699b489e4bf07e0be4df18d4e0b5/payment_stripe.patch"
             },
             "drupal/payment": {
                 "Fields on Payments don't save (Issue #2841035)": "https://www.drupal.org/files/issues/fix_fieldable.patch"
