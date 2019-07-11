@@ -43,17 +43,27 @@ $settings['install_profile'] = 'standard';
 /**
  * Load in the api keys from the JSON file in the private files.
  */
+$config['stripe.settings']['environment'] = 'test';
 if (isset($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] == 'live') {
   $json_text = file_get_contents('sites/default/files/private/secrets.json');
   $key_data = json_decode($json_text, TRUE);
   $config['mailchimp.settings']['api_key'] = $key_data['mailchimp_key'];
   $config['sendgrid_integration.settings']['apikey'] = $key_data['sendgrid_api'];
   $config['google_analytics.settings']['account'] = $key_data['google_analytics'];
+  $config['stripe.settings']['environment'] = 'live';
+  $config['stripe.settings']['live']['public'] = $key_data['stripe_live_public'];
+  $config['stripe.settings']['live']['secret'] = $key_data['stripe_live_secret'];
+  $config['stripe.settings']['test']['public'] = $key_data['stripe_test_public'];
+  $config['stripe.settings']['test']['secret'] = $key_data['stripe_test_secret'];
 }
 else {
   $json_text = file_get_contents('sites/default/files/private/secrets.json');
   $key_data = json_decode($json_text, TRUE);
   $config['mailchimp.settings']['api_key'] = $key_data['mailchimp_key'];
+  $config['stripe.settings']['live']['public'] = '';
+  $config['stripe.settings']['live']['secret'] = '';
+  $config['stripe.settings']['test']['public'] = $key_data['stripe_test_public'];
+  $config['stripe.settings']['test']['secret'] = $key_data['stripe_test_secret'];
 }
 
 // Require HTTPS
