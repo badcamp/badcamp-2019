@@ -55,10 +55,8 @@
     a {
       border-bottom: none;
 
-      &:hover,
-      &:focus {
-        border-bottom: 3px solid $salmon;
-        outline: 0;
+      &:hover {
+        color: $midblue;
       }
     }
   }

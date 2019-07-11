@@ -67,7 +67,7 @@
 
 // colors
 $lightblue: #02a0e4;
-$midblue: #083b61;
+$midblue: darken($lightblue, 17%);
 $navy: #0a2240;
 $tealish: #50c4b7;
 $dark-tealish: #199f94;
@@ -184,11 +184,12 @@ $header-styles: (
   ),
   medium: (
     'h1': (
-      'font-size': 47,
-      'line-height': 49,
+      'font-size': 44,
+      'line-height': 46,
     ),
     'h2': (
-      'font-size': 40,
+      'font-size': 38,
+      'line-height': 42,
     ),
     'h3': (
       'font-size': 30,
