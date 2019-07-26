@@ -14,3 +14,11 @@
     }
   }
 }
+
+//node
+.job-posting__apply-link {
+  font-family: $monsterrat;
+  a {
+    @extend .link;
+  }
+}
