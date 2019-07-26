@@ -1,10 +1,4 @@
-.field--topics {
-  @extend .attendee-name;
-  font-size: rem-calc(16);
-}
-
-// Temporary fix. Do this later with a template. (MM)
-.page-node--31 .views-element-container {
+.job-postings__listings {
   margin-top: 2.5em;
   .views-row {
     margin-bottom: 1.875em;

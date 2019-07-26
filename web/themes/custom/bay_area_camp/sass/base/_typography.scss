@@ -50,3 +50,11 @@ p {
     font-size: rem-calc(30);
   }
 }
+
+.views-teaser-h2 {
+  line-height: 1.25;
+  margin-bottom: 0.5em;
+  a:hover {
+    color: $midblue;
+  }
+}

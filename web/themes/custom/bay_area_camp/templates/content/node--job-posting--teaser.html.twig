@@ -1,0 +1,15 @@
+{% set description %}
+  {{ content.body }}
+{% endset %}
+
+<article{{ attributes.addClass('job-posting__display--teaser grid-x grid-margin-x') }}>
+  <div class="cell medium-4 large-3">
+    <div class="job-posting__sponsor-logo">{{ content.field_sponsor }}</div>
+  </div>
+  <div class="cell medium-8 large-9">
+    <h2 {{ title_attributes.addClass('job-posting__title') }} >
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+    <div class="job-posting__description">{{ description|striptags('<p>')|raw }}</div>
+  </div>
+</article>
