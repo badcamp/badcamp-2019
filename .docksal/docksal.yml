@@ -1,6 +1,6 @@
 # Basic LAMP stack
 
-version: "2.1"
+version: '2.1'
 
 services:
   # Web
@@ -35,6 +35,9 @@ services:
     extends:
       file: ${HOME}/.docksal/stacks/services.yml
       service: cli
+    environment:
+      - PANTHEON_SITE
+      - PANTHEON_ENV
     volumes:
       - ${PROJECT_ROOT}/.docksal/etc/drush:/etc/drush:ro
 
@@ -48,7 +51,7 @@ services:
     hostname: pma
     image: phpmyadmin/phpmyadmin
     expose:
-      - "80"
+      - '80'
     environment:
       - PMA_ARBITRARY=1
       - PMA_HOST=db

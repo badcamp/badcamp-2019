@@ -45,15 +45,15 @@
       height: 200px;
       object-fit: cover;
       object-position: center bottom;
+      padding-bottom: 1.25em;
       @include breakpoint('medium') {
-        height: 440px;
-        padding-bottom: 1.25em;
+        height: 360px;
       }
       @include breakpoint('large') {
-        height: 480px;
+        height: 300px;
       }
       @include breakpoint('xlarge') {
-        height: 400px;
+        height: 320px;
       }
     }
   }

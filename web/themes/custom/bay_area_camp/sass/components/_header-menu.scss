@@ -7,8 +7,18 @@
     background-color: $white;
   }
 
+  .header-menu__inner {
+    @include xy-grid-container;
+    @include breakpoint('large') {
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+    }
+  }
+
   ul {
-    float: right;
+    @include breakpoint('medium') {
+      float: right;
+    }
     @include breakpoint('large') {
       float: none;
     }
@@ -21,12 +31,17 @@
         font-size: 0.9375em;
       }
       @include breakpoint('xlarge') {
-        font-size: 1.25em;
+        font-size: 1.2em;
       }
     }
   }
   .big-button {
     text-transform: uppercase;
+    padding: 16px;
+    margin-bottom: 0.75em;
+    @include breakpoint('medium') {
+      margin-bottom: 0;
+    }
   }
 }
 

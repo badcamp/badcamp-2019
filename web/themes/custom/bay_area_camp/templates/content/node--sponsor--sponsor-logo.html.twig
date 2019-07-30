@@ -89,6 +89,6 @@
     {{ title_suffix }}
 
     {% if can_edit %}
-        <button class="button" href="{{ path('entity.node.edit_form', {'node': node.id}) }}">{{ "Edit" | t }} {{ label }}</button>
+        <button class="button edit-sponsor" href="{{ path('entity.node.edit_form', {'node': node.id}) }}">{{ "Edit" | t }} {{ label }}</button>
     {% endif %}
 </article>

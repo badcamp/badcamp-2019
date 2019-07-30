@@ -46,6 +46,7 @@
 %}
 {% set heading_id = attributes.id ~ '-menu'|clean_id %}
 <nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes.addClass(classes)|without('role', 'aria-labelledby') }}>
+    <div class="header-menu__inner">
     {# Label. If not displayed, we still provide it for screen readers. #}
     {% if not configuration.label_display %}
         {% set title_attributes = title_attributes.addClass('visually-hidden') %}
@@ -62,5 +63,6 @@
 
     <div class="responsive-menu-button-wrap" data-responsive-toggle="block-mainnavigation" data-hide-for="large">
         <button class="menu-icon" type="button" data-toggle="block-mainnavigation"></button>
+    </div>
     </div>
 </nav>

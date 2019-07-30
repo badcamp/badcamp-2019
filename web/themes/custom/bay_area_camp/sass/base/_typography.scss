@@ -1,6 +1,13 @@
-p {
+p,
+li,
+ol {
   font-size: rem-calc(18);
   line-height: rem-calc(28);
+}
+
+li,
+ol {
+  margin-bottom: 8px;
 }
 
 // reuseable classes from styleguide and beyond
@@ -48,5 +55,35 @@ p {
   font-size: rem-calc(24);
   @include breakpoint('medium') {
     font-size: rem-calc(30);
+  }
+}
+
+.views-teaser-h2 {
+  line-height: 1.25;
+  margin-bottom: 0.5em;
+  a:hover {
+    color: $midblue;
+  }
+}
+
+.field-label {
+  font-family: $monsterrat;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+// TODO: make better. Quick fixes for now.
+.body,
+.article__body {
+  li,
+  ol {
+    a {
+      @extend .link;
+    }
+  }
+  h2,
+  h3,
+  h4 {
+    padding-top: 24px;
   }
 }
