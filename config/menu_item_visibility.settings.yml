@@ -13,3 +13,15 @@ mlid:
     roles:
       - authenticated
     access_check: false
+  'menu_link_content:5342535a-dc78-4075-9b0d-902e486d8229':
+    roles:
+      - authenticated
+    access_check: false
+  'menu_link_content:4ac1107b-0249-400d-96a3-76de9010e659':
+    roles:
+      - anonymous
+    access_check: false
+  'menu_link_content:7f002a23-a244-428e-8392-e419653de383':
+    roles:
+      - anonymous
+    access_check: false

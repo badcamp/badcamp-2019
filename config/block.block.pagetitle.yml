@@ -9,7 +9,7 @@ dependencies:
 id: pagetitle
 theme: bay_area_camp
 region: content
-weight: -7
+weight: -9
 provider: null
 plugin: page_title_block
 settings:

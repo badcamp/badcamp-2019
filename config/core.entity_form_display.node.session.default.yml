@@ -13,9 +13,10 @@ dependencies:
     - field.field.node.session.field_twitter_description
     - node.type.session
   module:
-    - entityqueue
     - field_group
     - file
+    - multiple_selects
+    - path
     - text
     - video_embed_field
 third_party_settings:
@@ -25,7 +26,7 @@ third_party_settings:
         - field_session_slides
         - field_session_presentation_video
       parent_name: ''
-      weight: 8
+      weight: 7
       format_type: fieldset
       format_settings:
         id: ''
@@ -37,7 +38,7 @@ third_party_settings:
       children:
         - field_status
       parent_name: ''
-      weight: 7
+      weight: 6
       format_type: fieldset
       format_settings:
         id: ''
@@ -64,7 +65,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 4
+    weight: 3
     settings:
       rows: 9
       summary_rows: 3
@@ -75,12 +76,10 @@ content:
     weight: 5
     settings:
       match_operator: CONTAINS
-      size: '60'
+      size: 60
       placeholder: ''
-      link_to_entity: 0
-      link_to_edit_form: 0
     third_party_settings: {  }
-    type: entityqueue_dragtable
+    type: entity_reference_autocomplete
     region: content
   field_session_presentation_video:
     weight: 10
@@ -94,15 +93,19 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     region: content
+    type: file_generic
   field_session_topics:
-    weight: 3
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: multiple_options_select
     region: content
   field_sponsors:
-    weight: 6
-    settings: {  }
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete_tags
     region: content
@@ -113,16 +116,22 @@ content:
     type: options_select
     region: content
   field_twitter_description:
-    weight: 2
+    weight: 1
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
+  path:
+    type: path
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 1
+    weight: 0
     region: content
     settings:
       size: 60
@@ -130,9 +139,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_session_presentation_video: true
-  field_sponsors: true
-  path: true
   promote: true
   status: true
   sticky: true

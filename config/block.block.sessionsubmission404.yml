@@ -1,0 +1,39 @@
+uuid: 8297789b-e722-4a3e-85f6-8d50ec060b19
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:block_listing:1d25fb3b-492e-486f-b468-2322d5fab53a'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - bay_area_camp
+id: sessionsubmission404
+theme: bay_area_camp
+region: content
+weight: -7
+provider: null
+plugin: 'block_content:1d25fb3b-492e-486f-b468-2322d5fab53a'
+settings:
+  id: 'block_content:1d25fb3b-492e-486f-b468-2322d5fab53a'
+  label: 'Session Submission 403/404'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/add/session
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

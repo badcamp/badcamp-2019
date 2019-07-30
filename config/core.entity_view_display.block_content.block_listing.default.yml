@@ -4,12 +4,22 @@ status: true
 dependencies:
   config:
     - block_content.type.block_listing
+    - field.field.block_content.block_listing.body
     - field.field.block_content.block_listing.field_block_content
+  module:
+    - text
 id: block_content.block_listing.default
 targetEntityType: block_content
 bundle: block_listing
 mode: default
 content:
+  body:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_block_content:
     weight: 1
     label: hidden

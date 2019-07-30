@@ -1,10 +1,10 @@
-uuid: 6edc3edf-b2d0-4ec1-899d-e1480dfa30c4
+uuid: a6afcff9-b52d-4ab7-bfe2-db4bf5e035c8
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
-    - node.type.session
+    - block_content.type.block_listing
+    - field.storage.block_content.body
   module:
     - custom_add_another
     - text
@@ -12,13 +12,13 @@ third_party_settings:
   custom_add_another:
     custom_add_another: ''
     custom_remove: ''
-id: node.session.body
+id: block_content.block_listing.body
 field_name: body
-entity_type: node
-bundle: session
-label: Description
+entity_type: block_content
+bundle: block_listing
+label: Body
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
