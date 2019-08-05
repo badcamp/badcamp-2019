@@ -30,9 +30,6 @@
       @include breakpoint('large') {
         font-size: 0.9375em;
       }
-      @include breakpoint('xlarge') {
-        font-size: 1.2em;
-      }
     }
   }
   .big-button {

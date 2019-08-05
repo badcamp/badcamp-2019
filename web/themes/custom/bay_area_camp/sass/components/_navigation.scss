@@ -37,10 +37,6 @@
         font-size: 1em;
       }
 
-      @include breakpoint('xlarge') {
-        font-size: 1.125em;
-      }
-
       &:hover {
         color: $midblue;
       }
