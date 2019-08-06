@@ -54,7 +54,15 @@
   .field--sponsor-level {
     @extend .sponsor-level;
     font-size: rem-calc(20);
+    line-height: 1.125;
+    margin-top: 2em;
     margin-bottom: 1.5em;
+  }
+  .field--sponsor-logo {
+    img {
+      max-height: 200px;
+      width: auto;
+    }
   }
   .callout--sponsors {
     font-size: rem-calc(24);
