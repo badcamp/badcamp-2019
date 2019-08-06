@@ -7,19 +7,24 @@
 
 // sponsors view
 .views-group--sponsors {
-  margin-bottom: 4.5em;
+  margin-bottom: 4em;
+  @include breakpoint('medium') {
+    justify-content: center;
+    align-items: center;
+  }
 
   .views-row {
     margin-bottom: 2.5em;
+    padding: 1.5em;
     @include breakpoint('medium') {
-      margin-bottom: 0;
+      margin-bottom: 1.25em;
     }
   }
 }
 
 .views-group__h2--sponsors {
   @extend .sponsor-level;
-  margin: 1.5em 0 2.5em;
+  margin: 1.5em 0;
   border-bottom: $light-gray 1px solid;
 }
 
