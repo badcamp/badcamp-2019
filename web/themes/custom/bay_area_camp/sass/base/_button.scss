@@ -21,8 +21,9 @@
     border-bottom: 0;
     @if $bg == $salmon {
       background-color: lighten($bg, 4%);
-    }
-    @if else == $navy {
+    } @else if $bg == $grayish {
+      background-color: darken($bg, 7%);
+    } @else if $bg == $navy {
       background-color: lighten($bg, 6%);
     } @else {
       background-color: lighten($bg, 7%);
@@ -42,6 +43,9 @@
 .button,
 .button.primary {
   @include button();
+}
+.button.gray {
+  @include button($grayish, $navy, regular);
 }
 .small-button {
   @include button($size: small);

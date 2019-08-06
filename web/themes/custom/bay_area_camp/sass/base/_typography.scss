@@ -1,13 +1,6 @@
-p,
-li,
-ol {
+p {
   font-size: rem-calc(18);
   line-height: rem-calc(28);
-}
-
-li,
-ol {
-  margin-bottom: 8px;
 }
 
 // reuseable classes from styleguide and beyond
@@ -77,6 +70,9 @@ ol {
 .article__body {
   li,
   ol {
+    font-size: rem-calc(18);
+    line-height: rem-calc(28);
+    margin-bottom: 8px;
     a {
       @extend .link;
     }
