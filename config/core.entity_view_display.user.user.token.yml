@@ -1,0 +1,44 @@
+uuid: c672fc58-2025-4521-a181-75325161f0fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.token
+    - field.field.user.user.field_bio
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_options
+    - field.field.user.user.field_organization
+    - field.field.user.user.field_organization_url
+    - field.field.user.user.field_social_profile_links
+    - field.field.user.user.field_subscribe_to_badcamp_newsl
+    - field.field.user.user.field_title
+    - field.field.user.user.user_picture
+  module:
+    - user
+_core:
+  default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
+id: user.user.token
+targetEntityType: user
+bundle: user
+mode: token
+content:
+  field_organization:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_bio: true
+  field_first_name: true
+  field_last_name: true
+  field_options: true
+  field_organization_url: true
+  field_social_profile_links: true
+  field_subscribe_to_badcamp_newsl: true
+  field_title: true
+  member_for: true
+  user_picture: true
