@@ -12,3 +12,4 @@ payments:
     amount: 400
     title: 'BADCAMP Organization Sponsorship'
     page_title: 'Sponsor The Bay Area Drupal Camp'
+    redirect: /sponsors
