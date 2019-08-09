@@ -45,7 +45,7 @@
 
 {% if not logged_in %}
   <div>
-    <a href="/user/login?destination={{ url("<current>") }}" class="button primary">{{ "Login to Sponsor" | t }}</a>
+    <a href="/user/login?destination={{ path("<current>") }}" class="button primary">{{ "Login to Sponsor" | t }}</a>
   </div>
 {% else %}
 
