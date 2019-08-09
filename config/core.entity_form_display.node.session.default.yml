@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.session.field_session_topics
     - field.field.node.session.field_sponsors
     - field.field.node.session.field_status
+    - field.field.node.session.field_timeslot
     - field.field.node.session.field_twitter_description
     - node.type.session
   module:
@@ -111,6 +112,12 @@ content:
     region: content
   field_status:
     weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_timeslot:
+    weight: 26
     settings: {  }
     third_party_settings: {  }
     type: options_select

@@ -113,3 +113,9 @@ function bay_area_camp_preprocess_html(array &$variables) {
   }
 }
 
+/**
+ * Implements template_preprocess_views_view_unformatted__view__display().
+ */
+function bay_area_camp_preprocess_views_view_unformatted__job_postings__listings(&$vars) {
+  $vars['create_job'] = \Drupal::entityTypeManager()->getAccessControlHandler('node')->createAccess('job_posting');
+}

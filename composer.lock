@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9497036cb5cf6679445544cb76eefcb2",
+    "content-hash": "be661290be63942a5e50129da4056a6b",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5309,7 +5309,7 @@
                     }
                 },
                 "patches_applied": {
-                    "Improvements": "https://gist.githubusercontent.com/sean-e-dietrich/2ac08921ac2d23637593d888cc7f28a7/raw/3bd5150920c770b58fd9c97b313cc5cf6dd05d01/payment_stripe.patch"
+                    "Improvements": "https://gist.githubusercontent.com/sean-e-dietrich/2ac08921ac2d23637593d888cc7f28a7/raw/0a4997b52994699b489e4bf07e0be4df18d4e0b5/payment_stripe.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -5337,7 +5337,8 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/payment_stripe",
                 "issues": "https://www.drupal.org/project/issues/payment_stripe"
-            }
+            },
+            "time": "2019-05-10T20:08:38+00:00"
         },
         {
             "name": "drupal/plugin",

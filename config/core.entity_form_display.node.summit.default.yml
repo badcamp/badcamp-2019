@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.summit.body
     - field.field.node.summit.field_members
+    - field.field.node.summit.field_timeslot
     - node.type.summit
   module:
     - path
@@ -37,6 +38,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_timeslot:
+    weight: 123
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   path:
     type: path

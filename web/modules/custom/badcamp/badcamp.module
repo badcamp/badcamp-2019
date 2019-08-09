@@ -32,6 +32,21 @@ function badcamp_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_form_FORM_ID_alter().
  */
+function badcamp_form_node_job_posting_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $nodeForm = $form_state->getBuildInfo()['callback_object'];
+  $node = $nodeForm->getEntity();
+
+  $options =& $form['field_sponsor']['widget']['#options'];
+  foreach ($options AS $nid => $option) {
+    if ($nid !== '_none' && !\Drupal::entityTypeManager()->getStorage('node')->load($nid)->access('update')) {
+      unset($options[$nid]);
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
 function badcamp_form_node_session_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   $nodeForm = $form_state->getBuildInfo()['callback_object'];
   $node = $nodeForm->getEntity();
@@ -151,4 +166,19 @@ function _allowed_formats_remove_textarea_help($form_element, FormStateInterface
   }
 
   return $form_element;
+}
+
+/**
+ * Implements hook_entity_create_access().
+ */
+function badcamp_entity_create_access(\Drupal\Core\Session\AccountInterface $account, array $context, $entity_bundle) {
+  if ($entity_bundle == 'job_posting') {
+    $sponsors = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties([
+      'type' => 'sponsor',
+      'field_members' => $account->id()
+    ]);
+    if (count($sponsors) > 0) {
+      return \Drupal\Core\Access\AccessResult::allowed();
+    }
+  }
 }

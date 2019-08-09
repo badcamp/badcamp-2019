@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.event.field_event_type
     - field.field.node.event.field_leader
     - field.field.node.event.field_more_info_link
+    - field.field.node.event.field_timeslot
     - node.type.event
   module:
     - link
@@ -18,7 +19,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 3
+    weight: 4
     settings:
       rows: 9
       summary_rows: 3
@@ -26,13 +27,13 @@ content:
     third_party_settings: {  }
     region: content
   field_event_type:
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_leader:
-    weight: 1
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60
@@ -41,12 +42,18 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_more_info_link:
-    weight: 4
+    weight: 5
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_timeslot:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   title:
     type: string_textfield

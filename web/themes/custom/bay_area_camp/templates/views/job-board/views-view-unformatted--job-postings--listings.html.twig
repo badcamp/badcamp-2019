@@ -16,6 +16,10 @@
  */
 #}
 
+{% if logged_in and create_job %}
+  <a class="button primary" href="/node/add/job_posting?destination=sponsors/job-board">Add Job Posting</a>
+{% endif %}
+
 <div class="job-postings__listings">
 {% for row in rows %}
     {%

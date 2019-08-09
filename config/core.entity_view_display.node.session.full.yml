@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.session.field_session_topics
     - field.field.node.session.field_sponsors
     - field.field.node.session.field_status
+    - field.field.node.session.field_timeslot
     - field.field.node.session.field_twitter_description
     - node.type.session
   module:
@@ -26,12 +27,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
   field_members:
-    weight: 0
+    weight: 1
     label: inline
     settings:
       link: true
@@ -39,7 +40,7 @@ content:
     type: entity_reference_label
     region: content
   field_session_presentation_video:
-    weight: 4
+    weight: 5
     label: above
     settings:
       responsive: true
@@ -50,7 +51,7 @@ content:
     type: video_embed_field_video
     region: content
   field_session_slides:
-    weight: 5
+    weight: 6
     label: above
     settings:
       use_description_as_link_text: true
@@ -58,7 +59,7 @@ content:
     type: file_default
     region: content
   field_session_topics:
-    weight: 1
+    weight: 2
     label: inline
     settings:
       link: true
@@ -66,15 +67,23 @@ content:
     type: entity_reference_label
     region: content
   field_sponsors:
-    weight: 3
+    weight: 4
     label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_timeslot:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
   links:
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
