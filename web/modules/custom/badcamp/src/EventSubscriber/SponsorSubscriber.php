@@ -39,7 +39,7 @@ class SponsorSubscriber implements EventSubscriberInterface {
    */
   public function entityAccess(EntityAccessEvent $accessEvent) {
     $entity = $accessEvent->getEntity();
-    if ($entity->getEntityTypeId() == 'node' && $entity->bundle() == 'sponsor' && $accessEvent->getOperation() == 'update') {
+    if ($entity->getEntityTypeId() == 'node' && in_array($entity->bundle(), ['sponsor', 'event', 'summit', 'sessions', 'training']) && $accessEvent->getOperation() == 'update') {
 
       // Get the Author of the Node
       $author = $entity->getOwnerId();

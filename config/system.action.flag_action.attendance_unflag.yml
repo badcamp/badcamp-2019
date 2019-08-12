@@ -1,0 +1,15 @@
+uuid: 0256e867-92dd-4817-bc5a-b1f86e1fe77c
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.attendance
+  module:
+    - flag
+id: flag_action.attendance_unflag
+label: 'Un Check In'
+type: user
+plugin: 'flag_action:attendance_unflag'
+configuration:
+  flag_id: attendance
+  flag_action: unflag

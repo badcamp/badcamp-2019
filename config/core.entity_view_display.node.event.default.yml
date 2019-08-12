@@ -4,10 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
+    - field.field.node.event.field_day
     - field.field.node.event.field_event_type
     - field.field.node.event.field_leader
     - field.field.node.event.field_more_info_link
+    - field.field.node.event.field_sponsors
     - field.field.node.event.field_timeslot
+    - field.field.node.event.field_venue
     - node.type.event
   module:
     - link
@@ -21,29 +24,38 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 2
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_event_type:
-    weight: 5
-    label: above
+  field_day:
+    weight: 3
+    label: inline
     settings:
-      link: true
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_event_type:
+    weight: 1
+    label: hidden
+    settings:
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_leader:
-    weight: 3
-    label: above
+    weight: 7
+    label: hidden
     settings:
-      link: true
+      view_mode: sponsor_team_member
+      link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
   field_more_info_link:
-    weight: 4
-    label: above
+    weight: 6
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -53,17 +65,35 @@ content:
     third_party_settings: {  }
     type: link
     region: content
+  field_sponsors:
+    weight: 8
+    label: hidden
+    settings:
+      view_mode: sponsor_logo
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
   field_timeslot:
-    weight: 1
+    weight: 4
     label: inline
     settings:
       link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  links:
+  field_venue:
+    weight: 2
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  flag_add_to_schedule:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  links: true

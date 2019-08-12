@@ -20,3 +20,11 @@ badcamp.sessions:
     _controller: '\Drupal\badcamp\Controller\SessionSubmissionController::checkUser'
   requirements:
     _access: 'TRUE'
+
+badcamp.user.schedule:
+  path: '/user/{user}/sessions'
+  defaults:
+    _controller: '\Drupal\badcamp\Controller\MyScheduleController::schedule'
+    _title_callback: '\Drupal\badcamp\Controller\MyScheduleController::title'
+  requirements:
+    _custom_access: '\Drupal\badcamp\Controller\MyScheduleController::access'

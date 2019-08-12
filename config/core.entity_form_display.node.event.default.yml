@@ -4,14 +4,34 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
+    - field.field.node.event.field_day
     - field.field.node.event.field_event_type
     - field.field.node.event.field_leader
     - field.field.node.event.field_more_info_link
+    - field.field.node.event.field_sponsors
     - field.field.node.event.field_timeslot
+    - field.field.node.event.field_venue
     - node.type.event
   module:
+    - field_group
     - link
     - text
+third_party_settings:
+  field_group:
+    group_scheduling:
+      children:
+        - field_venue
+        - field_day
+        - field_timeslot
+      parent_name: ''
+      weight: 6
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Scheduling
 id: node.event.default
 targetEntityType: node
 bundle: event
@@ -26,14 +46,20 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  field_day:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_event_type:
-    weight: 3
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_leader:
-    weight: 2
+    weight: 3
     settings:
       match_operator: CONTAINS
       size: 60
@@ -49,8 +75,20 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  field_timeslot:
+  field_sponsors:
     weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_timeslot:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_venue:
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select

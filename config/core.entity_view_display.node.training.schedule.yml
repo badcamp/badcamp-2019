@@ -1,0 +1,64 @@
+uuid: 80255ede-ecd4-41c5-b55d-75f88f0af580
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.schedule
+    - field.field.node.training.body
+    - field.field.node.training.field_day
+    - field.field.node.training.field_members
+    - field.field.node.training.field_skill_level
+    - field.field.node.training.field_sponsors
+    - field.field.node.training.field_timeslot
+    - field.field.node.training.field_training_files
+    - field.field.node.training.field_training_links
+    - field.field.node.training.field_venue
+    - node.type.training
+  module:
+    - text
+    - user
+id: node.training.schedule
+targetEntityType: node
+bundle: training
+mode: schedule
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 1
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_members:
+    weight: 3
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_skill_level:
+    weight: 2
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_venue:
+    weight: 0
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  field_day: true
+  field_sponsors: true
+  field_timeslot: true
+  field_training_files: true
+  field_training_links: true
+  flag_add_to_schedule: true
+  links: true

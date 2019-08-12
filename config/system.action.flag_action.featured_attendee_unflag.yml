@@ -1,0 +1,15 @@
+uuid: eee8ce6e-d3ad-4e27-924c-dd5e9ee2e72c
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.featured_attendee
+  module:
+    - flag
+id: flag_action.featured_attendee_unflag
+label: 'Is Not A Featured Attendee'
+type: user
+plugin: 'flag_action:featured_attendee_unflag'
+configuration:
+  flag_id: featured_attendee
+  flag_action: unflag

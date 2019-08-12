@@ -1,0 +1,44 @@
+uuid: 9e2152a7-ea66-482f-825c-e21d48badb84
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.schedule
+    - field.field.node.summit.body
+    - field.field.node.summit.field_day
+    - field.field.node.summit.field_members
+    - field.field.node.summit.field_sponsors
+    - field.field.node.summit.field_timeslot
+    - field.field.node.summit.field_venue
+    - node.type.summit
+  module:
+    - text
+    - user
+id: node.summit.schedule
+targetEntityType: node
+bundle: summit
+mode: schedule
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 1
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_venue:
+    weight: 0
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  field_day: true
+  field_members: true
+  field_sponsors: true
+  field_timeslot: true
+  flag_add_to_schedule: true
+  links: true

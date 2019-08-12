@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.session.body
+    - field.field.node.session.field_day
     - field.field.node.session.field_members
     - field.field.node.session.field_session_presentation_video
     - field.field.node.session.field_session_slides
@@ -13,6 +14,7 @@ dependencies:
     - field.field.node.session.field_status
     - field.field.node.session.field_timeslot
     - field.field.node.session.field_twitter_description
+    - field.field.node.session.field_venue
     - node.type.session
   module:
     - file
@@ -27,21 +29,30 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 3
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_members:
-    weight: 1
+  field_day:
+    type: entity_reference_label
+    weight: 2
+    region: content
     label: inline
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
-    type: entity_reference_label
+  field_members:
+    weight: 8
+    label: hidden
+    settings:
+      view_mode: sponsor_team_member
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
     region: content
   field_session_presentation_video:
     weight: 5
-    label: above
+    label: hidden
     settings:
       responsive: true
       width: 854
@@ -51,22 +62,14 @@ content:
     type: video_embed_field_video
     region: content
   field_session_slides:
-    weight: 6
-    label: above
+    weight: 7
+    label: hidden
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
-    type: file_default
+    type: file_table
     region: content
   field_session_topics:
-    weight: 2
-    label: inline
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_sponsors:
     weight: 4
     label: inline
     settings:
@@ -74,19 +77,37 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_sponsors:
+    weight: 9
+    label: hidden
+    settings:
+      view_mode: sponsor_logo
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
   field_timeslot:
     type: entity_reference_label
-    weight: 0
+    weight: 3
     region: content
     label: inline
     settings:
       link: false
     third_party_settings: {  }
-  links:
-    weight: 7
+  field_venue:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+  flag_add_to_schedule:
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   field_status: true
   field_twitter_description: true
+  links: true

@@ -21,7 +21,7 @@ bundle: sponsor
 mode: full
 content:
   field_members:
-    weight: 103
+    weight: 2
     label: hidden
     settings:
       view_mode: sponsor_team_member
@@ -30,14 +30,14 @@ content:
     type: entity_reference_entity_view
     region: content
   field_sponsor_description:
-    weight: 104
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_sponsor_level:
-    weight: 106
+    weight: 4
     label: hidden
     settings:
       link: false
@@ -45,7 +45,7 @@ content:
     type: entity_reference_label
     region: content
   field_sponsor_logo:
-    weight: 107
+    weight: 5
     label: hidden
     settings:
       image_style: ''
@@ -54,7 +54,7 @@ content:
     type: image
     region: content
   field_url:
-    weight: 105
+    weight: 3
     label: hidden
     settings:
       trim_length: 80
@@ -66,7 +66,7 @@ content:
     type: link_separate
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }

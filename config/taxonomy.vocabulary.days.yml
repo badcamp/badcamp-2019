@@ -1,0 +1,8 @@
+uuid: 102d2b19-a8cb-421c-85e4-e6a11b4e0e13
+langcode: en
+status: true
+dependencies: {  }
+name: Days
+vid: days
+description: 'Days of the Week for Camp'
+weight: 0

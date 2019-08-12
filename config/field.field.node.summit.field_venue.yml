@@ -1,0 +1,35 @@
+uuid: 3cc522b0-34bf-4d18-8f9b-aa0bb5b16dfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_venue
+    - node.type.summit
+    - taxonomy.vocabulary.venue
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.summit.field_venue
+field_name: field_venue
+entity_type: node
+bundle: summit
+label: Venue
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      venue: venue
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

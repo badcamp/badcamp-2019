@@ -1,0 +1,109 @@
+uuid: a02b1594-6961-4a88-bacc-bb48ca52f8d2
+langcode: en
+status: true
+dependencies: {  }
+id: my_schedule
+label: 'My Schedule'
+renderer: quick_tabs
+options:
+  accordion_tabs:
+    jquery_ui:
+      collapsible: 0
+      heightStyle: auto
+  quick_tabs:
+    ajax: '0'
+hide_empty_tabs: 0
+default_tab: '9999'
+configuration_data:
+  -
+    title: Wed
+    weight: '0'
+    type: view_content
+    content:
+      view_content:
+        options:
+          vid: schedule
+          display: my_schedule
+          args: '62'
+      node_content:
+        options:
+          nid: ''
+          view_mode: full
+          hide_title: '1'
+      block_content:
+        options:
+          bid: schedule_block
+          block_title: ''
+          display_title: 0
+      qtabs_content:
+        options:
+          machine_name: schedule
+  -
+    title: Thurs
+    weight: '0'
+    type: view_content
+    content:
+      view_content:
+        options:
+          vid: schedule
+          display: my_schedule
+          args: '63'
+      node_content:
+        options:
+          nid: ''
+          view_mode: full
+          hide_title: '1'
+      block_content:
+        options:
+          bid: schedule_block
+          block_title: ''
+          display_title: 0
+      qtabs_content:
+        options:
+          machine_name: schedule
+  -
+    title: Fri
+    weight: '0'
+    type: view_content
+    content:
+      view_content:
+        options:
+          vid: schedule
+          display: my_schedule
+          args: '64'
+      node_content:
+        options:
+          nid: ''
+          view_mode: full
+          hide_title: '1'
+      block_content:
+        options:
+          bid: schedule_block
+          block_title: ''
+          display_title: 0
+      qtabs_content:
+        options:
+          machine_name: schedule
+  -
+    title: Sat
+    weight: '0'
+    type: view_content
+    content:
+      view_content:
+        options:
+          vid: schedule
+          display: my_schedule
+          args: '65'
+      node_content:
+        options:
+          nid: ''
+          view_mode: full
+          hide_title: '1'
+      block_content:
+        options:
+          bid: schedule_block
+          block_title: ''
+          display_title: 0
+      qtabs_content:
+        options:
+          machine_name: schedule

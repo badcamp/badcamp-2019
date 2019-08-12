@@ -1,5 +1,15 @@
 <article{{ attributes.addClass('session__display--full') }}>
   <div{{ content_attributes }}>
+    <div class="session__add_to_schedule field__add__to__schedule">
+      {{ content.flag_add_to_schedule }}
+    </div>
+    <div class="session__time__location event__time__location">
+      <span class="field__day">{{ content.field_day }}</span>
+      <span class="field__delimeter">//</span>
+      <span class="field__venue">{{ content.field_venue }}</span>
+      <span class="field__delimeter">//</span>
+      <span class="field__timeslot">{{ content.field_timeslot }}</span>
+    </div>
     <div class="session__presenters">
      {{ content.field_members }}
     </div>

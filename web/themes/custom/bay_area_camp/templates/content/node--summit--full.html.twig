@@ -1,10 +1,26 @@
 <article{{ attributes.addClass('summit__display--full') }}>
   <div{{ content_attributes }}>
-    <div class="summit__organizers">
-     {{ content.field_members }}
+    <div class="summit__add_to_schedule field__add__to__schedule">
+      {{ content.flag_add_to_schedule }}
     </div>
+
+    {% if content.field_day|render|striptags|trim is not empty %}
+    <div class="summit__time__location event__time__location">
+      <span class="field__day">{{ content.field_day }}</span>
+      <span class="field__delimeter">//</span>
+      <span class="field__venue">{{ content.field_venue }}</span>
+      <span class="field__delimeter">//</span>
+      <span class="field__timeslot">{{ content.field_timeslot }}</span>
+    </div>
+    {% endif %}
+
     <div class="summit__body">
       {{ content.body }}
     </div>
+
+    <div class="summit__organizers">
+      {{ content.field_members }}
+    </div>
+
   </div>
 </article>

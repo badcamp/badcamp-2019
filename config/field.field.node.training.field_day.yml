@@ -1,0 +1,35 @@
+uuid: 95e136ec-e336-4912-81d6-e5f73d14dd35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_day
+    - node.type.training
+    - taxonomy.vocabulary.days
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.training.field_day
+field_name: field_day
+entity_type: node
+bundle: training
+label: Day
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      days: days
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

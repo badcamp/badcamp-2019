@@ -5,7 +5,11 @@ namespace Drupal\badcamp\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\node\NodeInterface;
+use Drupal\node\Plugin\views\filter\Access;
+use Drupal\views\Views;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Class MembersController.
@@ -13,15 +17,17 @@ use Drupal\node\NodeInterface;
 class MembersController extends ControllerBase {
 
   /**
-   * Hello.
+   * Attendee List for Specific Event.
    *
    * @return string
    *   Return Hello string.
    */
   public function attendeesList(NodeInterface $node) {
+    $view = Views::getView('sign_up_list');
+    $members = $view->buildRenderable('default');
+
     return [
-      '#type' => 'markup',
-      '#markup' => $this->t('Implement method: hello with parameter(s): $node'),
+      'view' => $members,
     ];
   }
 
@@ -32,7 +38,7 @@ class MembersController extends ControllerBase {
    * @return \Drupal\Core\Access\AccessResultAllowed
    */
   public function access(NodeInterface $node, AccountInterface $account) {
-    return AccessResult::allowed();
+    return AccessResult::allowedIf($node->access('update', $account));
   }
 
 }

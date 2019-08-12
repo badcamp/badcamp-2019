@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.session.body
+    - field.field.node.session.field_day
     - field.field.node.session.field_members
     - field.field.node.session.field_session_presentation_video
     - field.field.node.session.field_session_slides
@@ -12,6 +13,7 @@ dependencies:
     - field.field.node.session.field_status
     - field.field.node.session.field_timeslot
     - field.field.node.session.field_twitter_description
+    - field.field.node.session.field_venue
     - node.type.session
   module:
     - field_group
@@ -59,6 +61,20 @@ third_party_settings:
         description: ''
         required_fields: true
       label: Presenters
+    group_scheduling:
+      children:
+        - field_venue
+        - field_day
+        - field_timeslot
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Scheduling
 id: node.session.default
 targetEntityType: node
 bundle: session
@@ -72,6 +88,12 @@ content:
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
+    region: content
+  field_day:
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_members:
     weight: 5
@@ -117,7 +139,7 @@ content:
     type: options_select
     region: content
   field_timeslot:
-    weight: 26
+    weight: 30
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -129,6 +151,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_venue:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   path:
     type: path

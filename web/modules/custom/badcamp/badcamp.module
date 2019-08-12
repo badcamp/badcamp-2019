@@ -12,6 +12,10 @@ use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\OpenModalDialogCommand;
 use Drupal\Core\Ajax\ReplaceCommand;
 use Drupal\Core\Ajax\RedirectCommand;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\views\Views;
 
 /**
  * Implements hook_help().
@@ -171,7 +175,7 @@ function _allowed_formats_remove_textarea_help($form_element, FormStateInterface
 /**
  * Implements hook_entity_create_access().
  */
-function badcamp_entity_create_access(\Drupal\Core\Session\AccountInterface $account, array $context, $entity_bundle) {
+function badcamp_entity_create_access(AccountInterface $account, array $context, $entity_bundle) {
   if ($entity_bundle == 'job_posting') {
     $sponsors = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties([
       'type' => 'sponsor',
@@ -180,5 +184,18 @@ function badcamp_entity_create_access(\Drupal\Core\Session\AccountInterface $acc
     if (count($sponsors) > 0) {
       return \Drupal\Core\Access\AccessResult::allowed();
     }
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ */
+function badcamp_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  if ($entity->getEntityTypeId() == 'node' && $entity->bundle() == 'sponsor' && $view_mode == 'full') {
+    $view = Views::getView('sponsor_items');
+    $build['job_postings'] = $view->buildRenderable('sponsor_jobs');
+
+    $view = Views::getView('sponsor_items');
+    $build['events'] = $view->buildRenderable('sponsor_events');
   }
 }

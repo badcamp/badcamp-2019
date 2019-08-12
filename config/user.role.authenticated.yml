@@ -17,12 +17,16 @@ permissions:
   - currency.currency.view
   - currency.currency_locale.view
   - 'edit own session content'
+  - 'flag add_to_schedule'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
+  - 'unflag add_to_schedule'
   - 'use text format basic_html'
   - 'view empty pages'
+  - 'view field_day'
   - 'view field_session_presentation_video'
   - 'view field_timeslot'
+  - 'view field_venue'
   - 'view media'
   - 'view own field_session_presentation_video'

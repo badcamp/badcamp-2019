@@ -10,3 +10,12 @@ view.badcamp_payments.training:
   base_route: view.badcamp_payments.individual
   route_name: view.badcamp_payments.training
   title: Trainings
+badcamp.user.schedule:
+  base_route: entity.user.canonical
+  route_name: badcamp.user.schedule
+  title: Schedule
+badcamp.node.attendees:
+  base_route: entity.node.canonical
+  route_name: badcamp.attendees_list
+  title: Attendees
+  weight: 100

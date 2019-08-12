@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "be661290be63942a5e50129da4056a6b",
+    "content-hash": "da35bb17dd74457bc7e91caaee956940",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -75,9 +75,7 @@
             "version": "1.2.2",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/antennaio/jquery-bar-rating/archive/v1.2.2.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/antennaio/jquery-bar-rating/archive/v1.2.2.zip"
             },
             "type": "drupal-library"
         },
@@ -2067,6 +2065,69 @@
             "time": "2019-01-26T22:14:19+00:00"
         },
         {
+            "name": "drupal/better_exposed_filters",
+            "version": "3.0.0-alpha6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/better_exposed_filters.git",
+                "reference": "8.x-3.0-alpha6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/better_exposed_filters-8.x-3.0-alpha6.zip",
+                "reference": "8.x-3.0-alpha6",
+                "shasum": "0cd9849aa28eea822e18555107e4539d755d95ef"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.0-alpha6",
+                    "datestamp": "1550449381",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Etroid",
+                    "homepage": "https://www.drupal.org/user/3048985"
+                },
+                {
+                    "name": "chr.fritsch",
+                    "homepage": "https://www.drupal.org/user/2103716"
+                },
+                {
+                    "name": "jkopel",
+                    "homepage": "https://www.drupal.org/user/66207"
+                },
+                {
+                    "name": "mikeker",
+                    "homepage": "https://www.drupal.org/user/192273"
+                },
+                {
+                    "name": "rlhawk",
+                    "homepage": "https://www.drupal.org/user/352283"
+                }
+            ],
+            "description": "Provides advanced options (such as links, checkboxes, or jQueryUI widgets) for exposed Views elements.",
+            "homepage": "https://www.drupal.org/project/better_exposed_filters",
+            "support": {
+                "source": "https://git.drupalcode.org/project/better_exposed_filters"
+            }
+        },
+        {
             "name": "drupal/blazy",
             "version": "2.0.0-rc3",
             "source": {
@@ -3101,7 +3162,8 @@
                     "merge-extra": false
                 },
                 "patches_applied": {
-                    "Issue #3003150 - Media Library Widget": "https://www.drupal.org/files/issues/2018-12-05/drupal-media-library-paragraphs-3003150-19-8.x.patch"
+                    "Issue #3003150 - Media Library Widget": "https://www.drupal.org/files/issues/2018-12-05/drupal-media-library-paragraphs-3003150-19-8.x.patch",
+                    "Issue #2457999 - Views Relationship Render": "https://www.drupal.org/files/issues/2019-05-04/2457999-194.patch"
                 }
             },
             "autoload": {
@@ -4065,6 +4127,79 @@
                 "source": "https://git.drupalcode.org/project/field_permissions",
                 "issues": "https://www.drupal.org/project/issues/field_permissions"
             }
+        },
+        {
+            "name": "drupal/flag",
+            "version": "dev-4.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/flag.git",
+                "reference": "468d1e0d1ecb7070525ac3924596cb939d825034"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "require-dev": {
+                "drupal/rules": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-4.x": "4.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-4.0-alpha3+14-dev",
+                    "datestamp": "1539832685",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "fago",
+                    "homepage": "https://www.drupal.org/user/16747"
+                },
+                {
+                    "name": "fubhy",
+                    "homepage": "https://www.drupal.org/user/761344"
+                },
+                {
+                    "name": "joachim",
+                    "homepage": "https://www.drupal.org/user/107701"
+                },
+                {
+                    "name": "merlinofchaos",
+                    "homepage": "https://www.drupal.org/user/26979"
+                },
+                {
+                    "name": "mooffie",
+                    "homepage": "https://www.drupal.org/user/78454"
+                },
+                {
+                    "name": "quicksketch",
+                    "homepage": "https://www.drupal.org/user/35821"
+                },
+                {
+                    "name": "shabana.navas",
+                    "homepage": "https://www.drupal.org/user/1311398"
+                },
+                {
+                    "name": "socketwench",
+                    "homepage": "https://www.drupal.org/user/65793"
+                }
+            ],
+            "description": "Create customized flags that users can set on entities.",
+            "homepage": "https://www.drupal.org/project/flag",
+            "support": {
+                "source": "https://git.drupalcode.org/project/flag"
+            },
+            "time": "2018-10-18T03:16:59+00:00"
         },
         {
             "name": "drupal/google_analytics",
@@ -5407,6 +5542,85 @@
             }
         },
         {
+            "name": "drupal/quicktabs",
+            "version": "3.0.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/quicktabs.git",
+                "reference": "8.x-3.0-alpha2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/quicktabs-8.x-3.0-alpha2.zip",
+                "reference": "8.x-3.0-alpha2",
+                "shasum": "783da3f1284b70b937d047f2ea5745340cc729d4"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.0-alpha2",
+                    "datestamp": "1497623642",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Palashvijay4O",
+                    "homepage": "https://www.drupal.org/user/2995945"
+                },
+                {
+                    "name": "Pasqualle",
+                    "homepage": "https://www.drupal.org/user/80733"
+                },
+                {
+                    "name": "ezra-g",
+                    "homepage": "https://www.drupal.org/user/69959"
+                },
+                {
+                    "name": "jaydub",
+                    "homepage": "https://www.drupal.org/user/46257"
+                },
+                {
+                    "name": "katbailey",
+                    "homepage": "https://www.drupal.org/user/172987"
+                },
+                {
+                    "name": "nedjo",
+                    "homepage": "https://www.drupal.org/user/4481"
+                },
+                {
+                    "name": "netw3rker",
+                    "homepage": "https://www.drupal.org/user/89684"
+                },
+                {
+                    "name": "systemick",
+                    "homepage": "https://www.drupal.org/user/819746"
+                },
+                {
+                    "name": "ultimateboy",
+                    "homepage": "https://www.drupal.org/user/153963"
+                }
+            ],
+            "description": "Render content with tabs and other display styles",
+            "homepage": "https://www.drupal.org/project/quicktabs",
+            "support": {
+                "source": "https://git.drupalcode.org/project/quicktabs"
+            }
+        },
+        {
             "name": "drupal/recaptcha",
             "version": "2.4.0",
             "source": {
@@ -6295,6 +6509,48 @@
                 "issues": "https://www.drupal.org/project/issues/views_bulk_operations?version=8.x",
                 "docs": "https://www.drupal.org/docs/8/modules/views-bulk-operations-vbo"
             }
+        },
+        {
+            "name": "drupal/views_send",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_send.git",
+                "reference": "9d0d172dda3947b59a050da05b53c4ea89f35226"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.3+5-dev",
+                    "datestamp": "1540540684",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "hansfn",
+                    "homepage": "https://www.drupal.org/user/40521"
+                }
+            ],
+            "description": "Provides a way to send e-mails from a list created with Views",
+            "homepage": "https://www.drupal.org/project/views_send",
+            "support": {
+                "source": "https://git.drupalcode.org/project/views_send"
+            },
+            "time": "2018-10-26T07:54:59+00:00"
         },
         {
             "name": "drupal/votingapi",
@@ -7439,8 +7695,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://github.com/OwlCarousel2/OwlCarousel2/archive/2.3.4.zip",
-                "reference": "master",
-                "shasum": null
+                "reference": "master"
             },
             "type": "drupal-library"
         },
@@ -7450,8 +7705,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://github.com/kenwheeler/slick/archive/1.8.0.zip",
-                "reference": "master",
-                "shasum": null
+                "reference": "master"
             },
             "type": "drupal-library"
         },
@@ -7576,9 +7830,7 @@
             "version": "1.8.2",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/blazy/-/blazy-1.8.2.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/blazy/-/blazy-1.8.2.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -7596,8 +7848,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/gdsmith/jquery.easing/zipball/df09da4048d2607c5d513681dff532dbe6680d95",
-                "reference": "df09da4048d2607c5d513681dff532dbe6680d95",
-                "shasum": null
+                "reference": "df09da4048d2607c5d513681dff532dbe6680d95"
             },
             "type": "npm-asset",
             "license": [
@@ -12806,6 +13057,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/badcamp_sight": 20,
+        "drupal/better_exposed_filters": 15,
         "drupal/blazy": 5,
         "drupal/block_field": 15,
         "drupal/cer": 15,
@@ -12817,6 +13069,7 @@
         "drupal/entity_usage": 15,
         "drupal/entityqueue": 10,
         "drupal/field_permissions": 5,
+        "drupal/flag": 20,
         "drupal/inline_entity_form": 5,
         "drupal/lets_camp": 20,
         "drupal/menu_attributes": 20,
@@ -12827,10 +13080,12 @@
         "drupal/paragraphs_class": 15,
         "drupal/payment": 20,
         "drupal/payment_stripe": 20,
+        "drupal/quicktabs": 15,
         "drupal/simple_block": 10,
         "drupal/slick_extras": 5,
         "drupal/stripe": 20,
         "drupal/viewfield": 15,
+        "drupal/views_send": 20,
         "drupal/votingapi_widgets": 15,
         "drupal/xmlsitemap": 15
     },

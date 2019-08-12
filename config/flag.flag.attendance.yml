@@ -1,0 +1,32 @@
+uuid: e8f0df6f-dd7f-4500-bf3c-f5d873163013
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: attendance
+label: Attendance
+bundles: {  }
+entity_type: user
+global: true
+weight: 0
+flag_short: 'Check In'
+flag_long: 'Mark User as Checking In'
+flag_message: ''
+unflag_short: 'Un Check In'
+unflag_long: 'Remove the user as being Checked In'
+unflag_message: ''
+unflag_denied_text: ''
+flag_type: 'entity:user'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links:
+    compact: compact
+    full: full
+  show_as_field: true
+  show_on_form: false
+  show_contextual_link: false
+  extra_permissions:
+    owner: '0'
+  show_on_profile: true
+linkTypeConfig: {  }
