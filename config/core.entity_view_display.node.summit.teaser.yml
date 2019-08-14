@@ -5,7 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.summit.body
+    - field.field.node.summit.field_day
     - field.field.node.summit.field_members
+    - field.field.node.summit.field_sponsors
+    - field.field.node.summit.field_timeslot
+    - field.field.node.summit.field_venue
     - node.type.summit
   module:
     - text
@@ -18,15 +22,60 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 5
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
-  links:
-    weight: 100
+  field_day:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_members:
+    type: entity_reference_label
+    weight: 4
+    region: content
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_sponsors:
+    type: entity_reference_entity_view
+    weight: 6
+    region: content
+    label: above
+    settings:
+      view_mode: sponsor_logo
+      link: false
+    third_party_settings: {  }
+  field_timeslot:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_venue:
+    type: entity_reference_label
+    weight: 3
+    region: content
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  flag_add_to_schedule:
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
+  links:
+    weight: 7
     region: content
-hidden:
-  field_members: true
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

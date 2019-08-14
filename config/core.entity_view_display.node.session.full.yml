@@ -39,7 +39,7 @@ content:
     region: content
     label: visually_hidden
     settings:
-      link: false
+      link: true
     third_party_settings: {  }
   field_members:
     weight: 8
@@ -92,7 +92,7 @@ content:
     region: content
     label: visually_hidden
     settings:
-      link: false
+      link: true
     third_party_settings: {  }
   field_venue:
     type: entity_reference_label
@@ -100,7 +100,7 @@ content:
     region: content
     label: visually_hidden
     settings:
-      link: false
+      link: true
     third_party_settings: {  }
   flag_add_to_schedule:
     weight: 0
