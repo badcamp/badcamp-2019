@@ -3,10 +3,18 @@
   font-family: $monsterrat;
   font-weight: 600;
 }
+.field__add__to__schedule {
+  margin-top: 1.5em;
+}
+.flag-add-to-schedule {
+  i {
+    margin-right: 15px;
+  }
+}
 .event-details__field {
   display: flex;
   align-items: center;
-  line-height: 2.25;
+  line-height: 2.5;
   i {
     color: $dark-salmon;
     font-size: 1.5em;

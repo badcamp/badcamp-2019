@@ -5,15 +5,14 @@
   ]
 %}
 
-<div{{ attributes.addClass('field field--presenters') }}>
-  <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
-  <div{{ attributes.addClass('field__items')}}>
+{% if multiple %}
+  <div{{ attributes.addClass('grid-x grid-margin-x') }}>
     {% for item in items %}
-      {% if loop.last %}
-        <span{{ item.attributes.addClass('field__item attendee-name--small') }}>{{ item.content }}</span>
-      {% else %}
-        <span{{ item.attributes.addClass('field__item attendee-name--small') }}>{{ item.content }}</span><span class="separator">//<span>
-      {% endif %}
+      <div{{ item.attributes.addClass('cell small-6 medium-3 large-2 text-center') }}>{{ item.content }}</div>
     {% endfor %}
   </div>
-</div>
+{% else %}
+  {% for item in items %}
+    <div{{ attributes }}>{{ item.content }}</div>
+  {% endfor %}
+{% endif %}
