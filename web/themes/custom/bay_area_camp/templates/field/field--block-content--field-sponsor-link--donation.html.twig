@@ -45,7 +45,8 @@
 
 {% if not logged_in %}
   <div>
-    <a href="/user/login?destination={{ path("<current>") }}" class="button primary">{{ "Login to Sponsor" | t }}</a>
+    <a href="/user/login?destination={{ path("<current>") }}" class="big-button lightblue">{{ "Login" | t }}</a>
+    <a href="/registration?destination={{ path("<current>") }}" class="big-button tealish">{{ "Register" | t }}</a>
   </div>
 {% else %}
 
