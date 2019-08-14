@@ -1,51 +1,13 @@
-// summit node full page display
-.summit__display--full {
-  margin-bottom: 3em;
-  .summit__organizers {
-    margin: 1.5em 0 1.125em;
-    .fas {
-      font-size: 1.75em;
-      color: $lightblue;
-      padding-right: 10px;
-      vertical-align: sub;
-    }
-    a {
-      &:hover {
-        border-bottom-color: $salmon;
-      }
-      &:focus {
-        outline: 2px dotted $salmon;
-        outline-offset: 1px;
-      }
-    }
-  }
-}
-
-// summit teaser display
 .summit__display--teaser {
-  .summit__title {
-    font-size: rem-calc(36);
-    line-height: 1.25;
-    margin-bottom: 0.5em;
-    a {
-      border-bottom: none;
-
-      &:hover {
-        border-bottom: 3px solid $lightblue;
-      }
-    }
-  }
-}
-
-// summits listing view
-.summits__listing {
-  margin-top: 0.75em;
+  background: $grayish;
+  padding: 1.25em 1.5em 1em;
   margin-bottom: 2em;
 
-  .views-row {
-    background: $grayish;
-    padding: 1.25em 1.75em 1.5em;
-    margin-top: 1em;
-    margin-bottom: 2em;
+  h2 {
+    margin-bottom: 0.5em;
   }
+}
+
+.field__label--summit-sponsors {
+  margin-top: 1.5em;
 }

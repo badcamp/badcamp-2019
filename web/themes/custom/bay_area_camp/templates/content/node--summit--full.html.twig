@@ -1,8 +1,5 @@
 <article{{ attributes.addClass('summit__display--full') }}>
   <div{{ content_attributes }}>
-    <div class="summit__add_to_schedule field__add__to__schedule">
-      {{ content.flag_add_to_schedule }}
-    </div>
 
   <div class="grid-x grid-margin-x">
 
@@ -23,6 +20,9 @@
       <div class="event-details__field event-details__field--venue">
         <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
         <span>{{ content.field_venue }}</span>
+      </div>
+      <div class="summit__add_to_schedule field__add__to__schedule">
+        {{ content.flag_add_to_schedule }}
       </div>
     </div>
     {% endif %}

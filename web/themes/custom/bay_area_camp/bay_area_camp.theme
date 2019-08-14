@@ -80,6 +80,15 @@ function bay_area_camp_theme_suggestions_user_alter(&$suggestions, $vars){
   $suggestions[] = 'user__' . $vars['elements']['#view_mode'];
 }
 
+
+/**
+ * Implements hook_theme_suggestions_field_alter().
+ */
+function bay_area_camp_theme_suggestions_field_alter(&$suggestions, $vars){
+  $suggestions[] = 'field__node__' . $vars['element']['#field_name'] . '__' . $vars['element']['#bundle'] . '__' . $vars['element']['#view_mode'];
+}
+
+
 /**
  * Implements hook_preprocess_user().
  */

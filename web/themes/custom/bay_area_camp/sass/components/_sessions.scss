@@ -1,17 +1,9 @@
-// TODO Temporary fix. Do this later with a template. (MM)
-.page-node--31 .views-element-container {
-  margin-top: 2.5em;
-  .views-row {
-    margin-bottom: 1.875em;
-    border-top: 1px solid $medium-gray;
-    padding-top: 1.5em;
+.session__display--teaser {
+  background: $grayish;
+  padding: 1.25em 1.5em 1em;
+  margin-bottom: 2em;
 
-    &:last-child {
-      margin-bottom: 0;
-    }
-
-    h2 {
-      @extend .views-teaser-h2;
-    }
+  h2 {
+    margin-bottom: 0.5em;
   }
 }

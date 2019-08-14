@@ -59,6 +59,12 @@ p {
   }
 }
 
+.teaser-title {
+  a:hover {
+    color: $midblue;
+  }
+}
+
 .field-label {
   font-family: $monsterrat;
   font-weight: 600;

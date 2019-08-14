@@ -1,0 +1,21 @@
+{%
+  set title_classes = [
+    label_display == 'visually_hidden' ? 'visually-hidden',
+    'field__label field__label--inline'
+  ]
+%}
+
+<div{{ attributes }}>
+  <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+  <div{{ attributes.addClass('field__items')}}>
+    {% for item in items %}
+      {% if loop.last %}
+        {% set separator = '' %}
+      {% else %}
+        {% set separator = ' // ' %}
+      {% endif %}
+
+      <span{{ item.attributes.addClass('field__item') }}>{{ item.content }}{{ separator }}</span>
+    {% endfor %}
+  </div>
+</div>

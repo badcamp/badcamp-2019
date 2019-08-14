@@ -1,5 +1,5 @@
 .link {
-  border-bottom: 3px solid $lightblue;
+  border-bottom: 2px solid $lightblue;
   &:hover,
   &:focus {
     border-bottom: 3px solid $salmon;
@@ -17,6 +17,17 @@ a:focus {
 
 p a {
   @extend .link;
+}
+
+.bold-link {
+  &:hover,
+  &:focus {
+    border-bottom: 2px solid $dark-salmon;
+  }
+  &:focus {
+    outline: 1px dotted $navy;
+    outline-offset: 2px;
+  }
 }
 
 .arrow-link {
