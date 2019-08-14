@@ -1,0 +1,17 @@
+.event-details__box {
+  margin-bottom: 1em;
+  font-family: $monsterrat;
+  font-weight: 600;
+}
+.event-details__field {
+  display: flex;
+  align-items: center;
+  line-height: 2.25;
+  i {
+    color: $dark-salmon;
+    font-size: 1.5em;
+    width: 1em;
+    text-align: center;
+    margin-right: 0.5em;
+  }
+}

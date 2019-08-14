@@ -4,23 +4,46 @@
       {{ content.flag_add_to_schedule }}
     </div>
 
-    {% if content.field_day|render|striptags|trim is not empty %}
-    <div class="summit__time__location event__time__location">
-      <span class="field__day">{{ content.field_day }}</span>
-      <span class="field__delimeter">//</span>
-      <span class="field__venue">{{ content.field_venue }}</span>
-      <span class="field__delimeter">//</span>
-      <span class="field__timeslot">{{ content.field_timeslot }}</span>
-    </div>
-    {% endif %}
+  <div class="grid-x grid-margin-x">
 
-    <div class="summit__body">
+    <div class="summit__body cell small-order-2 medium-7 large-9">
       {{ content.body }}
     </div>
 
-    <div class="summit__organizers">
-      {{ content.field_members }}
+    {% if content.field_day|render|striptags|trim is not empty %}
+    <div class="event-details__box event-details-box--summit cell medium-order-2 medium-5 large-3">
+      <div class="event-details__field event-details__field--day">
+        <span><i class="fa fa-calendar" aria-hidden="true"></i></span>
+        <span>{{ content.field_day }}</span>
+      </div>
+      <div class="event-details__field event-details__field--timeslot">
+        <span><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+        <span>{{ content.field_timeslot }}</span>
+      </div>
+      <div class="event-details__field event-details__field--venue">
+        <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+        <span>{{ content.field_venue }}</span>
+      </div>
     </div>
+    {% endif %}
+
+  </div>
+
+    {% if content.field_members|render|striptags|trim is not empty %}
+      <div class="cell summit__organizers">
+          <h2 class="callout section-callout">{{ "Event Organizers" | t }}</h2>
+      </div>
+      {{ content.field_members }}
+    {% endif %}
+
+    {% if content.field_sponsors|render|striptags|trim is not empty %}
+      <div class="cell">
+          <h2 class="callout section-callout">{{ "Event Sponsors" | t }}</h2>
+      </div>
+      <div class="summit__sponsors">
+        {{ content.field_sponsors }}
+      </div>
+    {% endif %}
 
   </div>
 </article>
