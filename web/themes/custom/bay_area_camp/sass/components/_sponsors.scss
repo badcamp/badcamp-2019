@@ -93,10 +93,7 @@
 
 .sponsor-events-view {
   .view-grouping-header {
-    font-size: rem-calc(20);
-    font-family: $monsterrat;
-    font-weight: 600;
-    text-transform: uppercase;
+    @extend .schedule-day;
   }
   .view-grouping-content {
     h3 {
