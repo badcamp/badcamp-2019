@@ -3,6 +3,14 @@ p {
   line-height: rem-calc(28);
 }
 
+.main-contents {
+  li,
+  ol {
+    font-size: rem-calc(18);
+    line-height: rem-calc(28);
+  }
+}
+
 // reuseable classes from styleguide and beyond
 .separator {
   font-family: $monsterrat;
@@ -74,15 +82,6 @@ p {
 // TODO: make better. Quick fixes for now.
 .body,
 .article__body {
-  li,
-  ol {
-    font-size: rem-calc(18);
-    line-height: rem-calc(28);
-    margin-bottom: 8px;
-    a {
-      @extend .link;
-    }
-  }
   h2,
   h3,
   h4 {
