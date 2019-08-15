@@ -16,11 +16,11 @@
  */
 #}
 {% block content %}
+<div class="branding-block">
+<a href="/" title="home">
     <div class="branding-wrapper grid-x align-middle">
         <div class="logo-wrapper auto">
-            <a href="/" title="home">
-                <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
-            </a>
+            <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
         </div>
         <div class="title-wrapper auto">
             <div class="title">{{ "BADCAMP 2019" | t}}</div>
@@ -31,4 +31,6 @@
             </div>
         </div>
     </div>
+</a>
+</div>
 {% endblock %}
