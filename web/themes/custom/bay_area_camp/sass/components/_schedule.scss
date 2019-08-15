@@ -1,0 +1,27 @@
+.time-slot {
+  color: $dark-salmon;
+  padding-top: 0.25em;
+  font-size: rem-calc(30);
+}
+
+#quicktabs-schedule {
+  .quicktabs-tabs {
+    li {
+      font-family: $monsterrat;
+      font-size: rem-calc(30);
+      font-weight: 600;
+      background: $grayish;
+
+      &.active {
+        background: $dark-salmon;
+        color: white;
+      }
+    }
+  }
+
+  #edit-topics {
+    .form-item {
+      float: left;
+    }
+  }
+}
