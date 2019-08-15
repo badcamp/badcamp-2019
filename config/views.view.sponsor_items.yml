@@ -216,6 +216,7 @@ display:
         style: false
         row: false
         fields: false
+        css_class: false
       relationships:
         field_day:
           id: field_day
@@ -411,6 +412,7 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+      css_class: sponsor-events-view
     cache_metadata:
       max-age: -1
       contexts:

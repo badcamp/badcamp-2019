@@ -5,11 +5,14 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.training.body
+    - field.field.node.training.field_day
     - field.field.node.training.field_members
     - field.field.node.training.field_skill_level
     - field.field.node.training.field_sponsors
+    - field.field.node.training.field_timeslot
     - field.field.node.training.field_training_files
     - field.field.node.training.field_training_links
+    - field.field.node.training.field_venue
     - node.type.training
   module:
     - text
@@ -22,19 +25,62 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 7
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
-  links:
-    weight: 100
+  field_day:
+    type: entity_reference_label
+    weight: 3
+    region: content
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_members:
+    type: entity_reference_label
+    weight: 6
+    region: content
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_skill_level:
+    type: entity_reference_label
+    weight: 4
+    region: content
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_timeslot:
+    type: entity_reference_label
+    weight: 5
+    region: content
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_venue:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  flag_add_to_schedule:
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
+  links:
+    weight: 1
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
-  field_members: true
-  field_skill_level: true
   field_sponsors: true
   field_training_files: true
   field_training_links: true

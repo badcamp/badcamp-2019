@@ -15,17 +15,16 @@
  * @see template_preprocess_views_view_unformatted()
  */
 #}
-
-<div class="summits__listing grid-x grid-margin-x">
+{% if title %}
+  <h3 class="time-slot">{{ title }}</h3>
+{% endif %}
 {% for row in rows %}
-    {%
-        set row_classes = [
-        default_row_class ? 'views-row',
-        'cell medium-6 large-4 align-self-stretch'
+  {%
+    set row_classes = [
+      default_row_class ? 'views-row',
     ]
-    %}
-    <div{{ row.attributes.addClass(row_classes) }}>
-        {{- row.content -}}
-    </div>
+  %}
+  <div{{ row.attributes.addClass(row_classes) }}>
+    {{- row.content -}}
+  </div>
 {% endfor %}
-</div>

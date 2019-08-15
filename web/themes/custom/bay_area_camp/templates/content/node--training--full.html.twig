@@ -1,14 +1,14 @@
-<article{{ attributes.addClass('summit__display--full') }}>
+<article{{ attributes.addClass('training__display--full') }}>
   <div{{ content_attributes }}>
 
   <div class="grid-x grid-margin-x">
 
-    <div class="summit__body cell small-order-2 medium-7 large-9">
+    <div class="training__body cell small-order-2 medium-7 large-9">
       {{ content.body }}
     </div>
 
     {% if content.field_day|render|striptags|trim is not empty %}
-    <div class="event-details__box event-details-box--summit cell medium-order-2 medium-5 large-3">
+    <div class="event-details__box event-details-box--training cell medium-order-2 medium-5 large-3">
       <div class="event-details__field event-details__field--day">
         <span><i class="fa fa-calendar" aria-hidden="true"></i></span>
         <span>{{ content.field_day }}</span>
@@ -21,7 +21,11 @@
         <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
         <span>{{ content.field_venue }}</span>
       </div>
-      <div class="summit__add_to_schedule field__add__to__schedule">
+      <div class="event-details__field event-details__field--skill-level">
+        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+        <span>{{ content.field_skill_level }}</span>
+      </div>
+      <div class="training__add_to_schedule field__add__to__schedule">
         {{ content.flag_add_to_schedule }}
       </div>
     </div>
@@ -31,18 +35,18 @@
 
     {% if content.field_members|render|striptags|trim is not empty %}
       <div class="cell">
-          <h2 class="callout section-callout">{{ "Event Organizers" | t }}</h2>
+          <h2 class="callout section-callout">{{ "Trainers" | t }}</h2>
       </div>
-      <div class=" summit__organizers">
+      <div class=" training__trainers">
         {{ content.field_members }}
       </div>
     {% endif %}
 
-    {% if content.field_sponsors|render|striptags|trim is not empty %}
+    {% if content.field_sponsors is not empty %}
       <div class="cell">
-          <h2 class="callout section-callout">{{ "Event Sponsors" | t }}</h2>
+          <h2 class="callout section-callout">{{ "Sponsors" | t }}</h2>
       </div>
-      <div class="summit__sponsors">
+      <div class="training__sponsors">
         {{ content.field_sponsors }}
       </div>
     {% endif %}

@@ -1,4 +1,4 @@
-<article{{ attributes.addClass('summit__display--teaser') }}>
+<article{{ attributes.addClass('summit__display--schedule') }}>
   <div{{ content_attributes }}>
     <h2 {{ title_attributes.addClass('teaser-title summit__title') }} >
       <a href="{{ url }}" rel="bookmark">{{ label }}</a>
@@ -26,8 +26,6 @@
     </div>
 
     {{ content.body|render|striptags }}
-
-    {{ content.field_sponsors }}
 
     <div class="session__add_to_schedule field__add__to__schedule">
       {{ content.flag_add_to_schedule }}

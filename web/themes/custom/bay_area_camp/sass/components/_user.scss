@@ -32,8 +32,15 @@
 .user__attendee-social {
   .social-media-links--platforms {
     justify-content: flex-start;
+    margin-top: 20px;
     li {
       margin: 0 15px 0 0;
     }
+  }
+}
+
+.sponsor-team-member {
+  img {
+    margin-bottom: 1em;
   }
 }

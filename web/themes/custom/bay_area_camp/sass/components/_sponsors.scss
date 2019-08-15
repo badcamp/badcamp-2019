@@ -69,12 +69,6 @@
       width: auto;
     }
   }
-  .callout--sponsors {
-    font-size: rem-calc(24);
-    text-transform: uppercase;
-    padding: 0.5em 0.75em;
-    background: $grayish;
-  }
   .sponsor-team-member {
     padding: 2em 0;
 
@@ -95,4 +89,19 @@
 
 .button.edit-sponsor {
   margin-top: 1.5em;
+}
+
+.sponsor-events-view {
+  .view-grouping-header {
+    font-size: rem-calc(20);
+    font-family: $monsterrat;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .view-grouping-content {
+    h3 {
+      @extend .time-slot;
+      padding-top: 0;
+    }
+  }
 }

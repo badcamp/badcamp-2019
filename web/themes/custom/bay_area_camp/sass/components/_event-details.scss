@@ -1,0 +1,29 @@
+.event-details__box {
+  margin-bottom: 1em;
+  font-family: $monsterrat;
+  font-weight: 600;
+
+  a {
+    @extend .bold-link;
+  }
+}
+.field__add__to__schedule {
+  margin-top: 1.5em;
+}
+.flag-add-to-schedule {
+  i {
+    margin-right: 10px;
+  }
+}
+.event-details__field {
+  display: flex;
+  align-items: center;
+  line-height: 2;
+  i {
+    color: $dark-salmon;
+    font-size: 1.25em;
+    width: 1em;
+    text-align: center;
+    margin-right: 0.5em;
+  }
+}

@@ -87,23 +87,23 @@
             </div>
         </div>
 
-        {% if content.content.field_members|render|striptags|trim is not empty %}
+        {% if content.field_members|render|striptags|trim is not empty %}
             <div class="cell">
-                <h2 class="callout primary callout--sponsors">{{ "Meet the Team" | t }}</h2>
+                <h2 class="callout section-callout">{{ "Meet the Team" | t }}</h2>
             </div>
             {{ content.field_members }}
         {% endif %}
 
         {% if content.job_postings|render|striptags|trim is not empty %}
             <div class="cell">
-                <h2 class="callout primary callout--sponsors">{{ "Join the Team" | t }}</h2>
+                <h2 class="callout section-callout">{{ "Join the Team" | t }}</h2>
             </div>
             {{ content.job_postings }}
         {% endif %}
 
         {% if content.events|render|striptags|trim is not empty %}
             <div class="cell">
-                <h2 class="callout primary callout--sponsors">{{ "Catch Us At These Events" | t }}</h2>
+                <h2 class="callout section-callout">{{ "Catch Us At These Events" | t }}</h2>
             </div>
             {{ content.events }}
         {% endif %}

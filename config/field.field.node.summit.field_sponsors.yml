@@ -16,7 +16,7 @@ id: node.summit.field_sponsors
 field_name: field_sponsors
 entity_type: node
 bundle: summit
-label: Sponsors
+label: 'Event Sponsors'
 description: ''
 required: false
 translatable: true

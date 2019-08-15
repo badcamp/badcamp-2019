@@ -1,0 +1,18 @@
+{%
+  set title_classes = [
+    label_display == 'visually_hidden' ? 'visually-hidden',
+    'field__label'
+  ]
+%}
+
+{% if multiple %}
+  <div{{ attributes.addClass('grid-x grid-margin-x') }}>
+    {% for item in items %}
+      <div{{ item.attributes.addClass('cell small-6 medium-3 large-2 text-center') }}>{{ item.content }}</div>
+    {% endfor %}
+  </div>
+{% else %}
+  {% for item in items %}
+    <div{{ attributes }}>{{ item.content }}</div>
+  {% endfor %}
+{% endif %}
