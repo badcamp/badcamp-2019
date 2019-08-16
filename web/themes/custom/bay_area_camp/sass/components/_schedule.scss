@@ -1,27 +1,83 @@
 .time-slot {
   color: $dark-salmon;
   padding-top: 0.25em;
-  font-size: rem-calc(30);
+  font-size: rem-calc(26);
+  font-weight: 700;
 }
 
+.schedule-day {
+  font-size: rem-calc(22);
+  font-family: $monsterrat;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &.salmon {
+    color: $dark-salmon;
+  }
+}
+
+// Schedule Tabs
 #quicktabs-schedule {
   .quicktabs-tabs {
+    @include xy-grid;
+    margin: 2.5em 0;
+    border-bottom: 2px solid $grayish;
+    padding: 0;
     li {
+      @include xy-cell();
+      width: 100%;
       font-family: $monsterrat;
-      font-size: rem-calc(30);
-      font-weight: 600;
-      background: $grayish;
+      font-size: rem-calc(20);
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 0.5em;
+      margin: 0;
+
+      @include breakpoint('medium') {
+        width: 25%;
+      }
+
+      a {
+        border-bottom: none;
+
+        &:hover {
+          color: $midblue;
+        }
+      }
 
       &.active {
-        background: $dark-salmon;
-        color: white;
+        background: $grayish;
+        a {
+          color: $dark-salmon;
+        }
       }
     }
   }
+}
 
+// Schedule Filters
+.schedule-view {
+  legend {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .fieldset-legend {
+    color: $dark-salmon;
+    font-size: rem-calc(20);
+    font-weight: 700;
+  }
   #edit-topics {
+    text-align: center;
+    width: 96%;
+    margin: 0 auto;
+    margin-bottom: 1em;
     .form-item {
-      float: left;
+      display: inline-block;
+      margin: 5px 3px;
+    }
+    [type='checkbox'] + label {
+      margin-left: 2px;
     }
   }
 }

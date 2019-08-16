@@ -42,7 +42,7 @@
       </div>
     {% endif %}
 
-    {% if content.field_sponsors is not empty %}
+    {% if content.field_sponsors|render is not empty %}
       <div class="cell">
           <h2 class="callout section-callout">{{ "Sponsors" | t }}</h2>
       </div>

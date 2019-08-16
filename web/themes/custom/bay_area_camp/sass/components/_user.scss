@@ -35,6 +35,9 @@
     margin-top: 20px;
     li {
       margin: 0 15px 0 0;
+      a {
+        border-bottom: none;
+      }
     }
   }
 }

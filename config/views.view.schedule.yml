@@ -228,7 +228,7 @@ display:
           exposed: true
           expose:
             operator_id: field_session_topics_target_id_op
-            label: Topics
+            label: 'Filter by Topic'
             description: ''
             use_operator: false
             operator: field_session_topics_target_id_op
@@ -389,7 +389,7 @@ display:
     display_options:
       display_extenders: {  }
       display_description: ''
-      css_class: schedule-view--general
+      css_class: 'schedule-view schedule-view--general'
       defaults:
         css_class: false
     cache_metadata:
@@ -531,7 +531,7 @@ display:
           entity_type: flagging
           entity_field: uid
           plugin_id: numeric
-      css_class: schedule-view--my-schedule
+      css_class: 'schedule-view schedule-view--my-schedule'
     cache_metadata:
       max-age: -1
       contexts:

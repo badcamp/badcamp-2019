@@ -25,37 +25,20 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 5
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     region: content
   field_day:
-    weight: 3
-    label: inline
+    weight: 2
+    label: visually_hidden
     settings:
-      link: false
+      link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
-  field_event_type:
-    weight: 1
-    label: hidden
-    settings:
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_leader:
-    weight: 7
-    label: hidden
-    settings:
-      view_mode: sponsor_team_member
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_entity_view
     region: content
   field_more_info_link:
-    weight: 6
+    weight: 5
     label: hidden
     settings:
       trim_length: 80
@@ -67,7 +50,7 @@ content:
     type: link
     region: content
   field_sponsors:
-    weight: 8
+    weight: 6
     label: hidden
     settings:
       view_mode: sponsor_logo
@@ -76,18 +59,18 @@ content:
     type: entity_reference_entity_view
     region: content
   field_timeslot:
-    weight: 4
-    label: inline
+    weight: 3
+    label: visually_hidden
     settings:
-      link: false
+      link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_venue:
-    weight: 2
-    label: inline
+    weight: 1
+    label: visually_hidden
     settings:
-      link: false
+      link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
@@ -97,4 +80,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_event_type: true
+  field_leader: true
   links: true

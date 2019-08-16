@@ -69,4 +69,37 @@
     @include button($medium-gray);
     margin-left: 10px;
   }
+
+  // Fix paragraphs-tabs-wrapper -- quick fixes for now
+  .paragraphs-tabs-wrapper {
+    .paragraphs-tabs {
+      padding-top: 2em;
+      background: none;
+      border: none;
+      margin-bottom: 0;
+      li {
+        display: inline-block;
+        float: left;
+        border-bottom: none;
+        font-family: $monsterrat;
+        a {
+          background: $grayish;
+          border-bottom: none;
+          font-size: rem-calc(16);
+          &:hover {
+            color: $navy;
+            background: darken($grayish, 5%);
+          }
+        }
+        &.is-active {
+          a {
+            background: $lightblue;
+            &:hover {
+              background: lighten($lightblue, 5%);
+            }
+          }
+        }
+      }
+    }
+  }
 }

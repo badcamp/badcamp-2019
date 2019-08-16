@@ -6,9 +6,9 @@
 %}
 
 {% if multiple %}
-  <div{{ attributes.addClass('grid-x grid-margin-x') }}>
+  <div{{ attributes.addClass('grid-x grid-margin-x align-middle') }}>
     {% for item in items %}
-      <div{{ item.attributes.addClass('cell medium-4') }}>{{ item.content }}</div>
+      <div{{ item.attributes.addClass('cell medium-4 text-center') }}>{{ item.content }}</div>
     {% endfor %}
   </div>
 {% else %}
