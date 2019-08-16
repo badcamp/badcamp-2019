@@ -344,6 +344,12 @@ display:
           clear_on_exposed: false
           action_title: ''
           selected_actions:
+            'session_action:pending': 'session_action:pending'
+            'session_action:maybe': 'session_action:maybe'
+            'session_action:approved': 'session_action:approved'
+            'session_action:rejected': 'session_action:rejected'
+            'flag_action:add_to_schedule_flag': 0
+            'flag_action:add_to_schedule_unflag': 0
             node_unpromote_action: 0
             node_unpublish_action: 0
             node_publish_action: 0
@@ -353,7 +359,7 @@ display:
             node_save_action: 0
             node_make_sticky_action: 0
             node_make_unsticky_action: 0
-            views_bulk_edit: views_bulk_edit
+            views_bulk_edit: 0
             views_bulk_operations_delete_entity: 0
             pathauto_update_alias: 0
             'entity:save_action:node': 0
@@ -361,9 +367,14 @@ display:
             'entity:publish_action:node': 0
             'entity:delete_action:node': 0
           preconfiguration:
-            views_bulk_edit:
+            'session_action:pending':
               label_override: ''
-              get_bundles_from_results: 1
+            'session_action:maybe':
+              label_override: ''
+            'session_action:approved':
+              label_override: ''
+            'session_action:rejected':
+              label_override: ''
           plugin_id: views_bulk_operations_bulk_form
         title:
           id: title
