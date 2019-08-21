@@ -17,13 +17,13 @@
   .quicktabs-tabs {
     @include xy-grid;
     margin: 2.5em 0;
-    border-bottom: 2px solid $grayish;
+    border-bottom: 3px solid $grayish;
     padding: 0;
     li {
       @include xy-cell();
       width: 100%;
       font-family: $monsterrat;
-      font-size: rem-calc(20);
+      font-size: rem-calc(26);
       font-weight: 700;
       text-align: center;
       text-transform: uppercase;
@@ -60,7 +60,7 @@
   }
   .fieldset-legend {
     color: $dark-salmon;
-    font-size: rem-calc(20);
+    font-size: rem-calc(24);
     font-weight: 700;
   }
   #edit-topics {
