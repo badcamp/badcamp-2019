@@ -87,19 +87,3 @@
     }
   }
 }
-
-.button.edit-sponsor {
-  margin-top: 1.5em;
-}
-
-.sponsor-events-view {
-  .view-grouping-header {
-    @extend .schedule-day;
-  }
-  .view-grouping-content {
-    h3 {
-      @extend .time-slot;
-      padding-top: 0;
-    }
-  }
-}
