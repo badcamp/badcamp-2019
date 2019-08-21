@@ -16,7 +16,7 @@
 
 .pager__link {
   font-size: rem-calc(20);
-  border-bottom: none;
+  border-bottom: none !important;
 }
 
 .pager__link--next,
