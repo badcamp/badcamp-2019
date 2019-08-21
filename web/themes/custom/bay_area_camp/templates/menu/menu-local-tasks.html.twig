@@ -12,23 +12,11 @@
  */
 #}
 
-{% if is_admin %}
-  <div id="tabs-wrapper">
-    <div class="tabs-list">
-      {% if primary %}
-        <ul class="menu tabs primary">{{ primary }}</ul>
-      {% endif %}
-      {% if secondary %}
-        <ul class="menu tabs secondary">{{ secondary }}</ul>
-      {% endif %}
-    </div>
-    <a href="#" class="tabs-trigger">Admin<i class="fa fa-cog"></i></a>
-  </div>
-{% else %}
-    {% if primary %}
-      <ul class="menu">{{ primary }}</ul>
-    {% endif %}
-    {% if secondary %}
-      <ul class="menu">{{ secondary }}</ul>
-    {% endif %}
+{% if primary %}
+  <h2 class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
+  <ul class="menu menu--tabs menu--tabs--primary">{{ primary }}</ul>
+{% endif %}
+{% if secondary %}
+  <h2 class="visually-hidden">{{ 'Secondary tabs'|t }}</h2>
+  <ul class="menu menu--tabs menu--tabs--secondary">{{ secondary }}</ul>
 {% endif %}
