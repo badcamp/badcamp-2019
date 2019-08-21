@@ -1,8 +1,8 @@
 <article{{ attributes.addClass('summit__display--teaser') }}>
   <div{{ content_attributes }}>
-    <h2 {{ title_attributes.addClass('teaser-title summit__title') }} >
+    <h3 {{ title_attributes.addClass('teaser-title summit__title') }} >
       <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
+    </h3>
 
     <div class="event-details__box">
       {% if content.field_day|render|striptags|trim is not empty %}
