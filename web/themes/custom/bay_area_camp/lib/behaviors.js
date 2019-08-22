@@ -5,19 +5,6 @@
     },
   };
 
-  Drupal.behaviors.badAreaTabs = {
-    attach: function(context, settings) {
-      $(document).on('click', '.tabs-trigger', function(e) {
-        e.preventDefault();
-        $('.tabs-list')
-          .parent()
-          .toggleClass('open');
-        $('.fa', this).toggleClass('fa-cog');
-        $('.fa', this).toggleClass('fa-close');
-      });
-    },
-  };
-
   // Make article teasers look correct while logged in as a site editor.
   Drupal.behaviors.articleTeaser = {
     attach: function(context, settings) {

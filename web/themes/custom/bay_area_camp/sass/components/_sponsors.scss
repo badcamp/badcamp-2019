@@ -3,6 +3,7 @@
   color: $dark-salmon;
   text-transform: uppercase;
   font-weight: 700;
+  font-size: rem-calc(26);
 }
 
 // sponsors view
@@ -58,7 +59,7 @@
   }
   .field--sponsor-level {
     @extend .sponsor-level;
-    font-size: rem-calc(20);
+    font-size: rem-calc(24);
     line-height: 1.125;
     margin-top: 2em;
     margin-bottom: 1.5em;
@@ -83,22 +84,6 @@
         outline: 2px dotted $navy;
         outline-offset: 2px;
       }
-    }
-  }
-}
-
-.button.edit-sponsor {
-  margin-top: 1.5em;
-}
-
-.sponsor-events-view {
-  .view-grouping-header {
-    @extend .schedule-day;
-  }
-  .view-grouping-content {
-    h3 {
-      @extend .time-slot;
-      padding-top: 0;
     }
   }
 }

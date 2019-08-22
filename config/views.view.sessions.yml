@@ -7,9 +7,12 @@ dependencies:
     - field.storage.node.field_members
     - field.storage.node.field_session_topics
     - field.storage.node.field_status
+    - field.storage.user.field_first_name
+    - field.storage.user.field_last_name
     - node.type.session
     - system.menu.admin
     - taxonomy.vocabulary.topic
+    - user.role.administrator
   module:
     - node
     - options
@@ -262,10 +265,42 @@ display:
           summary: ''
           description: ''
           columns:
+            views_bulk_operations_bulk_form: views_bulk_operations_bulk_form
             title: title
+            field_session_topics: field_session_topics
+            field_members: field_members
+            field_members_1: field_members_1
+            field_status: field_status
           info:
+            views_bulk_operations_bulk_form:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
             title:
-              sortable: false
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_session_topics:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_members:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_members_1:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_status:
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
@@ -703,7 +738,7 @@ display:
           order: ASC
           exposed: false
           expose:
-            label: ''
+            label: Title
           entity_type: node
           entity_field: title
           plugin_id: standard
@@ -827,6 +862,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - url.query_args
         - user
         - 'user.node_grants:view'
         - user.permissions

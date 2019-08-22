@@ -1,0 +1,85 @@
+uuid: 1b7942f6-db70-4ea6-b830-e84434403324
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.sponsor_item
+    - field.field.node.session.body
+    - field.field.node.session.field_day
+    - field.field.node.session.field_members
+    - field.field.node.session.field_session_presentation_video
+    - field.field.node.session.field_session_slides
+    - field.field.node.session.field_session_topics
+    - field.field.node.session.field_sponsors
+    - field.field.node.session.field_status
+    - field.field.node.session.field_timeslot
+    - field.field.node.session.field_twitter_description
+    - field.field.node.session.field_venue
+    - node.type.session
+  module:
+    - text
+    - user
+id: node.session.sponsor_item
+targetEntityType: node
+bundle: session
+mode: sponsor_item
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_day:
+    weight: 5
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_members:
+    weight: 2
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_session_topics:
+    weight: 3
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_timeslot:
+    weight: 4
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_venue:
+    weight: 6
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  flag_add_to_schedule:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_session_presentation_video: true
+  field_session_slides: true
+  field_sponsors: true
+  field_status: true
+  field_twitter_description: true
+  links: true

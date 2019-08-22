@@ -1,8 +1,8 @@
-<article{{ attributes.addClass('training__display--teaser') }}>
+<article{{ attributes.addClass('training__display--sponsor-item') }}>
   <div{{ content_attributes }}>
-    <h3 {{ title_attributes.addClass('teaser-title training__title') }} >
+    <h4 {{ title_attributes.addClass('sponsor-item-title training__title') }} >
       <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h3>
+    </h4>
 
     <div class="event-details__box">
       {% if content.field_day|render|striptags|trim is not empty %}
