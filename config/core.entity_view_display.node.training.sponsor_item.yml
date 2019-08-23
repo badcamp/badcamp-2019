@@ -76,6 +76,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_payment: true
   field_sponsors: true
   field_training_files: true
   field_training_links: true
