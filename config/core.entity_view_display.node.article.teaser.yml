@@ -27,7 +27,7 @@ content:
     weight: 2
     region: content
     settings:
-      trim_length: 300
+      trim_length: 800
     third_party_settings: {  }
     label: hidden
   field_article_date:
@@ -45,7 +45,7 @@ content:
     region: content
     settings:
       image_style: medium
-      image_link: content
+      image_link: ''
     third_party_settings: {  }
     label: hidden
   field_tags:

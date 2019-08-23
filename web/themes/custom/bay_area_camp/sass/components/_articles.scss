@@ -47,10 +47,20 @@
 
 // article teaser display
 .article__display--teaser {
+  background: $grayish;
+  padding: 1.25em 1.75em 1.5em;
+  margin: 1.5em 0;
+  position: relative;
+  overflow: hidden;
+
   .article__title {
-    line-height: rem-calc(48);
     margin-bottom: 0.375em;
-    width: 72%;
+    width: 70%;
+
+    @include breakpoint('medium') {
+      width: 100%;
+    }
+
     a {
       border-bottom: none;
 
@@ -61,10 +71,6 @@
   }
 
   .article__image {
-    float: right;
-    margin-top: 0.5em;
-    margin-bottom: 1.5em;
-    margin-left: 1.5em;
   }
   .article__date {
     width: 180px;
@@ -89,23 +95,4 @@
       max-width: 50px;
     }
   }
-}
-
-// article listing view
-.article__listing {
-  margin-top: 0.5em;
-
-  .views-row {
-    background: $grayish;
-    padding: 1.25em 1.75em 1.5em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    position: relative;
-    overflow: hidden;
-  }
-}
-
-// for logged in site editors - replaces row padding removed by js
-.contextual-region.article__display--teaser {
-  padding: 1.25em 1.75em 1.5em;
 }

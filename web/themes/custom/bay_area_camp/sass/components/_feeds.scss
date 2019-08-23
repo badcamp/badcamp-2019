@@ -1,0 +1,15 @@
+.feed-icon__wrapper {
+  margin-top: 3em;
+
+  i {
+    color: $dark-salmon;
+    font-size: rem-calc(22);
+    margin-right: 3px;
+  }
+}
+
+.feed-icon {
+  font-family: $monsterrat;
+  font-weight: 600;
+  @extend .link;
+}
