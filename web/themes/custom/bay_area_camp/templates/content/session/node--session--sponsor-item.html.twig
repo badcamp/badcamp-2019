@@ -1,8 +1,8 @@
-<article{{ attributes.addClass('training__display--teaser') }}>
+<article{{ attributes.addClass('session__display--teaser') }}>
   <div{{ content_attributes }}>
-    <h3 {{ title_attributes.addClass('teaser-title training__title') }} >
+    <h2 {{ title_attributes.addClass('teaser-title session__title') }} >
       <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h3>
+    </h2>
 
     <div class="event-details__box">
       {% if content.field_day|render|striptags|trim is not empty %}
@@ -14,24 +14,24 @@
           <span><i class="fa fa-clock-o" aria-hidden="true"></i></span>
           <span>{{ content.field_timeslot }}</span>
         </div>
+        <div class="event-details__field event-details__field--venue">
+          <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+          <span>{{ content.field_venue }}</span>
+        </div>
       {% endif %}
-      <div class="event-details__field event-details__field--venue">
-        <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-        <span>{{ content.field_venue }}</span>
-      </div>
-      <div class="event-details__field event-details__field--skill-level">
-        <span><i class="fa fa-star" aria-hidden="true"></i></span>
-        <span>{{ content.field_skill_level }}</span>
-      </div>
-      <div class="event-details__field event-details__field--trainers">
+      <div class="event-details__field event-details__field--presenters">
         <span><i class="fa fa-user" aria-hidden="true"></i></span>
         <span>{{ content.field_members }}</span>
+      </div>
+      <div class="event-details__field event-details__field--topics">
+        <span><i class="fa fa-tags" aria-hidden="true"></i></span>
+        <span>{{ content.field_session_topics }}</span>
       </div>
     </div>
 
     {{ content.body|render|striptags }}
 
-    <div class="training__add_to_schedule field__add__to__schedule">
+    <div class="session__add_to_schedule field__add__to__schedule">
       {{ content.flag_add_to_schedule }}
     </div>
 

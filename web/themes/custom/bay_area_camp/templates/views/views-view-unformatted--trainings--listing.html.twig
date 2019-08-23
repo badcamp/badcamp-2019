@@ -16,7 +16,7 @@
  */
 #}
 {% if title %}
-  <h3 class="schedule-day salmon">{{ title }}</h3>
+  <h2 id="{{ title|clean_class }}" class="schedule-day">{{ title }}</h2>
 {% endif %}
 {% for row in rows %}
   {%

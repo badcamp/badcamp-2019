@@ -1,11 +1,15 @@
 .summit__display--teaser,
-.summit__display--schedule {
+.summit__display--schedule,
+.summit__display--sponsor-item {
   background: $grayish;
   padding: 1.25em 1.5em 1em;
   margin-bottom: 2em;
 
-  h2 {
+  h2,
+  h3,
+  h4 {
     margin-bottom: 0.5em;
+    font-size: rem-calc(34);
   }
 }
 

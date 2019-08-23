@@ -1,12 +1,12 @@
-uuid: 5eb68158-2eaa-45c5-bd06-cea5656517a6
+uuid: bab3c3f5-238e-41ec-8b43-78e792d06979
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.sponsor_item
     - field.field.node.training.body
     - field.field.node.training.field_day
     - field.field.node.training.field_members
-    - field.field.node.training.field_payment
     - field.field.node.training.field_skill_level
     - field.field.node.training.field_sponsors
     - field.field.node.training.field_timeslot
@@ -15,21 +15,19 @@ dependencies:
     - field.field.node.training.field_venue
     - node.type.training
   module:
-    - badcamp
-    - file
-    - link
     - text
     - user
-id: node.training.default
+id: node.training.sponsor_item
 targetEntityType: node
 bundle: training
-mode: default
+mode: sponsor_item
 content:
   body:
     label: hidden
-    type: text_default
+    type: text_summary_or_trimmed
     weight: 4
-    settings: {  }
+    settings:
+      trim_length: 600
     third_party_settings: {  }
     region: content
   field_day:
@@ -41,37 +39,20 @@ content:
     type: entity_reference_label
     region: content
   field_members:
-    weight: 7
-    label: hidden
-    settings:
-      view_mode: compact
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: content
-  field_payment:
-    weight: 11
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: badcamp_payment_field
-    region: content
-  field_skill_level:
-    weight: 0
-    label: hidden
+    weight: 5
+    label: visually_hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_sponsors:
-    weight: 8
-    label: hidden
+  field_skill_level:
+    weight: 0
+    label: visually_hidden
     settings:
-      view_mode: sponsor_logo
-      link: false
+      link: true
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    type: entity_reference_label
     region: content
   field_timeslot:
     weight: 3
@@ -80,26 +61,6 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
-  field_training_files:
-    weight: 5
-    label: hidden
-    settings:
-      use_description_as_link_text: true
-    third_party_settings: {  }
-    type: file_table
-    region: content
-  field_training_links:
-    weight: 6
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
     region: content
   field_venue:
     weight: 1
@@ -110,9 +71,12 @@ content:
     type: entity_reference_label
     region: content
   flag_add_to_schedule:
-    weight: 10
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_sponsors: true
+  field_training_files: true
+  field_training_links: true
   links: true

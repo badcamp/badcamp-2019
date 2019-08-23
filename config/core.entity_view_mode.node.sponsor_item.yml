@@ -1,0 +1,10 @@
+uuid: 4ed2c058-df6f-4d79-93c6-ca3fea1d1715
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.sponsor_item
+label: 'Sponsor Item'
+targetEntityType: node
+cache: true
