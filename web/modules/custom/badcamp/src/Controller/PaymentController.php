@@ -6,6 +6,8 @@ use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Entity\EntityFormBuilderInterface;
 use Drupal\Core\Entity\EntityStorageInterface;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\Url;
 use Drupal\payment\Plugin\Payment\LineItem\PaymentLineItemManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
@@ -36,6 +38,13 @@ class PaymentController extends ControllerBase {
   protected $entityFormBuilder;
 
   /**
+   * Entity Type Manager Service.
+   *
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
+   */
+  protected $entityManager;
+
+  /**
    * PaymentController constructor.
    *
    * @param \Drupal\Core\Entity\EntityStorageInterface $paymentStorage
@@ -43,11 +52,12 @@ class PaymentController extends ControllerBase {
    * @param \Symfony\Component\HttpFoundation\RequestStack $requestStack
    * @param \Drupal\Core\Entity\EntityFormBuilderInterface $entityFormBuilder
    */
-  public function __construct( EntityStorageInterface $paymentStorage, PaymentLineItemManagerInterface $paymentLineItemManager,  RequestStack $requestStack, EntityFormBuilderInterface $entityFormBuilder) {
+  public function __construct( EntityStorageInterface $paymentStorage, PaymentLineItemManagerInterface $paymentLineItemManager,  RequestStack $requestStack, EntityFormBuilderInterface $entityFormBuilder, EntityTypeManagerInterface $entityTypeManager) {
     $this->paymentStorage = $paymentStorage;
     $this->paymentLineItemManager = $paymentLineItemManager;
     $this->requestStack = $requestStack;
     $this->entityFormBuilder = $entityFormBuilder;
+    $this->entityTypeManager = $entityTypeManager;
   }
 
   /**
@@ -58,7 +68,8 @@ class PaymentController extends ControllerBase {
       $container->get('entity_type.manager')->getStorage('payment'),
       $container->get('plugin.manager.payment.line_item'),
       $container->get('request_stack'),
-      $container->get('entity.form_builder')
+      $container->get('entity.form_builder'),
+      $container->get('entity_type.manager')
     );
   }
 
@@ -98,7 +109,16 @@ class PaymentController extends ControllerBase {
 
     $redirectDestination = isset($paymentInfo['redirect']) ? $paymentInfo['redirect'] : '/';
 
-    $line_title = $paymentInfo['title'];
+    if (isset($_GET['entity_id']) && isset($_GET['entity_type'])) {
+      $entity_type = $_GET['entity_type'];
+      $entity_id = $_GET['entity_id'];
+      $entity = $this->entityTypeManager->getStorage($entity_type)->load($entity_id);
+      if (!is_null($entity)) {
+        $redirectDestination = $entity->toUrl()->toString();
+      }
+    }
+
+    $line_title = isset($_GET['title']) ? $_GET['title'] : $paymentInfo['title'];
     if (isset($paymentInfo['allowed_amounts']) && !in_array($amount, $paymentInfo['allowed_amounts'])){
       $amount = $paymentInfo['amount'];
     }

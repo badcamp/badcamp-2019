@@ -1,0 +1,40 @@
+badcamp_payment_field:
+  type: mapping
+  label: 'Stripe Payment'
+  mapping:
+    enable:
+      type: int
+      label: 'Enable'
+    description_value:
+      type: string
+      label: 'Description Value'
+    description_format:
+      type: string
+      label: 'Description Format'
+    amount:
+      type: integer
+      label: 'Amount'
+    max_payments:
+      type: integer
+      label: 'Max Payments'
+    max_purchases:
+      type: integer
+      label: 'Max Purchases'
+    payment_type:
+      type: string
+      label: 'Payment Type'
+    button_label:
+      type: string
+      label: 'Button Label'
+
+field.value.badcamp_payment_field:
+  type: payment
+  label: 'Default value'
+
+field.field_settings.badcamp_payment_field:
+  type: mapping
+  label: 'BADCamp Payment Field settings'
+
+field.widget.settings.badcamp_payment_field:
+  type: mapping
+  label: 'BADCamp Payment widget settings'

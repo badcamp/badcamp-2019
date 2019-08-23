@@ -1,0 +1,30 @@
+uuid: 8d399609-f037-4aa9-90c6-3182d6d0495b
+langcode: en
+status: true
+dependencies:
+  module:
+    - badcamp
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: custom
+id: node.field_payment
+field_name: field_payment
+entity_type: node
+type: badcamp_payment_field
+settings:
+  enable: 0
+  amount: 0
+  description_value: ''
+  description_format: basic_html
+  button_text: ''
+  max_payments: 0
+  max_purchases: 0
+module: badcamp
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

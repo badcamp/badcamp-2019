@@ -6,104 +6,104 @@ id: schedule
 label: Schedule
 renderer: quick_tabs
 options:
+  quick_tabs:
+    ajax: '0'
   accordion_tabs:
     jquery_ui:
       collapsible: 0
       heightStyle: auto
-  quick_tabs:
-    ajax: '0'
 hide_empty_tabs: 0
-default_tab: '9999'
+default_tab: '0'
 configuration_data:
   -
     title: Wed
     weight: '0'
     type: view_content
     content:
+      block_content:
+        options:
+          bid: 'entity_view:node'
+          block_title: ''
+          display_title: 0
       view_content:
         options:
           vid: schedule
           display: general
-          args: '62'
+          args: '''62'''
+      qtabs_content:
+        options:
+          machine_name: my_schedule
       node_content:
         options:
           nid: ''
           view_mode: full
           hide_title: '1'
-      block_content:
-        options:
-          bid: schedule_block
-          block_title: ''
-          display_title: 0
-      qtabs_content:
-        options:
-          machine_name: ''
   -
     title: Thurs
     weight: '0'
     type: view_content
     content:
+      block_content:
+        options:
+          bid: 'entity_view:node'
+          block_title: ''
+          display_title: 0
       view_content:
         options:
           vid: schedule
           display: general
-          args: '63'
+          args: '''63'''
+      qtabs_content:
+        options:
+          machine_name: my_schedule
       node_content:
         options:
           nid: ''
           view_mode: full
           hide_title: '1'
-      block_content:
-        options:
-          bid: schedule_block
-          block_title: ''
-          display_title: 0
-      qtabs_content:
-        options:
-          machine_name: ''
   -
     title: Fri
     weight: '0'
     type: view_content
     content:
+      block_content:
+        options:
+          bid: 'entity_view:node'
+          block_title: ''
+          display_title: 0
       view_content:
         options:
           vid: schedule
           display: general
-          args: '64'
+          args: '''64'''
+      qtabs_content:
+        options:
+          machine_name: my_schedule
       node_content:
         options:
           nid: ''
           view_mode: full
           hide_title: '1'
-      block_content:
-        options:
-          bid: schedule_block
-          block_title: ''
-          display_title: 0
-      qtabs_content:
-        options:
-          machine_name: ''
   -
     title: Sat
     weight: '0'
     type: view_content
     content:
+      block_content:
+        options:
+          bid: 'entity_view:node'
+          block_title: ''
+          display_title: 0
       view_content:
         options:
           vid: schedule
           display: general
-          args: '65'
+          args: '''65'''
+      qtabs_content:
+        options:
+          machine_name: my_schedule
       node_content:
         options:
           nid: ''
           view_mode: full
           hide_title: '1'
-      block_content:
-        options:
-          bid: schedule_block
-          block_title: ''
-          display_title: 0
-      qtabs_content:
-        options:
-          machine_name: ''
