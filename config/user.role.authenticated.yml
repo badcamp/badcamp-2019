@@ -19,6 +19,7 @@ permissions:
   - 'edit own session content'
   - 'flag add_to_schedule'
   - 'post comments'
+  - 'register for trainings'
   - 'search content'
   - 'skip comment approval'
   - 'unflag add_to_schedule'

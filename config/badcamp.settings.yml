@@ -16,3 +16,4 @@ payments:
   badcamp_payment_training:
     title: 'BADCAMP Training'
     page_title: 'Training Registration'
+    permission: 'register for trainings'
