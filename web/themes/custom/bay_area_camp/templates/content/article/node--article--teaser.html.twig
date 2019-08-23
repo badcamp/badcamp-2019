@@ -70,6 +70,11 @@
  *   in different view modes.
  */
 #}
+
+{% set articlebody %}
+  {{ content.body }}
+{% endset %}
+
 <article{{ attributes.addClass('article__display--teaser') }}>
   <h2 {{ title_attributes.addClass('article__title') }} >
     <a href="{{ url }}" rel="bookmark">{{ label }}</a>
@@ -79,11 +84,13 @@
       {{ content.field_article_date }}
     </div>
   </div>
-  <div class="article__image">
-    {{ content.field_image }}
-  </div>
-  <div class="article__body">
-    {{ content.body }}
+  <div class="article__content grid-x grid-margin-x">
+    <div class="article__body cell auto">
+      {{ articlebody|striptags('<p>')|raw }}
+    </div>
+    <div class="article__image cell shrink show-for-medium">
+      {{ content.field_image }}
+    </div>
   </div>
   <div class="article__tags">
     {{ content.field_tags }}
