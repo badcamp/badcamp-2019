@@ -1,0 +1,16 @@
+<div class="payment description">{{ description }}</div>
+
+<div class="payment button">
+  {% if not logged_in %}
+    <div>
+      <a href="/user/login?destination={{ path("<current>") }}" class="big-button lightblue">{{ "Login" | t }}</a>
+      <a href="/registration?destination={{ path("<current>") }}" class="big-button tealish">{{ "Register" | t }}</a>
+    </div>
+  {% else %}
+    {{ button }}
+  {% endif %}
+</div>
+
+{% if footer is not empty %}
+  <div class="payment payment-message">{{ footer }}</div>
+{% endif %}
