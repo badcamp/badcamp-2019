@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "da35bb17dd74457bc7e91caaee956940",
+    "content-hash": "a5918de94145e3434e94ca47e1c07aee",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -6389,17 +6389,11 @@
         },
         {
             "name": "drupal/views_bulk_edit",
-            "version": "2.3.0",
+            "version": "dev-2.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/views_bulk_edit.git",
-                "reference": "8.x-2.3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/views_bulk_edit-8.x-2.3.zip",
-                "reference": "8.x-2.3",
-                "shasum": "cabead4a4d9aee553ed63c060c820e5df9395665"
+                "reference": "ded4f43bfc00e8e13dcf18161ccbcfb14f00642f"
             },
             "require": {
                 "drupal/core": "*",
@@ -6411,12 +6405,15 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.3",
+                    "version": "8.x-2.3+0-dev",
                     "datestamp": "1557991985",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "Issue #3047358 - Add support for entity validation prior to save": "https://www.drupal.org/files/issues/2019-04-11/3047358-d8-views_bulk_edit-entity-validate.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -6438,7 +6435,8 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/views_bulk_edit",
                 "issues": "https://www.drupal.org/project/issues/views_bulk_edit?version=8.x"
-            }
+            },
+            "time": "2019-05-16T07:28:14+00:00"
         },
         {
             "name": "drupal/views_bulk_operations",
@@ -13085,6 +13083,7 @@
         "drupal/slick_extras": 5,
         "drupal/stripe": 20,
         "drupal/viewfield": 15,
+        "drupal/views_bulk_edit": 20,
         "drupal/views_send": 20,
         "drupal/votingapi_widgets": 15,
         "drupal/xmlsitemap": 15

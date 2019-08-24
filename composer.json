@@ -305,7 +305,8 @@
                 "Improvements": "https://gist.githubusercontent.com/sean-e-dietrich/2ac08921ac2d23637593d888cc7f28a7/raw/0a4997b52994699b489e4bf07e0be4df18d4e0b5/payment_stripe.patch"
             },
             "drupal/payment": {
-                "Fields on Payments don't save (Issue #2841035)": "https://www.drupal.org/files/issues/fix_fieldable.patch"
+                "Fields on Payments don't save (Issue #2841035)": "https://www.drupal.org/files/issues/fix_fieldable.patch",
+                "Issue with Pre render table": "https://gist.githubusercontent.com/sean-e-dietrich/680180bb5934ba2f20089de935229f9b/raw/7890f990895e139159e77b411a8ab537e60d2804/gistfile1.txt"
             },
             "drupal/stripe": {
                 "Ajax Form": "https://gist.githubusercontent.com/sean-e-dietrich/fb979d558a3974f791af678b68879ce3/raw/1c2c580d65c185289a97eeb3c323f239046fadd1/stripe.patch"
