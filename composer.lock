@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a5918de94145e3434e94ca47e1c07aee",
+    "content-hash": "6abadac4fdefe60271aad099fe3f32b3",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -75,7 +75,9 @@
             "version": "1.2.2",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/antennaio/jquery-bar-rating/archive/v1.2.2.zip"
+                "url": "https://github.com/antennaio/jquery-bar-rating/archive/v1.2.2.zip",
+                "reference": null,
+                "shasum": null
             },
             "type": "drupal-library"
         },
@@ -5375,7 +5377,8 @@
                     }
                 },
                 "patches_applied": {
-                    "Fields on Payments don't save (Issue #2841035)": "https://www.drupal.org/files/issues/fix_fieldable.patch"
+                    "Fields on Payments don't save (Issue #2841035)": "https://www.drupal.org/files/issues/fix_fieldable.patch",
+                    "Issue with Pre render table": "https://gist.githubusercontent.com/sean-e-dietrich/680180bb5934ba2f20089de935229f9b/raw/7890f990895e139159e77b411a8ab537e60d2804/gistfile1.txt"
                 }
             },
             "autoload": {
@@ -5543,17 +5546,11 @@
         },
         {
             "name": "drupal/quicktabs",
-            "version": "3.0.0-alpha2",
+            "version": "dev-3.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/quicktabs.git",
-                "reference": "8.x-3.0-alpha2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/quicktabs-8.x-3.0-alpha2.zip",
-                "reference": "8.x-3.0-alpha2",
-                "shasum": "783da3f1284b70b937d047f2ea5745340cc729d4"
+                "reference": "34cb5ca5ee0ed1b78aed1e5d578ea7cc4290bc3b"
             },
             "require": {
                 "drupal/core": "*"
@@ -5564,12 +5561,15 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.0-alpha2",
-                    "datestamp": "1497623642",
+                    "version": "8.x-3.0-alpha1+27-dev",
+                    "datestamp": "1497623343",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "Issue #2873253 - Args not working": "https://www.drupal.org/files/issues/2019-02-11/fixed_issue_of_argument-2873253-12.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -5618,7 +5618,8 @@
             "homepage": "https://www.drupal.org/project/quicktabs",
             "support": {
                 "source": "https://git.drupalcode.org/project/quicktabs"
-            }
+            },
+            "time": "2017-06-16T14:25:03+00:00"
         },
         {
             "name": "drupal/recaptcha",
@@ -6411,9 +6412,6 @@
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
                     }
-                },
-                "patches_applied": {
-                    "Issue #3047358 - Add support for entity validation prior to save": "https://www.drupal.org/files/issues/2019-04-11/3047358-d8-views_bulk_edit-entity-validate.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -7693,7 +7691,8 @@
             "dist": {
                 "type": "zip",
                 "url": "https://github.com/OwlCarousel2/OwlCarousel2/archive/2.3.4.zip",
-                "reference": "master"
+                "reference": "master",
+                "shasum": null
             },
             "type": "drupal-library"
         },
@@ -7703,7 +7702,8 @@
             "dist": {
                 "type": "zip",
                 "url": "https://github.com/kenwheeler/slick/archive/1.8.0.zip",
-                "reference": "master"
+                "reference": "master",
+                "shasum": null
             },
             "type": "drupal-library"
         },
@@ -7828,7 +7828,9 @@
             "version": "1.8.2",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/blazy/-/blazy-1.8.2.tgz"
+                "url": "https://registry.npmjs.org/blazy/-/blazy-1.8.2.tgz",
+                "reference": null,
+                "shasum": null
             },
             "type": "npm-asset",
             "license": [
@@ -7846,7 +7848,8 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/gdsmith/jquery.easing/zipball/df09da4048d2607c5d513681dff532dbe6680d95",
-                "reference": "df09da4048d2607c5d513681dff532dbe6680d95"
+                "reference": "df09da4048d2607c5d513681dff532dbe6680d95",
+                "shasum": null
             },
             "type": "npm-asset",
             "license": [
@@ -13078,12 +13081,11 @@
         "drupal/paragraphs_class": 15,
         "drupal/payment": 20,
         "drupal/payment_stripe": 20,
-        "drupal/quicktabs": 15,
+        "drupal/quicktabs": 20,
         "drupal/simple_block": 10,
         "drupal/slick_extras": 5,
         "drupal/stripe": 20,
         "drupal/viewfield": 15,
-        "drupal/views_bulk_edit": 20,
         "drupal/views_send": 20,
         "drupal/votingapi_widgets": 15,
         "drupal/xmlsitemap": 15

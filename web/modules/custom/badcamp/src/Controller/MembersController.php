@@ -38,7 +38,7 @@ class MembersController extends ControllerBase {
    * @return \Drupal\Core\Access\AccessResultAllowed
    */
   public function access(NodeInterface $node, AccountInterface $account) {
-    return AccessResult::allowedIf($node->access('update', $account));
+    return AccessResult::allowedIf($node->access('update', $account) && in_array($node->bundle(), ['summit', 'training', 'event', 'session']));
   }
 
 }
