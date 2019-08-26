@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.summit.body
     - field.field.node.summit.field_day
     - field.field.node.summit.field_members
+    - field.field.node.summit.field_register_capacity
     - field.field.node.summit.field_sponsors
     - field.field.node.summit.field_timeslot
     - field.field.node.summit.field_venue
@@ -41,6 +42,15 @@ content:
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
+    region: content
+  field_register_capacity:
+    weight: 7
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
     region: content
   field_sponsors:
     weight: 6

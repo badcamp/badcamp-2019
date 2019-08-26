@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.session.body
     - field.field.node.session.field_day
     - field.field.node.session.field_members
+    - field.field.node.session.field_register_capacity
     - field.field.node.session.field_session_presentation_video
     - field.field.node.session.field_session_slides
     - field.field.node.session.field_session_topics
@@ -48,6 +49,15 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_register_capacity:
+    weight: 112
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
     region: content
   field_session_presentation_video:
     weight: 105

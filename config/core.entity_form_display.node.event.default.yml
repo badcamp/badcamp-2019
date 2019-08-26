@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.event.field_event_type
     - field.field.node.event.field_leader
     - field.field.node.event.field_more_info_link
+    - field.field.node.event.field_register_capacity
     - field.field.node.event.field_sponsors
     - field.field.node.event.field_timeslot
     - field.field.node.event.field_venue
@@ -23,6 +24,7 @@ third_party_settings:
         - field_venue
         - field_day
         - field_timeslot
+        - field_register_capacity
       parent_name: ''
       weight: 6
       format_type: fieldset
@@ -74,6 +76,13 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_register_capacity:
+    weight: 9
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   field_sponsors:
     weight: 1

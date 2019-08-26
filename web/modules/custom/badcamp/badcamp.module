@@ -15,6 +15,7 @@ use Drupal\Core\Ajax\RedirectCommand;
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Session\AccountInterface;
+use Drupal\node\Entity\Node;
 use Drupal\views\Views;
 use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemListInterface;
@@ -285,4 +286,44 @@ function badcamp_entity_field_access($operation, FieldDefinitionInterface $field
     }
   }
   return AccessResult::neutral();
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function badcamp_preprocess_node(&$vars) {
+  /** @var \Drupal\node\Entity\Node $node */
+  $node = $vars['node'];
+  if (in_array($node->bundle(), ['summit', 'training', 'event', 'session'])) {
+    $totalCap = $node->get('field_register_capacity')->getString();
+    if (empty($totalCap)) {
+      // If empty string set to 0
+      $totalCap = 0;
+    }
+
+    // If is set to above 0 get total flags.
+    if ($totalCap > 0) {
+      $flagging = \Drupal::service('flag.count')->getEntityFlagCounts($node);
+      if (isset($flagging) && isset($flagging['add_to_schedule'])) {
+        $totalCount = $flagging['add_to_schedule'];
+        if ($totalCap < $totalCount) {
+          $vars['content']['flag_add_to_schedule']['#access'] = FALSE;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function badcamp_preprocess_flag(&$vars) {
+  $entity = $vars['flaggable'];
+
+  if ($entity instanceof Node) {
+    if (in_array($entity->bundle(), ['summit', 'training']) && $vars['action'] == 'flag') {
+      $vars['title']['#markup'] = t('Register');
+    }
+    $vars['attributes']['title'] = t('@entity - @action', ['@action' => $vars['title']['#markup'], '@entity' => $entity->getTitle()]);
+  }
 }
