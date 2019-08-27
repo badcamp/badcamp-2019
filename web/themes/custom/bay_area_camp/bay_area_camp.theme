@@ -93,7 +93,7 @@ function bay_area_camp_theme_suggestions_field_alter(&$suggestions, $vars){
  * Implements hook_preprocess_user().
  */
 function bay_area_camp_preprocess_user(&$vars) {
-  $vars['org_url'] = (!empty($vars['content']['field_organization_url'][0]) ? $vars['content']['field_organization_url'][0]['#url']->getUri() : '');
+  $vars['org_url'] = (!empty($vars['content']['field_organization_url'][0]) ? $vars['content']['field_organization_url'][0]['#url']->toString() : '');
 
   /** @var User $account */
   $account = $vars['elements']['#user'];

@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.summit.body
     - field.field.node.summit.field_day
     - field.field.node.summit.field_members
+    - field.field.node.summit.field_register_capacity
     - field.field.node.summit.field_sponsors
     - field.field.node.summit.field_timeslot
     - field.field.node.summit.field_venue
@@ -21,6 +22,7 @@ third_party_settings:
         - field_venue
         - field_day
         - field_timeslot
+        - field_register_capacity
       parent_name: ''
       weight: 4
       format_type: fieldset
@@ -58,6 +60,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_register_capacity:
+    weight: 14
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   field_sponsors:
     weight: 3

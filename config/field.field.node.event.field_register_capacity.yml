@@ -1,0 +1,31 @@
+uuid: 46c17ab9-b87d-4c0d-acb9-f9aff65b081e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_register_capacity
+    - node.type.event
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.event.field_register_capacity
+field_name: field_register_capacity
+entity_type: node
+bundle: event
+label: 'Register Capacity'
+description: 'The allowed number of people who can register for this particular item. Setting to 0 will make it unlimited.'
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

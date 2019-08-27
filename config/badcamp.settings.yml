@@ -13,3 +13,7 @@ payments:
     title: 'BADCAMP Organization Sponsorship'
     page_title: 'Sponsor The Bay Area Drupal Camp'
     redirect: /sponsors
+  badcamp_payment_training:
+    title: 'BADCAMP Training'
+    page_title: 'Training Registration'
+    permission: 'register for trainings'

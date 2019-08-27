@@ -18,7 +18,7 @@ configuration_data:
   -
     title: Wed
     weight: '0'
-    type: view_content
+    type: block_content
     content:
       view_content:
         options:
@@ -32,7 +32,7 @@ configuration_data:
           hide_title: '1'
       block_content:
         options:
-          bid: schedule_block
+          bid: 'schedule_day:my_schedule:62'
           block_title: ''
           display_title: 0
       qtabs_content:
@@ -41,7 +41,7 @@ configuration_data:
   -
     title: Thurs
     weight: '0'
-    type: view_content
+    type: block_content
     content:
       view_content:
         options:
@@ -55,7 +55,7 @@ configuration_data:
           hide_title: '1'
       block_content:
         options:
-          bid: schedule_block
+          bid: 'schedule_day:my_schedule:63'
           block_title: ''
           display_title: 0
       qtabs_content:
@@ -64,7 +64,7 @@ configuration_data:
   -
     title: Fri
     weight: '0'
-    type: view_content
+    type: block_content
     content:
       view_content:
         options:
@@ -78,7 +78,7 @@ configuration_data:
           hide_title: '1'
       block_content:
         options:
-          bid: schedule_block
+          bid: 'schedule_day:my_schedule:64'
           block_title: ''
           display_title: 0
       qtabs_content:
@@ -87,7 +87,7 @@ configuration_data:
   -
     title: Sat
     weight: '0'
-    type: view_content
+    type: block_content
     content:
       view_content:
         options:
@@ -101,7 +101,7 @@ configuration_data:
           hide_title: '1'
       block_content:
         options:
-          bid: schedule_block
+          bid: 'schedule_day:my_schedule:65'
           block_title: ''
           display_title: 0
       qtabs_content:

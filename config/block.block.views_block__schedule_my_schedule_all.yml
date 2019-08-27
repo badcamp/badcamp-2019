@@ -1,0 +1,33 @@
+uuid: 063f6497-ec05-4607-afee-8704ec251dd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.schedule
+  module:
+    - user
+    - views
+  theme:
+    - bay_area_camp
+id: views_block__schedule_my_schedule_all
+theme: bay_area_camp
+region: offcanvas
+weight: 0
+provider: null
+plugin: 'views_block:schedule-my_schedule_all'
+settings:
+  id: 'views_block:schedule-my_schedule_all'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.session.body
     - field.field.node.session.field_day
     - field.field.node.session.field_members
+    - field.field.node.session.field_register_capacity
     - field.field.node.session.field_session_presentation_video
     - field.field.node.session.field_session_slides
     - field.field.node.session.field_session_topics
@@ -66,6 +67,7 @@ third_party_settings:
         - field_venue
         - field_day
         - field_timeslot
+        - field_register_capacity
       parent_name: ''
       weight: 20
       format_type: fieldset
@@ -103,6 +105,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_register_capacity:
+    weight: 31
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   field_session_presentation_video:
     weight: 10

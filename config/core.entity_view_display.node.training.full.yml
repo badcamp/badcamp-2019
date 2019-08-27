@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.training.body
     - field.field.node.training.field_day
     - field.field.node.training.field_members
+    - field.field.node.training.field_payment
     - field.field.node.training.field_skill_level
     - field.field.node.training.field_sponsors
     - field.field.node.training.field_timeslot
@@ -15,6 +16,7 @@ dependencies:
     - field.field.node.training.field_venue
     - node.type.training
   module:
+    - badcamp
     - file
     - link
     - text
@@ -48,6 +50,13 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
+  field_payment:
+    type: badcamp_payment_field
+    weight: 10
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_skill_level:
     weight: 0
     label: hidden
@@ -102,7 +111,7 @@ content:
     type: entity_reference_label
     region: content
   flag_add_to_schedule:
-    weight: 10
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }

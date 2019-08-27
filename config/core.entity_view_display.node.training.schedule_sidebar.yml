@@ -1,0 +1,119 @@
+uuid: cdec1967-033b-4c7b-b3ba-1c66e3ed7abd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.schedule_sidebar
+    - field.field.node.training.body
+    - field.field.node.training.field_day
+    - field.field.node.training.field_members
+    - field.field.node.training.field_payment
+    - field.field.node.training.field_skill_level
+    - field.field.node.training.field_sponsors
+    - field.field.node.training.field_timeslot
+    - field.field.node.training.field_training_files
+    - field.field.node.training.field_training_links
+    - field.field.node.training.field_venue
+    - node.type.training
+  module:
+    - badcamp
+    - file
+    - link
+    - text
+    - user
+id: node.training.schedule_sidebar
+targetEntityType: node
+bundle: training
+mode: schedule_sidebar
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_day:
+    weight: 2
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_members:
+    weight: 7
+    label: hidden
+    settings:
+      view_mode: compact
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_payment:
+    weight: 11
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: badcamp_payment_field
+    region: content
+  field_skill_level:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_sponsors:
+    weight: 8
+    label: hidden
+    settings:
+      view_mode: sponsor_logo
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_timeslot:
+    weight: 3
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_training_files:
+    weight: 5
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_table
+    region: content
+  field_training_links:
+    weight: 6
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_venue:
+    weight: 1
+    label: visually_hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  flag_add_to_schedule:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  links: true

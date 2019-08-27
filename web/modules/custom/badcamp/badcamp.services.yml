@@ -9,3 +9,8 @@ services:
     arguments: ['@current_user']
     tags:
       - { name: 'event_subscriber' }
+  badcamp.training_subscriber:
+    class: '\Drupal\badcamp\EventSubscriber\TrainingPaymentSubscriber'
+    arguments: ['@entity_type.manager', '@flag']
+    tags:
+      - { name: 'event_subscriber' }

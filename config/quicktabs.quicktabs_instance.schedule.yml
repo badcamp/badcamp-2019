@@ -13,12 +13,12 @@ options:
   quick_tabs:
     ajax: '0'
 hide_empty_tabs: 0
-default_tab: '9999'
+default_tab: '0'
 configuration_data:
   -
     title: Wed
     weight: '0'
-    type: view_content
+    type: block_content
     content:
       view_content:
         options:
@@ -32,16 +32,16 @@ configuration_data:
           hide_title: '1'
       block_content:
         options:
-          bid: schedule_block
+          bid: 'schedule_day:general:62'
           block_title: ''
           display_title: 0
       qtabs_content:
         options:
-          machine_name: ''
+          machine_name: my_schedule
   -
     title: Thurs
     weight: '0'
-    type: view_content
+    type: block_content
     content:
       view_content:
         options:
@@ -55,16 +55,16 @@ configuration_data:
           hide_title: '1'
       block_content:
         options:
-          bid: schedule_block
+          bid: 'schedule_day:general:63'
           block_title: ''
           display_title: 0
       qtabs_content:
         options:
-          machine_name: ''
+          machine_name: my_schedule
   -
     title: Fri
     weight: '0'
-    type: view_content
+    type: block_content
     content:
       view_content:
         options:
@@ -78,16 +78,16 @@ configuration_data:
           hide_title: '1'
       block_content:
         options:
-          bid: schedule_block
+          bid: 'schedule_day:general:64'
           block_title: ''
           display_title: 0
       qtabs_content:
         options:
-          machine_name: ''
+          machine_name: my_schedule
   -
     title: Sat
     weight: '0'
-    type: view_content
+    type: block_content
     content:
       view_content:
         options:
@@ -101,9 +101,9 @@ configuration_data:
           hide_title: '1'
       block_content:
         options:
-          bid: schedule_block
+          bid: 'schedule_day:general:65'
           block_title: ''
           display_title: 0
       qtabs_content:
         options:
-          machine_name: ''
+          machine_name: my_schedule

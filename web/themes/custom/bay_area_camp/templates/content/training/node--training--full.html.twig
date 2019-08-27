@@ -26,7 +26,11 @@
         <span>{{ content.field_skill_level }}</span>
       </div>
       <div class="training__add_to_schedule field__add__to__schedule">
-        {{ content.flag_add_to_schedule }}
+        {% if content.field_payment|render is not empty %}
+          {{ content.field_payment }}
+        {% else %}
+          {{ content.flag_add_to_schedule }}
+        {% endif %}
       </div>
     </div>
     {% endif %}

@@ -1,0 +1,66 @@
+uuid: a8a049ba-1890-4c97-a352-9fe8cbdd868e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.schedule_sidebar
+    - field.field.node.event.body
+    - field.field.node.event.field_day
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_leader
+    - field.field.node.event.field_more_info_link
+    - field.field.node.event.field_sponsors
+    - field.field.node.event.field_timeslot
+    - field.field.node.event.field_venue
+    - node.type.event
+  module:
+    - text
+    - user
+id: node.event.schedule_sidebar
+targetEntityType: node
+bundle: event
+mode: schedule_sidebar
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 3
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_event_type:
+    weight: 1
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_leader:
+    weight: 4
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_venue:
+    weight: 2
+    label: visually_hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  flag_add_to_schedule:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_day: true
+  field_more_info_link: true
+  field_sponsors: true
+  field_timeslot: true
+  links: true

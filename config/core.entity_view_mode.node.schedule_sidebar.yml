@@ -1,0 +1,10 @@
+uuid: b57882d2-dc9b-434b-a3a4-b3dacbec612d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.schedule_sidebar
+label: 'Schedule Sidebar'
+targetEntityType: node
+cache: true
