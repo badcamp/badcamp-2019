@@ -194,6 +194,57 @@ display:
           entity_type: payment
           entity_field: changed
           plugin_id: date
+        payment_type__plugin_id:
+          id: payment_type__plugin_id
+          table: payment
+          field: payment_type__plugin_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Type
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          entity_type: payment
+          entity_field: payment_type
+          plugin_id: payment_type_label
         payment_statuses_plugin_id_1:
           id: payment_statuses_plugin_id_1
           table: payment__payment_statuses
@@ -653,6 +704,47 @@ display:
           entity_type: user
           entity_field: uid
           plugin_id: user_name
+        payment_type__plugin_id:
+          id: payment_type__plugin_id
+          table: payment
+          field: payment_type__plugin_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: payment_type__plugin_id_op
+            label: Type
+            description: ''
+            use_operator: false
+            operator: payment_type__plugin_id_op
+            identifier: type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: payment
+          entity_field: payment_type
+          plugin_id: plugin_id
       sorts: {  }
       header: {  }
       footer: {  }
@@ -747,6 +839,7 @@ display:
       tags:
         - payment_method
         - payment_status
+        - payment_type
   page_1:
     display_plugin: page
     id: page_1
@@ -779,6 +872,7 @@ display:
       tags:
         - payment_method
         - payment_status
+        - payment_type
   page_2:
     display_plugin: page
     id: page_2

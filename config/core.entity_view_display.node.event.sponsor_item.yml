@@ -62,5 +62,6 @@ hidden:
   field_event_type: true
   field_leader: true
   field_more_info_link: true
+  field_register_capacity: true
   field_sponsors: true
   links: true

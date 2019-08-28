@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.schedule
     - core.entity_view_mode.node.schedule_sidebar
     - field.storage.node.field_day
     - field.storage.node.field_timeslot
@@ -96,7 +97,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: schedule_sidebar
+          view_mode: schedule
       fields:
         title:
           id: title
@@ -586,6 +587,8 @@ display:
         fields: false
         arguments: false
         relationships: false
+        style: false
+        row: false
       filter_groups:
         operator: AND
         groups:
@@ -833,6 +836,26 @@ display:
           entity_type: node
           plugin_id: flag_relationship
       block_description: 'My Schedule Block'
+      style:
+        type: default
+        options:
+          grouping:
+            -
+              field: field_day
+              rendered: true
+              rendered_strip: false
+            -
+              field: field_timeslot
+              rendered: true
+              rendered_strip: false
+          row_class: ''
+          default_row_class: true
+          uses_fields: true
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: schedule_sidebar
     cache_metadata:
       max-age: -1
       contexts:
