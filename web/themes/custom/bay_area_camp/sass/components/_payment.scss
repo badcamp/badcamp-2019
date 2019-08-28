@@ -1,0 +1,11 @@
+.payment-message {
+  font-family: $monsterrat;
+  font-weight: 600;
+  font-size: rem-calc(15);
+}
+
+// Fix weird hover behavior. TODO: better fix later.
+.payment.button a,
+.payment a.button {
+  border-bottom: none;
+}
