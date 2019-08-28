@@ -1,0 +1,19 @@
+.schedule-action {
+  background: aqua;
+  position: fixed;
+  top: 200px;
+  right: 0;
+  height: 100px;
+  width: 100px;
+}
+
+.off-canvas.position-right {
+  padding: 1.5em;
+}
+
+// If admin toolbar
+.toolbar-tray-open {
+  .off-canvas.position-right {
+    padding-top: 6em;
+  }
+}
