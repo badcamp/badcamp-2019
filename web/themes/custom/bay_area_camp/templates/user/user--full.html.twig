@@ -20,23 +20,24 @@
 {% set attendee_title = content.field_title|render %}
 {% set attendee_org = content.field_organization|render %}
 
-<article{{ attributes.addClass('user__display--full grid-x grid-margin-x') }}>
-  <div class="content-left cell small-12 medium-9 small-order-2 medium-order-1">
-    <div class="user__attendee-name">
-      <span class="first-name">{{ content.field_first_name }}</span>
-      <span class="last-name">{{ content.field_last_name }}</span>
-    </div>
-    <div class="user__attendee-org">
-      <span class="user-title">{{ content.field_title }}</span>
-      {% if attendee_title and attendee_org %}
-        <span class="separator"> // </span>
-      {% endif %}
-      <span class="user-org">{{ content.field_organization }}</span>
-    </div>
-    <div class="user__attendee-social">{{ content.field_social_profile_links }}</div>
-    <div class="user__attendee-bio">{{ content.field_bio }}</div>
+<article{{ attributes.addClass('user__display--full') }}>
+
+<div class="user__attendee-picture">{{ content.user_picture }}</div>
+
+  <div class="user__attendee-name">
+    <span class="first-name">{{ content.field_first_name }}</span>
+    <span class="last-name">{{ content.field_last_name }}</span>
   </div>
-  <div class="content-right cell small-12 medium-3 small-order-1 medium-order-2">
-    <div class="user__attendee-picture">{{ content.user_picture }}</div>
+
+  <div class="user__attendee-org">
+    <span class="user-title">{{ content.field_title }}</span>
+    {% if attendee_title and attendee_org %}
+      <span class="separator"> // </span>
+    {% endif %}
+    <span class="user-org">{{ content.field_organization }}</span>
   </div>
+
+  <div class="user__attendee-bio">{{ content.field_bio }}</div>
+
+  <div class="user__attendee-social">{{ content.field_social_profile_links }}</div>
 </article>
