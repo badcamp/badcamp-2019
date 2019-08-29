@@ -25,14 +25,13 @@
   }
 
   a {
-    width: 3.25em;
-    height: 3.25em;
+    width: 52px;
+    height: 52px;
     border-radius: 50%;
     background-color: $grayish;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 0px;
 
     &:hover {
       background-color: darken($grayish, 5%);
