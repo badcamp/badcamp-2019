@@ -1,0 +1,21 @@
+<article{{ attributes.addClass('summit__display--schedule-sidebar display--schedule-sidebar') }}>
+  <div{{ content_attributes }}>
+    <h5 {{ title_attributes.addClass('schedule-sidebar-title summit__title') }} >
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h5>
+
+    <div class="event-details__box">
+      <div class="event-details__field event-details__field--venue">
+        <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+        <span>{{ content.field_venue }}</span>
+      </div>
+      <div class="event-details__field event-details__field--organizers">
+        <span><i class="fa fa-user" aria-hidden="true"></i></span>
+        <span>{{ content.field_members }}</span>
+      </div>
+    </div>
+
+    {{ content.body|render|striptags }}
+
+  </div>
+</article>

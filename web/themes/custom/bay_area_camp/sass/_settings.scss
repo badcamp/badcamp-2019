@@ -70,7 +70,7 @@ $lightblue: #02a0e4;
 $midblue: #0175a7;
 $navy: #0a2240;
 $tealish: #50c4b7;
-$dark-tealish: #199f94;
+$dark-tealish: #189a90;
 $salmon: #ff8568;
 $dark-salmon: #e36c4f;
 $gold: #ffba02;
@@ -544,13 +544,14 @@ $meter-fill-bad: $alert-color;
 // --------------
 
 $offcanvas-sizes: (
-  small: 250px,
+  small: 300px,
+  medium: 450px,
 );
 $offcanvas-vertical-sizes: (
   small: 250px,
 );
-$offcanvas-background: $light-gray;
-$offcanvas-shadow: 0 0 10px rgba($black, 0.7);
+$offcanvas-background: $grayish;
+$offcanvas-shadow: 0 0 10px rgba($black, 0.325);
 $offcanvas-inner-shadow-size: 20px;
 $offcanvas-inner-shadow-color: rgba($black, 0.25);
 $offcanvas-overlay-zindex: 11;
