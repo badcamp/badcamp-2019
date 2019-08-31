@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.session.body
     - field.field.node.session.field_day
     - field.field.node.session.field_members
+    - field.field.node.session.field_register_capacity
     - field.field.node.session.field_session_presentation_video
     - field.field.node.session.field_session_slides
     - field.field.node.session.field_session_topics
@@ -26,14 +27,15 @@ mode: schedule_sidebar
 content:
   body:
     label: hidden
-    type: text_default
-    weight: 1
-    settings: {  }
+    type: text_trimmed
+    weight: 3
+    settings:
+      trim_length: 300
     third_party_settings: {  }
     region: content
   field_members:
     type: entity_reference_label
-    weight: 4
+    weight: 1
     region: content
     label: visually_hidden
     settings:
@@ -43,25 +45,26 @@ content:
     weight: 2
     label: visually_hidden
     settings:
-      link: false
+      link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_venue:
-    weight: 3
+    weight: 0
     label: visually_hidden
     settings:
-      link: false
+      link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   flag_add_to_schedule:
-    weight: 0
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   field_day: true
+  field_register_capacity: true
   field_session_presentation_video: true
   field_session_slides: true
   field_sponsors: true
