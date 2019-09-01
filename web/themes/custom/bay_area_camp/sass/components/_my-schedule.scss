@@ -20,12 +20,23 @@
 }
 
 // If admin toolbar
-.toolbar-tray-open {
+.toolbar-horizontal.toolbar-tray-open {
   .schedule-action {
     top: 79px;
   }
   .off-canvas.position-right {
-    padding-top: 6em;
+    padding-top: rem-calc(100);
+  }
+}
+
+.toolbar-fixed,
+.toolbar-vertical,
+.toolbar-vertical.toolbar-tray-open {
+  .schedule-action {
+    top: 39px;
+  }
+  .off-canvas.position-right {
+    padding-top: rem-calc(60);
   }
 }
 
