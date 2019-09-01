@@ -591,6 +591,7 @@ display:
         style: false
         row: false
         title: false
+        empty: false
       filter_groups:
         operator: AND
         groups:
@@ -860,6 +861,18 @@ display:
           view_mode: schedule_sidebar
       title: 'My Schedule'
       display_description: ''
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: '<div class="no-results"><p>You have no schedule items.</p></div>'
+          plugin_id: text_custom
     cache_metadata:
       max-age: -1
       contexts:

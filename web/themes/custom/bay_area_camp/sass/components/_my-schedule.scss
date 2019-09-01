@@ -42,6 +42,12 @@
   }
 }
 
+.schedule-view--my-schedule-all {
+  .no-results {
+    margin-top: rem-calc(20);
+  }
+}
+
 .display--schedule-sidebar {
   background: $white;
   padding: rem-calc(20);
