@@ -3,16 +3,20 @@
   position: sticky;
   z-index: 99;
   top: 0;
-  background: $grayish;
-  border-radius: 0;
+  border-radius: 0 !important;
   float: right;
+  margin-bottom: 10px;
+  box-shadow: 0 0 7px rgba($black, 0.2);
+  i {
+    margin-right: 8px;
+  }
 }
 
-.off-canvas-content {
-}
-
-.off-canvas.position-right {
-  padding: 1.5em;
+.off-canvas-content.is-open-right {
+  .schedule-action {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
 }
 
 // If admin toolbar
@@ -26,6 +30,10 @@
 }
 
 // Schedule content
+.off-canvas.position-right {
+  padding: 1.5em;
+}
+
 #block-views-block-schedule-my-schedule-all--3 {
   > h2 {
     font-size: rem-calc(30);

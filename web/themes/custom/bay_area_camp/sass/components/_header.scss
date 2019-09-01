@@ -1,7 +1,7 @@
 header {
   .header-holder {
-    padding-top: 1.75em;
-    padding-bottom: 1.75em;
+    padding-top: rem-calc(40);
+    padding-bottom: rem-calc(40);
     // LR padding set with .grid-container
   }
 }
