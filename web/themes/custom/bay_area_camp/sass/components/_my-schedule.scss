@@ -1,11 +1,14 @@
 // Schedule tab
 .schedule-action {
-  background: aqua;
-  position: fixed;
-  top: 200px;
-  right: 0;
-  height: 100px;
-  width: 100px;
+  position: sticky;
+  z-index: 99;
+  top: 0;
+  background: $grayish;
+  border-radius: 0;
+  float: right;
+}
+
+.off-canvas-content {
 }
 
 .off-canvas.position-right {
@@ -14,6 +17,9 @@
 
 // If admin toolbar
 .toolbar-tray-open {
+  .schedule-action {
+    top: 79px;
+  }
   .off-canvas.position-right {
     padding-top: 6em;
   }
