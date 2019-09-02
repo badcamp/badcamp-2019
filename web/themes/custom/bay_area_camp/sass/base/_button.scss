@@ -47,6 +47,9 @@
 .button.gray {
   @include button($grayish, $navy, regular);
 }
+.button.tealish {
+  @include button($tealish, $navy, regular);
+}
 .small-button {
   @include button($size: small);
 }

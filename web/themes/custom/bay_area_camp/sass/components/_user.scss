@@ -1,5 +1,8 @@
-.user__display--full {
-  margin-bottom: 1em;
+.user__attendee-picture {
+  @include breakpoint('medium') {
+    float: right;
+    margin: 0 6px 18px 18px;
+  }
 }
 
 .user__attendee-name {
@@ -34,16 +37,8 @@
     justify-content: flex-start;
     margin-top: 20px;
     li {
-      margin: 0 15px 0 0;
-      a {
-        border-bottom: none;
-      }
+      margin-right: 18px;
+      margin-left: 0 !important;
     }
-  }
-}
-
-.sponsor-team-member {
-  img {
-    margin-bottom: 1em;
   }
 }

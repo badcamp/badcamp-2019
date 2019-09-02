@@ -12,3 +12,9 @@
 @include foundation-everything(true, true);
 @import 'base/**/*.scss';
 @import 'components/**/*.scss';
+
+// Hack to fix the z-index of the dialog
+
+[role="dialog"] {
+  z-index: 200; 
+}
