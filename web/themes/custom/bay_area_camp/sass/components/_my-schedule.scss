@@ -1,0 +1,103 @@
+// Schedule tab
+.schedule-action {
+  position: sticky;
+  z-index: 99;
+  top: 0;
+  border-radius: 0 !important;
+  float: right;
+  margin-bottom: 10px;
+  box-shadow: 0 0 7px rgba($black, 0.2);
+  i {
+    margin-right: 8px;
+  }
+}
+
+.off-canvas-content.is-open-right {
+  .schedule-action {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+}
+
+// If admin toolbar
+.toolbar-horizontal.toolbar-tray-open {
+  .schedule-action {
+    top: 79px;
+  }
+  .off-canvas.position-right {
+    padding-top: rem-calc(100);
+  }
+}
+
+.toolbar-fixed,
+.toolbar-vertical,
+.toolbar-vertical.toolbar-tray-open {
+  .schedule-action {
+    top: 39px;
+  }
+  .off-canvas.position-right {
+    padding-top: rem-calc(60);
+  }
+}
+
+// Schedule content
+.off-canvas.position-right {
+  padding: 1.5em;
+}
+
+#block-views-block-schedule-my-schedule-all--3 {
+  > h2 {
+    font-size: rem-calc(30);
+    color: $dark-salmon;
+    margin-bottom: -15px;
+  }
+}
+
+.schedule-view--my-schedule-all {
+  .no-results {
+    margin-top: rem-calc(20);
+  }
+}
+
+.display--schedule-sidebar {
+  background: $white;
+  padding: rem-calc(20);
+  margin: rem-calc(20) 0;
+
+  .event-details__field {
+    line-height: 1.25;
+    margin-bottom: rem-calc(10);
+  }
+
+  .flag-add-to-schedule {
+    .button {
+      margin-bottom: rem-calc(5);
+    }
+  }
+}
+
+.my-schedule-day {
+  font-size: rem-calc(22);
+  text-transform: uppercase;
+  background: $navy;
+  color: $white;
+  padding: rem-calc(6) rem-calc(12);
+  margin-top: rem-calc(30);
+}
+
+h4.time-slot {
+  font-size: rem-calc(21);
+  margin-top: rem-calc(30);
+  margin-bottom: rem-calc(20);
+}
+
+h5.schedule-sidebar-title {
+  font-size: rem-calc(28);
+  line-height: 1.25 !important;
+  margin-bottom: rem-calc(15);
+  a {
+    &:hover {
+      color: $midblue;
+    }
+  }
+}

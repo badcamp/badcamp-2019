@@ -1,0 +1,21 @@
+<article{{ attributes.addClass('event__display--schedule-sidebar display--schedule-sidebar') }}>
+  <div{{ content_attributes }}>
+    <h5 {{ title_attributes.addClass('schedule-sidebar-title event__title') }} >
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h5>
+
+    <div class="event-details__box">
+      <div class="event-details__field event-details__field--venue">
+        <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+        <span>{{ content.field_venue }}</span>
+      </div>
+    </div>
+
+    {{ content.body|render|striptags }}
+
+    <div class="event__add_to_schedule field__add__to__schedule">
+      {{ content.flag_add_to_schedule }}
+    </div>
+
+  </div>
+</article>

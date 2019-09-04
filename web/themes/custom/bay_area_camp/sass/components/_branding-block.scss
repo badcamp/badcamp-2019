@@ -3,6 +3,14 @@
     display: block;
   }
 }
+// If logged in
+.user-logged-in {
+  .branding-block {
+    @include breakpoint('medium') {
+      margin-top: -10px;
+    }
+  }
+}
 .branding-wrapper {
   .logo-wrapper {
     margin-right: 1em;

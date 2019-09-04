@@ -45,9 +45,20 @@
  * @ingroup themeable
  */
 #}
-<div{{ attributes }}>
+
+
+
+<div{{ attributes.addClass('off-canvas-content') }} data-off-canvas-content>
+
+    {# My schedule button #}
+    {% if page.offcanvas|render is not empty %}
+        <button type="button" class="schedule-action button gray" data-toggle="offCanvas">
+            <i class="fa fa-calendar" aria-hidden="true"></i><span>{{ "My Schedule" | t }}</span>
+        </button>
+    {% endif %}
+
     <header>
-        <div class="header-inner-outter">
+        <div class="header-inner-outer">
             <div class="header-inner">
                 <div class="header-holder grid-container">
                     <div class="clearfix">
@@ -104,3 +115,9 @@
     </footer>
 
 </div>{# /.layout--layoutPage #}
+
+{% if page.offcanvas|render is not empty %}
+    <div class="off-canvas position-right" data-off-canvas id="offCanvas">
+        {{ page.offcanvas }}
+    </div>
+{% endif %}
