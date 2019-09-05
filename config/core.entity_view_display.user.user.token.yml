@@ -40,5 +40,7 @@ hidden:
   field_social_profile_links: true
   field_subscribe_to_badcamp_newsl: true
   field_title: true
+  flag_attendance: true
+  flag_featured_attendee: true
   member_for: true
   user_picture: true

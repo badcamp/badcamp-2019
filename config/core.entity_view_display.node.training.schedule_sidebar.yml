@@ -65,5 +65,4 @@ hidden:
   field_training_files: true
   field_training_links: true
   flag_add_to_schedule: true
-  field_register_capacity: true
   links: true
