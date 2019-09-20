@@ -1,12 +1,12 @@
 .user__display--full {
   clear: both;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
 
 .user__attendee-picture {
   @include breakpoint('medium') {
     float: right;
-    margin: -20px 6px 18px 18px;
+    margin: -70px 6px 18px 18px;
   }
 }
 
