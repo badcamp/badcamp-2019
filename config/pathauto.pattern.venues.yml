@@ -1,0 +1,23 @@
+uuid: 839910f8-31ac-4ef5-a1c6-1b35b632c882
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: venues
+label: Venues
+type: 'canonical_entities:taxonomy_term'
+pattern: 'venue/[term:name]'
+selection_criteria:
+  e76a7a10-13e0-4c7e-9b50-772c118839c7:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      venue: venue
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: e76a7a10-13e0-4c7e-9b50-772c118839c7
+selection_logic: and
+weight: -5
+relationships: {  }
