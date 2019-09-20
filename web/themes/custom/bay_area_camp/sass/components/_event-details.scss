@@ -18,7 +18,7 @@
 .event-details__field {
   display: flex;
   align-items: center;
-  line-height: 2;
+  margin: 10px 0;
   i {
     color: $dark-salmon;
     font-size: 1.25em;
@@ -26,4 +26,8 @@
     text-align: center;
     margin-right: 0.5em;
   }
+}
+
+.event-details__field--venue {
+  line-height: 1.2;
 }
