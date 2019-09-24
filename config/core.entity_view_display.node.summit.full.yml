@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.summit.body
     - field.field.node.summit.field_day
     - field.field.node.summit.field_members
+    - field.field.node.summit.field_register_capacity
     - field.field.node.summit.field_sponsors
     - field.field.node.summit.field_timeslot
     - field.field.node.summit.field_venue
@@ -30,7 +31,7 @@ content:
     weight: 2
     label: hidden
     settings:
-      link: false
+      link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
@@ -56,7 +57,7 @@ content:
     weight: 3
     label: hidden
     settings:
-      link: false
+      link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
@@ -64,7 +65,7 @@ content:
     weight: 1
     label: hidden
     settings:
-      link: false
+      link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
@@ -74,4 +75,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_register_capacity: true
   links: true

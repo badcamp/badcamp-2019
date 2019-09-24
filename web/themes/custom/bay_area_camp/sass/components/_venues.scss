@@ -1,0 +1,10 @@
+// Venues taxonomy.
+.field--description--venue {
+  font-family: $monsterrat;
+  padding-bottom: 1.5em;
+
+  p {
+    margin-bottom: 5px;
+    font-size: rem-calc(18);
+  }
+}
