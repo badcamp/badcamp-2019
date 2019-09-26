@@ -2,7 +2,7 @@ badcamp.attendees_list:
   path: '/node/{node}/attendees'
   defaults:
     _controller: '\Drupal\badcamp\Controller\MembersController::attendeesList'
-    _title: 'Attendees'
+    _title_callback: '\Drupal\badcamp\Controller\MembersController::title'
   requirements:
     _custom_access: '\Drupal\badcamp\Controller\MembersController::access'
 
@@ -28,3 +28,19 @@ badcamp.user.schedule:
     _title_callback: '\Drupal\badcamp\Controller\MyScheduleController::title'
   requirements:
     _custom_access: '\Drupal\badcamp\Controller\MyScheduleController::access'
+
+badcamp.autocomplete.events:
+  path: '/badcamp/autocomplete/events'
+  defaults:
+    _controller: '\Drupal\badcamp\Controller\AutoCompleteController::handleEventAutocomplete'
+    _format: json
+  requirements:
+    _permission: 'access content'
+
+badcamp.autocomplete.users:
+  path: '/badcamp/autocomplete/users'
+  defaults:
+    _controller: '\Drupal\badcamp\Controller\AutoCompleteController::handleUserAutocomplete'
+    _format: json
+  requirements:
+    _permission: 'access content'

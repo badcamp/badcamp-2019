@@ -14,7 +14,7 @@ dependencies:
     - field.field.user.user.field_subscribe_to_badcamp_newsl
     - field.field.user.user.field_title
     - field.field.user.user.user_picture
-    - image.style.thumbnail
+    - image.style.featured_attendee
   module:
     - image
     - user
@@ -29,7 +29,7 @@ content:
     type: string
     weight: 1
     region: content
-    label: above
+    label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -37,15 +37,23 @@ content:
     type: string
     weight: 2
     region: content
-    label: above
+    label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
   field_organization:
     type: string
+    weight: 4
+    region: content
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_title:
+    type: string
     weight: 3
     region: content
-    label: above
+    label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -54,8 +62,8 @@ content:
     weight: 0
     region: content
     settings:
-      image_style: thumbnail
-      image_link: ''
+      image_style: featured_attendee
+      image_link: content
     third_party_settings: {  }
     label: hidden
 hidden:
@@ -64,5 +72,6 @@ hidden:
   field_organization_url: true
   field_social_profile_links: true
   field_subscribe_to_badcamp_newsl: true
-  field_title: true
+  flag_attendance: true
+  flag_featured_attendee: true
   member_for: true

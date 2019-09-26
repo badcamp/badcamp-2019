@@ -2,14 +2,12 @@
 
 namespace Drupal\badcamp\Controller;
 
+use Drupal\badcamp\Form\AddUserToEvent as AddUserToEventForm;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Access\AccessResult;
-use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\node\NodeInterface;
-use Drupal\node\Plugin\views\filter\Access;
 use Drupal\views\Views;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Class MembersController.
@@ -26,9 +24,23 @@ class MembersController extends ControllerBase {
     $view = Views::getView('sign_up_list');
     $members = $view->buildRenderable('default');
 
+    $form = $this->formBuilder()->getForm(AddUserToEventForm::class, $node);
+
     return [
       'view' => $members,
+      'form' => $form
     ];
+  }
+
+  /**
+   * Return the title for the page.
+   *
+   * @param \Drupal\node\NodeInterface $node
+   *
+   * @return \Drupal\Core\StringTranslation\TranslatableMarkup
+   */
+  public function title(NodeInterface $node) {
+    return $this->t('Attendees for @title', ['@title' => $node->getTitle()]);
   }
 
   /**
