@@ -1,3 +1,65 @@
+diff --git a/src/Event/StripeEvent.php b/src/Event/StripeEvent.php
+new file mode 100644
+index 0000000..00a9d40
+--- /dev/null
++++ b/src/Event/StripeEvent.php
+@@ -0,0 +1,56 @@
++<?php
++
++namespace Drupal\payment_stripe\Event;
++
++use Symfony\Component\EventDispatcher\Event;
++
++/**
++ * Class StripeEvent
++ *
++ * @package Drupal\payment_stripe\Event
++ */
++class StripeEvent extends Event {
++
++  /**
++   * The Event Type.
++   *
++   * @var string
++   */
++  protected $eventType;
++
++  /**
++   * The data to pass in.
++   *
++   * @var mixed
++   */
++  protected $data;
++
++  /**
++   * StripeEvent constructor.
++   *
++   * @param $eventType
++   * @param $data
++   */
++  public function __construct($eventType, $data) {
++    $this->eventType = $eventType;
++    $this->data = $data;
++  }
++
++  /**
++   * Return the event type.
++   *
++   * @return string
++   */
++  public function getEventType() {
++    return $this->eventType;
++  }
++
++  /**
++   * Return the data.
++   *
++   * @return mixed
++   */
++  public function getData() {
++    return $this->data;
++  }
++}
 diff --git a/src/Event/StripeEvents.php b/src/Event/StripeEvents.php
 index 2634170..1ee59d0 100644
 --- a/src/Event/StripeEvents.php
