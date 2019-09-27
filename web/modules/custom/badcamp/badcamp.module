@@ -173,6 +173,11 @@ function badcamp_payment_sponsorship_submit_ajax($form, FormStateInterface $form
 
   // If there are any form errors, re-display the form.
   if ($form_state->hasAnyErrors()) {
+    $form['messages'] = [
+      '#type' => 'status_messages',
+      '#prefix' => '<div id="messages">',
+      '#suffix' => '</div>',
+    ];
     $response->addCommand(new ReplaceCommand('#payment_form', $form));
   }
   else {
@@ -197,6 +202,11 @@ function badcamp_payment_training_submit_ajax($form, FormStateInterface $form_st
 
   // If there are any form errors, re-display the form.
   if ($form_state->hasAnyErrors()) {
+    $form['messages'] = [
+      '#type' => 'status_messages',
+      '#prefix' => '<div id="messages">',
+      '#suffix' => '</div>',
+    ];
     $response->addCommand(new ReplaceCommand('#payment_form', $form));
   }
   else {
