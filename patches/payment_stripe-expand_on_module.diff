@@ -1,0 +1,256 @@
+diff --git a/src/Event/StripeEvents.php b/src/Event/StripeEvents.php
+index 2634170..1ee59d0 100644
+--- a/src/Event/StripeEvents.php
++++ b/src/Event/StripeEvents.php
+@@ -32,4 +32,18 @@ final class StripeEvents {
+    * @Event
+    */
+   const WEBHOOK_CHARGE_FAILED = 'stripe.webhook_charge_failed';
++
++  /**
++   * The name of the event fired when a charge is successful.
++   *
++   * @Event
++   */
++  const CHARGE_SUCCEEDED = 'stripe.charge_succeeded';
++
++  /**
++   * The name of the event fired when a charge fails.
++   *
++   * @Event
++   */
++  const CHARGE_FAILED = 'stripe.charge_failed';
+ }
+diff --git a/src/Plugin/Payment/Method/StripePayment.php b/src/Plugin/Payment/Method/StripePayment.php
+index f363056..c3eebd3 100644
+--- a/src/Plugin/Payment/Method/StripePayment.php
++++ b/src/Plugin/Payment/Method/StripePayment.php
+@@ -2,20 +2,30 @@
+ 
+ namespace Drupal\payment_stripe\Plugin\Payment\Method;
+ 
++use Drupal\Component\Utility\EmailValidator;
++use Drupal\Component\Utility\EmailValidatorInterface;
+ use Drupal\Core\Access\AccessResult;
++use Drupal\Core\Config\ConfigFactoryInterface;
+ use Drupal\Core\Extension\ModuleHandlerInterface;
++use Drupal\Core\Form\FormStateInterface;
+ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+ use Drupal\Core\Session\AccountInterface;
+ use Drupal\Core\Utility\Token;
+ use Drupal\payment\Entity\Payment;
+ use Drupal\payment\Entity\PaymentInterface;
+ use Drupal\payment\EventDispatcherInterface;
++use Drupal\payment_stripe\Event\StripeEvent;
++use Symfony\Component\EventDispatcher\EventDispatcherInterface as SymfonyEventDispatcher;
+ use Drupal\payment\Plugin\Payment\Method\PaymentMethodBase;
+ use Drupal\payment\Plugin\Payment\Method\PaymentMethodCapturePaymentInterface;
+ use Drupal\payment\Plugin\Payment\Method\PaymentMethodRefundPaymentInterface;
+ use Drupal\payment\Plugin\Payment\Method\PaymentMethodUpdatePaymentStatusInterface;
+ use Drupal\payment\Plugin\Payment\Status\PaymentStatusManagerInterface;
+ use Symfony\Component\DependencyInjection\ContainerInterface;
++use Stripe\Charge;
++use Stripe\Error\Base as StripeBaseException;
++use Stripe\Stripe;
++use Drupal\payment_stripe\Event\StripeEvents;
+ 
+ /**
+  * A payment_stripe method that does not transfer money.
+@@ -47,6 +57,27 @@ class StripePayment extends PaymentMethodBase implements ContainerFactoryPluginI
+    */
+   protected $paymentStatusManager;
+ 
++  /**
++   * The Config Factory service.
++   *
++   * @var \Drupal\Core\Config\ConfigFactoryInterface
++   */
++  protected $configFactory;
++
++  /**
++   * The Event Dispatcher service.
++   *
++   * @var \Symfony\Component\EventDispatcher\EventDispatcherInterface $eventDispatcherService;
++   */
++  protected $eventDispatcherService;
++
++  /**
++   * The Email Validation service.
++   *
++   * @var \Drupal\Component\Utility\EmailValidatorInterface
++   */
++  protected $emailValidator;
++
+   /**
+    * Constructs a new instance.
+    *
+@@ -64,17 +95,37 @@ class StripePayment extends PaymentMethodBase implements ContainerFactoryPluginI
+    *   The token API.
+    * @param \Drupal\payment\Plugin\Payment\Status\PaymentStatusManagerInterface $payment_status_manager
+    *   The payment status manager.
++   * @param \Drupal\Core\Config\ConfigFactoryInterface $configFactory
++   *   The Config Factory Service.
++   * @param \Symfony\Component\EventDispatcher\EventDispatcherInterface $eventDispatcher
++   *   The Event Dispatcher Service.
++   * @param \Drupal\Component\Utility\EmailValidatorInterface $emailValidator
++   *   The email validation service.
+    */
+-  public function __construct(array $configuration, $plugin_id, array $plugin_definition, ModuleHandlerInterface $module_handler, EventDispatcherInterface $event_dispatcher, Token $token, PaymentStatusManagerInterface $payment_status_manager) {
++  public function __construct(array $configuration, $plugin_id, array $plugin_definition, ModuleHandlerInterface $module_handler, EventDispatcherInterface $event_dispatcher, Token $token, PaymentStatusManagerInterface $payment_status_manager, ConfigFactoryInterface $configFactory, SymfonyEventDispatcher $eventDispatcher, EmailValidatorInterface $emailValidator) {
+     $configuration += $this->defaultConfiguration();
+     parent::__construct($configuration, $plugin_id, $plugin_definition, $module_handler, $event_dispatcher, $token, $payment_status_manager);
++    $this->configFactory = $configFactory;
++    $this->eventDispatcherService = $eventDispatcher;
++    $this->emailValidator = $emailValidator;
+   }
+ 
+   /**
+    * {@inheritdoc}
+    */
+   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+-    return new static($configuration, $plugin_id, $plugin_definition, $container->get('module_handler'), $container->get('payment.event_dispatcher'), $container->get('token'), $container->get('plugin.manager.payment.status'));
++    return new static(
++      $configuration,
++      $plugin_id,
++      $plugin_definition,
++      $container->get('module_handler'),
++      $container->get('payment.event_dispatcher'),
++      $container->get('token'),
++      $container->get('plugin.manager.payment.status'),
++      $container->get('config.factory'),
++      $container->get('event_dispatcher'),
++      $container->get('email.validator')
++    );
+   }
+ 
+   /**
+@@ -207,4 +258,129 @@ class StripePayment extends PaymentMethodBase implements ContainerFactoryPluginI
+     $payment->save();
+   }
+ 
++  /**
++   * {@inheritdoc}
++   */
++  public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
++    $form['first'] = [
++      '#type' => 'textfield',
++      '#title' => $this->t('First name'),
++      '#required' => TRUE,
++    ];
++    $form['last'] = [
++      '#type' => 'textfield',
++      '#title' => $this->t('Last name'),
++      '#required' => TRUE,
++    ];
++    $form['stripe'] = [
++      '#type' => 'stripe',
++      '#title' => $this->t('Credit card'),
++      "#stripe_selectors" => [
++        'first_name' => ':input[name="container[plugin_form][first]"]',
++        'last_name' => ':input[name="container[plugin_form][last]"]',
++      ],
++    ];
++    return $form;
++  }
++
++  /**
++   * {@inheritDoc}
++   */
++  public function validateConfigurationForm(array &$form, FormStateInterface $form_state) {
++    parent::validateConfigurationForm($form, $form_state); // TODO: Change the autogenerated stub
++
++    if (count($form_state->getErrors()) == 0) {
++      $stripe_token = $form_state->getValue('container')['plugin_form']['stripe'];
++      $description = isset($this->getPayment()->lineItemTitle) ? $this->getPayment()->lineItemTitle : $this->configFactory->get('system.site')
++        ->get('name');
++      $email = $this->getPayment()->getOwner()->getEmail();
++      $charge = $this->createCharge($stripe_token, $this->getPayment()
++        ->getAmount(), $description, $email);
++      if ($charge) {
++        $eventType = $charge->status == 'succeeded' ? StripeEvents::CHARGE_SUCCEEDED : StripeEvents::CHARGE_FAILED;
++        $data = [
++          'charge' => $charge,
++          'payment' => $this->getPayment(),
++        ];
++        $event = new StripeEvent($eventType, $data);
++        $storage = $form_state->getStorage();
++        $storage['event'] = $event;
++        $storage['eventType'] = $eventType;
++      }
++      else {
++        $form_state->setErrorByName('stripe', 'There was an error processing this transaction. Please try again.');
++      }
++    }
++  }
++
++  /**
++   * {@inheritDoc}
++   */
++  public function submitConfigurationForm(array &$form, FormStateInterface $form_state) {
++    $storage = $form_state->getStorage();
++    $event = $storage['event'];
++    $eventType = $storage['eventType'];
++    $this->eventDispatcherService->dispatch($eventType, $event);
++
++    parent::submitConfigurationForm($form, $form_state);
++  }
++
++  /**
++   * Helper function for test charge.
++   *
++   * @param string $stripe_token
++   *   Stripe API token.submitSelectorForm
++   * @param int $amount
++   *   Amount for charge.
++   * @param $description
++   *   The line item description.
++   * @param string $email
++   *   The email to send a receipt from.
++   *
++   * @return \Stripe\Charge /Stripe/Charge
++   *   Charge object.
++   */
++  private function createCharge($stripe_token, $amount, $description, $email = '') {
++    try {
++      $secret = $this->getEnvironmentInfo()['secret'];
++      Stripe::setApiKey($secret);
++      $data = [
++        'amount' => $amount * 100,
++        'currency' => 'USD',
++        'description' => $description,
++        'source' => $stripe_token,
++      ];
++      if (!empty($email) && $this->emailValidator->isValid($email)) {
++        $data['receipt_email'] = $email;
++      }
++      $charge = Charge::create($data);
++      return $charge;
++    }
++    catch (StripeBaseException $e) {
++      $this->messenger()->addError($this->t('Error: %error', ['%error' => $e->getMessage()]));
++    }
++  }
++
++  /**
++   * @return \Drupal\Core\Config\ImmutableConfig
++   */
++  private function getStripeSettings() {
++    return $this->configFactory->get('stripe.settings');
++  }
++
++  /**
++   * @return array|mixed|null
++   */
++  private function getEnvironment() {
++    return $this->getStripeSettings()->get('environment');
++  }
++
++  /**
++   * @return array|mixed|null
++   */
++  private function getEnvironmentInfo() {
++    $environment = $this->getEnvironment();
++    return $this->getStripeSettings()->get('apikey.'. $environment);
++  }
++
+ }
