@@ -1,0 +1,254 @@
+diff --git a/js/stripe.js b/js/stripe.js
+index ce90de9..238883e 100644
+--- a/js/stripe.js
++++ b/js/stripe.js
+@@ -2,12 +2,12 @@
+  * @file
+  * Provides stripe attachment logic.
+  */
++var stripe = null;
+ 
+ (function ($, window, Drupal, drupalSettings, Stripe) {
+ 
+   'use strict';
+ 
+-  var stripe = null;
+   // Create a Stripe client
+   if (drupalSettings.stripe.apiKey) {
+     stripe = Stripe(drupalSettings.stripe.apiKey);
+@@ -22,17 +22,27 @@
+    */
+   Drupal.behaviors.stripe = {
+     attach: function (context, settings) {
+-
+       // Stripe was not initialized, do nothing.
+       if (!stripe) {
+         return;
+       }
+ 
++      Drupal.stripeElements = Drupal.stripeElements || {};
+       for (var base in settings.stripe.elements) {
+         var element = $('#' + base, context)[0];
+         if (!element) {
++          if (Drupal.stripeElements.hasOwnProperty(base)) {
++            Drupal.stripeElements[base].destroy();
++            delete Drupal.stripeElements[base];
++          }
+           continue;
+         }
++
++        // Store Original Action.
++        if (typeof Drupal.Ajax !== 'undefined' && typeof Drupal.Ajax.prototype.eventResponseStripeOriginal === 'undefined') {
++          Drupal.Ajax.prototype.eventResponseStripeOriginal = Drupal.Ajax.prototype.eventResponse;
++        }
++
+         var form = element.form;
+         if (!$(form).data('stripe-element')) {
+           $(form).data('stripe-element', base);
+@@ -40,9 +50,10 @@
+ 
+         // Make sure we only attach the stripe card element a single
+         // element per form
+-        if ($(form).data('stripe-element') == base) {
++        if ($(form).data('stripe-element') === base) {
+           // Provide proper scope for closures of each stripe event
+           (function(element, form) {
++            var base = element.id;
+             var stripeSelectors = JSON.parse(element.getAttribute('data-drupal-stripe-selectors'))
+ 
+             // Create an instance of Elements
+@@ -57,14 +68,14 @@
+             $(element).trigger('drupalStripe.elementCreate', ['card', options]);
+ 
+             // Create an instance of the card Element
+-            var card = elements.create('card', options);
++            Drupal.stripeElements[base] = elements.create('card', options);
+ 
+             // Add an instance of the card Element into the `card-element` <div>
+-            card.mount('#' + element.id + '-card-element');
++            Drupal.stripeElements[base].mount('#' + element.id + '-card-element');
+ 
+-            card.on('ready', function(e) {
++            Drupal.stripeElements[base].on('ready', function(e) {
+               // Handle real-time validation errors from the card Element.
+-              card.addEventListener('change', function(event) {
++              Drupal.stripeElements[base].addEventListener('change', function(event) {
+                 var displayError = document.getElementById(element.id + '-card-errors');
+                 if (event.error) {
+                   displayError.textContent = event.error.message;
+@@ -73,13 +84,64 @@
+                 }
+               });
+ 
++              // Return the stripe values from the selectors
++              function stripeValues() {
++                // Collect all stripe options from the provided selectors
++                var stripeOptions = {name: ''};
++                for (var data in stripeSelectors) {
++                  var selector = stripeSelectors[data];
++                  if (selector) {
++                    stripeOptions[data] = $(selector, form).val();
++                  }
++                }
++
++                // Name special handling
++                if (stripeOptions['first_name'] ) {
++                  stripeOptions['name'] += stripeOptions['first_name'];
++                  if (stripeOptions['last_name']) {
++                    stripeOptions['name'] += ' ';
++                  }
++                }
++                if (stripeOptions['last_name']) {
++                  stripeOptions['name'] += stripeOptions['last_name'];
++                }
++
++                return stripeOptions;
++              }
++
++              // Filter Values in Stripe Values.
++              function filterStripeValues(stripeOptions) {
++                // Filter out unknown options and special handling for some of them
++                // https://stripe.com/docs/stripe-js/reference#stripe-create-token
++                var validOptions = [
++                  'name',
++                  'address_line1',
++                  'address_line2',
++                  'address_city',
++                  'address_state',
++                  'address_zip',
++                  'address_country',
++                  'currency'
++                ];
++                var options = {};
++                for (var option in stripeOptions) {
++                  if (validOptions.indexOf(option) !== -1) {
++                    options[option] = stripeOptions[option];
++                  }
++                }
++
++                return options
++              }
++
+               // Using the same approach as drupal own double submit prevention
+               // @see core/drupal.form
+-              function onFormSubmit(e) {
+-                var $form = $(e.currentTarget);
++              function onFormSubmit($form, success) {
++                if (typeof success === 'undefined') {
++                  success = function() {};
++                }
++                var baseId = element.id;
+                 var formValues = $form.find(':input').not(element).serialize();
+                 var previousValues = $form.attr('data-stripe-form-submit-last');
+-                e.preventDefault();
+ 
+                 if (previousValues !== formValues) {
+ 
+@@ -88,49 +150,14 @@
+ 
+                   $form.trigger('drupalStripe.submitStart');
+ 
+-                  // Collect all stripe options from the provided selectors
+-                  var stripeOptions = {name: ''};
+-                  for (var data in stripeSelectors) {
+-                    var selector = stripeSelectors[data];
+-                    if (selector) {
+-                      stripeOptions[data] = $(selector, form).val();
+-                    }
+-                  }
+-
+-                  // Name special handling
+-                  if (stripeOptions['first_name'] ) {
+-                    stripeOptions['name'] += stripeOptions['first_name'];
+-                    if (stripeOptions['last_name']) {
+-                      stripeOptions['name'] += ' ';
+-                    }
+-                  }
+-                  if (stripeOptions['last_name']) {
+-                    stripeOptions['name'] += stripeOptions['last_name'];
+-                  }
++                  var stripeOptions = stripeValues();
+ 
+                   // Allow other modules to change these options
+-                  $(element).trigger('drupalStripe.createToken', [card, stripeOptions]);
+-
+-                  // Filter out unknown options and special handling for some of them
+-                  // https://stripe.com/docs/stripe-js/reference#stripe-create-token
+-                  var validOptions = [
+-                    'name',
+-                    'address_line1',
+-                    'address_line2',
+-                    'address_city',
+-                    'address_state',
+-                    'address_zip',
+-                    'address_country',
+-                    'currency'
+-                  ];
+-                  var options = {};
+-                  for (var option in stripeOptions) {
+-                    if (validOptions.indexOf(option) !== -1) {
+-                      options[option] = stripeOptions[option];
+-                    }
+-                  }
++                  $(element).trigger('drupalStripe.createToken', [Drupal.stripeElements[baseId], stripeOptions]);
+ 
+-                  stripe.createToken(card, options).then(function(result) {
++                  var options = filterStripeValues(stripeOptions);
++
++                  stripe.createToken(Drupal.stripeElements[baseId], options).then(function (result) {
+                     if (result.error) {
+                       // Inform the user if there was an error
+                       var errorElement = document.getElementById(element.id + '-card-errors');
+@@ -140,13 +167,50 @@
+                     } else {
+                       // Send the token to your server
+                       element.setAttribute('value', result.token.id);
+-                      form.submit();
++                      success();
+                     }
++                  }).catch(function (error){
++                    console.log(error.message);
+                   });
+                 }
+               }
+ 
+-              $(form).once('stripe-single-submit').on('submit.stripeSingleSubmit', onFormSubmit);
++              $(form).once('stripe-single-submit').on('submit.stripeSingleSubmit', function(e){
++                var $form = $(e.currentTarget);
++                e.preventDefault();
++                onFormSubmit($form, function() {
++                  form.submit();
++                });
++              });
++
++              // Override because we need Stripe to generate token before we move forward.
++              Drupal.Ajax.prototype.eventResponse = function (eventElement, event) {
++                event.preventDefault();
++                event.stopPropagation();
++                var ajax = this;
++
++                if (ajax.ajaxing) {
++                  return;
++                }
++
++                try {
++                  if (ajax.$form) {
++                    if (ajax.setClick) {
++                      eventElement.form.clk = eventElement;
++                    }
++
++                    onFormSubmit(ajax.$form, function() {
++                      ajax.$form.ajaxSubmit(ajax.options);
++                    });
++                  } else {
++                    ajax.beforeSerialize(ajax.element, ajax.options);
++                    $.ajax(ajax.options);
++                  }
++                } catch (e) {
++                  ajax.ajaxing = false;
++                  window.alert('An error occurred while attempting to process ' + ajax.options.url + ': ' + e.message);
++                }
++              };
+ 
+               // Adding a stripe processing class using our custom events
+               $(form).on('drupalStripe.submitStart', function(e) {

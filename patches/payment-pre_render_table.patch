@@ -1,0 +1,15 @@
+diff --git a/src/Element/PaymentLineItemsDisplay.php b/src/Element/PaymentLineItemsDisplay.php
+index 2374b093..79dfccdd 100644
+--- a/src/Element/PaymentLineItemsDisplay.php
++++ b/src/Element/PaymentLineItemsDisplay.php
+@@ -133,9 +133,9 @@ class PaymentLineItemsDisplay extends FormElement implements ContainerFactoryPlu
+       'label' => array(
+         '#attributes' => array(
+           'class' => array('payment-amount-label'),
+-          'colspan' => 3,
+         ),
+         '#markup' => $this->t('Total amount'),
++        '#wrapper_attributes' => ['colspan' => 3],
+       ),
+       'total' => array(
+         '#attributes' => array(
