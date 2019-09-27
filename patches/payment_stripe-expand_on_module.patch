@@ -1,3 +1,65 @@
+diff --git a/src/Event/StripeEvent.php b/src/Event/StripeEvent.php
+new file mode 100644
+index 0000000..00a9d40
+--- /dev/null
++++ b/src/Event/StripeEvent.php
+@@ -0,0 +1,56 @@
++<?php
++
++namespace Drupal\payment_stripe\Event;
++
++use Symfony\Component\EventDispatcher\Event;
++
++/**
++ * Class StripeEvent
++ *
++ * @package Drupal\payment_stripe\Event
++ */
++class StripeEvent extends Event {
++
++  /**
++   * The Event Type.
++   *
++   * @var string
++   */
++  protected $eventType;
++
++  /**
++   * The data to pass in.
++   *
++   * @var mixed
++   */
++  protected $data;
++
++  /**
++   * StripeEvent constructor.
++   *
++   * @param $eventType
++   * @param $data
++   */
++  public function __construct($eventType, $data) {
++    $this->eventType = $eventType;
++    $this->data = $data;
++  }
++
++  /**
++   * Return the event type.
++   *
++   * @return string
++   */
++  public function getEventType() {
++    return $this->eventType;
++  }
++
++  /**
++   * Return the data.
++   *
++   * @return mixed
++   */
++  public function getData() {
++    return $this->data;
++  }
++}
 diff --git a/src/Event/StripeEvents.php b/src/Event/StripeEvents.php
 index 2634170..1ee59d0 100644
 --- a/src/Event/StripeEvents.php
@@ -22,7 +84,7 @@ index 2634170..1ee59d0 100644
 +  const CHARGE_FAILED = 'stripe.charge_failed';
  }
 diff --git a/src/Plugin/Payment/Method/StripePayment.php b/src/Plugin/Payment/Method/StripePayment.php
-index f363056..d1f4883 100644
+index f363056..c3eebd3 100644
 --- a/src/Plugin/Payment/Method/StripePayment.php
 +++ b/src/Plugin/Payment/Method/StripePayment.php
 @@ -2,20 +2,30 @@
@@ -124,7 +186,7 @@ index f363056..d1f4883 100644
    }
  
    /**
-@@ -207,4 +258,123 @@ class StripePayment extends PaymentMethodBase implements ContainerFactoryPluginI
+@@ -207,4 +258,129 @@ class StripePayment extends PaymentMethodBase implements ContainerFactoryPluginI
      $payment->save();
    }
  
@@ -173,8 +235,9 @@ index f363056..d1f4883 100644
 +          'payment' => $this->getPayment(),
 +        ];
 +        $event = new StripeEvent($eventType, $data);
-+
-+        $this->eventDispatcherService->dispatch($eventType, $event);
++        $storage = $form_state->getStorage();
++        $storage['event'] = $event;
++        $storage['eventType'] = $eventType;
 +      }
 +      else {
 +        $form_state->setErrorByName('stripe', 'There was an error processing this transaction. Please try again.');
@@ -186,6 +249,11 @@ index f363056..d1f4883 100644
 +   * {@inheritDoc}
 +   */
 +  public function submitConfigurationForm(array &$form, FormStateInterface $form_state) {
++    $storage = $form_state->getStorage();
++    $event = $storage['event'];
++    $eventType = $storage['eventType'];
++    $this->eventDispatcherService->dispatch($eventType, $event);
++
 +    parent::submitConfigurationForm($form, $form_state);
 +  }
 +
