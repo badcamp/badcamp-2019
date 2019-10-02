@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_user_notes
     - field.storage.user.field_first_name
     - field.storage.user.field_last_name
     - field.storage.user.field_organization
@@ -14,6 +15,7 @@ dependencies:
   module:
     - flag
     - user
+    - views_entity_form_field
     - views_field_view
 id: check_in
 label: 'Check In'
@@ -87,9 +89,85 @@ display:
           summary: ''
           description: ''
           columns:
+            uid: uid
+            counter: counter
             name: name
+            field_first_name: field_first_name
+            field_last_name: field_first_name
+            mail: mail
+            field_organization: field_organization
+            field_title: field_title
+            view: view
+            form_field_field_user_notes: form_field_field_user_notes
+            link_flag: link_flag
           info:
+            uid:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            counter:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
             name:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_first_name:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ' '
+              empty_column: false
+              responsive: ''
+            field_last_name:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            mail:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_organization:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_title:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            view:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            form_field_field_user_notes:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            link_flag:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -294,7 +372,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'First Name'
+          label: Name
           exclude: false
           alter:
             alter_text: false
@@ -655,6 +733,64 @@ display:
           display: default
           arguments: '{{ raw_fields.uid }}'
           plugin_id: view
+        form_field_field_user_notes:
+          id: form_field_field_user_notes
+          table: users_field_data
+          field: form_field_field_user_notes
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Notes
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          plugin:
+            hide_title: 1
+            hide_description: 1
+            type: string_textarea
+            settings:
+              rows: '5'
+              placeholder: ''
+            third_party_settings: {  }
+          entity_type: user
+          plugin_id: entity_form_field
         link_flag:
           id: link_flag
           table: flagging
@@ -805,12 +941,15 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
         - user.roles
       tags:
+        - 'config:field.field.user.user.field_user_notes'
         - 'config:field.storage.user.field_first_name'
         - 'config:field.storage.user.field_last_name'
         - 'config:field.storage.user.field_organization'
         - 'config:field.storage.user.field_title'
+        - 'config:field.storage.user.field_user_notes'
   page_1:
     display_plugin: page
     id: page_1
@@ -835,9 +974,12 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
         - user.roles
       tags:
+        - 'config:field.field.user.user.field_user_notes'
         - 'config:field.storage.user.field_first_name'
         - 'config:field.storage.user.field_last_name'
         - 'config:field.storage.user.field_organization'
         - 'config:field.storage.user.field_title'
+        - 'config:field.storage.user.field_user_notes'
