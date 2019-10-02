@@ -12,6 +12,7 @@ dependencies:
     - field.field.user.user.field_social_profile_links
     - field.field.user.user.field_subscribe_to_badcamp_newsl
     - field.field.user.user.field_title
+    - field.field.user.user.field_user_notes
     - field.field.user.user.user_picture
   module:
     - user
@@ -29,6 +30,23 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_user_notes:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  flag_attendance:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  flag_featured_attendee:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
     region: content
 hidden:
   field_bio: true

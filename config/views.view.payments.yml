@@ -785,23 +785,23 @@ display:
           entity_field: owner
           plugin_id: standard
       arguments:
-        uid:
-          id: uid
-          table: users
-          field: uid
-          relationship: owner
+        owner:
+          id: owner
+          table: payment
+          field: owner
+          relationship: none
           group_type: group
           admin_label: ''
-          default_action: 'not found'
+          default_action: default
           exception:
             value: all
             title_enable: false
             title: All
           title_enable: false
           title: ''
-          default_argument_type: fixed
+          default_argument_type: user
           default_argument_options:
-            argument: ''
+            user: false
           default_argument_skip_url: false
           summary_options:
             base_path: ''
@@ -812,14 +812,15 @@ display:
             sort_order: asc
             number_of_records: 0
             format: default_summary
-          specify_validation: true
+          specify_validation: false
           validate:
-            type: payment_view_payments_by_owner
-            fail: 'access denied'
+            type: none
+            fail: 'not found'
+          validate_options: {  }
           break_phrase: false
           not: false
-          entity_type: user
-          entity_field: uid
+          entity_type: payment
+          entity_field: owner
           plugin_id: numeric
       display_extenders: {  }
       filter_groups:

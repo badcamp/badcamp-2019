@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.session.body
     - field.field.node.session.field_day
     - field.field.node.session.field_members
+    - field.field.node.session.field_register_capacity
     - field.field.node.session.field_session_presentation_video
     - field.field.node.session.field_session_slides
     - field.field.node.session.field_session_topics
@@ -72,11 +73,16 @@ content:
     settings:
       link: true
     third_party_settings: {  }
+  flag_add_to_schedule:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  field_register_capacity: true
   field_session_presentation_video: true
   field_session_slides: true
   field_sponsors: true
   field_status: true
   field_twitter_description: true
-  flag_add_to_schedule: true
   links: true

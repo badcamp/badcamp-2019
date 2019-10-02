@@ -6,4 +6,8 @@ id: volunteer
 label: Volunteer
 weight: -8
 is_admin: null
-permissions: {  }
+permissions:
+  - 'edit field_user_notes'
+  - 'edit own field_user_notes'
+  - 'view field_user_notes'
+  - 'view own field_user_notes'
