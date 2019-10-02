@@ -6,14 +6,18 @@
     <div class="training__body cell small-order-2 medium-7 large-9">
       {{ content.body }}
       <div class="event-attachments">
-        <div class="event-attachment--links">
-          <div class="field-label">{{ "Links"|t }}</div>
-          {{ content.field_training_links }}
-        </div>
-        <div class="event-attachment--files">
-          <div class="field-label">{{ "Files"|t }}</div>
-          {{ content.field_training_files }}
-        </div>
+        {% if content.field_training_links|render|striptags|trim is not empty %}
+          <div class="event-attachment--links">
+            <div class="field-label">{{ "Links"|t }}</div>
+            {{ content.field_training_links }}
+          </div>
+        {% endif %}
+        {% if content.field_training_files|render|striptags|trim is not empty %}
+          <div class="event-attachment--files">
+            <div class="field-label">{{ "Files"|t }}</div>
+            {{ content.field_training_files }}
+          </div>
+        {% endif %}
       </div>
     </div>
 
