@@ -34,6 +34,7 @@
 }
 
 .event-attachments {
+  padding-top: 2em;
   .field-label {
     color: $dark-salmon;
     font-weight: 700;
@@ -43,7 +44,8 @@
     @extend .link;
     line-height: 1.8 !important;
   }
-  .event-attachment--links {
+  .event-attachment--links,
+  .event-attachment--slides {
     margin-bottom: 2.5em;
   }
 }
