@@ -733,6 +733,58 @@ display:
           display: default
           arguments: '{{ raw_fields.uid }}'
           plugin_id: view
+        view_1:
+          id: view_1
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Trainings
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          view: user_trainings
+          display: default
+          arguments: '{{ raw_fields.uid }}'
+          plugin_id: view
         form_field_field_user_notes:
           id: form_field_field_user_notes
           table: users_field_data
@@ -860,7 +912,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: starts
+          operator: word
           value: ''
           group: 1
           exposed: true
