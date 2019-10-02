@@ -32,3 +32,18 @@
 .event-details__field--topics {
   line-height: 1.3;
 }
+
+.event-attachments {
+  .field-label {
+    color: $dark-salmon;
+    font-weight: 700;
+    font-size: rem-calc(20);
+  }
+  a {
+    @extend .link;
+    line-height: 1.8 !important;
+  }
+  .event-attachment--links {
+    margin-bottom: 2.5em;
+  }
+}
