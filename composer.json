@@ -131,6 +131,7 @@
         "drupal/console": "^1.8",
         "drupal/content_sync": "8.x-2.x-dev",
         "drupal/core": "8.7.4",
+        "drupal/create_user_permission": "^1.2",
         "drupal/custom_add_another": "^1.0@beta",
         "drupal/daterange_compact": "1.x-dev",
         "drupal/disable_messages": "^1.1",

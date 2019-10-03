@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6916d5c0256c6f9556c191c821a23265",
+    "content-hash": "1bf4843e1e497347f7161a0877df7501",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -75,9 +75,7 @@
             "version": "1.2.2",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/antennaio/jquery-bar-rating/archive/v1.2.2.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/antennaio/jquery-bar-rating/archive/v1.2.2.zip"
             },
             "type": "drupal-library"
         },
@@ -3192,6 +3190,57 @@
             "time": "2019-07-04T07:26:51+00:00"
         },
         {
+            "name": "drupal/create_user_permission",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/create_user_permission.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/create_user_permission-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "b87bcc2197680a051cdf92fda3eb5799e254c08a"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1568823371",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "efpapado",
+                    "homepage": "https://www.drupal.org/user/1009348"
+                },
+                {
+                    "name": "eiriksm",
+                    "homepage": "https://www.drupal.org/user/1014468"
+                }
+            ],
+            "description": "Provides a permission to \"create users\", instead of having to \"administer users\"",
+            "homepage": "https://www.drupal.org/project/create_user_permission",
+            "support": {
+                "source": "https://git.drupalcode.org/project/create_user_permission"
+            }
+        },
+        {
             "name": "drupal/ctools",
             "version": "3.2.0",
             "source": {
@@ -5378,7 +5427,7 @@
                 },
                 "patches_applied": {
                     "Fields on Payments don't save (Issue #2841035)": "https://www.drupal.org/files/issues/fix_fieldable.patch",
-                    "Issue with Pre render table": "https://gist.githubusercontent.com/sean-e-dietrich/680180bb5934ba2f20089de935229f9b/raw/7890f990895e139159e77b411a8ab537e60d2804/gistfile1.txt"
+                    "Issue with Pre render table": "patches/payment-pre_render_table.patch"
                 }
             },
             "autoload": {
@@ -5447,7 +5496,7 @@
                     }
                 },
                 "patches_applied": {
-                    "Improvements": "https://gist.githubusercontent.com/sean-e-dietrich/2ac08921ac2d23637593d888cc7f28a7/raw/0a4997b52994699b489e4bf07e0be4df18d4e0b5/payment_stripe.patch"
+                    "Improvements": "patches/payment_stripe-expand_on_module.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -5475,7 +5524,8 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/payment_stripe",
                 "issues": "https://www.drupal.org/project/issues/payment_stripe"
-            }
+            },
+            "time": "2019-05-10T20:08:38+00:00"
         },
         {
             "name": "drupal/plugin",
@@ -6140,7 +6190,7 @@
                     }
                 },
                 "patches_applied": {
-                    "Ajax Form": "https://gist.githubusercontent.com/sean-e-dietrich/fb979d558a3974f791af678b68879ce3/raw/1c2c580d65c185289a97eeb3c323f239046fadd1/stripe.patch"
+                    "Ajax Form": "patches/stripe-ajax_form.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -7806,8 +7856,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://github.com/OwlCarousel2/OwlCarousel2/archive/2.3.4.zip",
-                "reference": "master",
-                "shasum": null
+                "reference": "master"
             },
             "type": "drupal-library"
         },
@@ -7817,8 +7866,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://github.com/kenwheeler/slick/archive/1.8.0.zip",
-                "reference": "master",
-                "shasum": null
+                "reference": "master"
             },
             "type": "drupal-library"
         },
@@ -7943,9 +7991,7 @@
             "version": "1.8.2",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/blazy/-/blazy-1.8.2.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/blazy/-/blazy-1.8.2.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -7963,8 +8009,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/gdsmith/jquery.easing/zipball/df09da4048d2607c5d513681dff532dbe6680d95",
-                "reference": "df09da4048d2607c5d513681dff532dbe6680d95",
-                "shasum": null
+                "reference": "df09da4048d2607c5d513681dff532dbe6680d95"
             },
             "type": "npm-asset",
             "license": [

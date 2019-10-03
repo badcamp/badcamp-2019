@@ -3,3 +3,10 @@ badcamp.reports.payments:
   description: Configure payment methods, types, and statuses.
   parent: system.admin_reports
   route_name: view.badcamp_payments.individual
+
+badcamp.reports.checkin:
+  title: Check Ins
+  description: Reporting of Check Ins
+  parent: system.admin_reports
+  route_name: badcamp.reports.user_check_in
+

@@ -44,3 +44,11 @@ badcamp.autocomplete.users:
     _format: json
   requirements:
     _permission: 'access content'
+
+badcamp.reports.user_check_in:
+  path: '/admin/reports/check-in'
+  defaults:
+    _controller: '\Drupal\badcamp\Controller\CheckInReport::report'
+    _title: 'Check In Report'
+  requirements:
+    _permission: 'access check in report'
