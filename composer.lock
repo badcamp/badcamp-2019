@@ -3501,7 +3501,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/eck.git",
-                "reference": "ecf376114716c9174615534fb42c47bf596f1f17"
+                "reference": "4a7630854aed01db41c8b13466d0694ed43521e8"
             },
             "require": {
                 "drupal/core": "^8"
@@ -3512,8 +3512,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-alpha5+6-dev",
-                    "datestamp": "1554964081",
+                    "version": "8.x-1.0-alpha5+9-dev",
+                    "datestamp": "1572129484",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -3576,7 +3576,7 @@
                 "source": "http://git.drupal.org/project/eck.git",
                 "issues": "https://www.drupal.org/project/issues/eck"
             },
-            "time": "2019-06-30T20:53:20+00:00"
+            "time": "2019-10-26T22:38:34+00:00"
         },
         {
             "name": "drupal/embed",
@@ -4149,7 +4149,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/flag.git",
-                "reference": "cadf39186fa7f4917b08ab359dd8d78c69c9af93"
+                "reference": "49fbb9e6e7df95b6615f15c70710cbcb78a415da"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -4163,8 +4163,8 @@
                     "dev-4.x": "4.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-4.0-alpha3+14-dev",
-                    "datestamp": "1539832685",
+                    "version": "8.x-4.0-alpha3+15-dev",
+                    "datestamp": "1569358086",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -4218,7 +4218,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/flag"
             },
-            "time": "2019-09-24T20:44:18+00:00"
+            "time": "2019-10-26T19:24:13+00:00"
         },
         {
             "name": "drupal/google_analytics",
