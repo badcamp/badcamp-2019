@@ -171,16 +171,16 @@
         },
         {
             "name": "chi-teck/drupal-code-generator",
-            "version": "1.30.4",
+            "version": "1.30.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Chi-teck/drupal-code-generator.git",
-                "reference": "8b7ae331e21e58088e3e52688823692ed6471ec3"
+                "reference": "c59c31ee6d8eefe76a5d367feef902e259c90c7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Chi-teck/drupal-code-generator/zipball/8b7ae331e21e58088e3e52688823692ed6471ec3",
-                "reference": "8b7ae331e21e58088e3e52688823692ed6471ec3",
+                "url": "https://api.github.com/repos/Chi-teck/drupal-code-generator/zipball/c59c31ee6d8eefe76a5d367feef902e259c90c7b",
+                "reference": "c59c31ee6d8eefe76a5d367feef902e259c90c7b",
                 "shasum": ""
             },
             "require": {
@@ -212,7 +212,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal code generator",
-            "time": "2019-08-25T06:39:56+00:00"
+            "time": "2019-10-27T14:27:26+00:00"
         },
         {
             "name": "commercie/currency",
@@ -4149,7 +4149,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/flag.git",
-                "reference": "49fbb9e6e7df95b6615f15c70710cbcb78a415da"
+                "reference": "0f69654aaf56454340a579cb23a6f47f47057eba"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -4163,8 +4163,8 @@
                     "dev-4.x": "4.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-4.0-alpha3+15-dev",
-                    "datestamp": "1569358086",
+                    "version": "8.x-4.0-alpha3+17-dev",
+                    "datestamp": "1572158285",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -4218,7 +4218,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/flag"
             },
-            "time": "2019-10-26T19:24:13+00:00"
+            "time": "2019-10-27T08:22:26+00:00"
         },
         {
             "name": "drupal/google_analytics",
