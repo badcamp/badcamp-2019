@@ -4150,7 +4150,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/flag.git",
-                "reference": "08270a14ef2487926ab36fddb48b79ce27a63a54"
+                "reference": "4fdbe4e1afb0047374eef614e9fe19559eda7356"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -4164,8 +4164,8 @@
                     "dev-4.x": "4.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-4.0-alpha3+19-dev",
-                    "datestamp": "1572379684",
+                    "version": "8.x-4.0-alpha3+20-dev",
+                    "datestamp": "1572381485",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -4219,7 +4219,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/flag"
             },
-            "time": "2019-10-29T20:37:04+00:00"
+            "time": "2019-10-30T20:16:00+00:00"
         },
         {
             "name": "drupal/google_analytics",
@@ -12008,16 +12008,16 @@
         },
         {
             "name": "mikey179/vfsstream",
-            "version": "v1.6.7",
+            "version": "v1.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bovigo/vfsStream.git",
-                "reference": "2b544ac3a21bcc4dde5d90c4ae8d06f4319055fb"
+                "reference": "231c73783ebb7dd9ec77916c10037eff5a2b6efe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bovigo/vfsStream/zipball/2b544ac3a21bcc4dde5d90c4ae8d06f4319055fb",
-                "reference": "2b544ac3a21bcc4dde5d90c4ae8d06f4319055fb",
+                "url": "https://api.github.com/repos/bovigo/vfsStream/zipball/231c73783ebb7dd9ec77916c10037eff5a2b6efe",
+                "reference": "231c73783ebb7dd9ec77916c10037eff5a2b6efe",
                 "shasum": ""
             },
             "require": {
@@ -12050,7 +12050,7 @@
             ],
             "description": "Virtual file system to mock the real file system in unit tests.",
             "homepage": "http://vfs.bovigo.org/",
-            "time": "2019-08-01T01:38:37+00:00"
+            "time": "2019-10-30T15:31:00+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
