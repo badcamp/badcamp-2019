@@ -7951,7 +7951,7 @@
             "version": "1.4.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/gdsmith/jquery.easing.git",
+                "url": "git@github.com:gdsmith/jquery.easing.git",
                 "reference": "df09da4048d2607c5d513681dff532dbe6680d95"
             },
             "dist": {
